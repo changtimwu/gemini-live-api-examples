@@ -185,6 +185,10 @@ def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[st
             report["unverified"].append(f"{name}" + (f" (dropped bad code {s.ticker})" if s.ticker else ""))
             if s.ticker:
                 s = s.model_copy(update={"ticker": ""})
+        # prefer the dict's authoritative English over the model's guess when we have a code
+        eng = stockdict.english(s.ticker) if s.ticker else None
+        if eng:
+            s = s.model_copy(update={"english": eng})
         out.append(s)
     return out, report
 

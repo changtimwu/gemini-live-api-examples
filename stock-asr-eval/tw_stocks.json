@@ -1,6 +1,7 @@
 {
  "_count_tickers": 2697,
  "_count_names": 2698,
+ "_count_english": 2300,
  "by_ticker": {
   "00982B": [
    "FT投資級債20+"
@@ -10794,5 +10795,9207 @@
   "龍翩": "5267",
   "龍邦": "2514",
   "龍鋒": "3226"
+ },
+ "by_english": {
+  "2486": {
+   "name": "I-CHIUN PRECISION INDUSTRY CO., LTD.",
+   "abbr": "I-CHIUN"
+  },
+  "3130": {
+   "name": "104 CORPORATION",
+   "abbr": "104"
+  },
+  "3609": {
+   "name": "HEP TECH CO., LTD.",
+   "abbr": "HEP"
+  },
+  "2905": {
+   "name": "MERCURIES & ASSOCIATES HOLDING, LTD.",
+   "abbr": "MERCURIES"
+  },
+  "2867": {
+   "name": "Mercuries Life Insurance Co., Ltd.",
+   "abbr": "Mercuries Life"
+  },
+  "2945": {
+   "name": "Simple Mart Retail Co., Ltd.",
+   "abbr": "Simple Mart"
+  },
+  "2427": {
+   "name": "MERCURIES DATA SYSTEMS LTD",
+   "abbr": "MDS"
+  },
+  "7705": {
+   "name": "Mercuries F&B Co., Ltd.",
+   "abbr": "Mercuries F&B"
+  },
+  "4416": {
+   "name": "Sumwon Development CO., LTD",
+   "abbr": "Sumwon"
+  },
+  "6946": {
+   "name": "SANTI RENEWABLE ENERGY CO., LTD.",
+   "abbr": "SANTI ENERGY"
+  },
+  "1438": {
+   "name": "SanDi Properties Co., Ltd.",
+   "abbr": "SanDi"
+  },
+  "7761": {
+   "name": "Power Win Taiwan Co., Ltd.",
+   "abbr": "Power Win"
+  },
+  "5007": {
+   "name": "SAN SHING FASTECH CORP.",
+   "abbr": "SAN SHING"
+  },
+  "1721": {
+   "name": "SUNKO INK CO., LTD.",
+   "abbr": "SUNKO"
+  },
+  "1472": {
+   "name": "TRIOCEAN INDUSTRIAL CORPORATION CO., LTD.",
+   "abbr": "TRIOCEAN"
+  },
+  "1614": {
+   "name": "Taiwan Sanyo Electric  Co.,Ltd.",
+   "abbr": "Taiwan Sanyo"
+  },
+  "9946": {
+   "name": "SAN FAR PROPERTY LIMITED",
+   "abbr": "SANFAR"
+  },
+  "4755": {
+   "name": "San Fu Chemical Co., Ltd.",
+   "abbr": "SAN FU"
+  },
+  "8284": {
+   "name": "MITAKE INFORMATION CORPORATION",
+   "abbr": "MITAKE"
+  },
+  "5493": {
+   "name": "Sanlien Technology Corp.",
+   "abbr": "Sanlien"
+  },
+  "6671": {
+   "name": "San Neng Group Holdings Co., LTD.",
+   "abbr": "San Neng-KY"
+  },
+  "1307": {
+   "name": "SAN FANG CHEMICAL INDUSTRY  CO.,LTD.",
+   "abbr": "SAN FANG"
+  },
+  "5514": {
+   "name": "SUNFON CONSTRUCTION CO., LTD.",
+   "abbr": "SUN FON"
+  },
+  "8489": {
+   "name": "Samebest Co., LTD.",
+   "abbr": "Samebest"
+  },
+  "2206": {
+   "name": "SANYANG MOTOR CO., LTD.",
+   "abbr": "SYM"
+  },
+  "6862": {
+   "name": "Trio Technology International Group Co., Ltd.",
+   "abbr": "TRIO-KY"
+  },
+  "3224": {
+   "name": "MetaTech (AP) Inc.",
+   "abbr": "MetaTech"
+  },
+  "6808": {
+   "name": "3D GLOBAL BIOTECH INC.",
+   "abbr": "3D BIO"
+  },
+  "6130": {
+   "name": "SHANGYA  TECHNOLOGY  CO., LTD.",
+   "abbr": "SHANGYA"
+  },
+  "4770": {
+   "name": "Allied Supreme Corp.",
+   "abbr": "ASC"
+  },
+  "6123": {
+   "name": "GrandTech C.G. Systems Inc.",
+   "abbr": "GrandTech"
+  },
+  "1316": {
+   "name": "SUN YAD CONSTRUCTION CO.,LTD",
+   "abbr": "SUN  YAD"
+  },
+  "6728": {
+   "name": "UP YOUNG CORNERSTONE CORP.",
+   "abbr": "UP YOUNG"
+  },
+  "5876": {
+   "name": "THE SHANGHAI COMMERCIAL & SAVINGS BANK, LTD.",
+   "abbr": "SCSB"
+  },
+  "6128": {
+   "name": "GENERAL PLASTIC INDUSTRIAL CO., LTD.",
+   "abbr": "GPI"
+  },
+  "3708": {
+   "name": "Swancor Holding Co., LTD.",
+   "abbr": "Swancor"
+  },
+  "3363": {
+   "name": "FOCI Fiber Optic Communications, Inc.",
+   "abbr": "FOCI"
+  },
+  "2049": {
+   "name": "HIWIN TECHNOLOGIES CORP.",
+   "abbr": "HIWIN"
+  },
+  "4305": {
+   "name": "SHIH-KUEN PLASTICS CO.LTD",
+   "abbr": "SKP"
+  },
+  "7595": {
+   "name": "Pharmigene, Inc.",
+   "abbr": "Pharmigene"
+  },
+  "2066": {
+   "name": "Sumeeko Industries Co., Ltd.",
+   "abbr": "SUMEEKO"
+  },
+  "5347": {
+   "name": "Vanguard International Semiconductor Co.",
+   "abbr": "VIS"
+  },
+  "2762": {
+   "name": "World Gym Corporation",
+   "abbr": "World Gym"
+  },
+  "3551": {
+   "name": "SHIH HER TECHNOLOGIES INC.",
+   "abbr": "SHT"
+  },
+  "5314": {
+   "name": "Myson Century, Inc.",
+   "abbr": "Myson"
+  },
+  "7752": {
+   "name": "Century Huaxin Wind Energy Co., Ltd.",
+   "abbr": "CHWE"
+  },
+  "9958": {
+   "name": "Century Iron and Steel Industrial Co.,Ltd.",
+   "abbr": "CIS"
+  },
+  "2072": {
+   "name": "Century Wind Power Co., Ltd.",
+   "abbr": "CWP"
+  },
+  "3661": {
+   "name": "Alchip Technologies, Limited",
+   "abbr": "Alchip"
+  },
+  "2065": {
+   "name": "Sheh Fung Screws Co.,Ltd",
+   "abbr": "SF"
+  },
+  "2063": {
+   "name": "SHEH KAI PRECISION CO.,LTD",
+   "abbr": "SHEH KAI"
+  },
+  "9917": {
+   "name": "TAIWAN SECOM CO.,LTD.",
+   "abbr": "TAIWAN SECOM"
+  },
+  "2644": {
+   "name": "JONG SHYN SHIPBUILDING CO., LTD.",
+   "abbr": "JSSC"
+  },
+  "2891": {
+   "name": "CTBC FINANCIAL HOLDING CO., LTD.",
+   "abbr": "CTBC HOLDING"
+  },
+  "6965": {
+   "name": "CHUNG JYE INVESTMENT HOLDING CO., LTD/",
+   "abbr": "CJ"
+  },
+  "5371": {
+   "name": "Coretronic Corporation",
+   "abbr": "Coretronic"
+  },
+  "2851": {
+   "name": "Central Reinsurance Corporation",
+   "abbr": "Central Re"
+  },
+  "3716": {
+   "name": "Cenra Inc.",
+   "abbr": "Cenra Inc."
+  },
+  "1762": {
+   "name": "Chunghwa Chemical Synthesis & Biotech Co.,Ltd",
+   "abbr": "CCSB"
+  },
+  "6923": {
+   "name": "CHUNG  TAI  RESOURCE  TECHNOLOGY  CORP.",
+   "abbr": "ctrt"
+  },
+  "4128": {
+   "name": "MICROBIO CO.,LTD.",
+   "abbr": "MICROBIO"
+  },
+  "1535": {
+   "name": "China Ecotek Corp.",
+   "abbr": "CEC"
+  },
+  "2515": {
+   "name": "BES Engineering Co.",
+   "abbr": "BES"
+  },
+  "6217": {
+   "name": "C.C.P. CONTACT PROBES CO., LTD.",
+   "abbr": "C.C.P."
+  },
+  "6668": {
+   "name": "Zhong Yang Technology Co.,Ltd",
+   "abbr": "Zhong Yang"
+  },
+  "2613": {
+   "name": "CHINA CONTAINER TERMINAL CORP",
+   "abbr": "CCTC"
+  },
+  "6236": {
+   "name": "Neith Corporation",
+   "abbr": "Neith Corp."
+  },
+  "2323": {
+   "name": "CMC Magnetics Corporation",
+   "abbr": "CMC"
+  },
+  "1314": {
+   "name": "CHINA PETROCHEMICAL DEVELOPMENT CORPORATION",
+   "abbr": "CPDC"
+  },
+  "1560": {
+   "name": "KINIK COMPANY",
+   "abbr": "KINIK"
+  },
+  "1723": {
+   "name": "CHINA STEEL CHEMICAL CO.,",
+   "abbr": "CSCC"
+  },
+  "5388": {
+   "name": "Sercomm Corporation",
+   "abbr": "Sercomm"
+  },
+  "1435": {
+   "name": "CHUNG  FU TEX-INTERNATIONAL  CORPORATION",
+   "abbr": "C.F.CORP."
+  },
+  "7863": {
+   "name": "Central Taiwan Science Park Logistics Co.,Ltd",
+   "abbr": "CTSPL"
+  },
+  "5871": {
+   "name": "Chailease Holding Company Limited",
+   "abbr": "Chailease"
+  },
+  "1718": {
+   "name": "China Man-Made Fiber Corporation",
+   "abbr": "CMFC"
+  },
+  "4702": {
+   "name": "ALLIED INDUSTRIAL CORP.,LTD.",
+   "abbr": "ALLIED"
+  },
+  "5483": {
+   "name": "Sino-American Silicon Products Inc.",
+   "abbr": "SAS"
+  },
+  "9930": {
+   "name": "CHC RESOURCES CORPORATION",
+   "abbr": "CHC"
+  },
+  "1513": {
+   "name": "CHUNG-HSIN ELECTRIC & MACHINERY MFG. CORP.",
+   "abbr": "CHEM"
+  },
+  "2612": {
+   "name": "Chinese Maritime Transport Ltd.",
+   "abbr": "CMT"
+  },
+  "5205": {
+   "name": "TAIWAN GREEN ENVIRONMENT TECHNOLOGY INC.",
+   "abbr": "TWGET"
+  },
+  "2204": {
+   "name": "China Motor Corporation",
+   "abbr": "CMC"
+  },
+  "1727": {
+   "name": "CHUNG HWA CHEMICAL INDUSTRIAL WORKS,LTD.",
+   "abbr": "CHCIW"
+  },
+  "7765": {
+   "name": "CHT Security Co., Ltd.",
+   "abbr": "CHT Security"
+  },
+  "2412": {
+   "name": "Chunghwa Telecom Co., Ltd",
+   "abbr": "CHT"
+  },
+  "4205": {
+   "name": "CHUNG HWA  FOOD  INDUSTRIAL CO., LTD.",
+   "abbr": "CHUNG HWA"
+  },
+  "5403": {
+   "name": "DIMERCO DATA SYSTEM CORPORATION",
+   "abbr": "DDSC"
+  },
+  "5609": {
+   "name": "Dimerco Express Corporation",
+   "abbr": "DIMERCO"
+  },
+  "4147": {
+   "name": "TaiMed Biologics Inc.",
+   "abbr": "TMB"
+  },
+  "9928": {
+   "name": "CHINA TELEVISION COMPANY",
+   "abbr": "CTV"
+  },
+  "5604": {
+   "name": "CHUNG LIEN  CO., LTD",
+   "abbr": "CLTC"
+  },
+  "1809": {
+   "name": "China Glaze Co.,Ltd.",
+   "abbr": "China Glaze"
+  },
+  "2002": {
+   "name": "China Steel Corporation",
+   "abbr": "CSC"
+  },
+  "2013": {
+   "name": "China Steel Structure Co.,Ltd.",
+   "abbr": "CSSC"
+  },
+  "1611": {
+   "name": "CHINA ELECTRIC MFG. CORPORATION",
+   "abbr": "CE"
+  },
+  "2014": {
+   "name": "CHUNG HUNG STEEL CORPORATION",
+   "abbr": "CHUNG HUNG"
+  },
+  "9933": {
+   "name": "CTCI Corporation",
+   "abbr": "CTCI"
+  },
+  "7866": {
+   "name": "DLI MEMORY, INC.",
+   "abbr": "DLI"
+  },
+  "6261": {
+   "name": "YOUNGTEK ELECTRONICS CORPORATION",
+   "abbr": "YTEC"
+  },
+  "6114": {
+   "name": "JUIC INTERNATIONAL CORPORATION",
+   "abbr": "JUIC"
+  },
+  "6720": {
+   "name": "Major Power Technology Co.,Ltd.",
+   "abbr": "MP"
+  },
+  "6167": {
+   "name": "POWERTIP TECH. CORP.",
+   "abbr": "POWERTIP"
+  },
+  "6498": {
+   "name": "POWERTIP IMAGE CORP.",
+   "abbr": "PTIC"
+  },
+  "5547": {
+   "name": "Jioushun Construction Co., Ltd.",
+   "abbr": "Jioushun"
+  },
+  "4173": {
+   "name": "ARICH ENTERPRISE CO., LTD.",
+   "abbr": "ARICH"
+  },
+  "4559": {
+   "name": "Joy Industrial Co., Ltd",
+   "abbr": "Joy-tech"
+  },
+  "5011": {
+   "name": "OFCO Industrial Corporation",
+   "abbr": "OFCO"
+  },
+  "5243": {
+   "name": "Eson Precision Ind. Co., Ltd.",
+   "abbr": "ESON"
+  },
+  "8040": {
+   "name": "IC Plus Corp.",
+   "abbr": "IC+"
+  },
+  "6127": {
+   "name": "LEATEC FINE CERAMICS CO., LTD.",
+   "abbr": "LEATEC"
+  },
+  "6494": {
+   "name": "Nyquest Technology Co., Ltd.",
+   "abbr": "Nyquest"
+  },
+  "1269": {
+   "name": "KANPAI CO., LTD",
+   "abbr": "KANPAI"
+  },
+  "7898": {
+   "name": "Inpsytech, Inc.",
+   "abbr": "InPsy"
+  },
+  "4916": {
+   "name": "PARPRO CORPORATION",
+   "abbr": "PARPRO"
+  },
+  "3633": {
+   "name": "Epoch Chemtronics Corp",
+   "abbr": "ECC"
+  },
+  "2390": {
+   "name": "EVERSPRING INDUSTRY CO.,LTD.",
+   "abbr": "EVERSPRING"
+  },
+  "6486": {
+   "name": "Interactive Digital Technologies Inc.",
+   "abbr": "IDT"
+  },
+  "2433": {
+   "name": "HUXEN CORPORATION.",
+   "abbr": "HUXEN"
+  },
+  "2745": {
+   "name": "LIFE TRAVEL & TOURIST SERVICE CO., LTD.",
+   "abbr": "LIFE TRAVEL"
+  },
+  "1733": {
+   "name": "Apex Biotechnology Corp.",
+   "abbr": "ApexBio"
+  },
+  "3169": {
+   "name": "ASIX ELECTRONICS CORPORATION",
+   "abbr": "ASIX"
+  },
+  "6109": {
+   "name": "ATECH OEM INC.",
+   "abbr": "AtechOEM"
+  },
+  "3019": {
+   "name": "ASIA OPTICAL CO., INC.",
+   "abbr": "ASIA"
+  },
+  "1514": {
+   "name": "ALLIS ELECTRIC CO.,LTD.",
+   "abbr": "AEC"
+  },
+  "1530": {
+   "name": "Awea mechantronic co.,ltd",
+   "abbr": "AWEA"
+  },
+  "3516": {
+   "name": "ADO  OPTRONICS  CORPORATION",
+   "abbr": "ADO"
+  },
+  "6201": {
+   "name": "YA HORNG ELECTRONIC CO.,LTD",
+   "abbr": "YAHORNG"
+  },
+  "1590": {
+   "name": "AIRTAC INTERNATIONAL GROUP",
+   "abbr": "AIRTAC"
+  },
+  "5213": {
+   "name": "YeaShin International Development Co., Ltd.",
+   "abbr": "YeaShin"
+  },
+  "6748": {
+   "name": "ACRO Biomedical Co., Ltd.",
+   "abbr": "ACRO Biomedical"
+  },
+  "7566": {
+   "name": "Argo Yachts Development Co.,Ltd.",
+   "abbr": "AYDC"
+  },
+  "1102": {
+   "name": "Asia Cement Corporation",
+   "abbr": "ACC"
+  },
+  "4974": {
+   "name": "ASIA TECH IMAGE INC.",
+   "abbr": "ATII"
+  },
+  "6727": {
+   "name": "Asia Metal Industries, Inc.",
+   "abbr": "AMI"
+  },
+  "2754": {
+   "name": "KURA SUSHI ASIA CO., LTD.",
+   "abbr": "KURA SUSHI ASIA"
+  },
+  "6113": {
+   "name": "ASEC International Corporation",
+   "abbr": "ASEC"
+  },
+  "6139": {
+   "name": "L & K ENGINEERING CO., LTD.",
+   "abbr": "L & K"
+  },
+  "1308": {
+   "name": "ASIA POLYMER CORPORATION",
+   "abbr": "APC"
+  },
+  "2630": {
+   "name": "Air Asia Company Ltd",
+   "abbr": "AACL"
+  },
+  "4133": {
+   "name": "Abnova（Taiwan）Corporation",
+   "abbr": "Abnova"
+  },
+  "6179": {
+   "name": "ATE ENERGY INTERNATIONAL CO. LTD.",
+   "abbr": "ATE ENERGY"
+  },
+  "5703": {
+   "name": "The Landis Taipei Hotel Co., Ltd",
+   "abbr": "Landis Taipei"
+  },
+  "4939": {
+   "name": "Asia Electronic Material Co., Ltd.",
+   "abbr": "AEM"
+  },
+  "7760": {
+   "name": "ENJOY WARMTH CO., LTD",
+   "abbr": "ENJOY"
+  },
+  "2449": {
+   "name": "KING YUAN ELECTRONICS CO., LTD.",
+   "abbr": "KYEC"
+  },
+  "2524": {
+   "name": "King's Town Construction Co., LTD.",
+   "abbr": "KTC"
+  },
+  "6419": {
+   "name": "NUUO INC.",
+   "abbr": "NUUO"
+  },
+  "2942": {
+   "name": "Jing-Jan Retail Business Co., Ltd.",
+   "abbr": "Jing-Jan"
+  },
+  "3413": {
+   "name": "Foxsemicon Integrated Technology Inc.",
+   "abbr": "Fiti"
+  },
+  "7767": {
+   "name": "HIGH PERFORMANCE INFORMATION CO., LTD.",
+   "abbr": "HPI"
+  },
+  "2324": {
+   "name": "Compal Electronics, Inc.",
+   "abbr": "Compal"
+  },
+  "6696": {
+   "name": "Lin BioScience, Inc.",
+   "abbr": "LBS"
+  },
+  "6209": {
+   "name": "KINKO OPTICAL CO.,LTD.",
+   "abbr": "KINKO"
+  },
+  "6432": {
+   "name": "ARLITECH ELECTRONIC CORP.",
+   "abbr": "ARLITECH"
+  },
+  "3011": {
+   "name": "Ji-Haw Industrial Co.,Ltd.",
+   "abbr": "JH"
+  },
+  "7729": {
+   "name": "Steminent Biotherapeutics Inc.",
+   "abbr": "SBI"
+  },
+  "2419": {
+   "name": "HITRON TECHNOLOGIES INC.",
+   "abbr": "H.T."
+  },
+  "7904": {
+   "name": "CITIESOCIAL CO., LTD.",
+   "abbr": "Citiesocial"
+  },
+  "6689": {
+   "name": "eCloudvalley Digital Technology Co., Ltd.",
+   "abbr": "ECV"
+  },
+  "8076": {
+   "name": "FIRICH ENTERPRISES CO.,LTD.",
+   "abbr": "FIRICH"
+  },
+  "6859": {
+   "name": "BEST PRECISION INDUSTRIAL CO., LTD.",
+   "abbr": "BEST OPT"
+  },
+  "6904": {
+   "name": "PROXENE TOOLS CO., LTD.",
+   "abbr": "PROXENE"
+  },
+  "1558": {
+   "name": "ZENG HSING INDUSTRIAL CO., LTD.",
+   "abbr": "ZENG HSING"
+  },
+  "3508": {
+   "name": "Ways Technical Corp., LTD",
+   "abbr": "Ways"
+  },
+  "4190": {
+   "name": "JOURDENESS GROUP LIMITED",
+   "abbr": "JDS"
+  },
+  "4980": {
+   "name": "JORJIN TECHNOLOGIES INC.",
+   "abbr": "JORJIN"
+  },
+  "7854": {
+   "name": "JOULES MILES CO.,LTD",
+   "abbr": "JMS"
+  },
+  "6929": {
+   "name": "We Can Medicines Co., Ltd.",
+   "abbr": "We Can"
+  },
+  "8024": {
+   "name": "Alpha Microelectronics Corp.",
+   "abbr": "Alpha"
+  },
+  "3205": {
+   "name": "Sagittarius Life Science Corp.",
+   "abbr": "SLS"
+  },
+  "3031": {
+   "name": "BRIGHT LED ELECTRONICS CORP",
+   "abbr": "BRIGHT"
+  },
+  "2352": {
+   "name": "Qisda Corporation",
+   "abbr": "Qisda"
+  },
+  "4976": {
+   "name": "Calin Technology  Co., Ltd.",
+   "abbr": "Calin"
+  },
+  "1449": {
+   "name": "CHIA HER INDUSTRIAL CO., LTD.",
+   "abbr": "CHIA HER"
+  },
+  "2033": {
+   "name": "CHIA TA WORLD CO.,LTD",
+   "abbr": "CHIA TA"
+  },
+  "6197": {
+   "name": "JPC connectivity Inc.",
+   "abbr": "JPC"
+  },
+  "1227": {
+   "name": "STANDARD FOODS CORPORATION",
+   "abbr": "SFC"
+  },
+  "3310": {
+   "name": "CHIALIN Precision Industrial Co., Ltd.",
+   "abbr": "CHIALIN"
+  },
+  "5355": {
+   "name": "GIA TZOONG ENTERPRISE CO.,LTD",
+   "abbr": "PSC"
+  },
+  "2374": {
+   "name": "ABILITY ENTERPRISE CO., LTD.",
+   "abbr": "ABILITY"
+  },
+  "7783": {
+   "name": "Giant Heavy Machinery Service Corporation",
+   "abbr": "Giant"
+  },
+  "6284": {
+   "name": "INPAQ TECHNOLOGY CO., LTD.",
+   "abbr": "INPAQ"
+  },
+  "4104": {
+   "name": "EXCELSIOR MEDICAL CO.,LTD",
+   "abbr": "EXCELSIOR"
+  },
+  "9955": {
+   "name": "Super Dragon Technology Co., Ltd",
+   "abbr": "SDTI"
+  },
+  "5452": {
+   "name": "UNIC TECHNOLOGY CORP.",
+   "abbr": "UNIC"
+  },
+  "6890": {
+   "name": "Lai Yih Footwear Co.,Ltd.",
+   "abbr": "Lai Yih"
+  },
+  "8066": {
+   "name": "LIFESTYLE GLOBAL ENTERPRISE INC.",
+   "abbr": "LIFESTYLE"
+  },
+  "7834": {
+   "name": "LYDSEC DIGITAL TECHNOLOGY CO., LTD",
+   "abbr": "LYDSEC DIGITAL"
+  },
+  "7816": {
+   "name": "RITWIN CORPORATION",
+   "abbr": "RITWIN"
+  },
+  "6799": {
+   "name": "M3 Technology Inc.",
+   "abbr": "M3TEK"
+  },
+  "6517": {
+   "name": "BASO PRECISION OPTICS LTD.",
+   "abbr": "BASO"
+  },
+  "6472": {
+   "name": "Bora Pharmaceuticals Co., Ltd.",
+   "abbr": "Bora"
+  },
+  "8423": {
+   "name": "Polygreen Resources Co., Ltd.",
+   "abbr": "Polygreen"
+  },
+  "8093": {
+   "name": "ENERMAX TECHNOLOGY CORPORATION",
+   "abbr": "ENERMAX"
+  },
+  "1109": {
+   "name": "Hsing Ta Cement Co.,Ltd",
+   "abbr": "HsingTa"
+  },
+  "6721": {
+   "name": "Sincere Security Corp. Ltd.",
+   "abbr": "Sincere group"
+  },
+  "6173": {
+   "name": "PROSPERITY DIELECTRICS CO., LTD.",
+   "abbr": "P.D.C."
+  },
+  "4303": {
+   "name": "HSINLI CHEMICAL INDUSTRIAL CORP.",
+   "abbr": "HSINLI"
+  },
+  "6667": {
+   "name": "Trusval Technology Co., Ltd.",
+   "abbr": "Trusval"
+  },
+  "9940": {
+   "name": "Sinyi Realty Inc.",
+   "abbr": "Sinyi"
+  },
+  "3023": {
+   "name": "SINBON ELECTRONICS CO.,LTD.",
+   "abbr": "SINBON"
+  },
+  "1582": {
+   "name": "SYNCMOLD ENTERPRISE CORP.",
+   "abbr": "SYNCMOLD"
+  },
+  "6126": {
+   "name": "SINGATRON ENTERPRISE CO.,LTD",
+   "abbr": "SINGATRON"
+  },
+  "5274": {
+   "name": "ASPEED TECHNOLOGY INC.",
+   "abbr": "ASPEED"
+  },
+  "1568": {
+   "name": "TSANG YOW INDUSTRIAL CO.,LTD.",
+   "abbr": "T.Y."
+  },
+  "6538": {
+   "name": "Brave C&H Supply Co.,Ltd",
+   "abbr": "Brave Screen"
+  },
+  "7882": {
+   "name": "Beiley Biofund Inc.",
+   "abbr": "Beiley Biofund"
+  },
+  "7822": {
+   "name": "V5 TECHNOLOGIES CO., LTD.",
+   "abbr": "V5 TECHNOLOGIES"
+  },
+  "6874": {
+   "name": "M-POWER INFORMATION Co., LTD.",
+   "abbr": "M-POWER"
+  },
+  "6270": {
+   "name": "Professional Computer Technology Limited",
+   "abbr": "PCT"
+  },
+  "2432": {
+   "name": "Acer Gadget Inc.",
+   "abbr": "AGT"
+  },
+  "3219": {
+   "name": "Aethertek technology co., Ltd.",
+   "abbr": "Aethertek"
+  },
+  "2364": {
+   "name": "TWINHEAD INTERNATIONAL CORP.",
+   "abbr": "Twinhead"
+  },
+  "1465": {
+   "name": "WISHER INDUSTRIAL CO., LTD.",
+   "abbr": "WISHER"
+  },
+  "6865": {
+   "name": "WebComm Technology Co., Ltd.",
+   "abbr": "WebComm"
+  },
+  "9912": {
+   "name": "Associated Industries China, Inc.",
+   "abbr": "AIC"
+  },
+  "3032": {
+   "name": "COMPUCASE ENTERPRISE CO., LTD.",
+   "abbr": "COMPUCASE"
+  },
+  "2436": {
+   "name": "Weltrend Semiconductor, Inc.",
+   "abbr": "Weltrend"
+  },
+  "4130": {
+   "name": "Genovate Biotechnology Co., LTD.",
+   "abbr": "GBL"
+  },
+  "4502": {
+   "name": "JIAN SIN INDUSTRIAL CO, LTD",
+   "abbr": "RT"
+  },
+  "3003": {
+   "name": "K.S. TERMINALS INC.",
+   "abbr": "KST"
+  },
+  "4114": {
+   "name": "SYNMOSA BIOPHARMA CORPORATION",
+   "abbr": "SYNMOSA"
+  },
+  "4561": {
+   "name": "Kenturn Nano. Tec. Co., Ltd.",
+   "abbr": "Kenturn"
+  },
+  "3653": {
+   "name": "JENTECH PRECISION INDUSTRIAL CO., LTD.",
+   "abbr": "JENTECH"
+  },
+  "3044": {
+   "name": "Tripod Technology Corporation",
+   "abbr": "Tripod"
+  },
+  "6723": {
+   "name": "JG Environmental Technology Co.,Ltd.",
+   "abbr": "JG"
+  },
+  "4570": {
+   "name": "JASON CO.,LTD",
+   "abbr": "JASON"
+  },
+  "8102": {
+   "name": "JEILIN TECHNOLOGY CORP., LTD.",
+   "abbr": "JEILIN"
+  },
+  "4994": {
+   "name": "X-LEGEND ENTERTAINMENT CO., LTD.",
+   "abbr": "X-LEGEND"
+  },
+  "3078": {
+   "name": "CHANNEL WELL TECHNOLOGY CO.,LTD",
+   "abbr": "CWT"
+  },
+  "2393": {
+   "name": "Everlight Electronics Co., Ltd.",
+   "abbr": "EVERLIGHT"
+  },
+  "1616": {
+   "name": "EVERTOP WIRE CABLE CORPORATION",
+   "abbr": "EVERTOP"
+  },
+  "6423": {
+   "name": "Yield Microelectronics Corp.",
+   "abbr": "YMC"
+  },
+  "8464": {
+   "name": "Nien Made Enterprise Co., Ltd.",
+   "abbr": "Nien Made"
+  },
+  "6604": {
+   "name": "JUOKU TECHNOLOGY CO., LTD.",
+   "abbr": "JUOKU"
+  },
+  "1476": {
+   "name": "ECLAT TEXTILE CO., LTD.",
+   "abbr": "ECLAT"
+  },
+  "4150": {
+   "name": "UNICON OPTICAL CO., LTD.",
+   "abbr": "UNICON"
+  },
+  "4121": {
+   "name": "ROSSMAX INTERNATIONAL LTD.",
+   "abbr": "ROSSMAX"
+  },
+  "3217": {
+   "name": "ARGOSY RESEARCH INC.",
+   "abbr": "ARGOSY"
+  },
+  "2034": {
+   "name": "YC INOX CO.,LTD",
+   "abbr": "YC"
+  },
+  "3685": {
+   "name": "Tradetool Auto Co., Ltd.",
+   "abbr": "TAC"
+  },
+  "6023": {
+   "name": "Yuanta Futures Co., Ltd.",
+   "abbr": "Yuanta Futures"
+  },
+  "2885": {
+   "name": "Yuanta Financial Holding Co., Ltd",
+   "abbr": "Yuanta Group"
+  },
+  "8069": {
+   "name": "E INK HOLDINGS INC.",
+   "abbr": "EIH"
+  },
+  "6275": {
+   "name": "YEN SUN TECHNOLOGY  CORP",
+   "abbr": "Y.S.TECH"
+  },
+  "6443": {
+   "name": "TSEC CORPORATION",
+   "abbr": "TSEC"
+  },
+  "6864": {
+   "name": "Anti-Microbial Savior BioteQ Co., Ltd.",
+   "abbr": "A.M.S."
+  },
+  "1725": {
+   "name": "YUAN JEN ENTERPRISES CO.,LTD.",
+   "abbr": "YJE"
+  },
+  "4564": {
+   "name": "MOSA INDUSTRIAL CORPORATION",
+   "abbr": "MOSA"
+  },
+  "7895": {
+   "name": "YUAN JIN CHUANG ENTERPRISE CO., LTD.",
+   "abbr": "YJC"
+  },
+  "7892": {
+   "name": "META Green Cooling Technology Co., Ltd.",
+   "abbr": "MGC"
+  },
+  "3548": {
+   "name": "JARLLYTEC  CO. , LTD.",
+   "abbr": "JARLLY"
+  },
+  "2444": {
+   "name": "AboCom Systems,Inc.",
+   "abbr": "AboCom"
+  },
+  "6959": {
+   "name": "ION ELECTRONIC MATERIALS CO., LTD.",
+   "abbr": "iemc"
+  },
+  "6944": {
+   "name": "Mega Union Technology Inc.",
+   "abbr": "Mega Union"
+  },
+  "2886": {
+   "name": "Mega Financial Holding Company Ltd.",
+   "abbr": "MEGA FHC"
+  },
+  "2485": {
+   "name": "ZINWELL  CORPORATION",
+   "abbr": "ZINWELL"
+  },
+  "3531": {
+   "name": "Shian Yih Electronic Industry Co., Ltd",
+   "abbr": "Shian Yih"
+  },
+  "3362": {
+   "name": "ABILITY OPTO-ELECTRONICS TECHNOLOGY CO.,LTD.",
+   "abbr": "ABILITY"
+  },
+  "2301": {
+   "name": "LITE-ON TECHNOLOGY CORP.",
+   "abbr": "LTC"
+  },
+  "4420": {
+   "name": "Kwang Ming Silk Mill Co., Ltd.",
+   "abbr": "Kwang Ming"
+  },
+  "7561": {
+   "name": "Bioray Biotech Co., Ltd",
+   "abbr": "Bioray Biotech"
+  },
+  "1785": {
+   "name": "Solar Applied Materials Technology Corp.",
+   "abbr": "Solar"
+  },
+  "7728": {
+   "name": "Enli Technology Co.,Ltd",
+   "abbr": "Enlitech"
+  },
+  "3234": {
+   "name": "TrueLight Corporation",
+   "abbr": "TrueLight"
+  },
+  "6595": {
+   "name": "Julien's International Entertainment Group",
+   "abbr": "Julien's Group"
+  },
+  "2338": {
+   "name": "TAIWAN MASK CORP.",
+   "abbr": "TMC"
+  },
+  "2461": {
+   "name": "K LASER TECHNOLOGY INC.",
+   "abbr": "K LASER"
+  },
+  "3666": {
+   "name": "Optivision Technology Inc.",
+   "abbr": "OTI"
+  },
+  "6442": {
+   "name": "EZconn Corporation",
+   "abbr": "EZconn"
+  },
+  "6111": {
+   "name": "Star Fusion Group Co., Ltd.",
+   "abbr": "SFG"
+  },
+  "5315": {
+   "name": "UNITED RADIANT TECHNOLOGY CORPORATION",
+   "abbr": "U.R.T."
+  },
+  "8032": {
+   "name": "Koryo Electronics Co., Ltd.",
+   "abbr": "KORYO"
+  },
+  "5381": {
+   "name": "Spectrum Electrics Corporation",
+   "abbr": "SPE"
+  },
+  "7782": {
+   "name": "SPEEDING ROCKET CO., LTD",
+   "abbr": "SPEEDING ROCKET"
+  },
+  "4956": {
+   "name": "Epileds Technologies, Inc.",
+   "abbr": "Epileds"
+  },
+  "8916": {
+   "name": "KWONG LUNG ENTERPRISE CO.,LTD.",
+   "abbr": "KLF"
+  },
+  "4581": {
+   "name": "World Known MFG (Cayman) Limited",
+   "abbr": "WKG"
+  },
+  "3624": {
+   "name": "VIKING TECH CORPORATION",
+   "abbr": "VIKING"
+  },
+  "6431": {
+   "name": "Kuangli Bio-Tech Holdings Co., Ltd.",
+   "abbr": "KL"
+  },
+  "6226": {
+   "name": "Para Light Electronics Co., Ltd.",
+   "abbr": "Para Light"
+  },
+  "6850": {
+   "name": "BIOPTIC INC.",
+   "abbr": "BIOPTIC"
+  },
+  "2305": {
+   "name": "Microtek International, Inc.",
+   "abbr": "MII"
+  },
+  "3038": {
+   "name": "EMERGING DISPLAY TECHNOLOGIES CORP.",
+   "abbr": "EDT"
+  },
+  "9937": {
+   "name": "National Petroleum Co., Ltd.",
+   "abbr": "NPC"
+  },
+  "6281": {
+   "name": "E-LIFE CORPORATION",
+   "abbr": "E-LIFE"
+  },
+  "2509": {
+   "name": "CHAINQUI  CONSTRUCTION DEVELOPMENT CO.,LTD",
+   "abbr": "CHAINQUI"
+  },
+  "3067": {
+   "name": "PNC INTERNATIONAL INC.",
+   "abbr": "PNC"
+  },
+  "6651": {
+   "name": "Cystech Electronics Corp.",
+   "abbr": "CYSTEK"
+  },
+  "4148": {
+   "name": "All Cosmos Bio-Tech Holding Corporation",
+   "abbr": "ACBT"
+  },
+  "5903": {
+   "name": "Taiwan FamilyMart.Co., Ltd.",
+   "abbr": "FamilyMart"
+  },
+  "7708": {
+   "name": "Family International Gourmet Co.,Ltd",
+   "abbr": "FIG"
+  },
+  "2718": {
+   "name": "Allmind Holdings Corporation.",
+   "abbr": "Allmind"
+  },
+  "2455": {
+   "name": "VISUAL PHOTONICS EPITAXY CO., LTD.",
+   "abbr": "VPEC"
+  },
+  "8272": {
+   "name": "Changing Information Technology Inc.",
+   "abbr": "Changing"
+  },
+  "3015": {
+   "name": "FSP Technology Inc.",
+   "abbr": "FSP"
+  },
+  "4540": {
+   "name": "TBI MOTION TECHNOLOGY CO., LTD.",
+   "abbr": "TBI MOTION"
+  },
+  "6885": {
+   "name": "BRIM Biotechnology, Inc.",
+   "abbr": "BRIM"
+  },
+  "3209": {
+   "name": "ALLTEK TECHNOLOGY CORP.",
+   "abbr": "ALLTEK"
+  },
+  "5222": {
+   "name": "TRANSCOM, INC.",
+   "abbr": "TRANSCOM"
+  },
+  "6228": {
+   "name": "Pacific Image Electronics Co., Ltd.",
+   "abbr": "PIE"
+  },
+  "8068": {
+   "name": "Chander  Electronics  Corp.",
+   "abbr": "Chander"
+  },
+  "2753": {
+   "name": "Bafang Yunji International Co., Ltd.",
+   "abbr": "Bafang"
+  },
+  "1342": {
+   "name": "CATHAY CONSOLIDATED INC.",
+   "abbr": "CCI Yilan"
+  },
+  "8119": {
+   "name": "Clientron Corp.",
+   "abbr": "Clientron"
+  },
+  "6028": {
+   "name": "Golden Insurance Brokers Co.,Ltd.",
+   "abbr": "GIBC"
+  },
+  "3178": {
+   "name": "GONGIN  PRECISION  INDUSTRIAL  CO.,LTD",
+   "abbr": "GONGIN"
+  },
+  "4569": {
+   "name": "SIXXON TECH. CO., LTD.",
+   "abbr": "Sixxon"
+  },
+  "2115": {
+   "name": "LU HAI HOLDING CORP.",
+   "abbr": "LU HAI"
+  },
+  "2705": {
+   "name": "LEOFOO DEVELOPMENT CO., LTD.",
+   "abbr": "LEOFOO"
+  },
+  "2732": {
+   "name": "La Kaffa International Co., LTD.",
+   "abbr": "La Kaffa"
+  },
+  "6617": {
+   "name": "Gongwin Biopharm Holdings Co., Ltd.",
+   "abbr": "Gongwin"
+  },
+  "3564": {
+   "name": "AEWIN Technologies Co.,Ltd.",
+   "abbr": "AEWIN"
+  },
+  "3372": {
+   "name": "Taiwan IC Packaging Corporation",
+   "abbr": "TICP"
+  },
+  "1337": {
+   "name": "Asia Plastic Recycling Holding Limited",
+   "abbr": "Asia Plastic"
+  },
+  "6758": {
+   "name": "A-SPINE Asia Co., Ltd.",
+   "abbr": "ASA"
+  },
+  "8354": {
+   "name": "KOAN HAO TECHNOLOGY CO.,LTD.",
+   "abbr": "KH"
+  },
+  "2520": {
+   "name": "KINDOM DEVELOPMENT CO., LTD.",
+   "abbr": "KINDOM"
+  },
+  "4439": {
+   "name": "TST Group Holding Ltd.",
+   "abbr": "TST Group"
+  },
+  "2466": {
+   "name": "Cosmo Electronics Corporation",
+   "abbr": "COSMO"
+  },
+  "1806": {
+   "name": "CHAMPION BUILDING MATERIALS CO.,LTD.",
+   "abbr": "CHAMPION"
+  },
+  "8105": {
+   "name": "GIANTPLUS TECHNOLOGY CO., LTD.",
+   "abbr": "GiantPlus"
+  },
+  "5212": {
+   "name": "HYWEB TECHNOLOGY CO., LTD.",
+   "abbr": "HYWEB"
+  },
+  "2453": {
+   "name": "SYSCOM COMPUTER ENGINEERING CO.",
+   "abbr": "SYSCOM"
+  },
+  "3135": {
+   "name": "GoldKey Technology Corporation",
+   "abbr": "Goldkey Tech."
+  },
+  "6166": {
+   "name": "ADLINK TECHNOLOGY INC.",
+   "abbr": "ADLINK"
+  },
+  "4952": {
+   "name": "Generalplus Technology Inc.",
+   "abbr": "Generalplus"
+  },
+  "2401": {
+   "name": "SUNPLUS TECHNOLOGY CO.,LTD.",
+   "abbr": "SUNPLUS"
+  },
+  "5236": {
+   "name": "Sunplus Innovation Technology Inc.",
+   "abbr": "Sunplusit"
+  },
+  "7443": {
+   "name": "FLUXTEK INTERNATIONAL CORP.",
+   "abbr": "FLUXTEK"
+  },
+  "3526": {
+   "name": "ALLTOP TECHNOLOGY CO., LTD.",
+   "abbr": "ALLTOP"
+  },
+  "2883": {
+   "name": "KGI Financial Holding Co., Ltd.",
+   "abbr": "KGI Financial"
+  },
+  "5498": {
+   "name": "KEY  WARE  ELECTRONICS CO., LTD.",
+   "abbr": "KEY WARE"
+  },
+  "1817": {
+   "name": "SANITAR CO.,  LTD.",
+   "abbr": "SANITAR"
+  },
+  "8059": {
+   "name": "CastleNet Technology Inc.",
+   "abbr": "CTI"
+  },
+  "2375": {
+   "name": "KAIMEI ELECTRONIC CORP.",
+   "abbr": "KAIMEI"
+  },
+  "5201": {
+   "name": "K WAY INFORMATION CORPORATION",
+   "abbr": "KWAY"
+  },
+  "5468": {
+   "name": "TM Technology, Inc.",
+   "abbr": "TMTECH"
+  },
+  "7737": {
+   "name": "KDAN Mobile Software Ltd.",
+   "abbr": "KDAN"
+  },
+  "2255": {
+   "name": "JET OPTOELECTRONICS CO., LTD.",
+   "abbr": "JET"
+  },
+  "7725": {
+   "name": "LabTurbo Biotech Corporation",
+   "abbr": "LabTurbo"
+  },
+  "4426": {
+   "name": "LI CHENG ENTERPRISE CO.,LTD.",
+   "abbr": "LI CHENG"
+  },
+  "1517": {
+   "name": "Lee Chi Enterprises Co., Ltd.",
+   "abbr": "Lee Chi"
+  },
+  "3444": {
+   "name": "NICHING INDUSTRIAL CORP.",
+   "abbr": "NICHING"
+  },
+  "7578": {
+   "name": "Revivegen Co., Ltd.",
+   "abbr": "Revivegen"
+  },
+  "1293": {
+   "name": "Lytone Enterprise, Inc.",
+   "abbr": "Lytone"
+  },
+  "1423": {
+   "name": "REWARD WOOL INDUSTRY CORPORATION",
+   "abbr": "REWARD WOOL"
+  },
+  "7702": {
+   "name": "APEX Wind Power Equipment Manufacturing",
+   "abbr": "APEXWP"
+  },
+  "4908": {
+   "name": "APAC Opto Electronics Inc.",
+   "abbr": "APAC"
+  },
+  "6530": {
+   "name": "Axcen Photonics Corporation",
+   "abbr": "Axcen"
+  },
+  "6104": {
+   "name": "GENESYS LOGIC, INC.",
+   "abbr": "GLI"
+  },
+  "3443": {
+   "name": "Global Unichip Corp.",
+   "abbr": "GUC"
+  },
+  "6909": {
+   "name": "Tricorntech Corporation",
+   "abbr": "tCt"
+  },
+  "7828": {
+   "name": "Innostar Service, Inc.",
+   "abbr": "INNOSTAR"
+  },
+  "8477": {
+   "name": "Xxtechec Co., Ltd.",
+   "abbr": "XXTECHEC"
+  },
+  "7714": {
+   "name": "UniForce Technology Corporation",
+   "abbr": "UFTC"
+  },
+  "6899": {
+   "name": "Apex Material Technology Corp.",
+   "abbr": "AMT"
+  },
+  "2451": {
+   "name": "Transcend Information, Inc.",
+   "abbr": "Transcend"
+  },
+  "7918": {
+   "name": "XALLOY Advanced Materials Corporation",
+   "abbr": "XALLOY"
+  },
+  "5701": {
+   "name": "JANFUSUN FANCYWORLD CORP",
+   "abbr": "JFS"
+  },
+  "2228": {
+   "name": "IRON FORCE INDUSTRIAL CO., LTD.",
+   "abbr": "IRF"
+  },
+  "4923": {
+   "name": "FORCE MOS TECHNOLOGY CO., LTD.",
+   "abbr": "Force Mos"
+  },
+  "1515": {
+   "name": "REXON INDUSTRIAL CORP.,LTD",
+   "abbr": "REXON"
+  },
+  "6239": {
+   "name": "Powertech Technology Inc.",
+   "abbr": "PTI"
+  },
+  "5202": {
+   "name": "NewSoft Technology Corporation",
+   "abbr": "NewSoft"
+  },
+  "3529": {
+   "name": "eMemory Technology Inc.",
+   "abbr": "eMemory"
+  },
+  "6719": {
+   "name": "uPI  Semiconductor Corp.",
+   "abbr": "uPI"
+  },
+  "5520": {
+   "name": "Lihtai Construction Enterprise Co., Ltd.",
+   "abbr": "Lihtai"
+  },
+  "3051": {
+   "name": "Optimax Technology Corporation",
+   "abbr": "Optimax"
+  },
+  "6770": {
+   "name": "Powerchip Semiconductor Manufacturing Corp.",
+   "abbr": "PSMC"
+  },
+  "1570": {
+   "name": "De Poan Pneumatic Corp.",
+   "abbr": "De Poan"
+  },
+  "3483": {
+   "name": "Forcecon Technology  Co., Ltd.",
+   "abbr": "FCN"
+  },
+  "4552": {
+   "name": "Lida Holdings Limited",
+   "abbr": "Lida"
+  },
+  "3593": {
+   "name": "LOGAH TECHNOLOGY CORPORATION",
+   "abbr": "Logah"
+  },
+  "6996": {
+   "name": "Forcelead Technology Corp.",
+   "abbr": "forcelead"
+  },
+  "1447": {
+   "name": "LI PENG ENTERPRISE CO., LTD.",
+   "abbr": "LP"
+  },
+  "5512": {
+   "name": "RICH DEVELOPMENT CO.,LTD.",
+   "abbr": "RICH"
+  },
+  "1444": {
+   "name": "LEALEA ENTERPRISE CO.,LTD",
+   "abbr": "LEALEA"
+  },
+  "5364": {
+   "name": "LEALEA HOTELS & RESORTS CO., LTD.",
+   "abbr": "LEALEA HOTELS"
+  },
+  "4109": {
+   "name": "Jia Jie Biomedical Co., Ltd.",
+   "abbr": "Jia Jie Bio"
+  },
+  "3323": {
+   "name": "Celxpert Energy Corporation",
+   "abbr": "Celxpert"
+  },
+  "8182": {
+   "name": "HARMONY ELECTRONICS CORP",
+   "abbr": "HELE"
+  },
+  "6577": {
+   "name": "Promate Solutions Corporation",
+   "abbr": "PSC"
+  },
+  "6591": {
+   "name": "SUN MAX TECH LIMITED",
+   "abbr": "SUN MAX"
+  },
+  "1773": {
+   "name": "Shiny Chemical Industrial Co.,Ltd",
+   "abbr": "SHINY  CHEMICAL"
+  },
+  "6556": {
+   "name": "Topview Optronics Corporation",
+   "abbr": "Topview"
+  },
+  "3296": {
+   "name": "POWERTECH INDUSTRIAL CO., LTD.",
+   "abbr": "POWERTECH"
+  },
+  "1340": {
+   "name": "VICTORY NEW MATERIALS LIMITED COMPANY",
+   "abbr": "VICTORY"
+  },
+  "4304": {
+   "name": "SUNVIC TECHNOLOGY CO.,LTD.",
+   "abbr": "SUNVIC"
+  },
+  "6979": {
+   "name": "Victory for Technology Co., Ltd.",
+   "abbr": "Vft"
+  },
+  "4760": {
+   "name": "AMPLE ELECTRONIC TECHNOLOGY CO.,LTD.",
+   "abbr": "ample"
+  },
+  "6516": {
+   "name": "KINGWAYTEK TECHNOLOGY CO., LTD.",
+   "abbr": "KINGWAY"
+  },
+  "1437": {
+   "name": "GTM HOLDINGS CORPORATION",
+   "abbr": "GTM"
+  },
+  "1532": {
+   "name": "CHINA METAL PRODUCTS  CO., LTD.",
+   "abbr": "CMP"
+  },
+  "8210": {
+   "name": "CHENBRO MICOM CO., LTD.",
+   "abbr": "CHENBRO"
+  },
+  "5246": {
+   "name": "ProbeLeader Co.,Ltd.",
+   "abbr": "PL"
+  },
+  "8927": {
+   "name": "North-Star International Co., LTD.",
+   "abbr": "Pei Chi"
+  },
+  "6550": {
+   "name": "Polaris Group",
+   "abbr": "PG"
+  },
+  "7785": {
+   "name": "Pershing Technology Services Corporation",
+   "abbr": "PTSC"
+  },
+  "2904": {
+   "name": "Prime Oil Chemical Service Corporation",
+   "abbr": "POCS"
+  },
+  "6754": {
+   "name": "RICH HONOUR INTERNATIONAL DESIGNS CO., LTD.",
+   "abbr": "Rich Honour"
+  },
+  "8431": {
+   "name": "Superior Plating Technology Co., Ltd.",
+   "abbr": "SPT"
+  },
+  "4967": {
+   "name": "TEAM GROUP INC.",
+   "abbr": "TEAM"
+  },
+  "3236": {
+   "name": "ABC  TAIWAN ELECTRONICS CORP.",
+   "abbr": "ABC"
+  },
+  "2025": {
+   "name": "CHIEN SHING STAINLESS STEEL CO.,LTD",
+   "abbr": "CSSSC"
+  },
+  "8383": {
+   "name": "CHEN FULL INTERNATIONAL CO., LTD.",
+   "abbr": "ChenFull"
+  },
+  "6829": {
+   "name": "CHENFULL PRECISION CO., LTD",
+   "abbr": "CFPREC"
+  },
+  "2496": {
+   "name": "Success Prime Corporation",
+   "abbr": "SPC"
+  },
+  "4533": {
+   "name": "SHIEH YIH MACHINERY INDUSTRY CO., LTD",
+   "abbr": "SEYI"
+  },
+  "5356": {
+   "name": "SIRTEC INTERNATIONAL CO., LTD.",
+   "abbr": "SIRTEC"
+  },
+  "3071": {
+   "name": "ADDA CORP.",
+   "abbr": "ADDA"
+  },
+  "1303": {
+   "name": "NAN YA PLASTICS CORPORATION",
+   "abbr": "NPC"
+  },
+  "2408": {
+   "name": "NANYA TECHNOLOGY CORPORATION",
+   "abbr": "NTC"
+  },
+  "5905": {
+   "name": "NAN REN LAKE  LEISURE AMUSEMENT CO., LTD.",
+   "abbr": "NRL"
+  },
+  "6584": {
+   "name": "NAN JUEN INTERNATIONAL CO., LTD.",
+   "abbr": "NAN JUEN"
+  },
+  "1702": {
+   "name": "Namchow Holdings Co., Ltd.",
+   "abbr": "NAMCHOW"
+  },
+  "1752": {
+   "name": "NANG KUANG PHARMACECUTICAL CO., LTD",
+   "abbr": "NANG KUANG"
+  },
+  "6504": {
+   "name": "NAN LIU ENTERPRISE CO., LTD",
+   "abbr": "NAN LIU"
+  },
+  "4766": {
+   "name": "NAN PAO RESINS CHEMICAL CO., LTD.",
+   "abbr": "NAN PAO"
+  },
+  "2108": {
+   "name": "NANTEX INDUSTRY.CO.,LTD.",
+   "abbr": "NANTEX"
+  },
+  "1410": {
+   "name": "NAN YANG DYEING & FINISHING CO.,LTD",
+   "abbr": "NYDF"
+  },
+  "2101": {
+   "name": "NANKANG RUBBER TIRE CORP.,LTD.",
+   "abbr": "NK"
+  },
+  "1440": {
+   "name": "TAINAN  SPINNING  CO. , LTD.",
+   "abbr": "TAINAN SPINNING"
+  },
+  "1467": {
+   "name": "TEX-RAY INDUSTRIAL CO.,LTD.",
+   "abbr": "TEX-RAY"
+  },
+  "5450": {
+   "name": "NAM LIONG GLOBAL CORPORATION",
+   "abbr": "NAMLIONG"
+  },
+  "8150": {
+   "name": "ChipMOS TECHNOLOGIES INC.",
+   "abbr": "ChipMOS"
+  },
+  "8046": {
+   "name": "NAN YA PRINTED CIRCUIT BOARD CORPORATION",
+   "abbr": "N.P.C"
+  },
+  "7562": {
+   "name": "LEX COMPUTECH CO., LTD",
+   "abbr": "LEX"
+  },
+  "3555": {
+   "name": "BaaS Innovation Co., Ltd.",
+   "abbr": "BaaS"
+  },
+  "8109": {
+   "name": "P-DUKE  TECHNOLOGY  CO.,LTD.",
+   "abbr": "P-DUKE"
+  },
+  "6997": {
+   "name": "Nextlink Technology Co., Limited",
+   "abbr": "Nextlink"
+  },
+  "6733": {
+   "name": "BioGend Therapeutics Co., Ltd.",
+   "abbr": "BioGend"
+  },
+  "8155": {
+   "name": "ALLIED CIRCUIT CO.,LTD",
+   "abbr": "ACCL"
+  },
+  "6972": {
+   "name": "PROTRADE APPLIED MATERIALS CORP.",
+   "abbr": "PROTRADE"
+  },
+  "7712": {
+   "name": "POTENS SEMICONDUCTOR CORP.",
+   "abbr": "POTENS"
+  },
+  "7891": {
+   "name": "BoYen Therapeutics,Inc.",
+   "abbr": "BoYen"
+  },
+  "3581": {
+   "name": "ZEN VOCE CORPORATION",
+   "abbr": "ZVC"
+  },
+  "6572": {
+   "name": "PlexBio Co.,Ltd.",
+   "abbr": "PlexBio"
+  },
+  "1215": {
+   "name": "CHAROEN POKPHAND ENTERPRISE(TAIWAN) CO., LTD.",
+   "abbr": "CPE"
+  },
+  "7734": {
+   "name": "ABLEPRINT TECHNOLOGY CO., LTD.",
+   "abbr": "APT"
+  },
+  "2107": {
+   "name": "FORMOSAN RUBBER GROUP INC.",
+   "abbr": "FRG"
+  },
+  "6483": {
+   "name": "Original BioMedicals Co., Ltd.",
+   "abbr": "OBM"
+  },
+  "3227": {
+   "name": "PixArt Imaging Inc.",
+   "abbr": "PXI"
+  },
+  "3095": {
+   "name": "Taiwan CHI CHENG Enterprise Co., Ltd.",
+   "abbr": "CCC"
+  },
+  "6142": {
+   "name": "CAMEO COMMUNICATIONS,INC.",
+   "abbr": "CAMEO"
+  },
+  "3580": {
+   "name": "UVAT Technology Co., Ltd.",
+   "abbr": "UVAT"
+  },
+  "6583": {
+   "name": "YOOSONN Entertainment Co., Ltd.",
+   "abbr": "YOOSONN"
+  },
+  "4120": {
+   "name": "Orient Europharma Co., Ltd.",
+   "abbr": "OEP"
+  },
+  "2332": {
+   "name": "D-Link Corporation",
+   "abbr": "D-LINK"
+  },
+  "4933": {
+   "name": "UBRIGHT OPTRONICS CORPORATION",
+   "abbr": "UBRIGHT"
+  },
+  "2397": {
+   "name": "DFI Inc.",
+   "abbr": "DFI Inc."
+  },
+  "2409": {
+   "name": "AUO Corporation",
+   "abbr": "AUO"
+  },
+  "7718": {
+   "name": "SPEC Products Corp.",
+   "abbr": "SPEC"
+  },
+  "4166": {
+   "name": "Orient Pharma Co., Ltd.",
+   "abbr": "OP"
+  },
+  "6752": {
+   "name": "Galaxy Software Services Corporation",
+   "abbr": "GSS"
+  },
+  "8422": {
+   "name": "Cleanaway Company Limited",
+   "abbr": "Cleanaway"
+  },
+  "2474": {
+   "name": "CATCHER TECHNOLOGY CO., LTD.",
+   "abbr": "CATCHER"
+  },
+  "2812": {
+   "name": "TAICHUNG COMMERCIAL BANK Co., Ltd.",
+   "abbr": "T.C.C.B."
+  },
+  "2340": {
+   "name": "Taiwan-Asia Semiconductor Corporation",
+   "abbr": "TASC"
+  },
+  "2383": {
+   "name": "ELITE  MATERIAL CO., LTD.",
+   "abbr": "EMC"
+  },
+  "3532": {
+   "name": "FORMOSA SUMCO TECHNOLOGY CORPORATION",
+   "abbr": "FST"
+  },
+  "1326": {
+   "name": "FORMOSA CHEMICALS & FIBRE CORPORATION",
+   "abbr": "FCFC"
+  },
+  "5425": {
+   "name": "TAIWAN SEMICONDUCTOR CO., LTD.",
+   "abbr": "TSC"
+  },
+  "1473": {
+   "name": "TAINAN ENTERPRISES CO.,LTD",
+   "abbr": "TAINAN"
+  },
+  "5878": {
+   "name": "TAIMING ASSURANCE BROKER CO.,LTD.",
+   "abbr": "TABC"
+  },
+  "3221": {
+   "name": "TAI-SAW TECHNOLOGY CO.,LTD.",
+   "abbr": "TST"
+  },
+  "1301": {
+   "name": "Formosa Plastics Corporation",
+   "abbr": "FPC"
+  },
+  "6505": {
+   "name": "Formosa Petrochemical Corp",
+   "abbr": "FPCC"
+  },
+  "8476": {
+   "name": "TAIWAN ENVIRONMENT SCIENTIFIC CO., LTD.",
+   "abbr": "TESC"
+  },
+  "1454": {
+   "name": "TAIWAN TAFFETA FABRIC CO., LTD",
+   "abbr": "TTF"
+  },
+  "6892": {
+   "name": "TAIWAN BIO THERAPEUTICS INC.",
+   "abbr": "TWB"
+  },
+  "6589": {
+   "name": "EirGenix Inc.",
+   "abbr": "EirGenix"
+  },
+  "6767": {
+   "name": "Wiltrom Co., Ltd.",
+   "abbr": "Wiltrom"
+  },
+  "2314": {
+   "name": "MICROELECTRONICS TECHNOLOGY INC.",
+   "abbr": "MTI"
+  },
+  "6464": {
+   "name": "Taiwan Optical Platform Co., Ltd.",
+   "abbr": "top MSO"
+  },
+  "2887": {
+   "name": "TS Financial Holding Co., Ltd.",
+   "abbr": "TS Holdings"
+  },
+  "6838": {
+   "name": "Formosa Pharmaceuticals, Inc.",
+   "abbr": "FRMSP"
+  },
+  "3265": {
+   "name": "Winstek Semiconductor Co., Ltd.",
+   "abbr": "WST"
+  },
+  "7921": {
+   "name": "Recharge Power Co., Ltd.",
+   "abbr": "Recharge Power"
+  },
+  "5353": {
+   "name": "Tailyn Technologies, Inc.",
+   "abbr": "Tailyn"
+  },
+  "1220": {
+   "name": "TAI  ROUN  PRODUCTS CO.,LTD.",
+   "abbr": "TAIROUN"
+  },
+  "2103": {
+   "name": "TSRC CORPORATION",
+   "abbr": "TSRC"
+  },
+  "8926": {
+   "name": "Taiwan Cogeneration Corporation",
+   "abbr": "TCC"
+  },
+  "1101": {
+   "name": "TCC Group Holdings CO., LTD.",
+   "abbr": "TCC"
+  },
+  "3045": {
+   "name": "TAIWAN  MOBILE  CO., LTD.",
+   "abbr": "TWM"
+  },
+  "6428": {
+   "name": "TAIWAN TAOMEE CO.,LTD",
+   "abbr": "TAOMEE"
+  },
+  "8999": {
+   "name": "TAIWAN LAMINATION INDUSTRIES, INC,",
+   "abbr": "TLI"
+  },
+  "3467": {
+   "name": "FORCERA MATERIALS CO., LTD.",
+   "abbr": "Forcera"
+  },
+  "4583": {
+   "name": "APEX DYNAMICS, INC.",
+   "abbr": "APEXDYNA"
+  },
+  "6757": {
+   "name": "TIGERAIR TAIWAN CO., LTD.",
+   "abbr": "TTW"
+  },
+  "6593": {
+   "name": "TAIWAN NUMERICAL POWERS CO., LTD.",
+   "abbr": "TNP"
+  },
+  "2633": {
+   "name": "Taiwan High Speed Rail Corporation",
+   "abbr": "THSRC"
+  },
+  "9902": {
+   "name": "TIDEHOLD  DEVELOPMENT  CO.,  LTD.",
+   "abbr": "TIDEHOLD"
+  },
+  "6274": {
+   "name": "TAIWAN UNION TECHNOLOGY CORPORATION",
+   "abbr": "tuc"
+  },
+  "4772": {
+   "name": "Taiwan Speciality Chemicals Corporation",
+   "abbr": "TSC"
+  },
+  "1802": {
+   "name": "TAIWAN GLASS IND. CORP.",
+   "abbr": "TGI"
+  },
+  "6649": {
+   "name": "Taiwan Biomaterial Co., Ltd.",
+   "abbr": "TWBM"
+  },
+  "2832": {
+   "name": "Taiwan Fire & Marine Insurance Co., Ltd.",
+   "abbr": "TFMI"
+  },
+  "6580": {
+   "name": "TaiRx, Inc.",
+   "abbr": "TaiRx"
+  },
+  "2330": {
+   "name": "Taiwan Semiconductor Manufacturing Co., Ltd.",
+   "abbr": "TSMC"
+  },
+  "3432": {
+   "name": "TAI TWUN ENTERPRISE CO. ,LTD.",
+   "abbr": "TAI TWUN"
+  },
+  "1336": {
+   "name": "TAIHAN PRECISION TECHNOLOGY CO., LTD.",
+   "abbr": "TAIHAN"
+  },
+  "4746": {
+   "name": "Formosa Laboratories, Inc.",
+   "abbr": "FRMSL"
+  },
+  "1304": {
+   "name": "USI CORPORATION",
+   "abbr": "USI"
+  },
+  "5601": {
+   "name": "TAIWAN ALLIED CONTAINER TERMINAL CORP.",
+   "abbr": "TACT"
+  },
+  "4905": {
+   "name": "TAINET COMMUNICATION SYSTEM CORP.",
+   "abbr": "TAINET"
+  },
+  "1722": {
+   "name": "TAIWAN FERTILIZER CO., LTD.",
+   "abbr": "TFC"
+  },
+  "3426": {
+   "name": "TAI SHING ELECTRONICS COMPONENTS CORPORATION",
+   "abbr": "TSE"
+  },
+  "2617": {
+   "name": "TAIWAN NAVIGATION CO., LTD.",
+   "abbr": "TNC"
+  },
+  "2208": {
+   "name": "CSBC Corporation, Taiwan",
+   "abbr": "CSBC"
+  },
+  "1310": {
+   "name": "Taiwan Styrene Monomer Corporation",
+   "abbr": "T.S.M.C."
+  },
+  "8039": {
+   "name": "TAIFLEX Scientific Co.,Ltd",
+   "abbr": "TAIFLEX"
+  },
+  "1742": {
+   "name": "TAIWAN WAX COMPANY,LTD.",
+   "abbr": "TWC"
+  },
+  "6278": {
+   "name": "Taiwan Surface Mounting Technology Corp.",
+   "abbr": "TSMT"
+  },
+  "8329": {
+   "name": "TAIWAN TELEVISION ENTERPRISE CO.,LTD.",
+   "abbr": "TTV"
+  },
+  "8011": {
+   "name": "TAI TUNG COMMUNICATION CO.,LTD.",
+   "abbr": "TTCC"
+  },
+  "1309": {
+   "name": "TAITA CHEMICAL COMPANY, LIMITED",
+   "abbr": "TTC"
+  },
+  "2308": {
+   "name": "DELTA ELECTRONICS, INC.",
+   "abbr": "DELTA"
+  },
+  "6269": {
+   "name": "FLEXIUM INTERCONNECT INC",
+   "abbr": "FLEXIUM"
+  },
+  "3521": {
+   "name": "TSG Development Co., Ltd.",
+   "abbr": "TSG Development"
+  },
+  "6947": {
+   "name": "Techzone Technology Materials Co.,Ltd.",
+   "abbr": "Techzone"
+  },
+  "2636": {
+   "name": "T3EX Global Holdings Corp.",
+   "abbr": "T3EX"
+  },
+  "4743": {
+   "name": "ONENESS BIOTECH CO., LTD.",
+   "abbr": "ONENESS BIOTECH"
+  },
+  "1781": {
+   "name": "HEALTH&LIFE CO.,LTD.",
+   "abbr": "H&L"
+  },
+  "3704": {
+   "name": "Zyxel Group Corporation",
+   "abbr": "Zyxel Group"
+  },
+  "4745": {
+   "name": "Cowealth Medical Holding Co., Ltd.",
+   "abbr": "CMH"
+  },
+  "5880": {
+   "name": "Taiwan Cooperative Financial Holding Co.,Ltd.",
+   "abbr": "TCFHC"
+  },
+  "6182": {
+   "name": "WAFER WORKS CORPORATION",
+   "abbr": "WAFER WORKS"
+  },
+  "1618": {
+   "name": "HOLD-KEY ELECTRIC WIRE & CABLE CO., LTD",
+   "abbr": "HK"
+  },
+  "7857": {
+   "name": "AsWater Advanced Envirotech Ltd.",
+   "abbr": "AsWater"
+  },
+  "6103": {
+   "name": "AVID ELECTRONICS CORP.",
+   "abbr": "AVID"
+  },
+  "8937": {
+   "name": "HER CHEE INDUSTRIAL CO.,LTD",
+   "abbr": "HER CHEE"
+  },
+  "7762": {
+   "name": "PET PHARM BIOTECH CO.,Ltd",
+   "abbr": "PET PHARM BIO"
+  },
+  "8488": {
+   "name": "Jiyuan Packaging Holdings Limited",
+   "abbr": "JYPKG"
+  },
+  "2491": {
+   "name": "FORTUNE ORIENTAL COMPANY LIMITED",
+   "abbr": "FOCL"
+  },
+  "1587": {
+   "name": "Cryomax Cooling System Corp.",
+   "abbr": "CM"
+  },
+  "5490": {
+   "name": "XAC AUTOMATION CORP",
+   "abbr": "XAC"
+  },
+  "5460": {
+   "name": "MUSTANG INDUSTRIAL CORP.",
+   "abbr": "MUSTANG"
+  },
+  "6271": {
+   "name": "TONG HSING ELECTRONIC INDUSTRIES ,LTD.",
+   "abbr": "THEIL"
+  },
+  "3321": {
+   "name": "UNIFLEX TECHNOLOGY INC.",
+   "abbr": "UNIFLEX"
+  },
+  "3552": {
+   "name": "TUNG THIH ELECTRONIC CO., LTD.",
+   "abbr": "TUNG THIH"
+  },
+  "1442": {
+   "name": "ADVANCETEK ENTERPRISE CO.,LTD.",
+   "abbr": "ADVANCETEK"
+  },
+  "6794": {
+   "name": "UnicoCell Biomed Co., Ltd.",
+   "abbr": "UnicoCell"
+  },
+  "4584": {
+   "name": "JUFAN INDUSTRIAL CO., LTD.",
+   "abbr": "JUFAN"
+  },
+  "7770": {
+   "name": "ZEITEC Semiconductor Co., LTD.",
+   "abbr": "ZEITEC"
+  },
+  "1201": {
+   "name": "WEI CHUAN FOODS CORP.",
+   "abbr": "WEI CHUAN"
+  },
+  "1203": {
+   "name": "VE WONG CORPORATION",
+   "abbr": "VE WONG"
+  },
+  "7825": {
+   "name": "New Smart Technology Co., Ltd.",
+   "abbr": "NSTC"
+  },
+  "1586": {
+   "name": "CHINA FINEBLANKING TECHNOLOGY CO., LTD.",
+   "abbr": "CFTC"
+  },
+  "1536": {
+   "name": "HOTA INDUSTRIAL MFG. CO., LTD.",
+   "abbr": "HOTA"
+  },
+  "1783": {
+   "name": "MAXIGEN BIOTECH INC.",
+   "abbr": "MBI"
+  },
+  "1810": {
+   "name": "HOCHENG CORPORATION",
+   "abbr": "HCG"
+  },
+  "6825": {
+   "name": "QBIC TECHNOLOGY CO., LTD.",
+   "abbr": "QBIC"
+  },
+  "1714": {
+   "name": "HO TUNG CHEMICAL CORP.",
+   "abbr": "HO TUNG"
+  },
+  "6215": {
+   "name": "AUROTEK CORPORATION",
+   "abbr": "Aurotek"
+  },
+  "2207": {
+   "name": "HOTAI MOTOR CO.,LTD.",
+   "abbr": "HOTAI MOTOR"
+  },
+  "6826": {
+   "name": "TAIWAN PURITIC CORP.",
+   "abbr": "TPC"
+  },
+  "6592": {
+   "name": "HOTAI FINANCE CO., LTD.",
+   "abbr": "HOTAI FINANCE"
+  },
+  "1709": {
+   "name": "FORMOSAN UNION CHEMICAL CORP.",
+   "abbr": "FUCC"
+  },
+  "4938": {
+   "name": "Pegatron Corporation",
+   "abbr": "Pegatron"
+  },
+  "6673": {
+   "name": "Innovision FlexTech Corporation",
+   "abbr": "IFTC"
+  },
+  "6986": {
+   "name": "HeXun Biosciences Co., Ltd.",
+   "abbr": "HEXUN"
+  },
+  "7855": {
+   "name": "HOTAI LEASING CO., LTD.",
+   "abbr": "HLC"
+  },
+  "6963": {
+   "name": "Texture Maker Enterprise Co., Ltd.",
+   "abbr": "Texture Maker"
+  },
+  "8088": {
+   "name": "PANRAM INTERNATIONAL CORP.",
+   "abbr": "PANRAM"
+  },
+  "3434": {
+   "name": "ACULA TECHNOLOGY CORP.",
+   "abbr": "ACULA"
+  },
+  "2035": {
+   "name": "Tang Eng Iron Works Co., Ltd.",
+   "abbr": "TE"
+  },
+  "4609": {
+   "name": "AIRLUX ELEXTRICAL CO., LTD.",
+   "abbr": "AIRLUX"
+  },
+  "8277": {
+   "name": "UNIFOSA CORP.",
+   "abbr": "UNIFOSA"
+  },
+  "8409": {
+   "name": "EBM Technologies Incorporated",
+   "abbr": "EBM"
+  },
+  "8482": {
+   "name": "Shane Global Holding Inc.",
+   "abbr": "Shane Global"
+  },
+  "6939": {
+   "name": "TFBS BIOSCIENCE, INC",
+   "abbr": "TFBS"
+  },
+  "7837": {
+   "name": "Creative Life Science Co., Ltd.",
+   "abbr": "Creative"
+  },
+  "6512": {
+   "name": "GoMax Electronics , Inc.",
+   "abbr": "GoMax"
+  },
+  "6285": {
+   "name": "WNC Corporation",
+   "abbr": "WNC"
+  },
+  "4115": {
+   "name": "SUNDER BIOMEDICAL TECH. CO., LTD.",
+   "abbr": "SUNDER"
+  },
+  "1736": {
+   "name": "Johnson Health Tech. Co., Ltd.",
+   "abbr": "JHT"
+  },
+  "1540": {
+   "name": "ROUNDTOP MACHINERY INDUSTRIES CO., LTD",
+   "abbr": "ROUNDTOP"
+  },
+  "7896": {
+   "name": "Sil-More Industrial Ltd.",
+   "abbr": "Sil-More"
+  },
+  "3057": {
+   "name": "Promise Technology, Inc.",
+   "abbr": "Promise"
+  },
+  "3490": {
+   "name": "Single Well Industrial Corporation",
+   "abbr": "singlewell"
+  },
+  "6715": {
+   "name": "Lintes Technology Co., Ltd.",
+   "abbr": "Lintes"
+  },
+  "3557": {
+   "name": "Jia Wei Lifestyle, Inc.",
+   "abbr": "JiaWei"
+  },
+  "3158": {
+   "name": "SysJust Co., Ltd.",
+   "abbr": "SysJust"
+  },
+  "4942": {
+   "name": "Chia Chang Co., Ltd",
+   "abbr": "Chia Chang"
+  },
+  "3016": {
+   "name": "Episil-Precision Inc.",
+   "abbr": "EPi"
+  },
+  "1103": {
+   "name": "CHIA HSIN CEMENT CORPORATION",
+   "abbr": "CHC"
+  },
+  "3533": {
+   "name": "LOTES CO., LTD",
+   "abbr": "LOTES"
+  },
+  "6153": {
+   "name": "Career Technology (MFG.) Co., Ltd.",
+   "abbr": "Career Tech."
+  },
+  "1417": {
+   "name": "CARNIVAL INDUSTRIAL CORPORATION",
+   "abbr": "CARNIVAL"
+  },
+  "2608": {
+   "name": "Kerry TJ Logistics Company Limited",
+   "abbr": "Kerry TJ"
+  },
+  "2067": {
+   "name": "CHIA YI STEEL CO., LTD",
+   "abbr": "CYSTEEL"
+  },
+  "6921": {
+   "name": "LeRain Technology Co., Ltd.",
+   "abbr": "LeRain"
+  },
+  "5608": {
+   "name": "SHIH WEI NAVIGATION CO., LTD",
+   "abbr": "S. W."
+  },
+  "4172": {
+   "name": "InnoPharmax Inc.",
+   "abbr": "InnoPharmax"
+  },
+  "2423": {
+   "name": "GOOD WILL INSTRUMENT CO.,LTD.",
+   "abbr": "GW"
+  },
+  "4142": {
+   "name": "ADIMMUNE CORPORATION",
+   "abbr": "ADIM"
+  },
+  "1713": {
+   "name": "CATHAY CHEMICAL WORKS INC.",
+   "abbr": "CCW"
+  },
+  "1312": {
+   "name": "GRAND PACIFIC PETROCHEMICAL CORPORATION",
+   "abbr": "GPPC"
+  },
+  "2327": {
+   "name": "YAGEO CORPORATION",
+   "abbr": "YAGEO"
+  },
+  "2501": {
+   "name": "CATHAY REAL ESTATE DEVELOPMENT CO.,LTD.",
+   "abbr": "CATHAY RED"
+  },
+  "2505": {
+   "name": "KUOYANG DEVELOPMENT CO.,LTD",
+   "abbr": "ky"
+  },
+  "2882": {
+   "name": "CATHAY FINANCIAL HOLDING CO., LTD.",
+   "abbr": "CATHAY FHC"
+  },
+  "6704": {
+   "name": "Gwo Xi Stem Cell Applied Technology Co. , Ltd",
+   "abbr": "GWOXI"
+  },
+  "2504": {
+   "name": "Goldsun Building Materials Co., Ltd.",
+   "abbr": "GBM"
+  },
+  "5410": {
+   "name": "LEO SYSTEMS, INC.",
+   "abbr": "LEO"
+  },
+  "2406": {
+   "name": "GIGASTORAGE CORPORATION",
+   "abbr": "GSC"
+  },
+  "4754": {
+   "name": "INTERNATIONAL CARBIDE TECHNOLOGY CO.,LTD.",
+   "abbr": "INCA"
+  },
+  "2889": {
+   "name": "IBF Financial Holdings Co., Ltd.",
+   "abbr": "IBF"
+  },
+  "4722": {
+   "name": "QUALIPOLY CHEMICAL CORP.",
+   "abbr": "QPC"
+  },
+  "8936": {
+   "name": "KUO TOONG INTERNATIONAL CO.LTD.",
+   "abbr": "KTI"
+  },
+  "2704": {
+   "name": "THE AMBASSADOR HOTEL,LTD.",
+   "abbr": "AMBH"
+  },
+  "6875": {
+   "name": "Pharmosa Biopharm Inc.",
+   "abbr": "PBI"
+  },
+  "2104": {
+   "name": "International CSRC Investment Holdings Co.,",
+   "abbr": "CSRC"
+  },
+  "7583": {
+   "name": "IOVTEC Co., Ltd.",
+   "abbr": "IOG"
+  },
+  "2417": {
+   "name": "AVerMedia Technologies, Inc.",
+   "abbr": "AVERMEDIA"
+  },
+  "3669": {
+   "name": "AVer Information Inc.",
+   "abbr": "AVer"
+  },
+  "6945": {
+   "name": "AP Biosciences Inc",
+   "abbr": "APBio"
+  },
+  "6835": {
+   "name": "COMPLEX MICRO INTERCONNECTION CO.,LTD.",
+   "abbr": "CMI"
+  },
+  "6797": {
+   "name": "Taiwan Advanced Nanotech INC.",
+   "abbr": "TAN"
+  },
+  "3629": {
+   "name": "Gravitytai Co.,Ltd.",
+   "abbr": "Gravitytai"
+  },
+  "1324": {
+   "name": "GLOBE INDUSTRIES CORPORATION",
+   "abbr": "GLOBE TAPE"
+  },
+  "6640": {
+   "name": "Gallant Micro. Machining Co., LTD.",
+   "abbr": "GMM"
+  },
+  "5443": {
+   "name": "GALLANT PRECISION MACHINING CO., LTD.",
+   "abbr": "GPM"
+  },
+  "5206": {
+   "name": "Kunyue Development  Co., Ltd.",
+   "abbr": "Kunyue"
+  },
+  "6867": {
+   "name": "Tan De Tech Co., Ltd.",
+   "abbr": "TD"
+  },
+  "3176": {
+   "name": "Medigen Biotechnology Corporation",
+   "abbr": "MEDIGEN"
+  },
+  "6641": {
+   "name": "GSD Technologies Co., Ltd.",
+   "abbr": "GSD-KY"
+  },
+  "2538": {
+   "name": "Kee Tai Properties Co.,Ltd",
+   "abbr": "KeeTai"
+  },
+  "4195": {
+   "name": "Genomics BioSci & Tech. Co.,Ltd.",
+   "abbr": "Genomics"
+  },
+  "3537": {
+   "name": "PODAK CO., LTD.",
+   "abbr": "PODAK"
+  },
+  "1522": {
+   "name": "T.Y.C. BROTHER INDUSTRIAL CO., LTD.",
+   "abbr": "TYC"
+  },
+  "3028": {
+   "name": "ZENITRON CORPORATION",
+   "abbr": "ZENITRON"
+  },
+  "1903": {
+   "name": "Shihlin Paper Corporation",
+   "abbr": "Shihlin Paper"
+  },
+  "5324": {
+   "name": "SHIHLIN DEVELOPMENT COMPANY LIMITED",
+   "abbr": "SDC"
+  },
+  "1503": {
+   "name": "Shihlin Electric & Engineering Corp.",
+   "abbr": "SEEC"
+  },
+  "3052": {
+   "name": "APEX SCIENCE & ENGINEERING CORP.",
+   "abbr": "APEX"
+  },
+  "2722": {
+   "name": "Chateau International Development Co.,Ltd.",
+   "abbr": "Chateau"
+  },
+  "7756": {
+   "name": "DONUTES INTERNATIONAL CO.,LTD.",
+   "abbr": "DONUTES"
+  },
+  "8472": {
+   "name": "GOMAJI Corp., LTD",
+   "abbr": "GOMAJI"
+  },
+  "8099": {
+   "name": "TATUNG SYSTEM TECHNOLOGIES INC.",
+   "abbr": "TSTI"
+  },
+  "6435": {
+   "name": "Sinopower Semiconductor Inc.",
+   "abbr": "Sinopower"
+  },
+  "6982": {
+   "name": "WALRUS PUMP CO., LTD.",
+   "abbr": "WALRUS PUMP"
+  },
+  "1609": {
+   "name": "TA YA ELECTRIC WIRE & CABLE",
+   "abbr": "TA YA"
+  },
+  "1521": {
+   "name": "TA YIH INDUSTRIAL CO.,LTD",
+   "abbr": "TA YIH"
+  },
+  "8107": {
+   "name": "TAYIH KENMOS AUTO PARTS CO., LTD.",
+   "abbr": "KENMOS"
+  },
+  "9908": {
+   "name": "THE GREAT TAIPEI GAS CORPORATION",
+   "abbr": "GTG"
+  },
+  "2371": {
+   "name": "TATUNG COMPANY",
+   "abbr": "TATUNG COMPANY"
+  },
+  "4738": {
+   "name": "TATUNG FINE CHEMICALS CO.",
+   "abbr": "TFC"
+  },
+  "8415": {
+   "name": "Brighton-Best International (Taiwan) Inc.",
+   "abbr": "Brighton-Best"
+  },
+  "8437": {
+   "name": "Dadi Early-Childhood Education Group Ltd.",
+   "abbr": "Dadi"
+  },
+  "6171": {
+   "name": "Tacheng Real Estate Co.,Ltd.",
+   "abbr": "Tacheng"
+  },
+  "3570": {
+   "name": "Otsuka Information Technology Corp.",
+   "abbr": "OITC"
+  },
+  "7901": {
+   "name": "DADA Broadband Co., Ltd.",
+   "abbr": "DADA Broadband"
+  },
+  "3218": {
+   "name": "UNIVERSAL VISION BIOTECHNOLOGY  CO., LTD.",
+   "abbr": "UNIVERSAL"
+  },
+  "1445": {
+   "name": "UNIVERSAL TEXTILE CO., LTD.",
+   "abbr": "UNIVERSAL"
+  },
+  "1453": {
+   "name": "TA JIANG  CO., LTD.",
+   "abbr": "TA  JIANG"
+  },
+  "6020": {
+   "name": "TACHAN SECURITIES CO.,LTD.",
+   "abbr": "TACHAN"
+  },
+  "1615": {
+   "name": "Dah San Electric Wire & Cable Corp.",
+   "abbr": "Dah  San"
+  },
+  "4706": {
+   "name": "TAH KONG CHEMICAL INDUSTRIAL CORP.",
+   "abbr": "TKC"
+  },
+  "1210": {
+   "name": "GREAT WALL ENTERPRISE CO., LTD.",
+   "abbr": "GREATWALL"
+  },
+  "2027": {
+   "name": "TA CHEN STAINLESS PIPE CO., LTD.",
+   "abbr": "TC"
+  },
+  "8455": {
+   "name": "Daito Me Holdings Co., Ltd",
+   "abbr": "Daito ME"
+  },
+  "1441": {
+   "name": "TAH TONG TEXTILE CO., LTD.",
+   "abbr": "TAH TONG"
+  },
+  "1623": {
+   "name": "TA TUN ELECTRIC WIRE & CABLE CO., LTD.",
+   "abbr": "TEWC"
+  },
+  "6469": {
+   "name": "Great Tree Pharmacy Co.,Ltd.",
+   "abbr": "Great Tree"
+  },
+  "6952": {
+   "name": "DAWUSHAN FARM TECHNOLOGY CO., LTD.",
+   "abbr": "DWS"
+  },
+  "2478": {
+   "name": "TA-I TECHNOLOGY CO.,LTD",
+   "abbr": "TA-I"
+  },
+  "8436": {
+   "name": "TCI CO.,Ltd",
+   "abbr": "TCI"
+  },
+  "6879": {
+   "name": "TCI GENE INC",
+   "abbr": "TCI GENE"
+  },
+  "8931": {
+   "name": "TA-YUAN COGENERATION COMPANY LTD.",
+   "abbr": "TYC"
+  },
+  "1321": {
+   "name": "Ocean Plastics Co., Ltd",
+   "abbr": "OPC"
+  },
+  "8924": {
+   "name": "O-TA PRECISION INDUSTRY CO., LTD.",
+   "abbr": "O-TA"
+  },
+  "2221": {
+   "name": "Tachia Yung Ho Machine Industry Co., Ltd.",
+   "abbr": "DAJA、YHMCO"
+  },
+  "4804": {
+   "name": "Da Lue International Holding Co., Ltd.",
+   "abbr": "Da Lue"
+  },
+  "3701": {
+   "name": "FIC Global, Inc.",
+   "abbr": "FICG"
+  },
+  "7780": {
+   "name": "DAIKEN BIOMEDICAL CO., LTD.",
+   "abbr": "DAIKEN"
+  },
+  "4716": {
+   "name": "DAILY POLYMER CORP.",
+   "abbr": "DAILY"
+  },
+  "3008": {
+   "name": "LARGAN Precision Co.,Ltd",
+   "abbr": "LARGAN"
+  },
+  "1470": {
+   "name": "Evertex Fabrinology  Ltd.",
+   "abbr": "EVERTEX"
+  },
+  "1232": {
+   "name": "TTET  UNION  CORPORATION",
+   "abbr": "TTET"
+  },
+  "3147": {
+   "name": "JETWELL COMPUTER CO.,LTD.",
+   "abbr": "JETWELL"
+  },
+  "3702": {
+   "name": "WPG HOLDINGS LIMITED",
+   "abbr": "WPG"
+  },
+  "9905": {
+   "name": "Great China Metal Ind. Co., Ltd",
+   "abbr": "GCM"
+  },
+  "4538": {
+   "name": "WINSON Machinery  Co., LTD.",
+   "abbr": "WINSON"
+  },
+  "6184": {
+   "name": "Dafeng TV Ltd.",
+   "abbr": "Dafeng TV Ltd."
+  },
+  "2640": {
+   "name": "Taiwan Taxi Co., Ltd",
+   "abbr": "55688"
+  },
+  "3167": {
+   "name": "TA LIANG TECHNOLOGY CO., LTD.",
+   "abbr": "TA LIANG"
+  },
+  "4576": {
+   "name": "HIWIN MIKROSYSTEM CORP.",
+   "abbr": "HMC"
+  },
+  "1213": {
+   "name": "OCEANIC BEVERAGES CO.,INC.",
+   "abbr": "OCEANIC Bev."
+  },
+  "1432": {
+   "name": "TRK Corporation",
+   "abbr": "TAROKO"
+  },
+  "7689": {
+   "name": "Climax Technology Co.,Ltd.",
+   "abbr": "CLIMAX"
+  },
+  "6834": {
+   "name": "EVER OHMS TECHNOLOGY CO.,LTD.",
+   "abbr": "EVEROHMS"
+  },
+  "1233": {
+   "name": "Ten Ren Tea Co., Ltd.",
+   "abbr": "Ten Ren"
+  },
+  "6784": {
+   "name": "TSKY CO.,LTD",
+   "abbr": "TSKY"
+  },
+  "5310": {
+   "name": "CGS INTERNATIONAL INC.",
+   "abbr": "CGS"
+  },
+  "6793": {
+   "name": "TIEN LI OFFSHORE WIND TECHNOLOGY CO., LTD.",
+   "abbr": "TIENLI OFFSHORE"
+  },
+  "6199": {
+   "name": "TienPin United Enterprise CO., LTD.",
+   "abbr": "TienPin"
+  },
+  "8171": {
+   "name": "Formosa Electronic Industries Inc.",
+   "abbr": "Formosa"
+  },
+  "7742": {
+   "name": "URANUS CHEMICALS CO., LTD",
+   "abbr": "URANUS"
+  },
+  "6708": {
+   "name": "MARS SEMICONDUCTOR CORP.",
+   "abbr": "MARS"
+  },
+  "3073": {
+   "name": "Teamphon Energy Co., LTD.",
+   "abbr": "Teamphon"
+  },
+  "6659": {
+   "name": "TIMING PHARMACEUTICAL CO.,LTD.",
+   "abbr": "TIMING"
+  },
+  "6654": {
+   "name": "Tian Zheng International Precision Machinery",
+   "abbr": "TZI"
+  },
+  "6225": {
+   "name": "aiPlex Corporation",
+   "abbr": "aiPlex"
+  },
+  "7842": {
+   "name": "GREENET CO., LTD.",
+   "abbr": "GREENET"
+  },
+  "4127": {
+   "name": "Tien Liang BioTech Co., Ltd.",
+   "abbr": "TLB"
+  },
+  "6937": {
+   "name": "Skytech Inc.",
+   "abbr": "Skytech"
+  },
+  "4961": {
+   "name": "Fitipower Integrated Technology Inc.",
+   "abbr": "FITIPOWER"
+  },
+  "5251": {
+   "name": "JSW PACIFIC CORPORATION",
+   "abbr": "JSW"
+  },
+  "2511": {
+   "name": "Prince Housing & Development Corp.",
+   "abbr": "PHD"
+  },
+  "6833": {
+   "name": "T-CONN PRECISION CORPORATION",
+   "abbr": "T-CONN"
+  },
+  "3284": {
+   "name": "TOP HIGH IMAGE CORP.",
+   "abbr": "TOP"
+  },
+  "4157": {
+   "name": "TAIGEN BIOPHARMACEUTICALS HOLDINGS LIMITED",
+   "abbr": "TAIGEN"
+  },
+  "4934": {
+   "name": "Tainergy Tech Co., Ltd.",
+   "abbr": "Tainergy"
+  },
+  "5302": {
+   "name": "SYNTEK SEMICONDUCTOR CO.,LTD.",
+   "abbr": "STK"
+  },
+  "2440": {
+   "name": "SPACE SHUTTLE HI-TECH CO.,LTD.",
+   "abbr": "SPACE SHUTTLE"
+  },
+  "2506": {
+   "name": "PACIFIC CONSTRUCTION CO., LTD.",
+   "abbr": "PCC"
+  },
+  "4126": {
+   "name": "PACIFIC HOSPITAL SUPPLY CO., LTD.",
+   "abbr": "PAHSCO"
+  },
+  "3356": {
+   "name": "GeoVision Inc.",
+   "abbr": "GeoVision"
+  },
+  "3430": {
+   "name": "CHITEC TECHNOLOGY CO., LTD.",
+   "abbr": "CHITEC"
+  },
+  "3017": {
+   "name": "Asia Vital Components Co., Ltd.",
+   "abbr": "AVC"
+  },
+  "6849": {
+   "name": "CHYI DING TECHNOLOGIES CO., LTD.",
+   "abbr": "CHYI DING"
+  },
+  "6612": {
+   "name": "ICARES MEDICUS, INC.",
+   "abbr": "ICARES"
+  },
+  "6962": {
+   "name": "ITH Corporation",
+   "abbr": "ITH-KY"
+  },
+  "7776": {
+   "name": "ANYA BIOPHARM INC.",
+   "abbr": "Anya"
+  },
+  "3114": {
+   "name": "Howteh Technology Co., Ltd.",
+   "abbr": "HT"
+  },
+  "9943": {
+   "name": "HOLIDAY ENTERTAINMENT CO.,LTD",
+   "abbr": "HOLIDAY"
+  },
+  "4414": {
+   "name": "ROO HSING  CO., LTD",
+   "abbr": "ROO HSING"
+  },
+  "3033": {
+   "name": "Weikeng Industrial Co., Ltd.",
+   "abbr": "Weikeng"
+  },
+  "6661": {
+   "name": "WELGENE BIOTECH CO.,LTD.",
+   "abbr": "WELGENE"
+  },
+  "3260": {
+   "name": "ADATA Technology Co., Ltd.",
+   "abbr": "ADATA"
+  },
+  "7713": {
+   "name": "WeLeader Biomedical Co.,Ltd",
+   "abbr": "WeLeader"
+  },
+  "6988": {
+   "name": "WELLYSUN INC.",
+   "abbr": "WELLYSUN"
+  },
+  "8442": {
+   "name": "WW Holding Inc.",
+   "abbr": "WW"
+  },
+  "3022": {
+   "name": "IEI Integration Corp.",
+   "abbr": "IEI"
+  },
+  "6465": {
+   "name": "ATrack Technology Inc.",
+   "abbr": "ATrack"
+  },
+  "2388": {
+   "name": "VIA TECHNOLOGIES, INC.",
+   "abbr": "VIA"
+  },
+  "8298": {
+   "name": "Genie Networks Limited",
+   "abbr": "Genie"
+  },
+  "7805": {
+   "name": "QNAP Systems, Inc.",
+   "abbr": "QNAP"
+  },
+  "2028": {
+   "name": "WEI CHIH STEEL INDUSTRIAL CO.,LTD.",
+   "abbr": "WEI CHIH"
+  },
+  "6756": {
+   "name": "VIA LABS, INC.",
+   "abbr": "VLI"
+  },
+  "6780": {
+   "name": "STUDY KING CO., LTD.",
+   "abbr": "Study123"
+  },
+  "2642": {
+   "name": "Taiwan Pelican Express Co., Ltd.",
+   "abbr": "Pelican"
+  },
+  "3546": {
+   "name": "USERJOY Technology Co.,Ltd.",
+   "abbr": "USERJOY"
+  },
+  "7887": {
+   "name": "PENTAPRO MATERIALS INC.",
+   "abbr": "PPMI"
+  },
+  "6470": {
+   "name": "U-MEDIA Communications,Inc.",
+   "abbr": "U-MEDIA"
+  },
+  "3276": {
+   "name": "T-Flex Techvest PCB CO., LTD.",
+   "abbr": "tht"
+  },
+  "8271": {
+   "name": "Apacer Technology Inc.",
+   "abbr": "Apacer"
+  },
+  "7902": {
+   "name": "UWELL BIOPHARMA INC.",
+   "abbr": "UWELL"
+  },
+  "7813": {
+   "name": "YU-CHEN SYSTEM TECHNOLOGY CORP.",
+   "abbr": "YCS"
+  },
+  "2233": {
+   "name": "Turvo International Co.,Ltd.",
+   "abbr": "TURVO"
+  },
+  "5548": {
+   "name": "ANCANG CONSTRUCTION CO., LTD",
+   "abbr": "ANCANG"
+  },
+  "4188": {
+   "name": "AmCad BioMed Corporation",
+   "abbr": "AmCad"
+  },
+  "5223": {
+   "name": "Anli International Co., Ltd",
+   "abbr": "Anli"
+  },
+  "3479": {
+   "name": "Avalue Technology Incorporation",
+   "abbr": "Avalue"
+  },
+  "3615": {
+   "name": "AimCore Technology Co., Ltd",
+   "abbr": "AimCore"
+  },
+  "8054": {
+   "name": "Alcor Micro,Corp.",
+   "abbr": "Alcor Micro"
+  },
+  "7875": {
+   "name": "Altos Computing Inc.",
+   "abbr": "Altos"
+  },
+  "7754": {
+   "name": "AnnJi Pharmaceutical Co., Ltd.",
+   "abbr": "AnnJi"
+  },
+  "1259": {
+   "name": "AN-SHIN FOOD SERVICES CO.,LTD.",
+   "abbr": "AN-SHIN"
+  },
+  "6610": {
+   "name": "TWi Biotechnology, Inc",
+   "abbr": "TWi Biotech."
+  },
+  "6743": {
+   "name": "AMPACS CORPORATION",
+   "abbr": "AMPACS"
+  },
+  "6684": {
+   "name": "AlgolTek, Inc.",
+   "abbr": "AlgolTek"
+  },
+  "2849": {
+   "name": "EnTie Commercial Bank",
+   "abbr": "EnTie Bank"
+  },
+  "6564": {
+   "name": "Enimmune corporation",
+   "abbr": "ENIM"
+  },
+  "3664": {
+   "name": "Array Inc.",
+   "abbr": "Array"
+  },
+  "6734": {
+   "name": "iXensor Co., Ltd.",
+   "abbr": "iXensor"
+  },
+  "6174": {
+   "name": "AKER TECHNOLOGY CO., LTD",
+   "abbr": "AKER"
+  },
+  "6690": {
+   "name": "Acer Cyber Security Inc.",
+   "abbr": "ACSI"
+  },
+  "7871": {
+   "name": "Elixiron Immunotherapeutics (Cayman) Limited",
+   "abbr": "Elixiron-KY"
+  },
+  "7575": {
+   "name": "Amed Co., Ltd.",
+   "abbr": "Amed"
+  },
+  "7792": {
+   "name": "AM-POWER MACHINE INTERNATIONAL ENTERPRISE CO.",
+   "abbr": "AM-POWER"
+  },
+  "7784": {
+   "name": "Anbogen Therapeutics, Inc.",
+   "abbr": "Anbogen"
+  },
+  "6276": {
+   "name": "Antec Inc.",
+   "abbr": "Antec"
+  },
+  "6477": {
+   "name": "Anji Technology Co., Ltd.",
+   "abbr": "Anji"
+  },
+  "3528": {
+   "name": "Macnica Anstek Inc.",
+   "abbr": "ANSTEK"
+  },
+  "7869": {
+   "name": "HORNG YU ELECTRIC CO., LTD.",
+   "abbr": "HYEC"
+  },
+  "1236": {
+   "name": "HUNYA  FOODS  CO., LTD.",
+   "abbr": "Hunya"
+  },
+  "1599": {
+   "name": "AEONTEK CO.,LTD.",
+   "abbr": "AEON"
+  },
+  "4565": {
+   "name": "HONG-WEI ELECTRICAL INDUSTRY & CO., LTD.",
+   "abbr": "Hong-Wei"
+  },
+  "9939": {
+   "name": "Taiwan Hon Chuan Enterprise Co., Ltd.",
+   "abbr": "HON CHUAN"
+  },
+  "1446": {
+   "name": "HONG HO PRECISION TEXTILE CO.,LTD.",
+   "abbr": "HONG HO"
+  },
+  "2924": {
+   "name": "Cayman Island Grand Galactica Corp Limited",
+   "abbr": "Grand Galactica"
+  },
+  "8086": {
+   "name": "ADVANCED WIRELESS SEMICONDUCTOR COMPANY",
+   "abbr": "AWSC"
+  },
+  "2243": {
+   "name": "HORNG SHIUE HOLDING Co., Ltd.",
+   "abbr": "HS"
+  },
+  "4530": {
+   "name": "Honyi International Company Limited",
+   "abbr": "Honyi"
+  },
+  "2536": {
+   "name": "Hong Pu Real Estate Development CO.,LTD.",
+   "abbr": "Hong Pu"
+  },
+  "6277": {
+   "name": "ATEN INTERNATIONAL CO., LTD.",
+   "abbr": "ATEN"
+  },
+  "1612": {
+   "name": "HONG TAI ELECTRIC INDUSTRIAL CO.,LTD.",
+   "abbr": "HONG TAI"
+  },
+  "1413": {
+   "name": "HUNG CHOU FIBER IND. CO., LTD",
+   "abbr": "H.C."
+  },
+  "2527": {
+   "name": "Hung Ching Development & Construction Co. Ltd",
+   "abbr": "Hung Ching"
+  },
+  "1452": {
+   "name": "HONG YI FIBER INDUSTRY CO., LTD.",
+   "abbr": "HONG YI"
+  },
+  "2534": {
+   "name": "HUNG SHENG CONSTRUCTION CO., LTD.",
+   "abbr": "HSC"
+  },
+  "2353": {
+   "name": "ACER INCORPORATED",
+   "abbr": "ACER"
+  },
+  "7706": {
+   "name": "Acer Synergy Manpower Corp.",
+   "abbr": "ASM"
+  },
+  "7794": {
+   "name": "Acerpure Inc.",
+   "abbr": "API"
+  },
+  "6857": {
+   "name": "Acer Medical Inc.",
+   "abbr": "Acer Medical"
+  },
+  "6811": {
+   "name": "ACER E-ENABLING SERVICE BUSINESS INC.",
+   "abbr": "AEB"
+  },
+  "6908": {
+   "name": "Acer Gaming Inc.",
+   "abbr": "AGM"
+  },
+  "6895": {
+   "name": "Wave Power Technology Inc.",
+   "abbr": "WPTI"
+  },
+  "7885": {
+   "name": "HONLYNN CO., LTD.",
+   "abbr": "HONLYNN"
+  },
+  "3605": {
+   "name": "ACES ELECTRONICS CO., LTD.",
+   "abbr": "ACES"
+  },
+  "6568": {
+   "name": "Rafael Microelectronics, Inc.",
+   "abbr": "Rafael Micro"
+  },
+  "2498": {
+   "name": "HTC Corporation",
+   "abbr": "HTC"
+  },
+  "1460": {
+   "name": "EVEREST TEXTILE CO.,LTD",
+   "abbr": "EVEREST"
+  },
+  "6015": {
+   "name": "HORIZON SECURITIES CO., LTD.",
+   "abbr": "HORIZON Sec."
+  },
+  "6168": {
+   "name": "HARVATEK CORPORATION",
+   "abbr": "HARVATEK CORPOR"
+  },
+  "2017": {
+   "name": "Quintain Steel Co., LTD",
+   "abbr": "Quintain Steel"
+  },
+  "3715": {
+   "name": "Dynamic Holding Co., Ltd.",
+   "abbr": "Dynamic Holding"
+  },
+  "4440": {
+   "name": "Yi Shin Textile Industrial Co., Ltd.",
+   "abbr": "Yi Shin"
+  },
+  "3289": {
+   "name": "INTEGRATED SERVICE TECHNOLOGY INC.",
+   "abbr": "IST"
+  },
+  "1457": {
+   "name": "YI JINN INDUSTRIAL CO.,LTD",
+   "abbr": "YI JINN"
+  },
+  "5289": {
+   "name": "Innodisk Corporation",
+   "abbr": "Innodisk"
+  },
+  "5457": {
+   "name": "SPEED TECH CORP.",
+   "abbr": "SPEED TECH"
+  },
+  "4724": {
+   "name": "MERIBANK BIOTECH CO., LTD",
+   "abbr": "MERIBANKBIOTECH"
+  },
+  "3680": {
+   "name": "Gudeng Precision Industrial Co., LTD",
+   "abbr": "Gudeng"
+  },
+  "6953": {
+   "name": "Gudeng Equipment Co., LTD.",
+   "abbr": "GDE"
+  },
+  "6922": {
+   "name": "Neousys Technology Inc.",
+   "abbr": "Neousys"
+  },
+  "6805": {
+   "name": "FOSITEK CORP.",
+   "abbr": "Fositek"
+  },
+  "1260": {
+   "name": "FLAVOR FULL FOODS INC.",
+   "abbr": "FLAVOR"
+  },
+  "1815": {
+   "name": "FULLTECH FIBER GLASS CORP.",
+   "abbr": "FFG"
+  },
+  "6707": {
+   "name": "AFASTOR CORPORATION",
+   "abbr": "AFASTOR CORP."
+  },
+  "8929": {
+   "name": "Fu Burg Industrial Co., Ltd.",
+   "abbr": "FBIC"
+  },
+  "6994": {
+   "name": "Foxwell Power Co., Ltd.",
+   "abbr": "FWP"
+  },
+  "4907": {
+   "name": "FUYU PROPERTY  COMPANY  LIMITED",
+   "abbr": "Fu Yu  Property"
+  },
+  "6603": {
+   "name": "FU CHUN SHIN MACHINERY MANUFACTURE CO., LTD.",
+   "abbr": "FCS"
+  },
+  "6219": {
+   "name": "FULL WANG INTERNATIONAL DEVELOPMENT CO.,LTD.",
+   "abbr": "FULL WANG"
+  },
+  "3623": {
+   "name": "Transtouch Technology Inc.",
+   "abbr": "TTI"
+  },
+  "1341": {
+   "name": "Fulin Plastic Industry (Cayman) Holding Co.,",
+   "abbr": "FULIN-KY"
+  },
+  "3115": {
+   "name": "Trust-Search Corp.,Ltd.",
+   "abbr": "TSC"
+  },
+  "6136": {
+   "name": "FULLERTON TECHNOLOGY CO., LTD.",
+   "abbr": "FTC"
+  },
+  "4590": {
+   "name": "FUKUTA ELECTRIC & MACHINERY CO., LTD.",
+   "abbr": "FUKUTA"
+  },
+  "7773": {
+   "name": "FullHope Biomedical Co., Ltd.",
+   "abbr": "FullHope"
+  },
+  "6642": {
+   "name": "FUZETEC TECHNOLOGY CO., LTD.",
+   "abbr": "FUZETEC"
+  },
+  "3056": {
+   "name": "Fu Hua Innovation Co., Ltd.",
+   "abbr": "Fu Hua"
+  },
+  "6264": {
+   "name": "KINGLAND PROPERTY CORPORATION LTD.",
+   "abbr": "KL"
+  },
+  "8454": {
+   "name": "momo.com Inc.",
+   "abbr": "momo"
+  },
+  "2881": {
+   "name": "Fubon Financial Holding Co., Ltd.",
+   "abbr": "Fubon Financial"
+  },
+  "3714": {
+   "name": "ENNOSTAR Inc.",
+   "abbr": "ENNOSTAR"
+  },
+  "2736": {
+   "name": "HOYA Resort Hotel Group",
+   "abbr": "HOYA"
+  },
+  "5465": {
+   "name": "LOYALTY FOUNDER ENTERPRISE CO.,LTD.",
+   "abbr": "LFE"
+  },
+  "8261": {
+   "name": "Advanced Power Electronics Co., Ltd.",
+   "abbr": "APEC"
+  },
+  "2739": {
+   "name": "MyHumbleHouseHospitalityManagementConsulting",
+   "abbr": "My Humble House"
+  },
+  "8416": {
+   "name": "SOLIDWIZARD TECHNOLOGY CO., LTD.",
+   "abbr": "SWTC"
+  },
+  "6596": {
+   "name": "Kuang Hong Arts Management Incorporation",
+   "abbr": "KHAM Inc."
+  },
+  "6101": {
+   "name": "Kwan's International Co., Ltd.",
+   "abbr": "KIC"
+  },
+  "8222": {
+   "name": "Aero Win Technology Corporation",
+   "abbr": "Aero Win"
+  },
+  "4587": {
+   "name": "LNC Technology Co., LTD",
+   "abbr": "LNC"
+  },
+  "1813": {
+   "name": "Polylite Taiwan Co., Ltd.",
+   "abbr": "Polylite"
+  },
+  "5312": {
+   "name": "FORMOSA OPTICAL TECHNOLOGY CO.,LTD.",
+   "abbr": "FORMOSA"
+  },
+  "5301": {
+   "name": "CJW International CO., LTD.",
+   "abbr": "CJW"
+  },
+  "1805": {
+   "name": "Better Life Group Co., LTD.",
+   "abbr": "BLG"
+  },
+  "3349": {
+   "name": "DEXIN Corporation",
+   "abbr": "DEXIN"
+  },
+  "9904": {
+   "name": "Pou Chen Corporation",
+   "abbr": "PCC"
+  },
+  "6987": {
+   "name": "Ina Energy Corporation",
+   "abbr": "Ina Energy"
+  },
+  "7850": {
+   "name": "Protect Animal Health Incorporation",
+   "abbr": "PAH"
+  },
+  "5210": {
+   "name": "APEX International Financial Engineering Res.",
+   "abbr": "APEX"
+  },
+  "6887": {
+   "name": "BORETECH Resource Recovery Engineering CO., L",
+   "abbr": "BORETECH-KY"
+  },
+  "4558": {
+   "name": "Alformer industrial co.,ltd.",
+   "abbr": "Alformer"
+  },
+  "2948": {
+   "name": "Bausen Inc",
+   "abbr": "Bausen"
+  },
+  "1906": {
+   "name": "Baolong International Co., Ltd.",
+   "abbr": "Baolong Intl."
+  },
+  "5904": {
+   "name": "POYA International Co., Ltd.",
+   "abbr": "Poya"
+  },
+  "1760": {
+   "name": "PANION & BF BIOTECH INC.",
+   "abbr": "PBF"
+  },
+  "7798": {
+   "name": "FABULOUS GLOBAL HOLDING CO., LTD.",
+   "abbr": "FABULOUS GROUP"
+  },
+  "4186": {
+   "name": "Taiwan Advance Bio-Pharmaceutical Inc.",
+   "abbr": "TABP"
+  },
+  "8021": {
+   "name": "Topoint Technology Co., Ltd.",
+   "abbr": "Topoint"
+  },
+  "5278": {
+   "name": "Sunfun Info Co., Ltd.",
+   "abbr": "Sunfun"
+  },
+  "3360": {
+   "name": "SUNNIC Technology & Merchandise Inc.",
+   "abbr": "SUNNIC"
+  },
+  "8291": {
+   "name": "ShineMore Technology Materials Co., Ltd.",
+   "abbr": "SMT"
+  },
+  "3317": {
+   "name": "NIKO SEMICONDUCTOR CO.,LTD.",
+   "abbr": "NIKO-SEM"
+  },
+  "6230": {
+   "name": "NIDEC CHAUN-CHOUNG TECHNOLOGY CORPORATION",
+   "abbr": "NCCI"
+  },
+  "6216": {
+   "name": "DrayTek Corporation",
+   "abbr": "DrayTek Corp."
+  },
+  "1776": {
+   "name": "Headway Advanced Materials Inc.",
+   "abbr": "Headway"
+  },
+  "6776": {
+   "name": "Weblink International Inc.",
+   "abbr": "Weblink"
+  },
+  "6798": {
+   "name": "Flight International Co.,Ltd.",
+   "abbr": "Flight"
+  },
+  "3447": {
+   "name": "XAVi TECHNOLOGIES CORPORATION",
+   "abbr": "XAVi"
+  },
+  "3595": {
+   "name": "Alliance Material Co.,Ltd",
+   "abbr": "AMC"
+  },
+  "2743": {
+   "name": "Richmond International Travel & Tours Co.,Ltd",
+   "abbr": "richmond"
+  },
+  "8473": {
+   "name": "FOREST WATER ENVIRONMENTAL ENG'G CO., LTD.",
+   "abbr": "FOREST WATER"
+  },
+  "2616": {
+   "name": "SHAN-LOONG TRANSPORTATION CO.,LTD",
+   "abbr": "SLC"
+  },
+  "1598": {
+   "name": "Dyaco International Inc.",
+   "abbr": "Dyaco"
+  },
+  "3303": {
+   "name": "UNIVACCO TECHNOLOGY  INC.",
+   "abbr": "UNIVACCO"
+  },
+  "6220": {
+   "name": "YFC-BONEAGLE ELECTRIC CO., LTD.",
+   "abbr": "YFC-BONEAGLE"
+  },
+  "6807": {
+   "name": "FY Group Ltd.",
+   "abbr": "FY-KY"
+  },
+  "4506": {
+   "name": "GFC. LTD.",
+   "abbr": "GFC"
+  },
+  "7763": {
+   "name": "Johnson Fine Chemical Co., Ltd.",
+   "abbr": "Johnson Fine"
+  },
+  "5434": {
+   "name": "TOPCO SCIENTIFIC CO.,LTD.",
+   "abbr": "TOPCO"
+  },
+  "3388": {
+   "name": "TOPCO TECHNOLOGIES CORP.",
+   "abbr": "TTC"
+  },
+  "6803": {
+   "name": "ECOVE Environment Corp.",
+   "abbr": "ECOVE Corp."
+  },
+  "3484": {
+   "name": "Solteam Incorporation",
+   "abbr": "SOLTEAM"
+  },
+  "7744": {
+   "name": "W&B TECHNOLOGY LTD.",
+   "abbr": "WB"
+  },
+  "1595": {
+   "name": "Chime Ball Technology Co.,Ltd.",
+   "abbr": "CBT"
+  },
+  "2059": {
+   "name": "KING SLIDE WORKS CO.,LTD",
+   "abbr": "king slide"
+  },
+  "1516": {
+   "name": "FALCON POWER CO., LTD.",
+   "abbr": "FALCON"
+  },
+  "3543": {
+   "name": "JOCHU TECHNOLOGY CO., LTD.",
+   "abbr": "JOCHU"
+  },
+  "5521": {
+   "name": "KUNG SING ENGINEERING CORPORATION",
+   "abbr": "KSECO"
+  },
+  "1563": {
+   "name": "SuperAlloy Industrial Co.,Ltd.",
+   "abbr": "SAI"
+  },
+  "9921": {
+   "name": "GIANT MANUFACTURING CO., LTD.",
+   "abbr": "GIANT"
+  },
+  "2760": {
+   "name": "CHU YU HSIANG CO.,LTD.",
+   "abbr": "CYH"
+  },
+  "1539": {
+   "name": "CHIU TING MACHINERY CO.,LTD.",
+   "abbr": "GT"
+  },
+  "8227": {
+   "name": "PROGATE  GROUP CORPORATION",
+   "abbr": "PGC"
+  },
+  "6903": {
+   "name": "JIU HAN SYSTEM TECHNOLOGY CO., LTD.",
+   "abbr": "JH"
+  },
+  "6827": {
+   "name": "MegaPro Biomedical Co., Ltd.",
+   "abbr": "MPB"
+  },
+  "8084": {
+   "name": "CHIP HOPE  CO., LTD",
+   "abbr": "CHIP HOPE"
+  },
+  "6192": {
+   "name": "LUMAX INTERNATIONAL CORP., LTD.",
+   "abbr": "LUMAX"
+  },
+  "2254": {
+   "name": "COPLUS INC.",
+   "abbr": "COPLUS"
+  },
+  "9136": {
+   "name": "Ju Teng International Holdings Limited",
+   "abbr": "Ju Teng"
+  },
+  "6196": {
+   "name": "MARKETECH INTERNATIONAL CORP.",
+   "abbr": "MIC"
+  },
+  "2484": {
+   "name": "SIWARD CRYSTAL TECHNOLOGY CO., LTD",
+   "abbr": "SIWARD"
+  },
+  "6650": {
+   "name": "Art Emperor Co., Ltd",
+   "abbr": "Art Emperor"
+  },
+  "6605": {
+   "name": "DEPO AUTO PARTS INDUSTRIAL  Co., LTD.",
+   "abbr": "DEPO"
+  },
+  "6730": {
+   "name": "LAGIS ENTERPRISE CO., LTD.",
+   "abbr": "LAGIS"
+  },
+  "8097": {
+   "name": "ATW TECHNOLOGY INC.",
+   "abbr": "ATW"
+  },
+  "6185": {
+   "name": "PLASTRON PRECISION CO., LTD.",
+   "abbr": "PLASTRON"
+  },
+  "6771": {
+   "name": "Ping Ho Environmental Technology Co., Ltd.",
+   "abbr": "PHET"
+  },
+  "3117": {
+   "name": "TECSTAR TECHNOLOGY CO., LTD.",
+   "abbr": "TECSTAR"
+  },
+  "1451": {
+   "name": "NIEN HSING TEXTILE CO., LTD.",
+   "abbr": "NIEN HSING"
+  },
+  "3332": {
+   "name": "Cincon Electronics Co.,Ltd.",
+   "abbr": "CINCON"
+  },
+  "1108": {
+   "name": "LUCKY CEMENT CO.",
+   "abbr": "LUCKY CEMENT"
+  },
+  "2938": {
+   "name": "BEDDING WORLD CO.,LTD",
+   "abbr": "BEDDING WORLD"
+  },
+  "8089": {
+   "name": "Comtrend Corporation",
+   "abbr": "Comtrend"
+  },
+  "6016": {
+   "name": "Concord Securities Co.,Ltd.",
+   "abbr": "concords"
+  },
+  "4943": {
+   "name": "CONCRAFT HOLDING CO., LTD",
+   "abbr": "CONCRAFT"
+  },
+  "4739": {
+   "name": "Coremax Corporation",
+   "abbr": "COREMAX"
+  },
+  "6518": {
+   "name": "Concord Medical Co., Ltd.",
+   "abbr": "Concordmed"
+  },
+  "6665": {
+   "name": "HEALTHCONN CORP.",
+   "abbr": "HEALTHCONN"
+  },
+  "3672": {
+   "name": "Connection Technology Systems Inc.,",
+   "abbr": "CTS"
+  },
+  "6282": {
+   "name": "Acbel Polytech Inc.",
+   "abbr": "Acbel"
+  },
+  "9919": {
+   "name": "KNH ENTERPRISE CO., LTD.",
+   "abbr": "KNH"
+  },
+  "6919": {
+   "name": "Caliway Biopharmaceuticals Co., Ltd.",
+   "abbr": "Caliway"
+  },
+  "7915": {
+   "name": "U-LEAM Inc.",
+   "abbr": "U-LEAM"
+  },
+  "5297": {
+   "name": "3S Silicon Tech., Inc.",
+   "abbr": "3S"
+  },
+  "2328": {
+   "name": "Pan-International Industrial Corp.",
+   "abbr": "PI"
+  },
+  "3287": {
+   "name": "KWORLD COMPUTER CO.,LTD",
+   "abbr": "Kworld"
+  },
+  "6188": {
+   "name": "Quanta Storage Inc.",
+   "abbr": "QSI"
+  },
+  "8050": {
+   "name": "IBASE TECHNOLOGY INC.",
+   "abbr": "IBASE"
+  },
+  "4973": {
+   "name": "Silicon Power Computer & Communications Inc.",
+   "abbr": "Silicon Power"
+  },
+  "1338": {
+   "name": "Hiroca Holdings Ltd.",
+   "abbr": "Hiroca"
+  },
+  "1416": {
+   "name": "KWONG FONG INDUSTRIES CORPORATION",
+   "abbr": "KFIC"
+  },
+  "4438": {
+   "name": "Quang Viet Enterprise Co., Ltd.",
+   "abbr": "QVE"
+  },
+  "6125": {
+   "name": "KENMEC MECHANICAL ENGINEERING CO.,LTD.",
+   "abbr": "KENMEC"
+  },
+  "2382": {
+   "name": "QUANTA COMPUTER INC.",
+   "abbr": "QCI"
+  },
+  "6441": {
+   "name": "IBASE SOLUTION CO., LTD",
+   "abbr": "IBS"
+  },
+  "6693": {
+   "name": "inergy Technology Inc.",
+   "abbr": "inergy"
+  },
+  "1537": {
+   "name": "KUNG LONG BATTERIES INDUSTRIAL CO.,LTD",
+   "abbr": "KUNG LONG"
+  },
+  "5515": {
+   "name": "CHIEN KUO CONSTRUCTION CO., LTD",
+   "abbr": "CHIEN KUO"
+  },
+  "2106": {
+   "name": "KENDA RUBBER INDUSTRIAL CO., LTD",
+   "abbr": "KENDA"
+  },
+  "6606": {
+   "name": "KENT INDUSTRIAL CO.,LTD.",
+   "abbr": "KENT"
+  },
+  "8367": {
+   "name": "CHIEN SHING HARBOUR SERVICE CO. , LTD",
+   "abbr": "CS"
+  },
+  "8092": {
+   "name": "Chien Wei Precise Technology Co., Ltd.",
+   "abbr": "CWPT"
+  },
+  "5340": {
+   "name": "BAOTEK INDUSTRIAL MATERIALS LTD.",
+   "abbr": "BAOTEK"
+  },
+  "2421": {
+   "name": "SUNONWEALTH ELECTRIC MACHINE INDUSTRY CO., LT",
+   "abbr": "SUNON"
+  },
+  "3062": {
+   "name": "CyberTAN Technology Inc.",
+   "abbr": "CyberTAN"
+  },
+  "3046": {
+   "name": "AOPEN INC.",
+   "abbr": "AOPEN"
+  },
+  "3603": {
+   "name": "UC&GN International Corp.",
+   "abbr": "UC&GN"
+  },
+  "3322": {
+   "name": "JOINSOON ELECTRONICS MFG. CO., LTD.",
+   "abbr": "JEM"
+  },
+  "2460": {
+   "name": "GEM TERMINAL INDUSTRY CO.,LTD.",
+   "abbr": "GEM"
+  },
+  "6118": {
+   "name": "Xander International Corp.",
+   "abbr": "Xander"
+  },
+  "5014": {
+   "name": "Chain Chon Industrial Co., Ltd.",
+   "abbr": "CCI"
+  },
+  "5240": {
+   "name": "ACTi Corporation",
+   "abbr": "ACTi"
+  },
+  "5244": {
+   "name": "BRIGHTEK OPTOELECTRONIC CO.,LTD.",
+   "abbr": "BRIGHTEK"
+  },
+  "3131": {
+   "name": "GRAND PROCESS TECHNOLOGY CORPORATION",
+   "abbr": "GPTC"
+  },
+  "8433": {
+   "name": "BON FAME CO., LTD.",
+   "abbr": "BON FAME"
+  },
+  "3312": {
+   "name": "G.M.I Technology Inc.",
+   "abbr": "G.M.I"
+  },
+  "6482": {
+   "name": "FUN YOURS TECHNOLOGY CO.,LTD.",
+   "abbr": "FUN YOURS"
+  },
+  "1474": {
+   "name": "HONMYUE ENTERPRISE CO., LTD.",
+   "abbr": "HONMYUE"
+  },
+  "4560": {
+   "name": "STRONG H MACHINERY TECHNOLOGY (CAYMAN) INC.",
+   "abbr": "STRONG H"
+  },
+  "5013": {
+   "name": "NEW BEST WIRE INDUSTRIAL CO.,LTD",
+   "abbr": "NEW BEST"
+  },
+  "4747": {
+   "name": "Johnson Chemical Pharmaceutical Works CO.,LTD",
+   "abbr": "JCP"
+  },
+  "1463": {
+   "name": "CS GROUP INVESTMENT HOLDING LIMITED",
+   "abbr": "CSG"
+  },
+  "2481": {
+   "name": "PANJIT INTERNATIONAL INC.",
+   "abbr": "PANJIT"
+  },
+  "4732": {
+   "name": "NatureWise Biotech & Medicals Corporation",
+   "abbr": "NBM"
+  },
+  "5489": {
+   "name": "DYNACOLOR,INC.",
+   "abbr": "DYNACOLOR"
+  },
+  "6116": {
+   "name": "Hannstar Display Corp.",
+   "abbr": "Hannstar"
+  },
+  "3379": {
+   "name": "TAIWAN  BENEFIT  COMPANY",
+   "abbr": "TBC"
+  },
+  "2030": {
+   "name": "FROCH ENTERPRISE CO., LTD.",
+   "abbr": "FROCH"
+  },
+  "2801": {
+   "name": "CHANG HWA COMMERCIAL BANK, LTD.",
+   "abbr": "CHANG HWA BANK"
+  },
+  "8458": {
+   "name": "1 Production Film Co.",
+   "abbr": "OPF"
+  },
+  "3354": {
+   "name": "MICROCOSM TECHNOLOGY CO., LTD.",
+   "abbr": "MICROCOSM"
+  },
+  "6144": {
+   "name": "DELTAMAC(TAIWAN)CO.,LTD",
+   "abbr": "DMT"
+  },
+  "1464": {
+   "name": "DE LICACY INDUSTRIAL CO., LTD.",
+   "abbr": "DE LICACY"
+  },
+  "7860": {
+   "name": "TEH SENG PHARMACEUTICAL MFG.CO.,LTD.",
+   "abbr": "TEH SENG"
+  },
+  "3522": {
+   "name": "TOPLUS GLOBAL CO., LTD.",
+   "abbr": "TOPLUS"
+  },
+  "6670": {
+   "name": "FuSheng Precision Co., Ltd.",
+   "abbr": "FSP"
+  },
+  "2377": {
+   "name": "MICRO-STAR INTERNATIONAL CO.,LTD.",
+   "abbr": "MSI"
+  },
+  "8162": {
+   "name": "MICRO SILICON ELECTRONICS CO., LTD.",
+   "abbr": "MSEC"
+  },
+  "7721": {
+   "name": "MICROPROGRAM INFORMATION CO.,LTD.",
+   "abbr": "MICROPROGRAM"
+  },
+  "3285": {
+   "name": "Microtips Technology Inc.",
+   "abbr": "MT"
+  },
+  "3184": {
+   "name": "MicroBase Technology Corp.",
+   "abbr": "MBTC"
+  },
+  "6883": {
+   "name": "Micro Electricity Co. Ltd.",
+   "abbr": "ME"
+  },
+  "6027": {
+   "name": "RELIANCE SECURITIES CO.,LTD.",
+   "abbr": "RSC"
+  },
+  "8048": {
+   "name": "RUBY TECH CORPORATION",
+   "abbr": "RUBYTECH"
+  },
+  "5475": {
+   "name": "GLOTECH INDUSTRIAL CORP",
+   "abbr": "GLOTECH"
+  },
+  "3030": {
+   "name": "Test Research,Inc.",
+   "abbr": "TRI"
+  },
+  "3675": {
+   "name": "Eris Technology Corp.",
+   "abbr": "Eris Tech"
+  },
+  "7846": {
+   "name": "HTC & SOLAR TECH SERVICE LIMITED",
+   "abbr": "HTC & SOLAR"
+  },
+  "5511": {
+   "name": "TE CHANG CONSTRUCTION CO., LTD.",
+   "abbr": "TE  CHANG"
+  },
+  "3466": {
+   "name": "Skardin Industrial Corporation",
+   "abbr": "SKARDIN"
+  },
+  "4720": {
+   "name": "TEX YEAR INDUSTRIES INC.",
+   "abbr": "TEX YEAR"
+  },
+  "4911": {
+   "name": "G&E Herbal Biotechnology Co., Ltd.",
+   "abbr": "G&E"
+  },
+  "5902": {
+   "name": "Tait Marketing & Distribution Co., Ltd.",
+   "abbr": "Tait"
+  },
+  "6910": {
+   "name": "Grandsys Incorporation",
+   "abbr": "Grandsys"
+  },
+  "1264": {
+   "name": "TEHMAG FOODS CORPORATION",
+   "abbr": "TEHMAG"
+  },
+  "6934": {
+   "name": "HCmed Innovations Co., Ltd.",
+   "abbr": "HCMED"
+  },
+  "6625": {
+   "name": "B'IN LIVE CO., LTD.",
+   "abbr": "Binlive"
+  },
+  "2611": {
+   "name": "TZE SHIN INTERNATIONAL CO., LTD.",
+   "abbr": "TSI"
+  },
+  "6768": {
+   "name": "Sports Gear Co., Ltd.",
+   "abbr": "SPG-KY"
+  },
+  "8067": {
+   "name": "Gish International Co.,Ltd.",
+   "abbr": "Gish INT"
+  },
+  "2467": {
+   "name": "C SUN MFG. LTD.",
+   "abbr": "C SUN"
+  },
+  "2024": {
+   "name": "CHIH LIEN INDUSTRIAL CO.,LTD",
+   "abbr": "CHIH LIEN"
+  },
+  "3206": {
+   "name": "KINGSTATE ELECTRONICS CORP.",
+   "abbr": "KINGSTATE"
+  },
+  "8213": {
+   "name": "TAIWAN PRINTED CIRCUIT BOARD TECHVEST CO.,LTD",
+   "abbr": "tpt"
+  },
+  "7790": {
+   "name": "Spirit Scientific Co., Ltd.",
+   "abbr": "SSLab"
+  },
+  "7829": {
+   "name": "Yoda Pharmaceuticals Inc.",
+   "abbr": "YODA-KY"
+  },
+  "2497": {
+   "name": "E-LEAD ELECTRONIC CO.,LTD.",
+   "abbr": "E-LEAD"
+  },
+  "7590": {
+   "name": "YIHO INTERNATIONAL CO., LTD.",
+   "abbr": "Yiho Int'l"
+  },
+  "1456": {
+   "name": "I-HWA INDUSTRIAL CO.,LTD",
+   "abbr": "I-HWA"
+  },
+  "6920": {
+   "name": "Phoenix Pioneer technology Co., Ltd.",
+   "abbr": "PPt"
+  },
+  "1325": {
+   "name": "UNIVERSAL INCORPORATION",
+   "abbr": "UK"
+  },
+  "8349": {
+   "name": "QST  INTERNATIONAL  CORP.",
+   "abbr": "QST"
+  },
+  "1528": {
+   "name": "ANDERSON INDUSTRIAL CORP.",
+   "abbr": "ANDERSON"
+  },
+  "6405": {
+   "name": "ONANO INDUSTRIAL CORP.",
+   "abbr": "ONANO"
+  },
+  "6035": {
+   "name": "EASYCARD Corporation",
+   "abbr": "EASYCARD"
+  },
+  "6508": {
+   "name": "Huikwang Corporation",
+   "abbr": "HKC"
+  },
+  "8424": {
+   "name": "WELLPOOL CO., LTD",
+   "abbr": "WELLPOOL"
+  },
+  "6971": {
+   "name": "HUI MIN ENVIRONMENTAL TECH CORPORATION",
+   "abbr": "HM Env. Tech"
+  },
+  "6706": {
+   "name": "FITTECH CO.,LTD",
+   "abbr": "FitTech"
+  },
+  "7556": {
+   "name": "YEEDEX ELECTRONIC CORPORATION",
+   "abbr": "YEEDEX"
+  },
+  "6925": {
+   "name": "eLand Information Co., Ltd",
+   "abbr": "eLand"
+  },
+  "7749": {
+   "name": "Intelligo Technology Inc.",
+   "abbr": "iGo-KY"
+  },
+  "1217": {
+   "name": "AGV PRODUCTS CORP.",
+   "abbr": "AGV"
+  },
+  "8933": {
+   "name": "IDEAL BIKE CORPORATION",
+   "abbr": "IDEAL"
+  },
+  "2540": {
+   "name": "JSL CONSTRUCTION & DEVELOPMENT CO., LTD.",
+   "abbr": "JSL"
+  },
+  "6531": {
+   "name": "AP Memory Technology Corporation",
+   "abbr": "AP Memory"
+  },
+  "6858": {
+   "name": "IPEVO CORPORATION",
+   "abbr": "IPEVO"
+  },
+  "6918": {
+   "name": "A Plus Biotechnology Co., Ltd.",
+   "abbr": "A Plus Biotech"
+  },
+  "8487": {
+   "name": "ELTA  Technology  Co.,Ltd.",
+   "abbr": "ELTA"
+  },
+  "5398": {
+   "name": "Mediera Corporation",
+   "abbr": "Mediera"
+  },
+  "5484": {
+   "name": "EverFocus Electronics Corp.",
+   "abbr": "EverFocus"
+  },
+  "7851": {
+   "name": "H2 INC.",
+   "abbr": "H2 INC."
+  },
+  "6615": {
+   "name": "SOFIVA GENOMICS CO.,LTD.",
+   "abbr": "SOFIVA"
+  },
+  "2637": {
+   "name": "Wisdom Marine Lines Co., Limited",
+   "abbr": "WISDOM"
+  },
+  "8098": {
+   "name": "DURA TEK, INC.",
+   "abbr": "Duratek"
+  },
+  "6210": {
+   "name": "KINTECH ELECTRONICS CO., LTD.",
+   "abbr": "KINTECH"
+  },
+  "9935": {
+   "name": "CHING FENG HOME FASHIONS CO.,LTD",
+   "abbr": "CF"
+  },
+  "4534": {
+   "name": "Trinity Precision Technology Co., Ltd.",
+   "abbr": "trinity"
+  },
+  "3024": {
+   "name": "ACTION ELECTRONICS CO., LTD",
+   "abbr": "ACTION"
+  },
+  "6716": {
+   "name": "PADAUK Technology Co., Ltd.",
+   "abbr": "PDK"
+  },
+  "4108": {
+   "name": "PhytoHealth Corporation",
+   "abbr": "PhytoHealth"
+  },
+  "6969": {
+   "name": "Transcene Co., Ltd.",
+   "abbr": "Transcene"
+  },
+  "9934": {
+   "name": "GLOBE UNION INDUSTRIAL CORP",
+   "abbr": "GUIC"
+  },
+  "2359": {
+   "name": "SOLOMON TECHNOLOGY CORPORATION",
+   "abbr": "SOLOMON"
+  },
+  "2425": {
+   "name": "CHAINTECH TECHNOLOGY CORPORATION",
+   "abbr": "CHAINTECH"
+  },
+  "4164": {
+   "name": "CHC Healthcare Group",
+   "abbr": "CHC"
+  },
+  "2376": {
+   "name": "GIGA-BYTE TECHNOLOGY CO., LTD.",
+   "abbr": "GIGABYTE"
+  },
+  "6848": {
+   "name": "RBC BIOSCIENCE CORPORATION",
+   "abbr": "RBC"
+  },
+  "3097": {
+   "name": "Partner Tech Corp.",
+   "abbr": "PTT"
+  },
+  "4536": {
+   "name": "TOPKEY CORPORATION",
+   "abbr": "TOPKEY"
+  },
+  "4441": {
+   "name": "GREAT GIANT FIBRE GARMENT CO., LTD.",
+   "abbr": "GGF"
+  },
+  "2947": {
+   "name": "ZHEN YU HARDWARE CO., LTD.",
+   "abbr": "Zhen Yu"
+  },
+  "6143": {
+   "name": "NETRONIX,INC.",
+   "abbr": "NETRONIX,INC."
+  },
+  "8114": {
+   "name": "POSIFLEX TECHNOLOGY, INC.",
+   "abbr": "POSIFLEX"
+  },
+  "5426": {
+   "name": "CHENG FWA INDUSTRIAL CO.,LTD",
+   "abbr": "CF"
+  },
+  "6705": {
+   "name": "MARTAS Precision  Slide Co.,Ltd",
+   "abbr": "MARTAS"
+  },
+  "7810": {
+   "name": "JTRON TECHNOLOGY CORP.",
+   "abbr": "JTRON"
+  },
+  "7831": {
+   "name": "Jesper Co.,Ltd.",
+   "abbr": "JESPER"
+  },
+  "6525": {
+   "name": "GEM Services, Inc",
+   "abbr": "GEM"
+  },
+  "6816": {
+   "name": "MetaEdge Corporation",
+   "abbr": "METAEDGE"
+  },
+  "6161": {
+   "name": "JETWAY INFORMATION CO., LTD.",
+   "abbr": "JETWAY"
+  },
+  "4580": {
+   "name": "Value Valves Co., Ltd.",
+   "abbr": "Value Valves"
+  },
+  "2643": {
+   "name": "Soonest Express Co., Ltd.",
+   "abbr": "Soonest"
+  },
+  "2493": {
+   "name": "AMPOC FAR-EAST CO., LTD.",
+   "abbr": "AMPOC"
+  },
+  "3504": {
+   "name": "Young Optics Inc.",
+   "abbr": "Young Optics"
+  },
+  "3041": {
+   "name": "ALi Corporation",
+   "abbr": "ALi"
+  },
+  "2755": {
+   "name": "YoungQin International Co., Ltd.",
+   "abbr": "YoungQin"
+  },
+  "6150": {
+   "name": "Tul Corporation",
+   "abbr": "Tul"
+  },
+  "8096": {
+   "name": "CoAsia Electronics Corp.",
+   "abbr": "CoAsia"
+  },
+  "6122": {
+   "name": "KING POLYTECHNIC ENGINEERING CO.,LTD.",
+   "abbr": "KPEC"
+  },
+  "7796": {
+   "name": "Microip Inc.",
+   "abbr": "Microip"
+  },
+  "6928": {
+   "name": "UBIQCONN TECHNOLOGY, INC.",
+   "abbr": "UTI"
+  },
+  "8481": {
+   "name": "Transart Graphics Co., Ltd.",
+   "abbr": "Transart"
+  },
+  "7853": {
+   "name": "CHENG MEI INSTRUMENT TECHNOLOGY CO., LTD.",
+   "abbr": "cmit"
+  },
+  "4431": {
+   "name": "Mytrex Health Technologies, Inc.",
+   "abbr": "Mytrex Health"
+  },
+  "3485": {
+   "name": "ECLAT FOREVER MACHINERY CO.,LTD.",
+   "abbr": "EF"
+  },
+  "2459": {
+   "name": "AUDIX CORPORATION",
+   "abbr": "AUDIX"
+  },
+  "3545": {
+   "name": "FocalTech Systems Co., Ltd.",
+   "abbr": "FocalTech"
+  },
+  "2480": {
+   "name": "STARK TECHNOLOGY, INC.",
+   "abbr": "STARK"
+  },
+  "2355": {
+   "name": "CHIN-POON INDUSTRIAL CO., LTD.",
+   "abbr": "CHIN-POON"
+  },
+  "5287": {
+   "name": "ADDCN TECHNOLOGY CO., LTD",
+   "abbr": "ADDCN"
+  },
+  "6855": {
+   "name": "Eclatorq Technology Co., Ltd.",
+   "abbr": "Eclatorq"
+  },
+  "3036": {
+   "name": "WT MICROELECTRONICS CO., LTD.",
+   "abbr": "WT"
+  },
+  "3313": {
+   "name": "FEEI CHERNG DEVELOP TECHNOLOGY CO., LTD.",
+   "abbr": "FCD"
+  },
+  "6648": {
+   "name": "Das Technology Co., Ltd.",
+   "abbr": "DAS"
+  },
+  "7750": {
+   "name": "Syntec Technology Co., Ltd.",
+   "abbr": "Syntec"
+  },
+  "9925": {
+   "name": "TAIWAN SHIN KONG SECURITY CO.,LTD.",
+   "abbr": "SKS"
+  },
+  "2031": {
+   "name": "Hsin Kuang Steel co. LTD.,",
+   "abbr": "Hkssteel"
+  },
+  "4919": {
+   "name": "Nuvoton Technology Corporation",
+   "abbr": "NTC"
+  },
+  "8940": {
+   "name": "New Palace  International Co., Ltd.",
+   "abbr": "New Palace"
+  },
+  "2420": {
+   "name": "ZIPPY TECHNOLOGY CORP",
+   "abbr": "ZIPPY"
+  },
+  "2516": {
+   "name": "New Asia Construction & Development Corp.",
+   "abbr": "New Asia"
+  },
+  "4909": {
+   "name": "NEW  ERA  ELECTRONICS  CO., LTD",
+   "abbr": "NEE"
+  },
+  "4749": {
+   "name": "Advanced Echem Materials Company Limited",
+   "abbr": "aemc"
+  },
+  "3376": {
+   "name": "Shin Zu Shing Co ., LTD.",
+   "abbr": "SZS"
+  },
+  "4406": {
+   "name": "HSIN-SIN TEXTILE CO., LTD.",
+   "abbr": "HSIN-SIN"
+  },
+  "6121": {
+   "name": "SIMPLO TECHNOLOGY CO.,LTD.",
+   "abbr": "SMP"
+  },
+  "3713": {
+   "name": "Hsinjing Holding Co., Ltd.",
+   "abbr": "HsinjingHolding"
+  },
+  "9926": {
+   "name": "SHIN HAI GAS CORPORATION",
+   "abbr": "S.H."
+  },
+  "8234": {
+   "name": "NEXCOM International Co., Ltd.",
+   "abbr": "NEXCOM"
+  },
+  "6186": {
+   "name": "Shin Ruenn development Co., LTD",
+   "abbr": "Shin Ruenn"
+  },
+  "7815": {
+   "name": "Sync-Tech System Corp",
+   "abbr": "Sync-Tech"
+  },
+  "2850": {
+   "name": "SHINKONG INSURANCE CO., LTD.",
+   "abbr": "SK Insurance"
+  },
+  "4931": {
+   "name": "STL Technology Co., Ltd.",
+   "abbr": "STL"
+  },
+  "6810": {
+   "name": "Bio Preventive Medicine Corp.",
+   "abbr": "BPM"
+  },
+  "1419": {
+   "name": "SHINKONG TEXTILE CO.,LTD",
+   "abbr": "SHINKO.TEXTILE"
+  },
+  "1409": {
+   "name": "SHINKONG SYNTHETIC FIBERS CORPORATION",
+   "abbr": "SSFC"
+  },
+  "2442": {
+   "name": "JEAN CO.,LTD",
+   "abbr": "JEAN"
+  },
+  "7912": {
+   "name": "ZENITHTEK INC.",
+   "abbr": "ZENITHTEK"
+  },
+  "3679": {
+   "name": "Nishoku Technology Inc.",
+   "abbr": "Nishoku"
+  },
+  "2605": {
+   "name": "SINCERE NAVIGATION CORPORATION",
+   "abbr": "SNC"
+  },
+  "5481": {
+   "name": "SINO TACTFUL CO., LTD.",
+   "abbr": "SINOTACT"
+  },
+  "3630": {
+   "name": "Newmax Technology Co., Ltd.",
+   "abbr": "NEWMAX"
+  },
+  "2032": {
+   "name": "Sinkang Industries Co.,Ltd.",
+   "abbr": "Sinkang"
+  },
+  "5432": {
+   "name": "SOLOMON DATA INTERNATIONAL CORPORATION",
+   "abbr": "SOLOMON DATA"
+  },
+  "3085": {
+   "name": "NEWRETAIL CO., LTD",
+   "abbr": "NEWRETAIL"
+  },
+  "9944": {
+   "name": "SHINIH ENTERPRISE CO., LTD.",
+   "abbr": "Shinih"
+  },
+  "1580": {
+   "name": "SINMAG EQUIPMENT CORPORATION",
+   "abbr": "SINMAG"
+  },
+  "5209": {
+   "name": "CTCI Advanced Systems Inc.",
+   "abbr": "CTCI ASI"
+  },
+  "6265": {
+   "name": "KUEN CHAANG UPPERTECH CORP.",
+   "abbr": "KCU"
+  },
+  "4527": {
+   "name": "KUEN LING MACHINERY REFRIGERATING CO.,LTD.",
+   "abbr": "KL"
+  },
+  "6961": {
+   "name": "UNITRAVEL SERVICES CO., LTD.",
+   "abbr": "Uni Travel"
+  },
+  "1735": {
+   "name": "EVERMORE CHEMICAL INDUSTRY CO.,LTD.",
+   "abbr": "EMC"
+  },
+  "2547": {
+   "name": "RADIUM LIFE TECH. CO., LTD.",
+   "abbr": "RADIUM"
+  },
+  "8341": {
+   "name": "SUNNY FRIEND ENVIRONMENTAL TECHNOLOGY CO.,LTD",
+   "abbr": "SF"
+  },
+  "4807": {
+   "name": "Regal Holding Co., Ltd.",
+   "abbr": "RH"
+  },
+  "6208": {
+   "name": "HIGHLIGHT TECH CORP.",
+   "abbr": "Htc"
+  },
+  "3711": {
+   "name": "ASE Technology Holding Co., Ltd.",
+   "abbr": "ASEH"
+  },
+  "6958": {
+   "name": "Infinite Finance Co.,Ltd",
+   "abbr": "INFINITE"
+  },
+  "3090": {
+   "name": "NICHIDENBO  CORPORATION",
+   "abbr": "NDB"
+  },
+  "1526": {
+   "name": "SUN RACE STURMEY-ARCHER INC.",
+   "abbr": "SUNRACE"
+  },
+  "1594": {
+   "name": "JUKAO ENGINEERING CORP.",
+   "abbr": "JUKAO"
+  },
+  "3325": {
+   "name": "Casing Macron Technology Co., Ltd.",
+   "abbr": "Casing"
+  },
+  "4119": {
+   "name": "SCI Pharmtech, Inc.",
+   "abbr": "SCI"
+  },
+  "6698": {
+   "name": "FineMat Applied Materials Co., Ltd.",
+   "abbr": "FINEMAT"
+  },
+  "4537": {
+   "name": "SHUZ TUNG MACHINERY INDUSTRIAL CO., LTD.",
+   "abbr": "STMC"
+  },
+  "1343": {
+   "name": "SUN RISE E&T CORPORATION",
+   "abbr": "SUN RISE"
+  },
+  "8421": {
+   "name": "XU YUAN PACKAGING TECHNOLOGY CO., LTD.",
+   "abbr": "XYP"
+  },
+  "4556": {
+   "name": "Bright Sheland International Co., Ltd.",
+   "abbr": "BSI"
+  },
+  "7849": {
+   "name": "Shine Passion Engineering Co., Ltd.",
+   "abbr": "Shine Passion"
+  },
+  "3390": {
+   "name": "SUNFLEX  TECH.  CO.,  Ltd.",
+   "abbr": "SUNFLEX"
+  },
+  "6409": {
+   "name": "VOLTRONIC POWER TECHNOLOGY CORP.",
+   "abbr": "VOLTRONIC"
+  },
+  "2337": {
+   "name": "MACRONIX INTERNATIONAL CO., LTD.",
+   "abbr": "Macronix"
+  },
+  "2816": {
+   "name": "Union Insurance Co., Ltd.",
+   "abbr": "UNION INS."
+  },
+  "6233": {
+   "name": "PROLIFIC TECHNOLOGY INC.",
+   "abbr": "PROLIFIC"
+  },
+  "6223": {
+   "name": "MPI CORPORATION",
+   "abbr": "MPI"
+  },
+  "2365": {
+   "name": "KYE SYSTEMS CORP.",
+   "abbr": "KYE"
+  },
+  "6732": {
+   "name": "Sensortek Technology Corp.",
+   "abbr": "sensortek"
+  },
+  "5455": {
+   "name": "Sheng Yi Development Co.,Ltd",
+   "abbr": "SY"
+  },
+  "3305": {
+   "name": "SHENMAO TECHNOLOGY INC.",
+   "abbr": "SHENMAO"
+  },
+  "3491": {
+   "name": "Universal Microwave Technology,Inc.",
+   "abbr": "UMT"
+  },
+  "3128": {
+   "name": "Hi Sharp Intelligence Technology Co.,Ltd.",
+   "abbr": "HI SHARP"
+  },
+  "3266": {
+   "name": "Sunty Development Co., LTD",
+   "abbr": "SUNTY"
+  },
+  "8028": {
+   "name": "Phoenix Silicon International Corporation",
+   "abbr": "PSI"
+  },
+  "6804": {
+   "name": "Axman Enterprise Co., Ltd.",
+   "abbr": "Axman"
+  },
+  "8215": {
+   "name": "BenQ Materials Corporation",
+   "abbr": "BMC"
+  },
+  "4116": {
+   "name": "BenQ Medical Technology Corporation",
+   "abbr": "BMTC"
+  },
+  "8938": {
+   "name": "ADVANCED INTERNATIONAL MULTITECH CO.,LTD",
+   "abbr": "ADVANCED  GROUP"
+  },
+  "7890": {
+   "name": "Etica Battery INC",
+   "abbr": "Etica"
+  },
+  "3380": {
+   "name": "Alpha Networks Inc.",
+   "abbr": "Alpha"
+  },
+  "6527": {
+   "name": "Crystalvue Medical Corporation",
+   "abbr": "Crystalvue"
+  },
+  "7704": {
+   "name": "Finesse Technology Co., Ltd",
+   "abbr": "Finesse"
+  },
+  "1799": {
+   "name": "EASYWELL BIOMEDICALS, INC.",
+   "abbr": "EASYWELL"
+  },
+  "6425": {
+   "name": "EASY FIELD CORPORATION",
+   "abbr": "EFC"
+  },
+  "6552": {
+   "name": "JMC ELECTRONICS CO., LTD.",
+   "abbr": "JMC"
+  },
+  "2734": {
+   "name": "Ezfly International Travel Agent Co., Ltd.",
+   "abbr": "Ezfly"
+  },
+  "7781": {
+   "name": "TPIsoftware Corporation",
+   "abbr": "TPIsoftware"
+  },
+  "7747": {
+   "name": "GrandTech Cloud Services Inc.",
+   "abbr": "GCS"
+  },
+  "7753": {
+   "name": "STAR ASIA VISION CORPORATION",
+   "abbr": "SAVC"
+  },
+  "2646": {
+   "name": "STARLUX AIRLINES CO., LTD.",
+   "abbr": "STARLUX AIR"
+  },
+  "3025": {
+   "name": "Loop Telecommunication International,Inc.",
+   "abbr": "LOOP"
+  },
+  "8047": {
+   "name": "Great Computer Corporation",
+   "abbr": "GCC"
+  },
+  "6563": {
+   "name": "Image Match Design Inc.",
+   "abbr": "iMD"
+  },
+  "2399": {
+   "name": "BIOSTAR MICROTECH INTERNATIONAL CORP.",
+   "abbr": "BIOSTAR"
+  },
+  "3597": {
+   "name": "Avertronics Inc.",
+   "abbr": "AVI"
+  },
+  "4544": {
+   "name": "Chun Zu Machinery Industry CO.,LTD",
+   "abbr": "Chun Zu"
+  },
+  "2010": {
+   "name": "CHUN YUAN STEEL INDUSTRY CO.,LTD.",
+   "abbr": "CHUN YUAN STEEL"
+  },
+  "2012": {
+   "name": "CHUN YU WORKS & CO.,LTD.",
+   "abbr": "CHUN YU"
+  },
+  "1339": {
+   "name": "Y.C.C. PARTS MFG. CO., LTD.",
+   "abbr": "Y.C.C."
+  },
+  "6561": {
+   "name": "Chief Telecom Inc.",
+   "abbr": "Chief"
+  },
+  "6709": {
+   "name": "Advagene Biopharma Co., Ltd.",
+   "abbr": "Advagene"
+  },
+  "6785": {
+   "name": "Alar Pharmaceuticals Inc.",
+   "abbr": "Alar"
+  },
+  "3232": {
+   "name": "Sentronic International Corp.",
+   "abbr": "SIC"
+  },
+  "6169": {
+   "name": "InterServ International  Inc.",
+   "abbr": "InterServ"
+  },
+  "7716": {
+   "name": "ITI INTERNATIONAL TRANSPORTATION INC.",
+   "abbr": "ITI"
+  },
+  "1468": {
+   "name": "CHANG HO FIBRE CORPORATION",
+   "abbr": "CHANG HO"
+  },
+  "8438": {
+   "name": "AMIA CO.,LTD",
+   "abbr": "AMIA"
+  },
+  "7642": {
+   "name": "Champ-Ray Industrial Co., Ltd.",
+   "abbr": "Champ-Ray"
+  },
+  "8923": {
+   "name": "China Times Publishing Comp.",
+   "abbr": "C.T.Publishing"
+  },
+  "4566": {
+   "name": "GLOBAL TEK FABRICATION CO., Ltd.",
+   "abbr": "GLOBAL TEK"
+  },
+  "6151": {
+   "name": "GINAR TECHNOLOGY CO.,LTD.",
+   "abbr": "GINAR"
+  },
+  "6796": {
+   "name": "Medimaging Integrated Solution Inc.",
+   "abbr": "MiiS"
+  },
+  "2064": {
+   "name": "CAMELLIA METAL CO.,LTD.",
+   "abbr": "CAMELLIA"
+  },
+  "6221": {
+   "name": "Genesis Technology, Inc.",
+   "abbr": "Genesis"
+  },
+  "4123": {
+   "name": "Center Laboratories, Inc.",
+   "abbr": "Center Lab."
+  },
+  "3631": {
+   "name": "Chernan Metal Industrial Corp.",
+   "abbr": "CHERNAN"
+  },
+  "4541": {
+   "name": "Magnate Technology Co.,Ltd",
+   "abbr": "Magnate"
+  },
+  "3229": {
+   "name": "CHEER TIME ENTERPRISE CO., LTD",
+   "abbr": "CHEER TIME"
+  },
+  "3013": {
+   "name": "CHENMING ELECTRONIC TECHNOLOGY CORPORATION",
+   "abbr": "UNEEC"
+  },
+  "1271": {
+   "name": "SunWay Biotech Co., Ltd.",
+   "abbr": "SunWay"
+  },
+  "2495": {
+   "name": "Infortrend Technology, Inc.",
+   "abbr": "Infortrend"
+  },
+  "6543": {
+   "name": "PERFECT MEDICAL INDUSTRY CO., LTD.",
+   "abbr": "PF"
+  },
+  "6847": {
+   "name": "PURIBLOOD MEDICAL CO., LTD.",
+   "abbr": "PURIBLOOD"
+  },
+  "4117": {
+   "name": "GENERAL BIOLOGICALS CORP.",
+   "abbr": "GBC"
+  },
+  "6263": {
+   "name": "Planet Technology Corporation",
+   "abbr": "Planet"
+  },
+  "6129": {
+   "name": "Princeton Technology Corporation",
+   "abbr": "PTC"
+  },
+  "6599": {
+   "name": "Poindus Systems Corp.",
+   "abbr": "Poindus"
+  },
+  "6590": {
+   "name": "Provision Information Co.,Ltd.",
+   "abbr": "Provision"
+  },
+  "5248": {
+   "name": "Pixon Technologies Corporation",
+   "abbr": "PIXON"
+  },
+  "6549": {
+   "name": "TaiwanJ Pharmaceuticals Co., Ltd.",
+   "abbr": "TaiwanJ"
+  },
+  "3164": {
+   "name": "GenMont  Biotech Incorporation",
+   "abbr": "GenMont"
+  },
+  "3189": {
+   "name": "KINSUS INTERCONNECT TECHNOLOGY CORP.",
+   "abbr": "KINSUS"
+  },
+  "7899": {
+   "name": "CERTAIN MICRO APPLICATION TECHNOLOGY INC",
+   "abbr": "CMAT"
+  },
+  "4768": {
+   "name": "INGENTEC CORPORATION",
+   "abbr": "INGENTEC"
+  },
+  "3141": {
+   "name": "Ultra Chip, Inc.",
+   "abbr": "UltraChip"
+  },
+  "3535": {
+   "name": "Favite, Inc.",
+   "abbr": "Favite"
+  },
+  "6533": {
+   "name": "Andes Technology Corporation",
+   "abbr": "ANDES"
+  },
+  "3042": {
+   "name": "TXC CORPORATION",
+   "abbr": "TXC"
+  },
+  "6411": {
+   "name": "Amazing Microelectronic Corp.",
+   "abbr": "Amazing"
+  },
+  "6787": {
+   "name": "KINGRAY TECHNOLOGY CO., LTD.",
+   "abbr": "KINGRAYTECH"
+  },
+  "3530": {
+   "name": "Silicon Optronics, Inc.",
+   "abbr": "SOI"
+  },
+  "6491": {
+   "name": "PEGAVISION CORPORATION",
+   "abbr": "PEGAVISION"
+  },
+  "2707": {
+   "name": "FORMOSA INTERNATIONAL HOTELS CORPORATION",
+   "abbr": "GFRT"
+  },
+  "3006": {
+   "name": "Elite Semiconductor Microelectronics Tech Inc",
+   "abbr": "ESMT"
+  },
+  "4995": {
+   "name": "Litemax Electronics Inc.",
+   "abbr": "Litemax"
+  },
+  "8049": {
+   "name": "AMPIRE  CO.,  LTD",
+   "abbr": "AMPIRE"
+  },
+  "6815": {
+   "name": "Diamond Biotechnology Co., Ltd.",
+   "abbr": "Diamond"
+  },
+  "4551": {
+   "name": "GLOBAL PMX CO., LTD",
+   "abbr": "GLOBAL PMX"
+  },
+  "5478": {
+   "name": "SOFT-WORLD INTERNATIONAL CORPORATION",
+   "abbr": "SOFT-WORLD"
+  },
+  "3035": {
+   "name": "FARADAY TECHNOLOGY CORP.",
+   "abbr": "Faraday"
+  },
+  "6294": {
+   "name": "Tekom Technologies, Inc",
+   "abbr": "Tekom"
+  },
+  "7824": {
+   "name": "NADA HOLDINGS CORP.",
+   "abbr": "NADA"
+  },
+  "5263": {
+   "name": "BROGENT TECHNOLOGIES INC.",
+   "abbr": "BROGENT"
+  },
+  "4925": {
+   "name": "JMicron Technology Corp.",
+   "abbr": "JMicron"
+  },
+  "8176": {
+   "name": "Z-COM,INC.",
+   "abbr": "ZCOM"
+  },
+  "4162": {
+   "name": "PharmaEngine, Inc.",
+   "abbr": "PEI"
+  },
+  "7832": {
+   "name": "Intelligene Inc.",
+   "abbr": "Intelligene"
+  },
+  "3596": {
+   "name": "Arcadyan Technology Corporation",
+   "abbr": "Arcadyan"
+  },
+  "5245": {
+   "name": "WISECHIP SEMICONDUCTOR INC.",
+   "abbr": "WSI"
+  },
+  "7836": {
+   "name": "SmaDay Technology Co., Ltd.",
+   "abbr": "SmaDay"
+  },
+  "6751": {
+   "name": "Acer Synergy Tech Corp.",
+   "abbr": "AST"
+  },
+  "8932": {
+   "name": "Wiselink Co., Ltd.",
+   "abbr": "Wiselink"
+  },
+  "3473": {
+   "name": "Fiber Logic Communications, Inc.",
+   "abbr": "Fiber Logic"
+  },
+  "2345": {
+   "name": "Accton Technology Corp.",
+   "abbr": "ACCTON"
+  },
+  "7726": {
+   "name": "CARILEX MEDICAL, INC.",
+   "abbr": "CARILEX"
+  },
+  "7730": {
+   "name": "Nano Electronics and Micro System Technologie",
+   "abbr": "NEMS"
+  },
+  "4197": {
+   "name": "Visgeneer Inc.",
+   "abbr": "VIS"
+  },
+  "4138": {
+   "name": "DYNAMIC MEDICAL TECHNOLOGIES INC.",
+   "abbr": "DMT"
+  },
+  "3540": {
+   "name": "Thermaltake Technology Co., Ltd.",
+   "abbr": "Thermaltake"
+  },
+  "4949": {
+   "name": "Win Win Precision Technology Co., Ltd",
+   "abbr": "WIN WIN"
+  },
+  "9962": {
+   "name": "YEOU YIH STEEL CO., LTD.",
+   "abbr": "YYS"
+  },
+  "6613": {
+   "name": "NOVA TECHNOLOGY CORP.",
+   "abbr": "Novatech"
+  },
+  "8255": {
+   "name": "Actron Technology Corporation",
+   "abbr": "ATC"
+  },
+  "6876": {
+   "name": "LAUNXP BIOMEDICAL CO., LTD.",
+   "abbr": "LaunXP BioMed"
+  },
+  "4771": {
+   "name": "VIZIONFOCUS INC.",
+   "abbr": "VF"
+  },
+  "3066": {
+   "name": "TAIWAN OASIS TECHNOLOGY CO., LTD.",
+   "abbr": "TAIWAN OASIS"
+  },
+  "4175": {
+   "name": "MedFirst Healthcare Services, Inc.",
+   "abbr": "MedFirst"
+  },
+  "4192": {
+   "name": "SynCore Biotechnology Co.,Ltd",
+   "abbr": "SynCore"
+  },
+  "1788": {
+   "name": "Hi-Clearance Inc.",
+   "abbr": "HCI"
+  },
+  "1734": {
+   "name": "SINPHAR PHARMACEUTICAL CO.,LTD.",
+   "abbr": "SINPHAR"
+  },
+  "4763": {
+   "name": "Jinan Acetate Chemical Co., LTD.",
+   "abbr": "ACE"
+  },
+  "3297": {
+   "name": "Hunt Electronic Co., Ltd.",
+   "abbr": "Hunt"
+  },
+  "5299": {
+   "name": "Excelliance MOS Corporation",
+   "abbr": "EMC"
+  },
+  "1504": {
+   "name": "TECO ELECTRIC & MACHINERY CO., LTD.",
+   "abbr": "TECO"
+  },
+  "6588": {
+   "name": "East Tender Optoelectronics Corporation",
+   "abbr": "EOC"
+  },
+  "5438": {
+   "name": "TECO Image Systems Co.,Ltd..",
+   "abbr": "TIS"
+  },
+  "4526": {
+   "name": "TONGTAI MACHINE & TOOL CO., LTD.",
+   "abbr": "TONGTAI"
+  },
+  "1414": {
+   "name": "Tung Ho Textile Co., Ltd.",
+   "abbr": "TUNG HO"
+  },
+  "2006": {
+   "name": "Tung Ho Steel Enterprise Corp.",
+   "abbr": "Tung Ho Steel"
+  },
+  "8478": {
+   "name": "Alexander Marine Co., Ltd.",
+   "abbr": "Ocean Alexander"
+  },
+  "8064": {
+   "name": "Contrel Technology Co., Ltd",
+   "abbr": "CONTREL"
+  },
+  "6697": {
+   "name": "Information Technology Total Services Co.,Ltd",
+   "abbr": "ITTS"
+  },
+  "7710": {
+   "name": "ASRock Industrial Computer Corporation",
+   "abbr": "ASRockInd"
+  },
+  "7786": {
+   "name": "DONG FANG OFFSHORE CO., LTD.",
+   "abbr": "DFO"
+  },
+  "5538": {
+   "name": "TONG MING ENTERPRISE CO., LTD",
+   "abbr": "TONG MING"
+  },
+  "2614": {
+   "name": "EASTERN MEDIA INTERNATIONAL CORPORATION",
+   "abbr": "EMIC"
+  },
+  "1110": {
+   "name": "SOUTHEAST CEMENT CO.,LTD.",
+   "abbr": "SE CEMENT"
+  },
+  "4105": {
+   "name": "TTY BIOPHARM COMPANY LIMITED",
+   "abbr": "TTY"
+  },
+  "3290": {
+   "name": "DONPON PRECISION INC.",
+   "abbr": "DONPON"
+  },
+  "8432": {
+   "name": "TSH Biopharm Corporation Limited",
+   "abbr": "TSH"
+  },
+  "1480": {
+   "name": "Tung Mung Development Co., Ltd",
+   "abbr": "TM"
+  },
+  "6840": {
+   "name": "BTL Inc.",
+   "abbr": "BTL"
+  },
+  "3272": {
+   "name": "Good Way Technology Co., Ltd.",
+   "abbr": "GW"
+  },
+  "5225": {
+   "name": "Eastech Holding Limited",
+   "abbr": "EASTECH"
+  },
+  "1710": {
+   "name": "ORIENTAL UNION CHEMICAL CORP.",
+   "abbr": "OUCC"
+  },
+  "7738": {
+   "name": "EASTERN UNION INTERACTIVE CORP.",
+   "abbr": "EUI"
+  },
+  "1418": {
+   "name": "TongHwa  Corporation",
+   "abbr": "TongHwa"
+  },
+  "2321": {
+   "name": "TECOM CO.,LTD.",
+   "abbr": "TECOM"
+  },
+  "1319": {
+   "name": "TONG YANG INDUSTRY CO.,LTD",
+   "abbr": "TYG"
+  },
+  "4401": {
+   "name": "Toung Loong Textile Mfg.Co.,Ltd.",
+   "abbr": "TLTM"
+  },
+  "1708": {
+   "name": "SESODA CORPORATION",
+   "abbr": "SESODA"
+  },
+  "6156": {
+   "name": "SONG SHANG ELECTRONICS CO., LTD.",
+   "abbr": "SONG SHANG"
+  },
+  "5016": {
+   "name": "SONG HO INDUSTRIAL CO., LTD.",
+   "abbr": "Song Ho"
+  },
+  "6240": {
+   "name": "Sung Gang Corp.Limited",
+   "abbr": "Sung  Gang"
+  },
+  "7788": {
+   "name": "SONG CHUAN PRECISION CO., LTD.",
+   "abbr": "SONG CHUAN"
+  },
+  "5488": {
+   "name": "SUNFPU TECHNOLOGY CO.,LTD",
+   "abbr": "SP"
+  },
+  "4167": {
+   "name": "Savior Lifetec Corporation",
+   "abbr": "SLC"
+  },
+  "5471": {
+   "name": "SONIX TECHNOLOGY CO.,LTD.",
+   "abbr": "SONIX"
+  },
+  "6141": {
+   "name": "PLOTECH CO.,LTD",
+   "abbr": "PLOTECH"
+  },
+  "8462": {
+   "name": "Power Wind Health Industry Incorporated",
+   "abbr": "Power Wind"
+  },
+  "3518": {
+   "name": "Paragon Technologies Co., Ltd.",
+   "abbr": "PT TECH."
+  },
+  "2546": {
+   "name": "KEDGE CONSTRUCTION CO., LTD.",
+   "abbr": "KEDGE"
+  },
+  "6940": {
+   "name": "GUS TECHNOLOGY CO., LTD.",
+   "abbr": "GUS TECH"
+  },
+  "4806": {
+   "name": "KUEI TIEN CULTURAL & CREATIVE ENTERTAINMENT",
+   "abbr": "KTCCE"
+  },
+  "5306": {
+   "name": "KMC (KUEI MENG)  INTERNATIONAL  INC.",
+   "abbr": "KMC"
+  },
+  "4549": {
+   "name": "FineTek Co.,Ltd.",
+   "abbr": "FineTek"
+  },
+  "5543": {
+   "name": "Buima Group Inc.",
+   "abbr": "Buima"
+  },
+  "6812": {
+   "name": "SAULTECH TECHNOLOGY CO., LTD",
+   "abbr": "SAULTECH"
+  },
+  "3489": {
+   "name": "Sun Brothers Development Co., Limited",
+   "abbr": "Sun Brothers"
+  },
+  "6806": {
+   "name": "SHINFOX ENERGY CO., LTD.",
+   "abbr": "SHINFOX ENERGY"
+  },
+  "8410": {
+   "name": "Sentien Printing Factory Co.,Ltd",
+   "abbr": "Sen Tien"
+  },
+  "8942": {
+   "name": "Xxentria Technology Materials Co.,Ltd",
+   "abbr": "Xxentria"
+  },
+  "2316": {
+   "name": "WUS Printed Circuit Co., Ltd.",
+   "abbr": "WUS"
+  },
+  "6124": {
+   "name": "YEH-CHIANG TECHNOLOGY CORP.",
+   "abbr": "YCTC"
+  },
+  "1475": {
+   "name": "BIG SUNSHINE CO., LTD.",
+   "abbr": "BIG SUNSHINE"
+  },
+  "7826": {
+   "name": "Twister5 Co., Ltd.",
+   "abbr": "Twister5"
+  },
+  "5009": {
+   "name": "GLORIA MATERIAL TECHNOLOGY CORP",
+   "abbr": "GMTC"
+  },
+  "3437": {
+   "name": "Advanced Optoelectronic Technology Inc.",
+   "abbr": "AOT"
+  },
+  "1909": {
+   "name": "Longchen Paper & Packaging Co., Ltd.",
+   "abbr": "Longchen P&P"
+  },
+  "3684": {
+   "name": "Grand-Tek Technology Co., Ltd.",
+   "abbr": "Grand-Tek"
+  },
+  "1617": {
+   "name": "JUNG SHING WIRE CO.,LTD.",
+   "abbr": "JSW"
+  },
+  "6555": {
+   "name": "Long Time Technology Co., Ltd.",
+   "abbr": "LT"
+  },
+  "7709": {
+   "name": "Honor Seiki Company Limited",
+   "abbr": "Honor"
+  },
+  "4989": {
+   "name": "LCY TECHNOLOGY CORP.",
+   "abbr": "LCYT"
+  },
+  "8034": {
+   "name": "OPNET TECHNOLOGIES CO., LTD.",
+   "abbr": "OPNET"
+  },
+  "2607": {
+   "name": "EVERGREEN INTERNATIONAL STORAGE & TRANSPORT",
+   "abbr": "EITC"
+  },
+  "1529": {
+   "name": "LUXE GREEN ENERGY TECHNOLOGY CO., LTD.",
+   "abbr": "LUXE"
+  },
+  "4154": {
+   "name": "Raku  Co., Ltd",
+   "abbr": "Raku-KY"
+  },
+  "7584": {
+   "name": "HAPPYTUK CO., LTD.",
+   "abbr": "HAPPYTUK"
+  },
+  "6662": {
+   "name": "BioLASCO Taiwan Co., Ltd.",
+   "abbr": "BioLASCO"
+  },
+  "6891": {
+   "name": "Locus Cell Co., Ltd.",
+   "abbr": "Locus Cell"
+  },
+  "6414": {
+   "name": "ENNOCONN CORPORATION",
+   "abbr": "ENNOCONN"
+  },
+  "7455": {
+   "name": "DEXATEK TECHNOLOGY LTD.",
+   "abbr": "DEXATEK"
+  },
+  "2062": {
+   "name": "SUNSPRING METAL CORPORATION",
+   "abbr": "SSM"
+  },
+  "6180": {
+   "name": "GAMANIA DIGITAL ENTERTAINMENT CO.,LTD.",
+   "abbr": "GAMANIA"
+  },
+  "2761": {
+   "name": "G-YEN HUTONG CO., LTD.",
+   "abbr": "GYEN HUTONG"
+  },
+  "4554": {
+   "name": "Orange Electronic Co ., Ltd",
+   "abbr": "Orange"
+  },
+  "6729": {
+   "name": "Luminescence Technology Corp.",
+   "abbr": "Lumtec"
+  },
+  "9911": {
+   "name": "TAIWAN SAKURA CORPORATION",
+   "abbr": "TAIWAN SAKURA"
+  },
+  "2539": {
+   "name": "SAKURA DEVELOPMENT CO.,LTD",
+   "abbr": "SAKURAD"
+  },
+  "4924": {
+   "name": "HTM INTERNATIONAL HOLDING LTD.",
+   "abbr": "HTM"
+  },
+  "4198": {
+   "name": "S&S Healthcare Holding Ltd.",
+   "abbr": "S&S"
+  },
+  "9918": {
+   "name": "shin shin natural gas co,ltd",
+   "abbr": "S.S.N.G"
+  },
+  "9906": {
+   "name": "HSIN BA BA  CORPORATION",
+   "abbr": "HSIN BA BA"
+  },
+  "6160": {
+   "name": "Cipherlab Co.,Ltd.",
+   "abbr": "Cipherlab"
+  },
+  "2949": {
+   "name": "H.H.GALAXY CO., LTD.",
+   "abbr": "HHG"
+  },
+  "6560": {
+   "name": "APPRO PHOTOELECTRON INC.",
+   "abbr": "APPROPHO"
+  },
+  "2901": {
+   "name": "SHIN SHIN CO LTD.",
+   "abbr": "SHIN SHIN"
+  },
+  "8917": {
+   "name": "HSIN TAI GAS CO., LTD.",
+   "abbr": "HTGas"
+  },
+  "6634": {
+   "name": "SINEW PHARMA INC.",
+   "abbr": "SINEW"
+  },
+  "3037": {
+   "name": "Unimicron Technology Corp.",
+   "abbr": "UNIMICRON"
+  },
+  "5254": {
+   "name": "CEN LINK CO.,LTD.",
+   "abbr": "CENLINK"
+  },
+  "3264": {
+   "name": "Ardentec Corporation",
+   "abbr": "Ardentec"
+  },
+  "3703": {
+   "name": "CONTINENTAL HOLDINGS CORP.",
+   "abbr": "CHC"
+  },
+  "8908": {
+   "name": "SHINHSIUNG  NATURAL  GAS  INC.",
+   "abbr": "SHIN HSIUNG"
+  },
+  "9931": {
+   "name": "HSIN KAO GAS CO.,LTD.",
+   "abbr": "HSIN KAO"
+  },
+  "6878": {
+   "name": "O'Pay Electronic Payment Co., Ltd.",
+   "abbr": "Opay"
+  },
+  "3002": {
+   "name": "Ahoku Electronic Company",
+   "abbr": "AHOKU"
+  },
+  "2256": {
+   "name": "oToBrite Electronic,Inc.",
+   "abbr": "oToBrite"
+  },
+  "3687": {
+   "name": "MacroWell OMG Digital Entertainment Co., Ltd.",
+   "abbr": "OMG"
+  },
+  "2940": {
+   "name": "SUN OWN INDUSTRIAL CO., LTD.",
+   "abbr": "SUNOWN"
+  },
+  "6546": {
+   "name": "AMPAK Technology, Inc.",
+   "abbr": "AMPAK"
+  },
+  "1538": {
+   "name": "JENN FENG INDUSTRIAL TOOLS CO., LTD.",
+   "abbr": "JF"
+  },
+  "2392": {
+   "name": "CHENG UEI PRECISION INDUSTRY CO., LTD.",
+   "abbr": "FOXLINK"
+  },
+  "2641": {
+   "name": "Franbo Lines Corp.",
+   "abbr": "Franbo Lines"
+  },
+  "4906": {
+   "name": "GEMTEK TECHNOLOGY Co.,Ltd",
+   "abbr": "GEMTEK"
+  },
+  "2105": {
+   "name": "Cheng Shin Rubber Ind., Co., Ltd.",
+   "abbr": "CST"
+  },
+  "8147": {
+   "name": "NEXTRONICS ENGINEERING CORP.",
+   "abbr": "NEXTRON"
+  },
+  "6534": {
+   "name": "CH BIOTECH R&D CO., LTD.",
+   "abbr": "CHBIO"
+  },
+  "5348": {
+   "name": "Empower Technology Corporation.",
+   "abbr": "EMT"
+  },
+  "1506": {
+   "name": "RIGHT WAY INDUSTRIAL CO.,LTD",
+   "abbr": "RIGHT WAY"
+  },
+  "3149": {
+   "name": "G-TECH Optoelectronics Corporation",
+   "abbr": "G-TECH"
+  },
+  "1904": {
+   "name": "Cheng Loong Corporation",
+   "abbr": "Cheng Loong"
+  },
+  "2402": {
+   "name": "ICHIA TECHNOLOGIES, INC",
+   "abbr": "ICHIA"
+  },
+  "1732": {
+   "name": "Mao Bao INC.",
+   "abbr": "Mao Bao"
+  },
+  "7811": {
+   "name": "Minson Integration, Inc.",
+   "abbr": "Minson"
+  },
+  "4555": {
+   "name": "TAIWAN CHELIC Co., Ltd.",
+   "abbr": "CHELIC"
+  },
+  "6932": {
+   "name": "Merdury Biopharmaceutical Corporation",
+   "abbr": "Merdury"
+  },
+  "3705": {
+   "name": "YungShin Global Holding Corporation",
+   "abbr": "Y.S.H."
+  },
+  "5508": {
+   "name": "YUNGSHIN CONSTRUCTION & DEVELOPMENT CO.,LTD.",
+   "abbr": "YCDC"
+  },
+  "1711": {
+   "name": "Everlight Chemical Industrial Corporation",
+   "abbr": "EVERLIGHT"
+  },
+  "1589": {
+   "name": "Yeong Guan Energy Technology Group Co., Ltd.",
+   "abbr": "YGG"
+  },
+  "5546": {
+   "name": "YONGGU GROUP INC.",
+   "abbr": "YGI"
+  },
+  "3712": {
+   "name": "FIT Holding Co., Ltd.",
+   "abbr": "FITH"
+  },
+  "4523": {
+   "name": "Everbrite Technology Co., Ltd.",
+   "abbr": "Everbrite"
+  },
+  "4714": {
+   "name": "U-BEST INNOVATIVE TECHNOLOGY CO., LTD.",
+   "abbr": "UB"
+  },
+  "7711": {
+   "name": "ASROCK RACK INCORPORATION",
+   "abbr": "ASROCK RACK"
+  },
+  "4557": {
+   "name": "Yusin Holding Corp.",
+   "abbr": "Yusin"
+  },
+  "4102": {
+   "name": "YUNG ZIP CHEMICAL IND. CO., LTD.",
+   "abbr": "YUNGZIP"
+  },
+  "4726": {
+   "name": "Mycenax Biotech Inc.",
+   "abbr": "Mycenax"
+  },
+  "6973": {
+   "name": "U-Neuron Biomedical Inc.",
+   "abbr": "U-Neuron"
+  },
+  "4178": {
+   "name": "StemCyte International, Ltd.",
+   "abbr": "StemCyte"
+  },
+  "4711": {
+   "name": "YONG SHUN CHEMICAL CO.,LTD",
+   "abbr": "YONG SHUN"
+  },
+  "6618": {
+   "name": "UHT Unitech Company Ltd.",
+   "abbr": "UHT"
+  },
+  "1323": {
+   "name": "YONYU PLASTICS CO., LTD.",
+   "abbr": "YONYU"
+  },
+  "1726": {
+   "name": "YUNG CHI PAINT ＆ VARNISH MFG.CO.,LTD",
+   "abbr": "Y.C.P."
+  },
+  "6790": {
+   "name": "Yuen Foong Yu Consumer Products Co., Ltd.",
+   "abbr": "YFYCPG"
+  },
+  "2890": {
+   "name": "SINOPAC  FINANCIAL HOLDINGS COMPANY LIMITED",
+   "abbr": "SINOPACHOLDINGS"
+  },
+  "1907": {
+   "name": "YFY Inc.",
+   "abbr": "YFY"
+  },
+  "6863": {
+   "name": "Arizon RFID Technology (Cayman) Co., Ltd.",
+   "abbr": "Arizon RFID"
+  },
+  "2939": {
+   "name": "Yong Yi International Group Co., Ltd",
+   "abbr": "Vitafoss-KY"
+  },
+  "6936": {
+   "name": "Vetnostrum Animal Health Co., Ltd.",
+   "abbr": "Vetnostrum"
+  },
+  "2247": {
+   "name": "Pan German Universal Motors Ltd.",
+   "abbr": "PGUM"
+  },
+  "6967": {
+   "name": "TRANS-SUN MATERIALS TECHNOLOGY CO., LTD.",
+   "abbr": "TRANS-SUN"
+  },
+  "6830": {
+   "name": "MSSCORPS CO., LTD.",
+   "abbr": "MSS"
+  },
+  "1525": {
+   "name": "KIAN SHEN CORPORATION",
+   "abbr": "KSC"
+  },
+  "4528": {
+   "name": "CHIAN HSING FORGING INDUSTRIAL CO.,LTD.",
+   "abbr": "CHF"
+  },
+  "6638": {
+   "name": "Goldtek Technology Co., Ltd.",
+   "abbr": "Goldtek"
+  },
+  "8921": {
+   "name": "SHEN'S ART PRINTING CO., LTD.",
+   "abbr": "SHEN'S ART"
+  },
+  "6291": {
+   "name": "Analog Integrations Corporation",
+   "abbr": "AIC"
+  },
+  "6248": {
+   "name": "TMP Steel Corporation",
+   "abbr": "TMP"
+  },
+  "6949": {
+   "name": "PELL BIO-MED TECHNOLOGY CO., LTD.",
+   "abbr": "PELL BMT"
+  },
+  "6873": {
+   "name": "HD Renewable Energy Co., Ltd.",
+   "abbr": "HDRE"
+  },
+  "3577": {
+   "name": "ICP DAS CO., LTD.",
+   "abbr": "ICP DAS"
+  },
+  "4741": {
+   "name": "Jetbest Corporation",
+   "abbr": "Jetbest"
+  },
+  "8467": {
+   "name": "BONNY WORLDWIDE LIMITED",
+   "abbr": "BONNY"
+  },
+  "3163": {
+   "name": "Browave Corporation",
+   "abbr": "Browave"
+  },
+  "3064": {
+   "name": "Astro Corporation",
+   "abbr": "Astro Corp."
+  },
+  "6750": {
+   "name": "Tech-Top Engineering CO., LTD.",
+   "abbr": "TTE"
+  },
+  "4736": {
+   "name": "Taidoc Technology Corporation",
+   "abbr": "TaiDoc"
+  },
+  "6467": {
+   "name": "TAHO Pharmaceuticals Ltd.",
+   "abbr": "TAHO Pharma"
+  },
+  "4169": {
+   "name": "TCM BIOTECH INTERNATIONAL CORP.",
+   "abbr": "TCM"
+  },
+  "1218": {
+   "name": "TAISUN ENTERPRISE CO.,LTD.",
+   "abbr": "TAISUN"
+  },
+  "3338": {
+   "name": "Taisol Electronics Co., Ltd.",
+   "abbr": "TAISOL"
+  },
+  "6541": {
+   "name": "Tanvex BioPharma, Inc.",
+   "abbr": "Tanvex"
+  },
+  "2230": {
+   "name": "C.T.I. TRAFFIC INDUSTRIES CO.,LTD.",
+   "abbr": "C.T.I."
+  },
+  "8289": {
+   "name": "TAITIEN ELECTRONICS CO., LTD.",
+   "abbr": "Taitien"
+  },
+  "6266": {
+   "name": "TOP UNION ELECTRONICS CORP.",
+   "abbr": "TOP UNION"
+  },
+  "3339": {
+   "name": "TEKCORE CO., LTD",
+   "abbr": "TEKCORE"
+  },
+  "2102": {
+   "name": "FEDERAL CORPORATION",
+   "abbr": "FEDERAL CORP"
+  },
+  "6629": {
+   "name": "THAI KIN CO., LTD.",
+   "abbr": "TK-KY"
+  },
+  "9105": {
+   "name": "Cal-Comp Electronics (Thailand) Pub Co Ltd",
+   "abbr": "CCET"
+  },
+  "9927": {
+   "name": "THYE MING INDUSTRIAL CO.,LTD.",
+   "abbr": "TMI"
+  },
+  "8080": {
+   "name": "TerraLink Enterprise Co., Ltd",
+   "abbr": "TerraLink"
+  },
+  "4927": {
+   "name": "Apex International Co., Ltd.",
+   "abbr": "Apex"
+  },
+  "6691": {
+   "name": "YANKEY ENGINEERING Co., LTD.",
+   "abbr": "YANKEY"
+  },
+  "3622": {
+   "name": "YOUNG FAST OPTOELECTRONICS CO., LTD",
+   "abbr": "YFO"
+  },
+  "8077": {
+   "name": "Green World Hotels Co., Ltd.",
+   "abbr": "GWH"
+  },
+  "6872": {
+   "name": "NaviFUS Corporation",
+   "abbr": "NaviFUS"
+  },
+  "4131": {
+   "name": "NeoCore Technology Co., Ltd.",
+   "abbr": "NeoCore"
+  },
+  "4174": {
+   "name": "OBI Pharma, Inc.",
+   "abbr": "OBI"
+  },
+  "6165": {
+   "name": "Lang Inc.",
+   "abbr": "Lang"
+  },
+  "2038": {
+   "name": "HAI KWANG ENTERPRISE CORPORATION",
+   "abbr": "HAIKWANG"
+  },
+  "7877": {
+   "name": "TEINCO TECHNOLOGY CO., LTD.",
+   "abbr": "TEINCO"
+  },
+  "3268": {
+   "name": "Higher Way Electronic Co., Ltd.",
+   "abbr": "Higher Way"
+  },
+  "2348": {
+   "name": "Hiyes International Co., Ltd.",
+   "abbr": "Hiyes"
+  },
+  "7814": {
+   "name": "Horien Biochemical Technology Co., Ltd.",
+   "abbr": "HORIEN"
+  },
+  "6884": {
+   "name": "Highpoint Service Network Corporation",
+   "abbr": "HSNC"
+  },
+  "3252": {
+   "name": "Haiwan International Development Co.,Ltd",
+   "abbr": "Haiwan"
+  },
+  "3694": {
+   "name": "AzureWave Technologies, Inc.",
+   "abbr": "AzureWave"
+  },
+  "6203": {
+   "name": "Sea Sonic Electronics Co., Ltd.",
+   "abbr": "Sea Sonic"
+  },
+  "2929": {
+   "name": "TOPBI International Holdings Limited",
+   "abbr": "TOPBI"
+  },
+  "6283": {
+   "name": "SHUN ON ELECTRONIC CO., LTD.",
+   "abbr": "SOE"
+  },
+  "4529": {
+   "name": "ELECTRIC POWER TECHNOLOGY LIMITED",
+   "abbr": "EPTECH"
+  },
+  "7516": {
+   "name": "Sea Mild Biotechnology Co., Ltd",
+   "abbr": "Sea Mild"
+  },
+  "3093": {
+   "name": "TAIWAN KONG KING CO.,LTD",
+   "abbr": "TKK"
+  },
+  "3689": {
+   "name": "U.D.ELECTRONIC CORP.",
+   "abbr": "UDE"
+  },
+  "2249": {
+   "name": "Young Shine Electric Co., Ltd.",
+   "abbr": "YOUNG SHINE"
+  },
+  "4972": {
+   "name": "TONS LIGHTOLOGY INC.",
+   "abbr": "TONS"
+  },
+  "3536": {
+   "name": "Yuan Jie Technology",
+   "abbr": ""
+  },
+  "6639": {
+   "name": "Grand Green Energy Co., LTD.",
+   "abbr": "GGEC"
+  },
+  "7922": {
+   "name": "EVOASIS INC.",
+   "abbr": "EVOASIS"
+  },
+  "7818": {
+   "name": "KEMFLO INTERNATIONAL CO., LTD.",
+   "abbr": "KEMFLO"
+  },
+  "6817": {
+   "name": "WINSTON MEDICAL SUPPLY CO., LTD.",
+   "abbr": "WINSTON"
+  },
+  "2916": {
+   "name": "MUNSIN GARMENT CORPORATION",
+   "abbr": "MUNSIN"
+  },
+  "1268": {
+   "name": "Hi-Lai Foods Co., Ltd",
+   "abbr": "Hi-Lai Foods"
+  },
+  "2404": {
+   "name": "United Integrated Services Co., Ltd.",
+   "abbr": "UIS"
+  },
+  "2488": {
+   "name": "HANPIN ELECTRON CO., LTD.",
+   "abbr": "HANPIN"
+  },
+  "7827": {
+   "name": "HanchorBio Inc.",
+   "abbr": "Hanchor-KY"
+  },
+  "7856": {
+   "name": "HERMES TESTING SOLUTIONS INC.",
+   "abbr": "HTSI"
+  },
+  "1294": {
+   "name": "HANTECH BIO-TECHNOLOGY CO., LTD.",
+   "abbr": "HTB"
+  },
+  "3707": {
+   "name": "EPISIL TECHNOLOGIES INC.",
+   "abbr": "EPISIL"
+  },
+  "3402": {
+   "name": "Wholetech  System Hitech Limited",
+   "abbr": "WHOLETECH"
+  },
+  "2634": {
+   "name": "Aerospace Industrial Development Corporation",
+   "abbr": "AIDC"
+  },
+  "6620": {
+   "name": "Handa Pharmaceuticals,Inc.",
+   "abbr": "Handa Pharma"
+  },
+  "2597": {
+   "name": "Ruentex Engineering & Const.Co",
+   "abbr": "REC"
+  },
+  "6881": {
+   "name": "RUENTEX INTERIOR DESIGN INC.",
+   "abbr": "RTD"
+  },
+  "2915": {
+   "name": "RUENTEX INDUSTRIES LIMITED",
+   "abbr": "RUENTEX IND.LTD"
+  },
+  "9945": {
+   "name": "RUENTEX DEVELOPMENT CO., LTD.",
+   "abbr": "RUENTEX DEVELOP"
+  },
+  "8463": {
+   "name": "Ruentex Materials Co.,Ltd.",
+   "abbr": "RTM"
+  },
+  "1808": {
+   "name": "RUN LONG CONSTRUCTION CO., LTD.",
+   "abbr": "RUN LONG"
+  },
+  "6742": {
+   "name": "VACTRONICS TECHNOLOGIES INC.",
+   "abbr": "Vti"
+  },
+  "4111": {
+   "name": "Chi Sheng Pharma & Biotech Co., Ltd",
+   "abbr": "CHI  SHENG"
+  },
+  "1569": {
+   "name": "Bin Chuan Enterprise Co., Ltd.",
+   "abbr": "Bin Chuan"
+  },
+  "6823": {
+   "name": "GREENFILTEC LTD.",
+   "abbr": "GreenFILTEC"
+  },
+  "5469": {
+   "name": "HannStar Board Corp.",
+   "abbr": "HSB"
+  },
+  "8103": {
+   "name": "CviLux Corporation",
+   "abbr": "CviLux"
+  },
+  "6999": {
+   "name": "HAN BIOMEDICAL INC.",
+   "abbr": "Han Biomedical"
+  },
+  "7920": {
+   "name": "Tripartite Therapeutics Inc.",
+   "abbr": "TTI"
+  },
+  "6609": {
+   "name": "TAIWAN TAKISAWA TECHNOLOGY CO., LTD.",
+   "abbr": "TTT"
+  },
+  "7731": {
+   "name": "MARX Biotech Co., Ltd.",
+   "abbr": "MARX"
+  },
+  "4306": {
+   "name": "YEM CHIO CO., LTD.",
+   "abbr": "YC"
+  },
+  "3171": {
+   "name": "Yem Chio Distribution Co., Ltd.",
+   "abbr": "YCD"
+  },
+  "2231": {
+   "name": "CUB  ELECPARTS  INC.",
+   "abbr": "CUB"
+  },
+  "2252": {
+   "name": "CUBTEK INC.",
+   "abbr": "CUBTEK"
+  },
+  "8201": {
+   "name": "INVENTEC BESTA CO.,LTD.",
+   "abbr": "BESTA"
+  },
+  "4729": {
+   "name": "MILDEX OPTICAL INC.",
+   "abbr": "MILDEX"
+  },
+  "7740": {
+   "name": "SEETEL NEW ENERGY Co., LTD.",
+   "abbr": "SEETEL"
+  },
+  "3373": {
+   "name": "Radiant Innovation Inc.",
+   "abbr": "Radiant"
+  },
+  "9957": {
+   "name": "YIEH UNITED STEEL CORP.",
+   "abbr": "YUSCO"
+  },
+  "2007": {
+   "name": "YIEH HSING ENTERPRISE CO.,LTD.",
+   "abbr": "YH"
+  },
+  "2023": {
+   "name": "YIEH PHUI ENTERPRISE CO.,LTD.",
+   "abbr": "YP"
+  },
+  "3693": {
+   "name": "AIC Inc.",
+   "abbr": "AIC"
+  },
+  "2430": {
+   "name": "TSANN KUEN ENTERPRISE CO.,LTD",
+   "abbr": "TKE"
+  },
+  "2719": {
+   "name": "TSG Star Travel Corp.",
+   "abbr": "Star Travel"
+  },
+  "4930": {
+   "name": "Star  Comgistic Capital Co.,Ltd.",
+   "abbr": "Star  Comgistic"
+  },
+  "2367": {
+   "name": "UNITECH PRINTED CIRCUIT BOARD CORP.",
+   "abbr": "UNITECH"
+  },
+  "3563": {
+   "name": "MACHVISION,INC",
+   "abbr": "MACHVISION"
+  },
+  "6565": {
+   "name": "ThroughTek Co., Ltd",
+   "abbr": "TUTK"
+  },
+  "2908": {
+   "name": "Test Rite International Co., Ltd.",
+   "abbr": "Test Rite"
+  },
+  "7867": {
+   "name": "TEST RITE RETAIL CO., LTD.",
+   "abbr": "TLW"
+  },
+  "6616": {
+   "name": "Techcential International Ltd",
+   "abbr": "TIL"
+  },
+  "2884": {
+   "name": "E.SUN FINANCIAL HOLDING COMPANY,LTD.",
+   "abbr": "E.S.F.H"
+  },
+  "3406": {
+   "name": "GENIUS ELECTRONIC OPTICAL CO.,LTD.",
+   "abbr": "GSEO"
+  },
+  "2727": {
+   "name": "WOWPRIME CORP.",
+   "abbr": "WOWPRIME"
+  },
+  "6935": {
+   "name": "PRINCE PHARMACEUTICAL CO., LTD.",
+   "abbr": "PRINCE PHARM"
+  },
+  "2751": {
+   "name": "Kingza International CO.,LTD.",
+   "abbr": "Kingza"
+  },
+  "2897": {
+   "name": "O-Bank Co., Ltd.",
+   "abbr": "O-Bank"
+  },
+  "4588": {
+   "name": "Arch Meter Corporation",
+   "abbr": "Arch Meter"
+  },
+  "6906": {
+   "name": "Groundhog Inc.",
+   "abbr": "Groundhog"
+  },
+  "6212": {
+   "name": "LI MING DEVELOPMENT CONSTRUCTION CO., LTD.",
+   "abbr": "LI MING"
+  },
+  "9949": {
+   "name": "TITTOT CO.,LTD.",
+   "abbr": "TITTOT"
+  },
+  "6176": {
+   "name": "RADIANT OPTO-ELECTRONICS CORP.",
+   "abbr": "ROEC"
+  },
+  "1512": {
+   "name": "JUI LI ENTERPRISE CO.,LTD.",
+   "abbr": "JL"
+  },
+  "4171": {
+   "name": "GeneReach Biotechnology Corp.",
+   "abbr": "GeneReach"
+  },
+  "6842": {
+   "name": "Nexora Technology Co., LTD.",
+   "abbr": "NEXORA"
+  },
+  "2379": {
+   "name": "Realtek Semiconductor Corporation",
+   "abbr": "RT"
+  },
+  "4532": {
+   "name": "RECHI PRECISION CO.,LTD.",
+   "abbr": "RECHI"
+  },
+  "6416": {
+   "name": "CASWELL, INC.",
+   "abbr": "CASWELL"
+  },
+  "8083": {
+   "name": "PRO-HAWK CORPORATION",
+   "abbr": "TIC"
+  },
+  "6198": {
+   "name": "Rich Circle Development Co., Ltd.",
+   "abbr": "Rich Circle"
+  },
+  "6532": {
+   "name": "CALITECH CO., LTD",
+   "abbr": "CT"
+  },
+  "5863": {
+   "name": "TAIPEI STAR BANK",
+   "abbr": "TSB"
+  },
+  "2489": {
+   "name": "AMTRAN TECHNOLOGY CO.,LTD",
+   "abbr": "AMTRAN"
+  },
+  "3592": {
+   "name": "Raydium Semiconductor Corporation",
+   "abbr": "Raydium"
+  },
+  "6677": {
+   "name": "Anxo Pharmaceutical Co., Ltd.",
+   "abbr": "Anxo"
+  },
+  "3152": {
+   "name": "Advanced Ceramic X Corporation",
+   "abbr": "ACX"
+  },
+  "3499": {
+   "name": "GLOBALSAT WORLDCOM CORPORATION",
+   "abbr": "GLOBALSAT"
+  },
+  "4991": {
+   "name": "GCS Holdings, Inc.",
+   "abbr": "GCS"
+  },
+  "7507": {
+   "name": "ENRESTEC INC.",
+   "abbr": "ENRESTEC INC."
+  },
+  "1104": {
+   "name": "UNIVERSAL CEMENT CORPORATION",
+   "abbr": "UCC"
+  },
+  "4207": {
+   "name": "TAIWAN FRUCTOSE CO., LTD.",
+   "abbr": "TFC"
+  },
+  "6488": {
+   "name": "GlobalWafers Co., Ltd",
+   "abbr": "GWC"
+  },
+  "2413": {
+   "name": "UNIVERSAL MICROELECTRONICS CO., LTD.",
+   "abbr": "UMEC"
+  },
+  "2729": {
+   "name": "TTFB COMPANY LIMITED",
+   "abbr": "TTFB"
+  },
+  "1295": {
+   "name": "SYNBIO  TECH  INC.",
+   "abbr": "SYNBIO"
+  },
+  "8279": {
+   "name": "SYNGEN BIOTECH CO.,LTD.",
+   "abbr": "SYNGEN"
+  },
+  "1777": {
+   "name": "SYN-TECH CHEM. & PHARM. CO., LTD.",
+   "abbr": "SYN-TECH"
+  },
+  "6492": {
+   "name": "Senhwa Biosciences, Inc.",
+   "abbr": "SH"
+  },
+  "1720": {
+   "name": "Standard Chemical & Pharmaceutical Co. Ltd.",
+   "abbr": "S.C.P.C"
+  },
+  "3455": {
+   "name": "UTECHZONE  Co., Ltd.",
+   "abbr": "UTECHZONE"
+  },
+  "6882": {
+   "name": "REALLUSION INC",
+   "abbr": "REALLUSION"
+  },
+  "6582": {
+   "name": "Shin Foong Specialty&Applied Materials Co Ltd",
+   "abbr": "Shin Foong"
+  },
+  "5285": {
+   "name": "Jih Lin Technology Co., Ltd.",
+   "abbr": "Jih Lin"
+  },
+  "7872": {
+   "name": "GREEN SOLUTION TECHNOLOGY CO., LTD.",
+   "abbr": "GS"
+  },
+  "8401": {
+   "name": "BAI  SHA TECHNOLOGY CO., LTD.",
+   "abbr": "BAI SHA"
+  },
+  "6152": {
+   "name": "PRIME ELECTRONICS AND SATELLITICS INCORPORAT",
+   "abbr": "PRIME"
+  },
+  "9938": {
+   "name": "Taiwan Paiho Limited",
+   "abbr": "TAIWAN PAIHO"
+  },
+  "8404": {
+   "name": "PAIHO SHIH HOLDINGS CORPORATION",
+   "abbr": "PAIHO  SHIH"
+  },
+  "2483": {
+   "name": "EXCEL CELL ELECTRONIC CO., LTD.",
+   "abbr": "ECE"
+  },
+  "4563": {
+   "name": "QUASER MACHINE TOOLS, INC.",
+   "abbr": "QUASER"
+  },
+  "6259": {
+   "name": "BULL WILL CO., LTD.",
+   "abbr": "BULLWILL"
+  },
+  "6622": {
+   "name": "Bossdom Digiinnovation CO.,LTD.",
+   "abbr": "Bossdom Digi"
+  },
+  "3659": {
+   "name": "Bison Electronics Inc.",
+   "abbr": "Bison"
+  },
+  "2236": {
+   "name": "Patec Precision Industry Co., Ltd.",
+   "abbr": "Patec"
+  },
+  "7791": {
+   "name": "LUCKY ROYAL CO., LTD.",
+   "abbr": "LUCKY ROYAL"
+  },
+  "4419": {
+   "name": "King House CO., Ltd.",
+   "abbr": "KH"
+  },
+  "4744": {
+   "name": "CVC TECHNOLOGIES INC.",
+   "abbr": "CVC"
+  },
+  "2543": {
+   "name": "HWANG CHANG GENERAL CONTRACTOR CO.,LTD",
+   "abbr": "HWANG CHANG"
+  },
+  "2528": {
+   "name": "CROWELL DEVELOPMENT CORP.",
+   "abbr": "CROWELL"
+  },
+  "9951": {
+   "name": "MACAUTO INDUSTRIAL CO., LTD",
+   "abbr": "MACAUTO"
+  },
+  "2545": {
+   "name": "HUANG HSIANG CONSTRUCTION CORPORATION",
+   "abbr": "HUANG HSIANG"
+  },
+  "5533": {
+   "name": "FOUNDING CONSTRUCTION DEVELOPMENT CORP.",
+   "abbr": "FOUNDING"
+  },
+  "3512": {
+   "name": "Huang Long Development Co.,Ltd.",
+   "abbr": "Huang Long"
+  },
+  "3628": {
+   "name": "ABLEREX ELECTRONICS CO., LTD.",
+   "abbr": "ABLEREX"
+  },
+  "6499": {
+   "name": "Medeon Biodesign, Inc.",
+   "abbr": "Medeon"
+  },
+  "8342": {
+   "name": "I  JANG  INDUSTRIAL  CO.,LTD.",
+   "abbr": "I  JANG"
+  },
+  "6461": {
+   "name": "Intech Biopharm Ltd.",
+   "abbr": "Intech"
+  },
+  "7879": {
+   "name": "ADVANCED MATERIAL SYSTEMS CORPORATION",
+   "abbr": "AMS"
+  },
+  "3048": {
+   "name": "EDOM TECHNOLOGY CO., LTD.",
+   "abbr": "EDOM"
+  },
+  "2601": {
+   "name": "First Steamship Co., Ltd.",
+   "abbr": "FSC"
+  },
+  "7707": {
+   "name": "CMSC, Inc.",
+   "abbr": "CMSC"
+  },
+  "6912": {
+   "name": "Yi Chun Green Technology Co., Ltd.",
+   "abbr": "YCGT"
+  },
+  "8403": {
+   "name": "SHAREHOPE MEDICINE CO., LTD.",
+   "abbr": "SHAREHOPE"
+  },
+  "4553": {
+   "name": "ALFOT Technologies Co.,Ltd",
+   "abbr": "ALFOT"
+  },
+  "6202": {
+   "name": "HOLTEK SEMICONDUCTOR INCORPORATION",
+   "abbr": "HOLTEK"
+  },
+  "3027": {
+   "name": "BILLION ELECTRIC CO., LTD.",
+   "abbr": "BILLION"
+  },
+  "2029": {
+   "name": "SHENG YU STEEL CO., LTD.",
+   "abbr": "SYSCO"
+  },
+  "2464": {
+   "name": "MIRLE  AUTOMATION  CORPORATION",
+   "abbr": "Mirle"
+  },
+  "1597": {
+   "name": "CHIEFTEK PRECISION Co., LTD.",
+   "abbr": "cpc"
+  },
+  "6407": {
+   "name": "Mutual-Tek Industries Co. Ltd",
+   "abbr": "Mutual-Tek"
+  },
+  "6819": {
+   "name": "Oriental System Technology Inc.",
+   "abbr": "ORISYSTECH"
+  },
+  "3168": {
+   "name": "DATA IMAGE CORPORATION",
+   "abbr": "DATA IMAGE"
+  },
+  "4977": {
+   "name": "PCL TECHNOLOGIES,INC.",
+   "abbr": "PCL"
+  },
+  "7893": {
+   "name": "Radbon Electronics Co., Ltd.",
+   "abbr": "Radbon"
+  },
+  "6861": {
+   "name": "InnoCare Optoelectronics Corporation",
+   "abbr": "INCX"
+  },
+  "7758": {
+   "name": "KEELGOAL ENERGY CO., LTD.",
+   "abbr": "KEELGOAL ENERGY"
+  },
+  "7551": {
+   "name": "FLASHAIM INC.",
+   "abbr": "FLASHAIM"
+  },
+  "8016": {
+   "name": "Sitronix Technology Corp.",
+   "abbr": "Sitronix"
+  },
+  "6415": {
+   "name": "Silergy Corp.",
+   "abbr": "Silergy"
+  },
+  "6257": {
+   "name": "SIGURD MICROELECTRONICS CORP.",
+   "abbr": "SIGURD"
+  },
+  "3511": {
+   "name": "SIMULA TECHNOLOGY  INC.",
+   "abbr": "SIMULA TECH INC"
+  },
+  "6725": {
+   "name": "Cica-Huntek Chemical Technology Taiwan Co.",
+   "abbr": "CHCT"
+  },
+  "2363": {
+   "name": "Silicon Integrated Systems Corp.",
+   "abbr": "SiS"
+  },
+  "3632": {
+   "name": "PAPAGO INC.",
+   "abbr": "PAPAGO"
+  },
+  "6579": {
+   "name": "AAEON Technology Inc.",
+   "abbr": "AAEON"
+  },
+  "6559": {
+   "name": "High Power Lighting Corp",
+   "abbr": "HPL"
+  },
+  "2395": {
+   "name": "ADVANTECH Co., Ltd.",
+   "abbr": "Advantech"
+  },
+  "6229": {
+   "name": "V-TAC TECHNOLOGY CO.,LTD.",
+   "abbr": "V-TAC"
+  },
+  "3617": {
+   "name": "Cyber Power Systems, Inc.",
+   "abbr": "CyberPower"
+  },
+  "7669": {
+   "name": "Suregiant Technology Co., Ltd.",
+   "abbr": "Suregiant"
+  },
+  "3691": {
+   "name": "GIGASOLAR MATERIALS CORPORATION",
+   "abbr": "GIGASOLAR"
+  },
+  "7547": {
+   "name": "INTUMIT INC.",
+   "abbr": "INTUMIT"
+  },
+  "6536": {
+   "name": "TIGA GAMING INC.",
+   "abbr": "TIGA"
+  },
+  "4589": {
+   "name": "Motion Technology Electric & Machinery Co.,",
+   "abbr": "MTM"
+  },
+  "7719": {
+   "name": "CARBON-BASED TECHNOLOGY INC.",
+   "abbr": "CBT"
+  },
+  "4707": {
+   "name": "PAN ASIA CHEMICAL CO.",
+   "abbr": "PACC"
+  },
+  "3594": {
+   "name": "ARBOR Technology Corp.",
+   "abbr": "ARBOR"
+  },
+  "4765": {
+   "name": "PANCOLOUR INK CO., LTD.",
+   "abbr": "PANCOLOUR"
+  },
+  "3005": {
+   "name": "Getac Holdings Corporation",
+   "abbr": "Getac"
+  },
+  "7821": {
+   "name": "MiTAC Digital Technology Corporation",
+   "abbr": "MDT"
+  },
+  "3558": {
+   "name": "Senao Networks Inc.",
+   "abbr": "Senao Networks"
+  },
+  "6462": {
+   "name": "Egis Technology Inc.",
+   "abbr": "EGIS"
+  },
+  "2450": {
+   "name": "Senao International Co.,Ltd.",
+   "abbr": "SENAO"
+  },
+  "3706": {
+   "name": "MiTAC Holdings Corporation",
+   "abbr": "MHC"
+  },
+  "1789": {
+   "name": "ScinoPharm Taiwan, Ltd.",
+   "abbr": "SPT"
+  },
+  "7840": {
+   "name": "Nice Garden Industrial Co., Ltd.",
+   "abbr": "Nice Garden"
+  },
+  "5269": {
+   "name": "ASMEDIA TECHNOLOGY INC.",
+   "abbr": "Asmedia"
+  },
+  "6676": {
+   "name": "Sunny Pharmtech Inc.",
+   "abbr": "Sunny"
+  },
+  "1593": {
+   "name": "CHI HUA FITNESS CO.,LTD.",
+   "abbr": "CHI HUA"
+  },
+  "1219": {
+   "name": "FWUSOW INDUSTRY CO.,LTD",
+   "abbr": "FWUSOW"
+  },
+  "1434": {
+   "name": "FORMOSA TAFFETA CO., LTD.",
+   "abbr": "F.T.C"
+  },
+  "1225": {
+   "name": "FORMOSA OILSEED PROCESSING CO,LTD",
+   "abbr": "FOPCO"
+  },
+  "8131": {
+   "name": "FORMOSA ADVANCED TECHNOLOGIES CO., LTD.",
+   "abbr": "FATC"
+  },
+  "4183": {
+   "name": "EPS Bio Technology Corp.",
+   "abbr": "EPS Bio"
+  },
+  "9924": {
+   "name": "TAIWAN FU HSING INDUSTRIAL CO.,LTD.",
+   "abbr": "TAIWAN FU HSING"
+  },
+  "8085": {
+   "name": "FORWARD ELECTRONICS CO., LTD.",
+   "abbr": "FD"
+  },
+  "4513": {
+   "name": "FALCON MACHINE TOOLS CO.,LTD",
+   "abbr": "FALCON"
+  },
+  "8411": {
+   "name": "KINGCAN HOLDINGS LIMITED",
+   "abbr": "KINGCAN"
+  },
+  "6026": {
+   "name": "Grand Fortune Securities Co.,Ltd",
+   "abbr": "GFS"
+  },
+  "3026": {
+   "name": "HOLY STONE ENTERPRISE CO.,LTD.",
+   "abbr": "HOLY STONE"
+  },
+  "6158": {
+   "name": "P-TWO INDUSTRIES INC.",
+   "abbr": "P-TWO"
+  },
+  "7799": {
+   "name": "HERON NEUTRON MEDICAL CORP.",
+   "abbr": "HNMC"
+  },
+  "3556": {
+   "name": "eGalax_eMPIA Technology Inc.",
+   "abbr": "EETI"
+  },
+  "4194": {
+   "name": "Holy Stone Healthcare Co., Ltd.",
+   "abbr": "HSHC"
+  },
+  "5283": {
+   "name": "Heran Co., Ltd.",
+   "abbr": "Heran"
+  },
+  "7919": {
+   "name": "ALTASEC TECHNOLOGY CORPORATION",
+   "abbr": "ALTASEC"
+  },
+  "7897": {
+   "name": "WHOLE SUN GREEN POWER CO., LTD.",
+   "abbr": "WHOLE SUN"
+  },
+  "6737": {
+   "name": "SOLID YEAR CO., LTD.",
+   "abbr": "SOLID YEAR"
+  },
+  "9929": {
+   "name": "CHOICE  DEVELOPMENT,INC.",
+   "abbr": "CHOICE"
+  },
+  "5215": {
+   "name": "KO JA (CAYMAN) CO., LTD.",
+   "abbr": "KO JA"
+  },
+  "1786": {
+   "name": "SciVision Biotech Inc.",
+   "abbr": "SVBI"
+  },
+  "6655": {
+   "name": "Keding Enterprises Co., Ltd.",
+   "abbr": "KD"
+  },
+  "4542": {
+   "name": "ASIA NEO TECH INDUSTRIAL CO.,LTD.",
+   "abbr": "ANT"
+  },
+  "7886": {
+   "name": "KOJEM INTERNATIONAL CO., LTD.",
+   "abbr": "KOJEM"
+  },
+  "6496": {
+   "name": "Excelsior Biopharma Inc.",
+   "abbr": "Excelsior"
+  },
+  "7881": {
+   "name": "EYECARE TECH INC.",
+   "abbr": "EYECARE"
+  },
+  "4987": {
+   "name": "GODEX INTERNATIONAL CO., LTD",
+   "abbr": "GODEX"
+  },
+  "4568": {
+   "name": "Koge Micro Tech Co., Ltd",
+   "abbr": "KOGE"
+  },
+  "3043": {
+   "name": "POWERCOM CO .,LTD",
+   "abbr": "PCM"
+  },
+  "6898": {
+   "name": "ChainSea Information Integration Co., Ltd.",
+   "abbr": "ChainSea"
+  },
+  "1583": {
+   "name": "GOODWAY MACHINE  CORP.",
+   "abbr": "GOODWAY"
+  },
+  "7812": {
+   "name": "TMY TECHNOLOGY INC.",
+   "abbr": "TMYTEK"
+  },
+  "6775": {
+   "name": "ENTIRE TECHNOLOGY CO., LTD.",
+   "abbr": "ENTIRE TECH"
+  },
+  "6515": {
+   "name": "WinWay Technology Co., Ltd.",
+   "abbr": "WinWay"
+  },
+  "4562": {
+   "name": "YING HAN TECHNOLOGY CO., LTD.",
+   "abbr": "YHT"
+  },
+  "6761": {
+   "name": "Wendell Industrial Co., Ltd.",
+   "abbr": "Wendell"
+  },
+  "3105": {
+   "name": "WIN SEMICONDUCTORS CORP.",
+   "abbr": "WIN"
+  },
+  "5227": {
+   "name": "Advanced Lithium Electrochemistry(KY)Co.,Ltd.",
+   "abbr": "Aleees"
+  },
+  "6242": {
+   "name": "LI KANG BIOMEDICAL CO., LTD.",
+   "abbr": "LI KANG"
+  },
+  "1780": {
+   "name": "ALLIED BIOTECH CORP",
+   "abbr": "ABC"
+  },
+  "3058": {
+   "name": "Leader  Electronics Inc.",
+   "abbr": "LEI"
+  },
+  "6175": {
+   "name": "LITON TECHNOLOGY CORP.",
+   "abbr": "LITON"
+  },
+  "7820": {
+   "name": "Liying Environmental Protection Technology Co",
+   "abbr": "Liying EPTech"
+  },
+  "1443": {
+   "name": "LILY TEXTILE CO., LTD.",
+   "abbr": "LILYTEXTILE"
+  },
+  "8111": {
+   "name": "LIGITEK ELECTRONICS CO.,LTD",
+   "abbr": "LIGITEK"
+  },
+  "4968": {
+   "name": "RichWave Technology Corporation",
+   "abbr": "Richwave"
+  },
+  "6245": {
+   "name": "Lanner Electronics Inc.",
+   "abbr": "Lanner"
+  },
+  "3054": {
+   "name": "LIWANLI Innovation  Co., Ltd.",
+   "abbr": "LIWANLI"
+  },
+  "5344": {
+   "name": "VATE TECHNOLOGY CO., LTD.",
+   "abbr": "VATE"
+  },
+  "6597": {
+   "name": "ECOCERA OPTRONICS CO., LTD.",
+   "abbr": "ECOCERA"
+  },
+  "6222": {
+   "name": "Li Hsuan Development & Construction Co., Ltd.",
+   "abbr": "Li Hsuan"
+  },
+  "5262": {
+   "name": "Gigastone Corporation",
+   "abbr": "GST"
+  },
+  "2472": {
+   "name": "LELON ELECTRONICS CORP.",
+   "abbr": "LELON"
+  },
+  "7751": {
+   "name": "HORNG TERNG AUTOMATION CO., LTD.",
+   "abbr": "HORNG TERNG"
+  },
+  "6917": {
+   "name": "Andros Pharmaceuticals Co.,Ltd",
+   "abbr": "Andros"
+  },
+  "4442": {
+   "name": "J&B International Inc.",
+   "abbr": "J&B-KY"
+  },
+  "6108": {
+   "name": "APCB INC.",
+   "abbr": "APCB INC."
+  },
+  "6739": {
+   "name": "Grade Upon Technology Corp",
+   "abbr": "GUTC"
+  },
+  "3122": {
+   "name": "Megawin Technology Co.,Ltd.",
+   "abbr": "Megawin"
+  },
+  "5272": {
+   "name": "AMICCOM Electronics Corporation",
+   "abbr": "AMICCOM"
+  },
+  "2852": {
+   "name": "THE FIRST INSURANCE CO., LTD.",
+   "abbr": "FIRST INS"
+  },
+  "2706": {
+   "name": "FIRST HOTEL COMPANY LTD.",
+   "abbr": "FIRST HOTEL"
+  },
+  "2892": {
+   "name": "First  Financial  Holding  Co.  Ltd.",
+   "abbr": "FFHC"
+  },
+  "2009": {
+   "name": "FIRST COPPER TECHNOLOGY CO., LTD.",
+   "abbr": "FCC"
+  },
+  "7723": {
+   "name": "JHU JIAN CATERING CO., LTD.",
+   "abbr": "JHU JIAN"
+  },
+  "2941": {
+   "name": "MISTER INTERNATIONAL ENTERPRISE CORP.",
+   "abbr": "MISTER"
+  },
+  "2387": {
+   "name": "SUNREX TECHNOLOGY CORPORATION",
+   "abbr": "SUNREX"
+  },
+  "1584": {
+   "name": "S-Tech Corp",
+   "abbr": "STC"
+  },
+  "6191": {
+   "name": "GLOBAL BRANDS MANUFACTURE LTD.",
+   "abbr": "GBM"
+  },
+  "2414": {
+   "name": "unitech computer co., ltd.",
+   "abbr": "UT"
+  },
+  "4951": {
+   "name": "Feature Integration Technology Inc.",
+   "abbr": "Fintek"
+  },
+  "8183": {
+   "name": "INFO-TEK CORPORATION",
+   "abbr": "ITC"
+  },
+  "3374": {
+   "name": "Xintec Inc.",
+   "abbr": "Xintec"
+  },
+  "6510": {
+   "name": "Chunghwa Precision Test Tech. Co., Ltd.",
+   "abbr": "CHPT"
+  },
+  "2070": {
+   "name": "Ching Chan Optical Technology Co., Ltd.",
+   "abbr": "Ching Chan"
+  },
+  "3162": {
+   "name": "UNITED ALLOY-TECH COMPANY",
+   "abbr": "UAT"
+  },
+  "3652": {
+   "name": "UNITECH ELECTRONICS CO., LTD.",
+   "abbr": "Unitech elec."
+  },
+  "2331": {
+   "name": "Elitegroup Computer Systems Co.,Ltd.",
+   "abbr": "ECS"
+  },
+  "1565": {
+   "name": "St.Shine Optical Co.,Ltd.",
+   "abbr": "St.Shine"
+  },
+  "7806": {
+   "name": "Gin Hwa Biotech Inc.",
+   "abbr": "Gin Hwa"
+  },
+  "6214": {
+   "name": "SYSTEX  CORPORATION",
+   "abbr": "SYSTEX"
+  },
+  "7819": {
+   "name": "Systex Fintech Corporation",
+   "abbr": "Systex Fintech"
+  },
+  "3049": {
+   "name": "HannsTouch Holdings Company",
+   "abbr": "HannsTouch"
+  },
+  "6231": {
+   "name": "Insyde Software Corp.",
+   "abbr": "Insyde"
+  },
+  "5309": {
+   "name": "SYSGRATION LTD.",
+   "abbr": "SG"
+  },
+  "8426": {
+   "name": "Redwood Group Ltd",
+   "abbr": "Redwood"
+  },
+  "7745": {
+   "name": "RED SUNRISE CO., LTD.",
+   "abbr": "Red Sunrise"
+  },
+  "5271": {
+   "name": "HORNG TONG ENTERPRISE CO.,LTD",
+   "abbr": "HORNG TONG"
+  },
+  "1216": {
+   "name": "UNI-PRESIDENT ENTERPRISES CORP.",
+   "abbr": "UNI-PRESIDENT"
+  },
+  "9907": {
+   "name": "TON YI INDUSTRIAL CORP.",
+   "abbr": "TON YI"
+  },
+  "2855": {
+   "name": "President Securities Corporation",
+   "abbr": "PSC"
+  },
+  "2912": {
+   "name": "PRESIDENT CHAIN STORE CORPORATION",
+   "abbr": "PCSC"
+  },
+  "2434": {
+   "name": "MOSPEC SEMICONDUCTOR CORP.",
+   "abbr": "MOSPEC"
+  },
+  "6170": {
+   "name": "WELLDONE COMPANY",
+   "abbr": "WELLDONE"
+  },
+  "6426": {
+   "name": "APOGEE OPTOCOM CO., LTD.",
+   "abbr": "APOGEE"
+  },
+  "2910": {
+   "name": "TONLIN DEPARTMENT STORE CO.,LTD.",
+   "abbr": "TONLIN"
+  },
+  "7841": {
+   "name": "CyberSoft Digital Services Corporation",
+   "abbr": "CyberSoft"
+  },
+  "7771": {
+   "name": "GREENBASE TECHNOLOGY CORP.",
+   "abbr": "GBT"
+  },
+  "7833": {
+   "name": "GREENROCK ENERGY CO., LTD.",
+   "abbr": "GRE"
+  },
+  "2596": {
+   "name": "ReaLy Development & Construction Corp.",
+   "abbr": "ReaLy"
+  },
+  "8444": {
+   "name": "Green River Holding Co. Ltd.",
+   "abbr": "Green River"
+  },
+  "6763": {
+   "name": "Green World FinTech Service Co., Ltd.",
+   "abbr": "Green World"
+  },
+  "6846": {
+   "name": "GREENYN BIOTECHNOLOGY CO., LTD",
+   "abbr": "GREENYN"
+  },
+  "8440": {
+   "name": "E＆E Recycling,Inc.",
+   "abbr": "E＆E"
+  },
+  "2733": {
+   "name": "Vigor Kobo Co.,Ltd.",
+   "abbr": "Vigor Kobo"
+  },
+  "3501": {
+   "name": "Well Shin Technology Co., Ltd.",
+   "abbr": "Well Shin"
+  },
+  "6570": {
+   "name": "APLEX TECHNOLOGY INC.",
+   "abbr": "APLEX"
+  },
+  "8044": {
+   "name": "PChome online Inc.",
+   "abbr": "PChome online"
+  },
+  "3083": {
+   "name": "CHINESE GAMER INTERNATIONAL CORPORATION",
+   "abbr": "CHINESEGAMER"
+  },
+  "3231": {
+   "name": "Wistron Corporation",
+   "abbr": "Wistron"
+  },
+  "6669": {
+   "name": "Wiwynn Corporation",
+   "abbr": "Wiwynn"
+  },
+  "4953": {
+   "name": "WITS Corp.",
+   "abbr": "WITS"
+  },
+  "8374": {
+   "name": "ACE PILLAR CO., LTD.",
+   "abbr": "ACE PILLAR"
+  },
+  "6666": {
+   "name": "Luo Lih-Fen Holding Co., Ltd.",
+   "abbr": "LLF-KY"
+  },
+  "2020": {
+   "name": "MAYER STEEL PIPE CORPORATION",
+   "abbr": "MAYER PIPE"
+  },
+  "9914": {
+   "name": "MERIDA INDUSTRY CO.,LTD.",
+   "abbr": "MIC"
+  },
+  "8466": {
+   "name": "M.J. International Co., Ltd.",
+   "abbr": "M.J."
+  },
+  "1731": {
+   "name": "MAYWUFA COMPANY LTD.",
+   "abbr": "Maywufa"
+  },
+  "6021": {
+   "name": "GOOD FINANCE SECURITIES CO., LTD.",
+   "abbr": "GOOD FINANCE"
+  },
+  "6915": {
+   "name": "IGIANT OPTICS CO., LTD.",
+   "abbr": "IGIANT OPTICS"
+  },
+  "2439": {
+   "name": "MERRY ELECTRONICS CO.,LTD.",
+   "abbr": "MERRY"
+  },
+  "9103": {
+   "name": "Medtecs International Corporation Ltd.",
+   "abbr": "MEDTECS"
+  },
+  "1795": {
+   "name": "Lotus Pharmaceutical Co., Ltd.",
+   "abbr": "Lotus Pharm"
+  },
+  "4721": {
+   "name": "MECHEMA CHEMICALS INT'L CORP.",
+   "abbr": "mechema"
+  },
+  "5321": {
+   "name": "UNITED RECOMMEND INTERNATIONAL CO., LTD.",
+   "abbr": "U.R."
+  },
+  "6473": {
+   "name": "meimaii Technology Co., Ltd",
+   "abbr": "meimaii"
+  },
+  "6735": {
+   "name": "AMIDA Technology, Inc.",
+   "abbr": "AMIDA"
+  },
+  "2477": {
+   "name": "MEILOON INDUSTRIAL CO., LTD.",
+   "abbr": "MEILOON"
+  },
+  "2723": {
+   "name": "Gourmet Master Co. Ltd.",
+   "abbr": "Gourmet"
+  },
+  "2385": {
+   "name": "CHICONY ELECTRONICS CO., LTD.",
+   "abbr": "CHICONY"
+  },
+  "7558": {
+   "name": "BRYTON INC.",
+   "abbr": "BRYTON"
+  },
+  "3481": {
+   "name": "INNOLUX CORPORATION",
+   "abbr": "INX"
+  },
+  "6024": {
+   "name": "Capital Futures Corp.",
+   "abbr": "CFC"
+  },
+  "6005": {
+   "name": "CAPITAL SECURITIES CORP.",
+   "abbr": "CSC"
+  },
+  "6664": {
+   "name": "Group Up Industrial Co., Ltd.",
+   "abbr": "Group Up"
+  },
+  "8299": {
+   "name": "Phison Electronics Corp.",
+   "abbr": "Phison"
+  },
+  "6911": {
+   "name": "CHYUNN ENVIRONMENT CORPORATION",
+   "abbr": "CHYUNN"
+  },
+  "6412": {
+   "name": "Chicony Power Technology Co., Ltd.",
+   "abbr": "Chicony Power"
+  },
+  "2458": {
+   "name": "ELAN MICROELECTRONICS CORP.",
+   "abbr": "ELAN"
+  },
+  "8091": {
+   "name": "FEEDBACK TECHNOLOGY CORP.",
+   "abbr": "FB"
+  },
+  "2438": {
+   "name": "ENLIGHT CORPORATION",
+   "abbr": "ENLIGHT"
+  },
+  "4430": {
+   "name": "YAO I  FABRIC CO.,LTD.",
+   "abbr": "YAO I"
+  },
+  "3207": {
+   "name": "YAO SHENG ELECTRONIC CO., LTD.",
+   "abbr": "YAO SHENG"
+  },
+  "3138": {
+   "name": "Auden Techno Corp.",
+   "abbr": "Auden"
+  },
+  "7772": {
+   "name": "Morrison Optoelectronics Ltd.",
+   "abbr": "MOE"
+  },
+  "2741": {
+   "name": "Renjie Oldsichuan Catering Management Consult",
+   "abbr": "Oldsichuan"
+  },
+  "5704": {
+   "name": "Hotel royal chihpen",
+   "abbr": "Chihpen Royal"
+  },
+  "8058": {
+   "name": "Nytex Composites Co., Ltd.",
+   "abbr": "Nytex"
+  },
+  "6146": {
+   "name": "SPORTON INTERNATIONAL INC.",
+   "abbr": "SPORTON"
+  },
+  "1524": {
+   "name": "GORDON AUTO BODY PARTS CO., LTD",
+   "abbr": "GORDON"
+  },
+  "7880": {
+   "name": "SANTA PHOENIX TECHNOLOGY CO., LTD.",
+   "abbr": "spti"
+  },
+  "6926": {
+   "name": "Shine-On BioMedical Co., Ltd.",
+   "abbr": "Shine-On Bio"
+  },
+  "7764": {
+   "name": "Formosa Saint Jose Corporation",
+   "abbr": "SAINT JOSE"
+  },
+  "5536": {
+   "name": "ACTER GROUP CORPORATION LIMITED",
+   "abbr": "ACTER"
+  },
+  "7868": {
+   "name": "INFORCOM TECHNOLOGY INC.",
+   "abbr": "INFORCOM"
+  },
+  "2022": {
+   "name": "TYCOONS GROUP ENTERPRISE CO.,LTD.",
+   "abbr": "TYCOONS"
+  },
+  "6509": {
+   "name": "TAIWAN HOPAX CHEMICALS MFG.CO.,LTD.",
+   "abbr": "HOPAX"
+  },
+  "7862": {
+   "name": "AceGreen Eco-Material Technology Co., Ltd.",
+   "abbr": "AceGreen"
+  },
+  "3527": {
+   "name": "Macroblock, Inc.",
+   "abbr": "MBI"
+  },
+  "7631": {
+   "name": "GENII IDEAS Co., Ltd.",
+   "abbr": "GENIIDEAS"
+  },
+  "1477": {
+   "name": "Makalot Industrial Co., Ltd.",
+   "abbr": "Makalot"
+  },
+  "1466": {
+   "name": "Acelon chemicals & Fiber Corporation",
+   "abbr": "Acelon"
+  },
+  "6224": {
+   "name": "POLYTRONICS TECHNOLOGY CORP.",
+   "abbr": "PTTC."
+  },
+  "3441": {
+   "name": "UNIQUE OPTO-ELECTRONICS CO.,LTD.",
+   "abbr": "UNIQUE"
+  },
+  "4113": {
+   "name": "WE&WIN DIVERSIFICATION CO.,LTD.",
+   "abbr": "WE&WIN"
+  },
+  "2537": {
+   "name": "WE & WIN Development Co., LTD",
+   "abbr": "WE & WIN"
+  },
+  "3081": {
+   "name": "LandMark Optoelectronics Corporation",
+   "abbr": "LandMark"
+  },
+  "3678": {
+   "name": "Ushine  Photonics  Corporation",
+   "abbr": "Ushine"
+  },
+  "3094": {
+   "name": "DAVICOM SEMICONDUCTOR,INC.",
+   "abbr": "DAVICOM"
+  },
+  "4903": {
+   "name": "UNITED FIBER OPTIC COMMUNICATION INC.",
+   "abbr": "UFOC"
+  },
+  "7870": {
+   "name": "ACCORDANCE SYSTEMS INC.",
+   "abbr": "ACCO"
+  },
+  "7610": {
+   "name": "LIANYOU METALS CO.,LTD.",
+   "abbr": "LIANYOU METALS"
+  },
+  "4129": {
+   "name": "United Orthopedic Corporation",
+   "abbr": "UOC"
+  },
+  "3576": {
+   "name": "United Renewable Energy Co., Ltd.",
+   "abbr": "URE"
+  },
+  "6927": {
+   "name": "Integrated Solutions Technology, Inc.",
+   "abbr": "IST"
+  },
+  "3717": {
+   "name": "Excellence Optoelectronics Holding Co., Inc.",
+   "abbr": "EOI Holding"
+  },
+  "6821": {
+   "name": "LinkCom Manufacturing Co.,LTD.",
+   "abbr": "LKM"
+  },
+  "2347": {
+   "name": "Synnex Technology International Corp.",
+   "abbr": "Synnex"
+  },
+  "3308": {
+   "name": "BESTEC POWER ELECTRONICS CO., LTD",
+   "abbr": "BESTEC"
+  },
+  "4912": {
+   "name": "Lemtech Holdings Co., Limited",
+   "abbr": "Lemtech-KY"
+  },
+  "1313": {
+   "name": "UPC TECHNOLOGY CORPORATION",
+   "abbr": "UPC"
+  },
+  "2431": {
+   "name": "LIEN CHANG ELECTRONIC ENTERPRISE CO., LTD",
+   "abbr": "LIEN CHANG"
+  },
+  "1459": {
+   "name": "LAN FA TEXTILE CO.,LTD.",
+   "abbr": "LAN FA"
+  },
+  "2756": {
+   "name": "LIAN FA INTERNATIONAL DINING BUSINESS CORP.",
+   "abbr": "LIAN FA"
+  },
+  "2454": {
+   "name": "MediaTek Inc.",
+   "abbr": "MediaTek"
+  },
+  "3550": {
+   "name": "Copartner Technology Corporation",
+   "abbr": "COPARTNER"
+  },
+  "6658": {
+   "name": "SynPower Co., Ltd.",
+   "abbr": "SynPower"
+  },
+  "6977": {
+   "name": "UNITED PURIFICATION TECHNOLOGY CO.,LTD.",
+   "abbr": "UPT"
+  },
+  "3585": {
+   "name": "ADVANCE MATERIALS CORPORATION",
+   "abbr": "AMC"
+  },
+  "6213": {
+   "name": "ITEQ CORPORATION",
+   "abbr": "ITEQ"
+  },
+  "1229": {
+   "name": "Lien Hwa Industrial Holdings Corporation",
+   "abbr": "LHIHC"
+  },
+  "1231": {
+   "name": "Lian Hwa Foods Corporation",
+   "abbr": "Lian Hwa Foods"
+  },
+  "3034": {
+   "name": "Novatek Microelectronics Corporation",
+   "abbr": "NOVATEK"
+  },
+  "2838": {
+   "name": "UNION BANK OF TAIWAN",
+   "abbr": "UBOT"
+  },
+  "3450": {
+   "name": "ELITE ADVANCED LASER CORPORATION",
+   "abbr": "ELASER"
+  },
+  "3014": {
+   "name": "ITE  Tech. Inc",
+   "abbr": "ITE"
+  },
+  "2303": {
+   "name": "UNITED MICROELECTRONICS CORP.",
+   "abbr": "UMC"
+  },
+  "5474": {
+   "name": "Yuan High-Tech Development Co.,Ltd.",
+   "abbr": "YUAN"
+  },
+  "1604": {
+   "name": "Sampo Corporation",
+   "abbr": "SAMPO"
+  },
+  "4161": {
+   "name": "BIOPTIK TECHNOLOGY, INC",
+   "abbr": "BIOPTIK"
+  },
+  "6976": {
+   "name": "Acepodia, Inc.",
+   "abbr": "Acepodia"
+  },
+  "6194": {
+   "name": "YUFO ELECTRONICS CO., LTD.",
+   "abbr": "YUFO"
+  },
+  "6279": {
+   "name": "HU  LANE  ASSOCIATE  INC.",
+   "abbr": "HU LANE"
+  },
+  "5392": {
+   "name": "ABICO AVY CO., LTD.",
+   "abbr": "ABICO AVY"
+  },
+  "7777": {
+   "name": "ABICO ASIA CAPITAL CORPORATION",
+   "abbr": "ABICO ASIA"
+  },
+  "8071": {
+   "name": "ABICO NetCom Co.,Ltd.",
+   "abbr": "ABICO"
+  },
+  "8112": {
+   "name": "Supreme Electronics Co., Ltd.",
+   "abbr": "Supreme"
+  },
+  "4535": {
+   "name": "FINE  BLANKING  & TOOL  CO.,  LTD",
+   "abbr": "FBT"
+  },
+  "4915": {
+   "name": "Primax Electronics Ltd.",
+   "abbr": "Primax"
+  },
+  "5864": {
+   "name": "CONCORD INTERNATIONAL SECURITIES CO., LTD",
+   "abbr": "CIS"
+  },
+  "8081": {
+   "name": "GLOBAL MIXED-MODE TECHNOLOGY INC",
+   "abbr": "GMT"
+  },
+  "2360": {
+   "name": "CHROMA ATE INC.",
+   "abbr": "CHROMA"
+  },
+  "2834": {
+   "name": "TAIWAN BUSINESS BANK,LTD.",
+   "abbr": "TBB"
+  },
+  "3357": {
+   "name": "TAI-TECH Advanced Electronics Co.,Ltd.",
+   "abbr": "TAI-TECH"
+  },
+  "1737": {
+   "name": "Taiyen Biotech Co.,Ltd",
+   "abbr": "Taiyen"
+  },
+  "6246": {
+   "name": "Taiwan Thick-Film Ind. Corp",
+   "abbr": "TTFIC"
+  },
+  "4958": {
+   "name": "Zhen Ding Technology Holding Limited",
+   "abbr": "ZDT"
+  },
+  "2428": {
+   "name": "THINKING ELECTRONIC INDUSTRIAL CO., LTD",
+   "abbr": "THINKING"
+  },
+  "2542": {
+   "name": "Highwealth Construction Corp.",
+   "abbr": "Highwealth"
+  },
+  "1235": {
+   "name": "SHIN TAI INDUSTRY CO.,LTD.",
+   "abbr": "ST"
+  },
+  "6558": {
+   "name": "SYNergy ScienTech Corp.",
+   "abbr": "SYNergy"
+  },
+  "1712": {
+   "name": "SINON CORPORATION",
+   "abbr": "SINON"
+  },
+  "4433": {
+   "name": "Singtex Industrial Co., Ltd.",
+   "abbr": "Singtex"
+  },
+  "2462": {
+   "name": "TAIWAN LINE TEK ELECTRONIC CO.,LTD.",
+   "abbr": "LINETEK"
+  },
+  "6290": {
+   "name": "LONGWELL COMPANY",
+   "abbr": "LONGWELL"
+  },
+  "2241": {
+   "name": "Amulaire Thermal Technology, Inc.",
+   "abbr": "Amulaire"
+  },
+  "3646": {
+   "name": "ANT PRECISION INDUSTRY CO., LTD",
+   "abbr": "ANT"
+  },
+  "3591": {
+   "name": "EDISON OPTO CORPORATION",
+   "abbr": "EDISON OPTO"
+  },
+  "1626": {
+   "name": "Airmate (Cayman) International Co. Limited",
+   "abbr": "AIRMATE"
+  },
+  "6204": {
+   "name": "TAIWAN ALPHA ELECTRONIC CO., LTD.",
+   "abbr": "ALPHA"
+  },
+  "3088": {
+   "name": "AXIOMTEK CO., LTD.",
+   "abbr": "AXIOMTEK"
+  },
+  "7858": {
+   "name": "E-CHEM ENTERPRISE CORP.",
+   "abbr": "E-CHEM"
+  },
+  "6786": {
+   "name": "iSTART-TEK INC.",
+   "abbr": "iSTART"
+  },
+  "6695": {
+   "name": "iCatch Technology, Inc.",
+   "abbr": "iCatchtek"
+  },
+  "1730": {
+   "name": "FARCENT ENTERPRISE CO.,LTD",
+   "abbr": "FARCENT"
+  },
+  "8906": {
+   "name": "Forward Graphic Enterprise Co., Ltd.",
+   "abbr": "Forward"
+  },
+  "2239": {
+   "name": "Cayman Engley Industrial Co., Ltd.",
+   "abbr": "Cayman Engley"
+  },
+  "7843": {
+   "name": "EmBestor Technology Inc.",
+   "abbr": "EmBestor"
+  },
+  "2356": {
+   "name": "INVENTEC CORPORATION",
+   "abbr": "INVENTEC"
+  },
+  "3294": {
+   "name": "Megaforce Company Limited",
+   "abbr": "Megaforce"
+  },
+  "4935": {
+   "name": "Global Lighting Technologies Inc.",
+   "abbr": "GLT"
+  },
+  "1240": {
+   "name": "MORN SUN FEED MILL CORP.",
+   "abbr": "MORNSUN"
+  },
+  "2342": {
+   "name": "MOSEL VITELIC INC.",
+   "abbr": "MVI"
+  },
+  "6227": {
+   "name": "Macnica Galaxy Inc.",
+   "abbr": "Macnica Galaxy"
+  },
+  "3213": {
+   "name": "Mildef Crete Inc.",
+   "abbr": "Mildef"
+  },
+  "6244": {
+   "name": "MOTECH INDUSTRIES INC",
+   "abbr": "MOTECH"
+  },
+  "6138": {
+   "name": "Anpec Electronics Corporation",
+   "abbr": "ANPEC"
+  },
+  "9942": {
+   "name": "NAK SEALING TECHNOLOGIES CORPORATION",
+   "abbr": "MAO SHUN"
+  },
+  "7427": {
+   "name": "Great Novel Therapeutics Biotech & Medicals",
+   "abbr": "GNTbm"
+  },
+  "8101": {
+   "name": "Arima Communications Corp.",
+   "abbr": "Arima Comm."
+  },
+  "6916": {
+   "name": "WINSTAR Display Co., Ltd.",
+   "abbr": "WINSTAR"
+  },
+  "2248": {
+   "name": "Shining Victory Motor Electronic Co., Ltd.",
+   "abbr": "eLAND"
+  },
+  "2880": {
+   "name": "HUA NAN FINANCIAL HOLDINGS CO., LTD.",
+   "abbr": "HNFHC"
+  },
+  "1436": {
+   "name": "HUA YU LIEN Development Co., Ltd.",
+   "abbr": "HUA YU LIEN"
+  },
+  "2548": {
+   "name": "HUAKU DEVELOPMENT CO., LTD.",
+   "abbr": "HUAKU"
+  },
+  "2702": {
+   "name": "HOTEL HOLIDAY GARDEN",
+   "abbr": "HG"
+  },
+  "1519": {
+   "name": "FORTUNE ELECTRIC CO.,LTD",
+   "abbr": "FE"
+  },
+  "1305": {
+   "name": "CHINA GENERAL PLASTICS CORPORATION",
+   "abbr": "CGPC"
+  },
+  "6235": {
+   "name": "Waffer Technology Corporation",
+   "abbr": "Waffer"
+  },
+  "6621": {
+   "name": "UNI PHARMA CO., LTD.",
+   "abbr": "UniPharma"
+  },
+  "6657": {
+   "name": "Energenesis Biomedical CO.,LTD.",
+   "abbr": "ENERGENESIS"
+  },
+  "8240": {
+   "name": "WAH HONG INDUSTRIAL CORP.",
+   "abbr": "WAH HONG"
+  },
+  "5328": {
+   "name": "HUA JUNG COMPONENTS CO.,LTD.",
+   "abbr": "HJC"
+  },
+  "4737": {
+   "name": "BIONIME CORPORATION",
+   "abbr": "BIONIME"
+  },
+  "2530": {
+   "name": "DELPHA CONSTRUCTION CO.,LTD.",
+   "abbr": "DELPHA"
+  },
+  "2237": {
+   "name": "RAC Electric Vehicles Inc.",
+   "abbr": "RAC"
+  },
+  "5292": {
+   "name": "Desiccant  Technology  Corporation",
+   "abbr": "DTECH"
+  },
+  "3515": {
+   "name": "ASROCK Incorporation",
+   "abbr": "ASROCK"
+  },
+  "1605": {
+   "name": "WALSIN LIHWA CORPORATION",
+   "abbr": "WALSIN"
+  },
+  "2492": {
+   "name": "WALSIN TECHNOLOGY CORPORATION",
+   "abbr": "WTC"
+  },
+  "6682": {
+   "name": "Hua Hsu  Advanced Technology Co., Ltd.",
+   "abbr": "HHAT"
+  },
+  "4979": {
+   "name": "LuxNet Corporation",
+   "abbr": "LuxNet"
+  },
+  "6788": {
+   "name": "Brillian Network & Automation Integrated Syst",
+   "abbr": "Brillian"
+  },
+  "3059": {
+   "name": "Altek Corporation",
+   "abbr": "Altek"
+  },
+  "8110": {
+   "name": "WALTON ADVANCED ENGINEERING, INC.",
+   "abbr": "WALTON"
+  },
+  "1608": {
+   "name": "HUA ENG WIRE AND CABLE CO., LTD.",
+   "abbr": "HE"
+  },
+  "2329": {
+   "name": "Orient Semiconductor Electronics, Limited",
+   "abbr": "OSE"
+  },
+  "6983": {
+   "name": "HUA YANG Precision Machinery Co.,Ltd",
+   "abbr": "HYP"
+  },
+  "3520": {
+   "name": "Jhen Vei Electronic Co., LTD.",
+   "abbr": "JVE"
+  },
+  "8446": {
+   "name": "HIM International Music Inc.",
+   "abbr": "HIM Music"
+  },
+  "2357": {
+   "name": "ASUSTEK COMPUTER INC.",
+   "abbr": "ASUSTEK"
+  },
+  "2820": {
+   "name": "China Bills Finance Corporation",
+   "abbr": "CBF"
+  },
+  "5015": {
+   "name": "RODEX  FASTENERS  CORP.",
+   "abbr": "RODEX"
+  },
+  "3010": {
+   "name": "WAH LEE INDUSTRIAL CORP.",
+   "abbr": "WAH LEE"
+  },
+  "1905": {
+   "name": "CHUNG HWA PULP CORP.",
+   "abbr": "CHP"
+  },
+  "2468": {
+   "name": "Fortune Information Systems Corp.",
+   "abbr": "FIS"
+  },
+  "3086": {
+   "name": "Wayi International Digital Entertainment Co.",
+   "abbr": "WAYI"
+  },
+  "6164": {
+   "name": "LEDTECH ELECTRONICS CORP.",
+   "abbr": "LEDTECH"
+  },
+  "2610": {
+   "name": "China Airlines Ltd.",
+   "abbr": "CAL"
+  },
+  "7801": {
+   "name": "ASUSTOR INC.",
+   "abbr": "ASUSTOR"
+  },
+  "2109": {
+   "name": "HWA FONG RUBBER IND. CO., LTD.",
+   "abbr": "HWA FONG"
+  },
+  "6474": {
+   "name": "WFE  TECHNOLOGY  CORP.",
+   "abbr": "WFE"
+  },
+  "2740": {
+   "name": "Hua Hsuan Real Estate Co., Ltd",
+   "abbr": "Hua Hsuan"
+  },
+  "2313": {
+   "name": "COMPEQ MANUFACTURING COMPANY LIMITED",
+   "abbr": "COMPEQ"
+  },
+  "2344": {
+   "name": "Winbond Electronics Corporation",
+   "abbr": "WEC"
+  },
+  "6990": {
+   "name": "PLUM-MONIX INDUSTRY CO.,LTD.",
+   "abbr": "PMIC"
+  },
+  "1603": {
+   "name": "CHINA WIRE & CABLE CO., LTD.",
+   "abbr": "CWCO"
+  },
+  "6163": {
+   "name": "Hwacom Systems Inc.",
+   "abbr": "HWACOM"
+  },
+  "8249": {
+   "name": "CREATIVE SENSOR INC.",
+   "abbr": "CSI"
+  },
+  "2369": {
+   "name": "LINGSEN PRECISION INDUSTRIES, LTD.",
+   "abbr": "LPI"
+  },
+  "7717": {
+   "name": "Lightel Corporation",
+   "abbr": "Lightel-KY"
+  },
+  "2701": {
+   "name": "WANHWA ENTERPRISE COMPANY",
+   "abbr": "WANHWA"
+  },
+  "9950": {
+   "name": "EMINENT LUGGAGE CORPORATION",
+   "abbr": "EMINENT"
+  },
+  "4543": {
+   "name": "MAN ZAI INDUSTRIAL CO., LTD.",
+   "abbr": "MAN ZAI"
+  },
+  "6624": {
+   "name": "EVER-CLEAR ENVIRONMENTAL ENG. CORP",
+   "abbr": "EC"
+  },
+  "6134": {
+   "name": "WanShih Electronic Co., Ltd.",
+   "abbr": "WanShih"
+  },
+  "6190": {
+   "name": "WONDERFUL HI-TECH CO., LTD.",
+   "abbr": "WONDERFUL"
+  },
+  "2615": {
+   "name": "WAN HAI LINES LTD.",
+   "abbr": "WANHAI"
+  },
+  "6187": {
+   "name": "ALL RING TECH CO., LTD.",
+   "abbr": "ALL RING"
+  },
+  "5220": {
+   "name": "HIGGSTEC Inc.",
+   "abbr": "HIGGSTEC"
+  },
+  "6968": {
+   "name": "WONDER PETS ENTERPRISES CORPORATION",
+   "abbr": "WONDERPETS"
+  },
+  "1707": {
+   "name": "GRAPE KING BIO LTD",
+   "abbr": "GKB"
+  },
+  "5211": {
+   "name": "Penpower Technology LTD.",
+   "abbr": "Penpower"
+  },
+  "3055": {
+   "name": "Spirox Corporation",
+   "abbr": "Spirox Corp."
+  },
+  "2362": {
+   "name": "CLEVO CO.",
+   "abbr": "CLEVO CO."
+  },
+  "6938": {
+   "name": "NEWEB INFORMATION CO., LTD.",
+   "abbr": "Newebinfo"
+  },
+  "2724": {
+   "name": "Architectural Aesthetics Global Development",
+   "abbr": "AAGD-KY"
+  },
+  "7878": {
+   "name": "Pharmasaga Company Limited",
+   "abbr": "PHARMASAGA"
+  },
+  "6446": {
+   "name": "PharmaEssentia Corp.",
+   "abbr": "PEC"
+  },
+  "7736": {
+   "name": "HUSHAN AUTOPARTS INC.",
+   "abbr": "HUSHAN"
+  },
+  "6791": {
+   "name": "Taiwan Auto-Design Co.",
+   "abbr": "TADC"
+  },
+  "2380": {
+   "name": "AVISION INC.",
+   "abbr": "AVISION"
+  },
+  "3257": {
+   "name": "CHAMPION MICROELECTRONIC CORP.",
+   "abbr": "CHAMPION"
+  },
+  "5258": {
+   "name": "Castles Technology  Co., Ltd.",
+   "abbr": "Castles"
+  },
+  "6573": {
+   "name": "HY ELECTRONIC (CAYMAN) LIMITED",
+   "abbr": "HY"
+  },
+  "8043": {
+   "name": "HONEY  HOPE  HONESTY  ENTERPRISE CO.,LTD.",
+   "abbr": "3H"
+  },
+  "3416": {
+   "name": "Winmate Inc.",
+   "abbr": "Winmate"
+  },
+  "6894": {
+   "name": "WASTE RECOVERY TECHNOLOGY INC.",
+   "abbr": "WRT"
+  },
+  "8905": {
+   "name": "EAGLE COLD STORAGE ENTERPRISE CO.,LTD",
+   "abbr": "ECS"
+  },
+  "7715": {
+   "name": "Yuh Shan Environmental Engineering Co.,LTD.",
+   "abbr": "Yuh Shan"
+  },
+  "6957": {
+   "name": "Horizon Fixture Group Co., Ltd.",
+   "abbr": "Horizon"
+  },
+  "2227": {
+   "name": "Yulon Nissan Motor Co.,Ltd",
+   "abbr": "YNM"
+  },
+  "2606": {
+   "name": "U-MING MARINE TRANSPORT CORP.",
+   "abbr": "U-MING"
+  },
+  "9941": {
+   "name": "Taiwan Acceptance Corporation",
+   "abbr": "TAC"
+  },
+  "2201": {
+   "name": "YULON MOTOR CO.,LTD",
+   "abbr": "YL"
+  },
+  "3625": {
+   "name": "C-TECH UNITED CORP.",
+   "abbr": "C-TECH"
+  },
+  "3541": {
+   "name": "Cypress Technology CO.,LTD.",
+   "abbr": "CYP"
+  },
+  "7759": {
+   "name": "Sunhawk Vision Biotech, Inc.",
+   "abbr": "SUNHAWK BIO"
+  },
+  "6782": {
+   "name": "Visco Vision Inc.",
+   "abbr": "VISCO"
+  },
+  "4155": {
+   "name": "OK BIOTECH CO., LTD.",
+   "abbr": "OK BIOTECH"
+  },
+  "1784": {
+   "name": "BIONET CORP.",
+   "abbr": "BIONET CORP."
+  },
+  "4160": {
+   "name": "Genetics Generation Advancement Corp.(GGA Cor",
+   "abbr": "GGA Corp."
+  },
+  "7808": {
+   "name": "BIONET Therapeutics Corp.",
+   "abbr": "BIONET TX Corp."
+  },
+  "3047": {
+   "name": "EDIMAX TECHNOLOGY CO., LTD.",
+   "abbr": "EDIMAX"
+  },
+  "6451": {
+   "name": "ShunSin Technology Holdings Limited",
+   "abbr": "ShunSin"
+  },
+  "5203": {
+   "name": "Cyberlink Corp.",
+   "abbr": "CyberLink"
+  },
+  "6140": {
+   "name": "DIMENSION COMPUTER TECHNOLOGY CO., LTD.",
+   "abbr": "DIMENSION"
+  },
+  "2245": {
+   "name": "NWW MANUFACTURING CO., LTD.",
+   "abbr": "NWW"
+  },
+  "6418": {
+   "name": "Y-S ELECTRONIC CO., LTD.",
+   "abbr": "Y-S ELEC."
+  },
+  "6792": {
+   "name": "Unictron Technologies Corporation",
+   "abbr": "Unictron"
+  },
+  "6195": {
+   "name": "SCAN-D CORPORATION",
+   "abbr": "SCAN-D"
+  },
+  "6205": {
+   "name": "CHANT SINCERE CO., LTD.",
+   "abbr": "COXOC"
+  },
+  "2926": {
+   "name": "Eslite Spectrum Corporation",
+   "abbr": "Eslite Spectrum"
+  },
+  "4767": {
+   "name": "CHERNG TAY TECHNOLOGY CO., LTD.",
+   "abbr": "CHETAY"
+  },
+  "3494": {
+   "name": "HiTi Digital Inc.",
+   "abbr": "HiTi"
+  },
+  "4960": {
+   "name": "CHENG MEI MATERIALS TECHNOLOGY CORPORATION",
+   "abbr": "CMMT"
+  },
+  "7724": {
+   "name": "U-ARK TECHNOLOGY CO., LTD.",
+   "abbr": "U-ARK"
+  },
+  "6844": {
+   "name": "NORBEL BABY CO., LTD.",
+   "abbr": "NORBEL"
+  },
+  "2235": {
+   "name": "I YUAN PRECISION INDUSTRIAL CO., LTD.",
+   "abbr": "I YUAN"
+  },
+  "3419": {
+   "name": "WHA YU INDUSTRIAL CO.,LTD.",
+   "abbr": "WHAYU"
+  },
+  "4966": {
+   "name": "Parade Technologies, Ltd.",
+   "abbr": "Parade"
+  },
+  "3607": {
+   "name": "Coxon Precise Industrial Co., Ltd",
+   "abbr": "Coxon"
+  },
+  "2752": {
+   "name": "Tofu Restaurant Co., Ltd.",
+   "abbr": "TOFU"
+  },
+  "7847": {
+   "name": "Li Yu Chu Co., Ltd.",
+   "abbr": "Li Yu"
+  },
+  "6744": {
+   "name": "FENG CHI BIOTECH CORP.",
+   "abbr": "FCB"
+  },
+  "9910": {
+   "name": "FENG TAY ENTERPRISES CO., LTD.",
+   "abbr": "FT"
+  },
+  "5288": {
+   "name": "Eurocharm Holdings Co., Ltd.",
+   "abbr": "Eurocharm"
+  },
+  "2015": {
+   "name": "FENG HSIN STEEL CO.,LTD",
+   "abbr": "FH"
+  },
+  "6189": {
+   "name": "Promate Electronic Co.,Ltd.",
+   "abbr": "Promate"
+  },
+  "5523": {
+   "name": "FONG CHIEN CONSTRUCTIONCO.,LTD",
+   "abbr": "FONG CHIEN"
+  },
+  "3004": {
+   "name": "National Aerospace Fasteners Corporation",
+   "abbr": "NAFCO"
+  },
+  "6218": {
+   "name": "Hauman Technologies Corp.",
+   "abbr": "Hauman"
+  },
+  "4735": {
+   "name": "Avita Corporation",
+   "abbr": "Avita"
+  },
+  "7861": {
+   "name": "Bellwether Electronic Corp.",
+   "abbr": "BellWether"
+  },
+  "3665": {
+   "name": "BizLink Holding Inc.",
+   "abbr": "BHI (BizLink)"
+  },
+  "6614": {
+   "name": "International Integrated Systems, Inc.",
+   "abbr": "IISI"
+  },
+  "2471": {
+   "name": "Ares International Corporation",
+   "abbr": "ARES"
+  },
+  "8345": {
+   "name": "SUPER QIN ENTERPRISE CO.,LTD.",
+   "abbr": "SUPER QIN"
+  },
+  "2441": {
+   "name": "GREATEK ELECTRONICS INC.",
+   "abbr": "GTK"
+  },
+  "9110": {
+   "name": "Vietnam Manufacturing and Export Processing",
+   "abbr": "VMEP Holdings"
+  },
+  "8121": {
+   "name": "Acme Electronics Corporation",
+   "abbr": "ACME"
+  },
+  "2758": {
+   "name": "LOUISA Professional Coffee  LTD.",
+   "abbr": "LOUISA COFFEE"
+  },
+  "6814": {
+   "name": "Lukas Biomedical INC.",
+   "abbr": "LUKAS"
+  },
+  "1533": {
+   "name": "MOBILETRON ELECTRONICS CO.,LTD.",
+   "abbr": "MORE"
+  },
+  "6703": {
+   "name": "SHINY BRANDS GROUP CO., LTD.",
+   "abbr": "SHINY"
+  },
+  "2405": {
+   "name": "Shuttle Inc.",
+   "abbr": "Shuttle"
+  },
+  "6722": {
+   "name": "WHETRON ELECTRONICS CO.,LTD.",
+   "abbr": "Whetron"
+  },
+  "3583": {
+   "name": "Scientech Corporation",
+   "abbr": "Scientech"
+  },
+  "4946": {
+   "name": "Cayenne Entertainment Technology Co., Ltd.",
+   "abbr": "Cayenne Tech"
+  },
+  "2913": {
+   "name": "TAIWAN TEA CORPORATION",
+   "abbr": "TTC"
+  },
+  "6438": {
+   "name": "Symtek Automation Asia Co., Ltd.",
+   "abbr": "SAA"
+  },
+  "6292": {
+   "name": "AXIS Corporation",
+   "abbr": "AXIS"
+  },
+  "6243": {
+   "name": "ENE Technology Inc.",
+   "abbr": "ENE"
+  },
+  "6117": {
+   "name": "IN WIN DEVELOPMENT INC.",
+   "abbr": "IN WIN"
+  },
+  "3523": {
+   "name": "EFUN TECHNOLOGY CO.,LTD",
+   "abbr": "EFUN"
+  },
+  "3588": {
+   "name": "Leadtrend Technology Corporation",
+   "abbr": "LD"
+  },
+  "7913": {
+   "name": "QBit Semiconductor Ltd.",
+   "abbr": "QBit"
+  },
+  "5487": {
+   "name": "TONTEK DESIGN TECHNOLOGY LTD.",
+   "abbr": "TONTEK"
+  },
+  "7607": {
+   "name": "DuoGenic StemCells corporation",
+   "abbr": "DuoGenic"
+  },
+  "2482": {
+   "name": "UNIFORM INDUSTRIAL CORP.",
+   "abbr": "UIC"
+  },
+  "3710": {
+   "name": "ACON Holding Inc.",
+   "abbr": "ACON Holding"
+  },
+  "6820": {
+   "name": "ACON OPTICS COMMUNICATIONS INC.",
+   "abbr": "ACON OPTICS"
+  },
+  "6755": {
+   "name": "Lian Hong Art Company Limited",
+   "abbr": "LH"
+  },
+  "6818": {
+   "name": "ADVANCED WIRELESS & ANTENNA INC.",
+   "abbr": "AWAN"
+  },
+  "6843": {
+   "name": "JDV CONTROL VALVES CO., LTD.",
+   "abbr": "JDV"
+  },
+  "3465": {
+   "name": "NEW ADVANCED ELECTRONICS TECHNOLOGIES CO.,LTD",
+   "abbr": "NAE"
+  },
+  "6692": {
+   "name": "Acmepoint Energy Services Co.,Ltd.",
+   "abbr": "AES"
+  },
+  "3118": {
+   "name": "LEVEL BIOTECHNOLOGY INC.",
+   "abbr": "LEVEL"
+  },
+  "3567": {
+   "name": "ETREND Hightech Corp.",
+   "abbr": "ETREND"
+  },
+  "6576": {
+   "name": "Foresee Pharmaceuticals Co., Ltd.",
+   "abbr": "Foresee"
+  },
+  "2069": {
+   "name": "YUEN CHANG STAINLESS STEEL CO., LTD",
+   "abbr": "YC"
+  },
+  "6762": {
+   "name": "Delta Asia International Corporation",
+   "abbr": "Delta Asia"
+  },
+  "7839": {
+   "name": "PRO360 Inc.",
+   "abbr": "PRO360"
+  },
+  "7419": {
+   "name": "MORTECH CORPORATION",
+   "abbr": "MTC"
+  },
+  "1315": {
+   "name": "TAH HSIN INDUSTRIAL CORPORATION",
+   "abbr": "TAH HSIN"
+  },
+  "8163": {
+   "name": "DARFON ELECTRONICS CORP",
+   "abbr": "DARFON"
+  },
+  "4585": {
+   "name": "TECHMAN ROBOT INC.",
+   "abbr": "TRI"
+  },
+  "2535": {
+   "name": "DA-CIN CONSTRUCTION CO.,LTD.",
+   "abbr": "DA-CIN"
+  },
+  "6523": {
+   "name": "DR.WU SKINCARE CO., LTD.",
+   "abbr": "DR.WU"
+  },
+  "6526": {
+   "name": "Airoha Technology Corp.",
+   "abbr": "Airoha"
+  },
+  "3686": {
+   "name": "Danen Technology Corporation",
+   "abbr": "Danen"
+  },
+  "5234": {
+   "name": "Daxin Materials Corporation",
+   "abbr": "DAXIN"
+  },
+  "4577": {
+   "name": "Ofuna Technology Co., Ltd.",
+   "abbr": "Ofuna Tech"
+  },
+  "5276": {
+   "name": "Da Hui Limited",
+   "abbr": "Da Hui"
+  },
+  "6434": {
+   "name": "TacBright Optronics Corporation",
+   "abbr": "TacBright"
+  },
+  "6120": {
+   "name": "DARWIN PRECISIONS CORPORATION",
+   "abbr": "DARWIN"
+  },
+  "8045": {
+   "name": "TWOWAY Communications Inc.",
+   "abbr": "TWOWAY"
+  },
+  "3645": {
+   "name": "Taimide Tech. Inc.",
+   "abbr": "TMT"
+  },
+  "6578": {
+   "name": "DaBomb Protein Biotech Corp.",
+   "abbr": "DaBomb"
+  },
+  "6177": {
+   "name": "DA-LI DEVELOPMENT CO., LTD.",
+   "abbr": "DA-LI CO.,LTD."
+  },
+  "4904": {
+   "name": "Far EasTone Telecommunications Co., Ltd.",
+   "abbr": "Far EasTone"
+  },
+  "5859": {
+   "name": "FARGLORY LIFE INSURANCE CO., LTD.",
+   "abbr": "FGLIFE"
+  },
+  "1402": {
+   "name": "Far Eastern New Century Corporation",
+   "abbr": "FENC"
+  },
+  "6886": {
+   "name": "Far East Bio-Tec Co., Ltd.",
+   "abbr": "FEBICO"
+  },
+  "2845": {
+   "name": "FAR EASTERN INTERNATIONAL BANK",
+   "abbr": "FEIB"
+  },
+  "2903": {
+   "name": "Far Eastern Department Stores Ltd.",
+   "abbr": "FEDS"
+  },
+  "3040": {
+   "name": "GLOBAL VIEW CO., LTD.",
+   "abbr": "G.V."
+  },
+  "5522": {
+   "name": "Farglory Land Development  Co., Ltd",
+   "abbr": "Farglory"
+  },
+  "2712": {
+   "name": "FarGlory Hotel Co.,Ltd",
+   "abbr": "FGH"
+  },
+  "5607": {
+   "name": "Farglory F T Z Investment Holding Co.,Ltd.",
+   "abbr": "Farglory FTZ"
+  },
+  "6831": {
+   "name": "TAIWAN MICROLOOPS CORP.",
+   "abbr": "MICROLOOPS"
+  },
+  "9960": {
+   "name": "DACOME INTERNATIONAL LTD.",
+   "abbr": "DACOME"
+  },
+  "6112": {
+   "name": "Metaage Corporation",
+   "abbr": "Metaage"
+  },
+  "5291": {
+   "name": "EISO ENTERPRISE CO.,LTD",
+   "abbr": "EISO"
+  },
+  "7402": {
+   "name": "Brinno Incorporated",
+   "abbr": "Brinno"
+  },
+  "8935": {
+   "name": "PONTEX POLYBLEND CO.,LTD",
+   "abbr": "PONTEX"
+  },
+  "4107": {
+   "name": "BIOTEQUE CORPORATION",
+   "abbr": "BIOTEQUE"
+  },
+  "6955": {
+   "name": "BONRAYBIO CO., LTD.",
+   "abbr": "BONRAYBIO"
+  },
+  "4402": {
+   "name": "J.D  Development Co., LTD",
+   "abbr": "J.D Development"
+  },
+  "5531": {
+   "name": "Shining Building Business Co.,Ltd.",
+   "abbr": "Shining"
+  },
+  "6586": {
+   "name": "CHO PHARMA, INC.",
+   "abbr": "CHO"
+  },
+  "4168": {
+   "name": "GlycoNex Incorporation",
+   "abbr": "GlycoNex Inc."
+  },
+  "6637": {
+   "name": "Medical Imaging Corp.",
+   "abbr": "MIC"
+  },
+  "6569": {
+   "name": "Onyx Healthcare Inc.",
+   "abbr": "onyx"
+  },
+  "6868": {
+   "name": "Iscom Online International Information Inc.",
+   "abbr": "ISCOM"
+  },
+  "6789": {
+   "name": "VisEra Technologies Company Ltd.",
+   "abbr": "VisEra"
+  },
+  "6995": {
+   "name": "BEAST KINGDOM CO.,LTD.",
+   "abbr": "BK"
+  },
+  "2368": {
+   "name": "GOLD CIRCUIT ELECTRONICS LTD",
+   "abbr": "GCE"
+  },
+  "7743": {
+   "name": "Kee Fresh & Safe Foodtech Co., Ltd.",
+   "abbr": "KFS"
+  },
+  "2312": {
+   "name": "KINPO ELECTRONICS, INC.",
+   "abbr": "KINPO"
+  },
+  "8358": {
+   "name": "CO-TECH DEVELOPMENT CORP.",
+   "abbr": "CO-TECH"
+  },
+  "8042": {
+   "name": "TAIWAN CHINSAN ELECTRONIC INDUSTRIAL CO., LTD",
+   "abbr": "CHINSAN"
+  },
+  "6133": {
+   "name": "GOLDEN BRIDGE ELECTECH INC.",
+   "abbr": "GBE"
+  },
+  "4417": {
+   "name": "KING CHOU MARINE TECHNOLOGY CO., LTD",
+   "abbr": "KING CHOU"
+  },
+  "8390": {
+   "name": "JIIN YEEH DING ENTERPRISE CORP.",
+   "abbr": "JYD"
+  },
+  "1796": {
+   "name": "GeneFerm Biotechnology Co.,Ltd.",
+   "abbr": "GeneFerm"
+  },
+  "4950": {
+   "name": "Golden Win International CORP",
+   "abbr": "GWIC"
+  },
+  "7865": {
+   "name": "JIN LIAN CHENG RESOURCES CO., LTD",
+   "abbr": "JIN LIAN CHENG"
+  },
+  "7732": {
+   "name": "KING SHING INDUSTRIAL CO., LTD.",
+   "abbr": "KING SHING"
+  },
+  "7757": {
+   "name": "Lebledor F&B Co., Ltd.",
+   "abbr": "Lebledor"
+  },
+  "6645": {
+   "name": "KIM FOREST ENTERPRISE CO., LTD.",
+   "abbr": "KIM FOREST"
+  },
+  "4503": {
+   "name": "GOLD RAIN ENTERPRISES CORP.",
+   "abbr": "GOLD RAIN"
+  },
+  "8429": {
+   "name": "Jinli Group Holdings Limited",
+   "abbr": "Jinli"
+  },
+  "3228": {
+   "name": "RDC Semiconductor Co.,Ltd.",
+   "abbr": "RDC"
+  },
+  "6832": {
+   "name": "KING'S METAL FIBER TECHNOLOGIES CO., LTD.",
+   "abbr": "KING'S"
+  },
+  "3293": {
+   "name": "INTERNATIONAL GAMES SYSTEM CO.,LTD.",
+   "abbr": "IGS"
+  },
+  "6155": {
+   "name": "KING CORE ELECTRONICS INC.",
+   "abbr": "KC"
+  },
+  "4571": {
+   "name": "KHGEARS INTERNATIONAL LIMITED",
+   "abbr": "KHGEARS"
+  },
+  "8027": {
+   "name": "E&R ENGINEERING CORPORATION",
+   "abbr": "E&R"
+  },
+  "5351": {
+   "name": "Etron Technology, Inc.",
+   "abbr": "Etron"
+  },
+  "6679": {
+   "name": "ZILLTEK TECHNOLOGY CORP.",
+   "abbr": "ZILLTEK"
+  },
+  "3150": {
+   "name": "SYNCOMM TECHNOLOGY CORP.",
+   "abbr": "SYNCOMM"
+  },
+  "3050": {
+   "name": "U-TECH Media Corporation",
+   "abbr": "U-TECH"
+  },
+  "7909": {
+   "name": "YE SIANG ENTERPRISE CO., LTD.",
+   "abbr": "YE SIANG"
+  },
+  "4153": {
+   "name": "DIVA Laboratories, Ltd.",
+   "abbr": "DIVA Labs."
+  },
+  "6449": {
+   "name": "APAQ TECHNOLOGY CO.,LTD.",
+   "abbr": "APAQ"
+  },
+  "5228": {
+   "name": "MAX ECHO TECHNOLOGY CORP.",
+   "abbr": "MAX ECHO"
+  },
+  "9802": {
+   "name": "Fulgent Sun International (Holding) Co., Ltd.",
+   "abbr": "Fulgent Sun"
+  },
+  "8928": {
+   "name": "DYNAMIC PRECISION INDUSTRY CORP.",
+   "abbr": "DYNAMIC"
+  },
+  "8074": {
+   "name": "AURONA  INDUSTRIES, INC",
+   "abbr": "AURONA"
+  },
+  "2476": {
+   "name": "G-SHANK ENTERPRISE CO.,LTD.",
+   "abbr": "GS"
+  },
+  "8435": {
+   "name": "Zimmite Taiwan Ltd.",
+   "abbr": "Zimmite"
+  },
+  "5529": {
+   "name": "MEGA International Development Co.,Ltd.",
+   "abbr": "MEGA"
+  },
+  "4575": {
+   "name": "CHUMPOWER MACHINERY CORPORATION",
+   "abbr": "CHUMPOWER"
+  },
+  "4432": {
+   "name": "Hakers Enterprise Co., LTD.",
+   "abbr": "Haksport"
+  },
+  "2429": {
+   "name": "ABONMAX CO., LTD",
+   "abbr": "PWT"
+  },
+  "3060": {
+   "name": "MIN AIK TECHNOLOGY Co., Ltd.",
+   "abbr": "MIN AIK"
+  },
+  "4545": {
+   "name": "Min Aik Precision Industrial Co., Ltd.",
+   "abbr": "MAP"
+  },
+  "7703": {
+   "name": "RAYZHER INDUSTRIAL CO.,LTD.",
+   "abbr": "RAYZHER"
+  },
+  "6674": {
+   "name": "COMPAL BROADBAND NETWORKS, INC.",
+   "abbr": "CBN"
+  },
+  "7530": {
+   "name": "Forward Science Corporation",
+   "abbr": "Forward Tek."
+  },
+  "6581": {
+   "name": "TAIWAN STEEL UNION CO., LTD",
+   "abbr": "TSU"
+  },
+  "8359": {
+   "name": "CASHBOX PARTYWORLD CO., LTD.",
+   "abbr": "CASHBOX"
+  },
+  "3230": {
+   "name": "Jiin Ming Industry Co., Ltd.",
+   "abbr": "Jiin Ming"
+  },
+  "2415": {
+   "name": "CX TECHNOLOGY CORPORATION",
+   "abbr": "CX TECH"
+  },
+  "1541": {
+   "name": "Chang Type Industrial Co.,Ltd.",
+   "abbr": "Chang Type"
+  },
+  "8104": {
+   "name": "RiTdisplay Corporation",
+   "abbr": "RiTdisplay"
+  },
+  "2349": {
+   "name": "RITEK CORPORATION",
+   "abbr": "RITEK"
+  },
+  "7907": {
+   "name": "Laienparts Technology Co.,Ltd.",
+   "abbr": "LPST"
+  },
+  "7779": {
+   "name": "CARRY INTERNATIONAL CO.,LTD.",
+   "abbr": "CARRY"
+  },
+  "6115": {
+   "name": "I-SHENG ELECTRIC WIRE & CABLE CO., LTD.",
+   "abbr": "I-SHENG"
+  },
+  "6877": {
+   "name": "HYE TECHNOLOGY CO.,LTD",
+   "abbr": "HYE"
+  },
+  "6980": {
+   "name": "Rapidtek Technologies Inc.",
+   "abbr": "RPTK"
+  },
+  "4163": {
+   "name": "INTAI TECHNOLOGY CORP.",
+   "abbr": "INTAI"
+  },
+  "6856": {
+   "name": "SHINE TREND International Multimedia Technolo",
+   "abbr": "ST media"
+  },
+  "3259": {
+   "name": "Solid State System Co.,Ltd",
+   "abbr": "3S"
+  },
+  "6680": {
+   "name": "SINTRONES Technology Corp.",
+   "abbr": "SINTRONES"
+  },
+  "4170": {
+   "name": "Vectorite Biomedical Inc.",
+   "abbr": "VBI"
+  },
+  "7748": {
+   "name": "Jollify Creative, Ltd.",
+   "abbr": "JollifyCreative"
+  },
+  "6241": {
+   "name": "AMIGO TECHNOLOGY INC.",
+   "abbr": "AMIGO"
+  },
+  "2114": {
+   "name": "HSIN YUNG CHIEN CO.,LTD.",
+   "abbr": "HYC"
+  },
+  "4999": {
+   "name": "Sinher Technology Inc.",
+   "abbr": "Sinher"
+  },
+  "3663": {
+   "name": "THINTECH MATERIALS TECHNOLOGY CO., LTD.",
+   "abbr": "TTMC"
+  },
+  "3709": {
+   "name": "Trigold Holdings Limited",
+   "abbr": "Trigold"
+  },
+  "3188": {
+   "name": "Golden Long Teng Development Co., Ltd.",
+   "abbr": "GLTD"
+  },
+  "1527": {
+   "name": "BASSO INDUSTRY CORP.",
+   "abbr": "BASSO"
+  },
+  "6901": {
+   "name": "DIAMOND BIOFUND INC.",
+   "abbr": "DIAMOND BIOFUND"
+  },
+  "4546": {
+   "name": "CHAHENG PRECISION CO., LTD.",
+   "abbr": "CHPC"
+  },
+  "4550": {
+   "name": "Chang Jia M&E Engineering Corp.",
+   "abbr": "CJME"
+  },
+  "6841": {
+   "name": "Ever Fortune. AI Co. , Ltd.",
+   "abbr": "EFAI"
+  },
+  "8038": {
+   "name": "CHANGS ASCENDING ENTERPRISE CO., LTD.",
+   "abbr": "CAEC"
+  },
+  "7795": {
+   "name": "ETERNAL PRECISION MECHANICS CO., LTD.",
+   "abbr": "EPM"
+  },
+  "2603": {
+   "name": "EVERGREEN MARINE CORP. (TAIWAN) LTD.",
+   "abbr": "EMC"
+  },
+  "2618": {
+   "name": "EVA AIRWAYS CORPORATION",
+   "abbr": "EVAAIR"
+  },
+  "2645": {
+   "name": "EVERGREEN AVIATION TECHNOLOGIES CORPORATION",
+   "abbr": "EGAT"
+  },
+  "2211": {
+   "name": "EVERGREEN STEEL CORP.",
+   "abbr": "EGST"
+  },
+  "3492": {
+   "name": "Advanced Connection Technology Inc.",
+   "abbr": "ACT"
+  },
+  "6548": {
+   "name": "CHANG WAH TECHNOLOGY CO., LTD",
+   "abbr": "CWTC"
+  },
+  "6712": {
+   "name": "Ever Supreme Bio Technology Co., Ltd",
+   "abbr": "Ever Supreme"
+  },
+  "1717": {
+   "name": "ETERNAL MATERIALS CO., LTD.",
+   "abbr": "ETERNAL"
+  },
+  "8070": {
+   "name": "CHANG WAH ELECTROMATERIALS INC.",
+   "abbr": "CHANG WAH"
+  },
+  "5534": {
+   "name": "Chong Hong Development Co., Ltd.，",
+   "abbr": "CHONG HONG"
+  },
+  "7789": {
+   "name": "Casual Restaurants Inc.",
+   "abbr": "Casual"
+  },
+  "6839": {
+   "name": "Power Master Energy  Co., Ltd.",
+   "abbr": "Power Master"
+  },
+  "3587": {
+   "name": "Materials Analysis Technology Inc.",
+   "abbr": "MA-tek"
+  },
+  "3311": {
+   "name": "Silitech Technology Corporation",
+   "abbr": "Silitech"
+  },
+  "8941": {
+   "name": "GRAND HALL ENTERPRISE CO., LTD.",
+   "abbr": "GRAND HALL"
+  },
+  "6183": {
+   "name": "TRADE-VAN INFORMATION SERVICES CO.",
+   "abbr": "TRADE-VAN"
+  },
+  "6914": {
+   "name": "PSS CO.,LTD.",
+   "abbr": "PSS"
+  },
+  "7911": {
+   "name": "Apollo power co., ltd.",
+   "abbr": "Apollo power"
+  },
+  "8443": {
+   "name": "SHUI-MU International Co., Ltd.",
+   "abbr": "ASO"
+  },
+  "8072": {
+   "name": "AV TECH CORPORATION",
+   "abbr": "AV TECH"
+  },
+  "5603": {
+   "name": "SEA & LAND INTEGRATED CO",
+   "abbr": "SEA&LAND"
+  },
+  "2609": {
+   "name": "Yang Ming Marine Transport Corp.",
+   "abbr": "YMTC"
+  },
+  "3498": {
+   "name": "USUN TECHNOLOGY CO.,LTD.",
+   "abbr": "USUN"
+  },
+  "6542": {
+   "name": "GAMESPARCS CO.,LTD.",
+   "abbr": "GAMESPARCS"
+  },
+  "5519": {
+   "name": "LongDa Construction & Development Corporation",
+   "abbr": "LD"
+  },
+  "3018": {
+   "name": "LUNG MING GREEN ENERGY TECHNOLOGY ENGINEERING",
+   "abbr": "LUNG MING"
+  },
+  "2424": {
+   "name": "LUNG HWA ELECTRONICS CO., LTD.",
+   "abbr": "LUNG HWA"
+  },
+  "4106": {
+   "name": "WELLELL INC.",
+   "abbr": "WELLELL"
+  },
+  "2731": {
+   "name": "Lion Travel Service Co., Ltd.",
+   "abbr": "Liontravel"
+  },
+  "2073": {
+   "name": "Syong Shun Metal CO., Ltd.",
+   "abbr": "SSMC"
+  },
+  "6907": {
+   "name": "Artery Technology Corporation",
+   "abbr": "ATK-KY"
+  },
+  "2726": {
+   "name": "Yummy Town (Cayman) Holdings Corporation",
+   "abbr": "Yummy Town"
+  },
+  "1455": {
+   "name": "ZIG SHENG IND. CO., LTD",
+   "abbr": "ZIG SHENG"
+  },
+  "2937": {
+   "name": "Gseven Co., Ltd.",
+   "abbr": "Gseven"
+  },
+  "1439": {
+   "name": "ASCENT DEVELOPMENT CO., LTD.",
+   "abbr": "ASCENT"
+  },
+  "6683": {
+   "name": "KEYSTONE MICROTECH CORPORATION",
+   "abbr": "KSMT"
+  },
+  "5516": {
+   "name": "SUN-SEA CONSTRUCTION CORPORATION",
+   "abbr": "SUN-SEA"
+  },
+  "4728": {
+   "name": "Sunmax Biotechnology Co., Ltd.",
+   "abbr": "Sunmax"
+  },
+  "6506": {
+   "name": "Shuang-Bang Industrial Corp.",
+   "abbr": "SBI"
+  },
+  "4764": {
+   "name": "Double Bond Chemical Ind. Co., Ltd.",
+   "abbr": "DBC"
+  },
+  "3324": {
+   "name": "AURAS Technology Co.,Ltd.",
+   "abbr": "AURAS"
+  },
+  "2748": {
+   "name": "FDC International Hotels Corporation",
+   "abbr": "FDC"
+  },
+  "3191": {
+   "name": "YJN CO.,LTD.",
+   "abbr": "YJN"
+  },
+  "6869": {
+   "name": "J&V Energy Technology Co., Ltd.",
+   "abbr": "J&V Energy"
+  },
+  "3029": {
+   "name": "Zero One Technology Co.,Ltd.",
+   "abbr": "ZERO ONE"
+  },
+  "6207": {
+   "name": "LASERTEK TAIWAN CO.,LTD",
+   "abbr": "LASERTEK"
+  },
+  "5230": {
+   "name": "Ledlink Optics, Inc.",
+   "abbr": "Ledlink"
+  },
+  "8033": {
+   "name": "THUNDER TIGER CORP.",
+   "abbr": "TT"
+  },
+  "6493": {
+   "name": "TTBIO CORP.",
+   "abbr": "TTBIO"
+  },
+  "2071": {
+   "name": "CHEN NAN IRON WIRE CO.,LTD",
+   "abbr": "Chen Nan Steel"
+  },
+  "2373": {
+   "name": "Aurora Corporation",
+   "abbr": "Aurora"
+  },
+  "6574": {
+   "name": "MIKOBEAUTE INTERNATIONAL CO., LTD.",
+   "abbr": "MIKOBEAUTE"
+  },
+  "5464": {
+   "name": "LIN HORN TECHNOLOGY CO., LTD.",
+   "abbr": "LIN HORN"
+  },
+  "8450": {
+   "name": "Pili International Multimedia Co.,Ltd.",
+   "abbr": "PILI"
+  },
+  "6951": {
+   "name": "CHIN HSIN ENVIRON ENGINEERING CO.， LTD.",
+   "abbr": "CHIN HSIN"
+  },
+  "6931": {
+   "name": "Qing Song Health Co.,Ltd.",
+   "abbr": "Qing Song"
+  },
+  "8930": {
+   "name": "CKM APPLIED MATERIALS CORP.",
+   "abbr": "CKM"
+  },
+  "5386": {
+   "name": "ALBATRON TECHNOLOGY CO., LTD",
+   "abbr": "ALBATRON"
+  },
+  "6417": {
+   "name": "Securitag Assembly Group Co., Ltd.",
+   "abbr": "SAG"
+  },
+  "5525": {
+   "name": "SWEETEN REAL  ESTATE  DEVELOPMENT  CO.,LTD.",
+   "abbr": "SWEETEN"
+  },
+  "2351": {
+   "name": "SDI CORPORATION",
+   "abbr": "SDI"
+  },
+  "6154": {
+   "name": "Sunfar Computer Co., Ltd",
+   "abbr": "Sunfar"
+  },
+  "6535": {
+   "name": "LUMOSA THERAPEUTICS CO., LTD.",
+   "abbr": "LUMOSA"
+  },
+  "3211": {
+   "name": "Dynapack International Technology Corporation",
+   "abbr": "Dynapack"
+  },
+  "7768": {
+   "name": "PRAISE VICTOR INDUSTRIAL CO., LTD.",
+   "abbr": "PVI"
+  },
+  "6147": {
+   "name": "CHIPBOND TECHNOLOGY CORPORATION",
+   "abbr": "CHIPBOND"
+  },
+  "3438": {
+   "name": "Advanced Analog Technology Inc.",
+   "abbr": "AAT"
+  },
+  "2061": {
+   "name": "FENG CHING METAL CORPORATION",
+   "abbr": "FENG CHING"
+  },
+  "2457": {
+   "name": "PHIHONG TECHNOLOGY CO., LTD.",
+   "abbr": "PHIHONG"
+  },
+  "4413": {
+   "name": "EST GLOBAL APPAREL CO.,LTD",
+   "abbr": "EST"
+  },
+  "6206": {
+   "name": "FLYTECH TECHNOLOGY CO.,LTD.",
+   "abbr": "FLYTECH"
+  },
+  "7883": {
+   "name": "FEASTOGETHER GROUP CO., LTD.",
+   "abbr": "FEASTOGETHER"
+  },
+  "1471": {
+   "name": "SOLYTECH ENTERPRISE CORPORATION",
+   "abbr": "SL"
+  },
+  "5345": {
+   "name": "Fullhome Development Co., Ltd.",
+   "abbr": "Fullhome"
+  },
+  "4139": {
+   "name": "MA KUANG HEALTHCARE HOLDING LIMITED",
+   "abbr": "KY M.K."
+  },
+  "4572": {
+   "name": "Drewloong Precision, Inc.",
+   "abbr": "DPI"
+  },
+  "1591": {
+   "name": "Inmax Holding Co., Ltd.",
+   "abbr": "INMAX"
+  },
+  "7848": {
+   "name": "CHI YI HSIN TECHNOLOGY CO., LTD.",
+   "abbr": "CYH"
+  },
+  "7889": {
+   "name": "TSA INTERNATIONAL CO., LTD.",
+   "abbr": "TSA"
+  },
+  "6672": {
+   "name": "Ventec International Group Co.,Ltd.",
+   "abbr": "Ventec"
+  },
+  "6870": {
+   "name": "Turn Cloud Technology Service Inc.",
+   "abbr": "Turn Cloud"
+  },
+  "6148": {
+   "name": "AZION CORPORATION",
+   "abbr": "AZION"
+  },
+  "6237": {
+   "name": "C-MEDIA ELECTRONICS INC.",
+   "abbr": "CMEI"
+  },
+  "6272": {
+   "name": "WIESON TECHNOLOGIES CO., LTD.",
+   "abbr": "WIESON"
+  },
+  "6234": {
+   "name": "TERA AUTOTECH CORPORATION",
+   "abbr": "TERA AUTO"
+  },
+  "8996": {
+   "name": "KAORI  HEAT  TREATMENT  CO.,LTD",
+   "abbr": "KAORI"
+  },
+  "5439": {
+   "name": "First Hi-tec Enterprise Co.,Ltd.",
+   "abbr": "FHt"
+  },
+  "4573": {
+   "name": "GMT GLOBAL INC.",
+   "abbr": "GMT"
+  },
+  "2906": {
+   "name": "Collins Co., Ltd.",
+   "abbr": "Collins"
+  },
+  "1531": {
+   "name": "KAULIN MANUFACTURING CO. LTD.",
+   "abbr": "KAULIN"
+  },
+  "6547": {
+   "name": "Medigen Vaccine Biologics Corporation",
+   "abbr": "MVC"
+  },
+  "2008": {
+   "name": "KAO HSING CHANG IRON & STEEL CORPORATION",
+   "abbr": "KHC"
+  },
+  "4510": {
+   "name": "KAO FONG MACHINERY CO.,LTD",
+   "abbr": "KAFO"
+  },
+  "2836": {
+   "name": "BANK OF KAOHSIUNG,CO.,LTD.",
+   "abbr": "B.O.K"
+  },
+  "1256": {
+   "name": "Sunjuice Holdings Co., Limited",
+   "abbr": "Sunjuice"
+  },
+  "5706": {
+   "name": "Phoenix Tours International, Inc.",
+   "abbr": "PHX TOUR"
+  },
+  "7769": {
+   "name": "Hon.Precision, Inc.",
+   "abbr": "HON"
+  },
+  "3021": {
+   "name": "WELLTEND TECHNOLOGY CORPORATION",
+   "abbr": "WELLTEND"
+  },
+  "6913": {
+   "name": "VSO ELECTRONICS CO., LTD.",
+   "abbr": "VSO"
+  },
+  "2317": {
+   "name": "HON HAI PRECISION IND. CO., LTD.",
+   "abbr": "HON HAI"
+  },
+  "2354": {
+   "name": "FOXCONN TECHNOLOGY CO., LTD.",
+   "abbr": "FTC"
+  },
+  "3092": {
+   "name": "HOTRON PRECISION ELECTRONIC INDUSTRIAL CO.LTD",
+   "abbr": "HOTRON"
+  },
+  "2258": {
+   "name": "Foxtron Vehicle Technologies Co., Ltd.",
+   "abbr": "Foxtron"
+  },
+  "8087": {
+   "name": "LEADSUN GREENTECH CORPORATION",
+   "abbr": "LEADSUN"
+  },
+  "2911": {
+   "name": "Les enphants Co.,Ltd.",
+   "abbr": "Les enphants"
+  },
+  "7888": {
+   "name": "LIBO PHARMA CORP.",
+   "abbr": "LIBO"
+  },
+  "6539": {
+   "name": "DV Biomed CO., LTD.",
+   "abbr": "DV"
+  },
+  "2302": {
+   "name": "RECTRON LTD.",
+   "abbr": "RECTRON"
+  },
+  "3346": {
+   "name": "Laster Tech Co., Ltd.",
+   "abbr": "Laster Tech"
+  },
+  "2465": {
+   "name": "LEADTEK RESEARCH INC.",
+   "abbr": "LEADTEK"
+  },
+  "4137": {
+   "name": "CHLITINA HOLDING LIMITED",
+   "abbr": "CHLITINA-KY"
+  },
+  "1234": {
+   "name": "HEY SONG CORPORATION",
+   "abbr": "HEY SONG"
+  },
+  "6485": {
+   "name": "ASolid Technology Co., Ltd",
+   "abbr": "ASolid"
+  },
+  "3288": {
+   "name": "SILICON TOUCH TECHNOLOGY INC.",
+   "abbr": "SiTI"
+  },
+  "2426": {
+   "name": "TYNTEK CORPORATION",
+   "abbr": "TYNTEK"
+  },
+  "2923": {
+   "name": "Sino Horizon Holdings Limited",
+   "abbr": "Sino Horizon"
+  },
+  "6585": {
+   "name": "DINGZING ADVANCED MATERIALS INCORPORATED",
+   "abbr": "DingZing"
+  },
+  "3306": {
+   "name": "RoyalTek Company Ltd.",
+   "abbr": "RoyalTek"
+  },
+  "6738": {
+   "name": "MAYO Human Capital Inc.",
+   "abbr": "MAYO"
+  },
+  "7876": {
+   "name": "OBIGEN PHARMA, INC.",
+   "abbr": "OBIGEN PHARMA"
+  },
+  "8499": {
+   "name": "TOP BRIGHT HOLDING CO., LTD.",
+   "abbr": "TOP BRIGHT"
+  },
+  "3611": {
+   "name": "TSC AUTO ID TECHNOLOGY CO., LTD.",
+   "abbr": "TSC AUTO ID"
+  },
+  "5530": {
+   "name": "LUNGYEN LIFE SERVICE CORPORATION",
+   "abbr": "LUNG YEN"
+  },
+  "6753": {
+   "name": "LUNGTEH SHIPBUILDING CO., LTD.",
+   "abbr": "LUNGTEH"
+  },
+  "5267": {
+   "name": "LUNG PIEN VACUUM INDUSTRY CO., LTD.",
+   "abbr": "LUNG PIEN"
+  },
+  "2514": {
+   "name": "LONG BON INTERNATIONAL CO.,LTD",
+   "abbr": "LONG BON"
+  },
+  "3226": {
+   "name": "LFA CO.,LTD.",
+   "abbr": "LFA"
+  }
  }
 }
