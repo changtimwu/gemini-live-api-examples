@@ -376,6 +376,21 @@ function TranscriptColumn({
     if (el) el.scrollTop = el.scrollHeight;
   }, [segments, showEnglish]);
 
+  // Flatten turns into display items: one item = one Chinese sentence paired
+  // (by index) with its English translation. The pairing is approximate — the
+  // model splits sentences differently across languages — but we only want an
+  // item-by-item readout, so exactness doesn't matter.
+  const items = segments.flatMap((s) => {
+    const zhLines = splitSentences(s.zh);
+    const enLines = showEnglish ? splitSentences(s.en) : [];
+    const count = Math.max(zhLines.length, enLines.length);
+    return Array.from({ length: count }, (_, i) => ({
+      key: `${s.id}-${i}`,
+      zh: zhLines[i] || "",
+      en: enLines[i] || "",
+    }));
+  });
+
   return (
     <div
       style={{
@@ -404,51 +419,35 @@ function TranscriptColumn({
           padding: "18px",
           display: "flex",
           flexDirection: "column",
-          gap: 16,
+          gap: 0,
         }}
       >
-        {segments.length === 0 ? (
+        {items.length === 0 ? (
           <p className="body-sm italic">Waiting for speech…</p>
         ) : (
-          segments.map((s) => {
-            const zhLines = splitSentences(s.zh);
-            const enLines = showEnglish ? splitSentences(s.en) : [];
-            return (
-              <div key={s.id}>
-                {zhLines.length > 0 ? (
-                  zhLines.map((line, i) => (
-                    <p
-                      key={`zh-${i}`}
-                      style={{
-                        fontSize: 16,
-                        lineHeight: 1.6,
-                        color: "var(--fg)",
-                        marginTop: i ? 4 : 0,
-                      }}
-                    >
-                      {line}
-                    </p>
-                  ))
-                ) : (
-                  <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--fg)" }}>
-                    …
-                  </p>
-                )}
-                {enLines.map((line, i) => (
-                  <p
-                    key={`en-${i}`}
-                    className="body-sm"
-                    style={{
-                      marginTop: i ? 2 : 6,
-                      color: "var(--fg-secondary)",
-                    }}
-                  >
-                    {line}
-                  </p>
-                ))}
-              </div>
-            );
-          })
+          items.map((item) => (
+            <div
+              key={item.key}
+              style={{
+                padding: "10px 0",
+                borderBottom: "1px solid var(--border-light)",
+              }}
+            >
+              {item.zh && (
+                <p style={{ fontSize: 16, lineHeight: 1.5, color: "var(--fg)" }}>
+                  {item.zh}
+                </p>
+              )}
+              {showEnglish && item.en && (
+                <p
+                  className="body-sm"
+                  style={{ marginTop: 4, color: "var(--fg-secondary)" }}
+                >
+                  {item.en}
+                </p>
+              )}
+            </div>
+          ))
         )}
       </div>
     </div>
