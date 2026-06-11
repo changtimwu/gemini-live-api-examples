@@ -73,13 +73,36 @@ export const SYSTEM_INSTRUCTIONS: Record<Variant, string> = {
 // listed here run it; the rest publish the raw ASR.
 export const REPHRASE_MODEL = "gemini-3.1-flash-lite";
 export const REPHRASE_VARIANTS: Variant[] = ["glossary"];
+// The rephrase agent only needs correct names/tickers/terms + cues. Drop the example-sentence and
+// English-translation sections of the glossary text — the agent otherwise regurgitates the examples
+// and appends English glosses (e.g. "封測 (Packaging and Testing)").
+function glossaryForRephrase(): string {
+  return resolveGlossaryKnowledge()
+    .split(/(?<=。)/)
+    .filter((s) => !s.includes("用法範例") && !s.includes("翻譯成英文"))
+    .join("");
+}
+
 export const REPHRASE_INSTRUCTION =
   "你是台灣股市節目的『中文逐字稿校正員』。下面的『詞彙知識』列出節目會提到的公司名稱、股票代號、" +
-  "專有名詞、用法範例，以及常見的同音誤聽與讀音提示。請依據它，只把使用者輸入的逐字稿中被誤聽的" +
-  "名稱／專有名詞更正為正確寫法；其餘文字、語序、口語風格、標點一律原樣保留，不要翻譯、不要解釋、" +
-  "不要新增或刪除其他內容。若沒有需要更正的地方，就原樣輸出。只輸出更正後的中文逐字稿本身。\n\n" +
+  "專有名詞，以及常見的同音誤聽與讀音提示。請『只』針對我提供的這段逐字稿做兩件事：\n" +
+  "1. 把明顯被誤聽、其實是詞彙知識中公司／專有名詞的地方，整個誤聽的詞一併換成正確寫法——" +
+  "包含誤聽殘留的多餘字也要一起換掉，絕不可留下原本誤聽的任何字。只有在明確是在講某家公司／某個" +
+  "專有名詞的語境下才更正；一般常用詞（例如「新聞」「測試」「需求」「基本面」「漲停」「投信」" +
+  "「安全」「信心」）即使發音接近某個名稱，也絕不可改成公司名。讀音提示只在這種情況下參考使用。\n" +
+  "2. 只在『公司名稱』後面加上『 (代號)』，代號必須是詞彙知識『公司清單』裡該公司自己標註的數字代號，" +
+  "不可張冠李戴，例如「台積電」→「台積電 (2330)」、「日月光投控」→「日月光投控 (3711)」。" +
+  "詞彙知識『專有名詞清單』裡的詞（例如封測、矽光子、CoWoS、先進封裝、ASIC、外溢、台指期）都不是公司，" +
+  "一律不可加代號、也不可加任何括號——例如「封測族群」維持「封測族群」，" +
+  "絕不可變成「封測 (3711)」或「封測 (封測)」。英文縮寫與一般詞同樣不加。" +
+  "沒有代號的公司（例如外國公司）維持原樣。\n" +
+  "範例（特別注意要清掉誤聽殘留字）：「台積電電它的」→「台積電 (2330) 它的」；" +
+  "「那欣銓權來講」→「那欣銓 (3264) 來講」；「日月光投控光族群」→「日月光投控 (3711) 族群」。\n" +
+  "嚴格要求：除上述兩點外，其他文字、語序、口語、標點一律原樣保留；不可翻譯、不可附加任何英文、" +
+  "不可解釋、不可自行造句、不可加入詞彙知識裡的例句或清單。若這段只是片段或標點，直接原樣輸出，" +
+  "不要回問或說明。輸出長度必須與輸入相近，只輸出處理後的這段逐字稿本身。\n\n" +
   "詞彙知識：\n" +
-  resolveGlossaryKnowledge();
+  glossaryForRephrase();
 
 export const VARIANT_LABELS: Record<Variant, string> = {
   glossary: "Tuned with glossary",

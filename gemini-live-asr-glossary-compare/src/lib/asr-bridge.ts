@@ -45,8 +45,8 @@ export type TranscriptKind = "source" | "translation" | "source-correction";
 // The translate model keeps one long turn over continuous speech (turnComplete rarely fires), so
 // the rephrase arm flushes a chunk for correction after a short pause, or once it grows this long.
 // Kept small so corrections land quickly (and so "polished-only" mode doesn't lag far behind).
-const REPHRASE_IDLE_MS = 700;
-const REPHRASE_MAX_CHARS = 24;
+const REPHRASE_IDLE_MS = 1000;
+const REPHRASE_MAX_CHARS = 40;
 
 export class AsrBridge {
   private room: Room | null = null;
