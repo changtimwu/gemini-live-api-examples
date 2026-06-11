@@ -14,7 +14,8 @@ import { Track, LocalTrackPublication } from "livekit-client";
 type Variant = "glossary" | "general";
 type InputMode = "mic" | "tab";
 
-const VARIANTS: Variant[] = ["glossary", "general"];
+// Display order, left → right. Server bridges are unaffected (see asr-config VARIANTS).
+const VARIANTS: Variant[] = ["general", "glossary"];
 const LABELS: Record<Variant, string> = {
   glossary: "With glossary",
   general: "General",
@@ -84,7 +85,7 @@ export default function Home() {
   const [room, setRoom] = useState("");
   const [token, setToken] = useState("");
   const [serverUrl, setServerUrl] = useState("");
-  const [showEnglish, setShowEnglish] = useState(true);
+  const [showEnglish, setShowEnglish] = useState(false);
   const [inputMode, setInputMode] = useState<InputMode>("mic");
   const [tabStream, setTabStream] = useState<MediaStream | null>(null);
 
