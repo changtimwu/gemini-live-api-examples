@@ -9,9 +9,10 @@ import {
   TrackToggle,
 } from "@livekit/components-react";
 import "@livekit/components-styles";
-import { Track } from "livekit-client";
+import { Track, LocalTrackPublication } from "livekit-client";
 
 type Variant = "glossary" | "general";
+type InputMode = "mic" | "tab";
 
 const VARIANTS: Variant[] = ["glossary", "general"];
 const LABELS: Record<Variant, string> = {
@@ -44,6 +45,37 @@ function splitSentences(text: string): string[] {
 
 const SPEAKER_IDENTITY = "speaker";
 
+// Capture a browser tab's *playback* audio via getDisplayMedia. Chrome/Edge
+// only offer the "Also share tab audio" checkbox when video is requested too
+// and the user picks the "Chrome Tab" surface, so we ask for both, then keep
+// only the audio. The video track is left alive (Chrome ties the capture
+// session to it) but disabled, and is never published.
+async function captureTabAudio(): Promise<MediaStream> {
+  if (!navigator.mediaDevices?.getDisplayMedia) {
+    throw new Error(
+      "Tab audio capture isn't supported here. Use Chrome or Edge on desktop."
+    );
+  }
+  const stream = await navigator.mediaDevices.getDisplayMedia({
+    video: { displaySurface: "browser" },
+    // Keep the tab's audio raw — browser DSP would hurt ASR quality.
+    audio: {
+      echoCancellation: false,
+      noiseSuppression: false,
+      autoGainControl: false,
+    },
+  });
+  if (stream.getAudioTracks().length === 0) {
+    stream.getTracks().forEach((t) => t.stop());
+    throw new Error(
+      'No tab audio captured. In the picker, choose the "Chrome Tab" option and turn on "Also share tab audio".'
+    );
+  }
+  const video = stream.getVideoTracks()[0];
+  if (video) video.enabled = false;
+  return stream;
+}
+
 export default function Home() {
   const [started, setStarted] = useState(false);
   const [starting, setStarting] = useState(false);
@@ -53,11 +85,18 @@ export default function Home() {
   const [token, setToken] = useState("");
   const [serverUrl, setServerUrl] = useState("");
   const [showEnglish, setShowEnglish] = useState(true);
+  const [inputMode, setInputMode] = useState<InputMode>("mic");
+  const [tabStream, setTabStream] = useState<MediaStream | null>(null);
 
-  async function start() {
+  async function start(mode: InputMode) {
     setError(null);
     setStarting(true);
+    // For tab mode, grab the audio first — getDisplayMedia must run inside the
+    // click gesture, and we want to bail before touching the server if it fails.
+    let stream: MediaStream | null = null;
     try {
+      if (mode === "tab") stream = await captureTabAudio();
+
       const roomName = `asr-${crypto.randomUUID().slice(0, 8)}`;
 
       // 1. Spin up the two server-side ASR bridges (glossary + general).
@@ -78,11 +117,14 @@ export default function Home() {
       const tokenData = await tokenRes.json();
       if (tokenData.error) throw new Error(tokenData.error);
 
+      setInputMode(mode);
+      setTabStream(stream);
       setRoom(roomName);
       setToken(tokenData.token);
       setServerUrl(tokenData.serverUrl);
       setStarted(true);
     } catch (err) {
+      stream?.getTracks().forEach((t) => t.stop());
       setError((err as Error).message);
     } finally {
       setStarting(false);
@@ -97,10 +139,13 @@ export default function Home() {
         body: JSON.stringify({ room }),
       }).catch(() => {});
     }
+    tabStream?.getTracks().forEach((t) => t.stop());
+    setTabStream(null);
+    setInputMode("mic");
     setStarted(false);
     setToken("");
     setRoom("");
-  }, [room]);
+  }, [room, tabStream]);
 
   // Tear down bridges if the tab closes mid-session.
   useEffect(() => {
@@ -126,9 +171,10 @@ export default function Home() {
             className="body enter-d1"
             style={{ maxWidth: 380, margin: "0 auto 40px" }}
           >
-            Speak into your mic. The same audio is transcribed by two Gemini Live
-            sessions side by side — one primed with a TWSE stock glossary, one
-            general — so you can see the difference.
+            Feed in your mic or a browser tab&apos;s audio. The same audio is
+            transcribed by two Gemini Live sessions side by side — one primed
+            with a TWSE stock glossary, one general — so you can see the
+            difference.
           </p>
 
           <div
@@ -137,10 +183,14 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              gap: 20,
+              gap: 12,
             }}
           >
-            <button className="btn btn-dark" onClick={start} disabled={starting}>
+            <button
+              className="btn btn-dark"
+              onClick={() => start("mic")}
+              disabled={starting}
+            >
               {starting ? (
                 <>
                   <span className="spinner" /> Starting…
@@ -149,6 +199,22 @@ export default function Home() {
                 "Start microphone"
               )}
             </button>
+
+            <button
+              className="btn btn-outline"
+              onClick={() => start("tab")}
+              disabled={starting}
+            >
+              Use a browser tab&apos;s audio
+            </button>
+
+            <p
+              className="body-sm"
+              style={{ maxWidth: 320, margin: "4px auto 12px", opacity: 0.7 }}
+            >
+              Tab audio needs Chrome or Edge — in the picker, choose a tab and
+              turn on &ldquo;Also share tab audio&rdquo;.
+            </p>
 
             <label
               style={{
@@ -187,7 +253,7 @@ export default function Home() {
   return (
     <LiveKitRoom
       video={false}
-      audio={true}
+      audio={inputMode === "mic"}
       token={token}
       serverUrl={serverUrl}
       onDisconnected={() => stop()}
@@ -197,6 +263,8 @@ export default function Home() {
         showEnglish={showEnglish}
         setShowEnglish={setShowEnglish}
         onStop={stop}
+        inputMode={inputMode}
+        tabStream={tabStream}
       />
     </LiveKitRoom>
   );
@@ -206,10 +274,14 @@ function LiveSession({
   showEnglish,
   setShowEnglish,
   onStop,
+  inputMode,
+  tabStream,
 }: {
   showEnglish: boolean;
   setShowEnglish: (v: boolean) => void;
   onStop: () => void;
+  inputMode: InputMode;
+  tabStream: MediaStream | null;
 }) {
   const [transcripts, setTranscripts] = useState<Transcripts>({
     glossary: [],
@@ -222,6 +294,46 @@ function LiveSession({
       t.participant.identity === localParticipant.identity &&
       !t.publication.isMuted
   );
+
+  // In tab mode the captured audio isn't a real mic, so LiveKitRoom won't
+  // auto-publish it. Publish it ourselves as a Microphone-source track (the
+  // server bridge subscribes to any audio track; tagging it Microphone also
+  // lets the waveform/"Listening" indicator below work unchanged).
+  const tabPubRef = useRef<LocalTrackPublication | null>(null);
+  const publishedRef = useRef(false);
+  useEffect(() => {
+    if (inputMode !== "tab" || !tabStream || publishedRef.current) return;
+    const audioTrack = tabStream.getAudioTracks()[0];
+    if (!audioTrack) return;
+    publishedRef.current = true;
+    localParticipant
+      .publishTrack(audioTrack, {
+        source: Track.Source.Microphone,
+        name: "tab-audio",
+      })
+      .then((pub) => {
+        tabPubRef.current = pub;
+      })
+      .catch((err) => console.error("Failed to publish tab audio:", err));
+  }, [inputMode, tabStream, localParticipant]);
+
+  // If the user hits "Stop sharing" in the browser bar, end the session. Kept
+  // in its own effect so the listener stays live regardless of publish state.
+  useEffect(() => {
+    if (inputMode !== "tab" || !tabStream) return;
+    const audioTrack = tabStream.getAudioTracks()[0];
+    if (!audioTrack) return;
+    const onEnded = () => onStop();
+    audioTrack.addEventListener("ended", onEnded);
+    return () => audioTrack.removeEventListener("ended", onEnded);
+  }, [inputMode, tabStream, onStop]);
+
+  const toggleTabMute = useCallback(() => {
+    const pub = tabPubRef.current;
+    if (!pub) return;
+    if (pub.isMuted) pub.unmute();
+    else pub.mute();
+  }, []);
 
   // Receive transcripts from the ASR bridges over the data channel.
   useDataChannel("transcript", (msg) => {
@@ -291,7 +403,11 @@ function LiveSession({
             style={{ color: isMicOn ? "var(--success)" : "var(--fg-ghost)" }}
           >
             <span className={`status-dot ${isMicOn ? "pulse" : ""}`} />
-            {isMicOn ? "Listening" : "Muted"}
+            {isMicOn
+              ? inputMode === "tab"
+                ? "Capturing tab audio"
+                : "Listening"
+              : "Muted"}
           </span>
         </div>
 
@@ -312,23 +428,42 @@ function LiveSession({
             <span className="body-sm">Show English</span>
           </label>
 
-          <TrackToggle
-            source={Track.Source.Microphone}
-            showIcon={false}
-            style={{
-              padding: "8px 16px",
-              fontFamily: "var(--font-body)",
-              fontSize: "13px",
-              fontWeight: 500,
-              border: "1px solid var(--border)",
-              borderRadius: 0,
-              background: "transparent",
-              color: "var(--fg)",
-              cursor: "pointer",
-            }}
-          >
-            {isMicOn ? "Mute" : "Unmute"}
-          </TrackToggle>
+          {inputMode === "tab" ? (
+            <button
+              onClick={toggleTabMute}
+              style={{
+                padding: "8px 16px",
+                fontFamily: "var(--font-body)",
+                fontSize: "13px",
+                fontWeight: 500,
+                border: "1px solid var(--border)",
+                borderRadius: 0,
+                background: "transparent",
+                color: "var(--fg)",
+                cursor: "pointer",
+              }}
+            >
+              {isMicOn ? "Mute" : "Unmute"}
+            </button>
+          ) : (
+            <TrackToggle
+              source={Track.Source.Microphone}
+              showIcon={false}
+              style={{
+                padding: "8px 16px",
+                fontFamily: "var(--font-body)",
+                fontSize: "13px",
+                fontWeight: 500,
+                border: "1px solid var(--border)",
+                borderRadius: 0,
+                background: "transparent",
+                color: "var(--fg)",
+                cursor: "pointer",
+              }}
+            >
+              {isMicOn ? "Mute" : "Unmute"}
+            </TrackToggle>
+          )}
 
           <button className="btn-danger" onClick={onStop}>
             Stop

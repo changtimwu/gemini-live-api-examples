@@ -1,8 +1,9 @@
 # ASR Glossary Compare
 
 Side-by-side live transcription that shows what a **domain glossary** does to
-speech recognition. You speak into your browser mic; the same audio is fed to
-**two** Gemini Live sessions at once:
+speech recognition. You feed in audio — your **browser mic** or the **playback
+of a browser tab** (a YouTube video, a meeting, a podcast) — and the same audio
+is fed to **two** Gemini Live sessions at once:
 
 - **Left — With glossary**: system instruction pins a set of TWSE-listed company
   names and tickers (台積電 / 2330, 宜鼎 / 5289, …).
@@ -18,8 +19,9 @@ This is the live counterpart to the offline A/B harness in
 ## How it works
 
 ```
-Browser mic ──publishes audio──▶ LiveKit room
-                                     │
+Browser mic ─┐
+             ├─publishes audio──▶ LiveKit room
+Browser tab ─┘                       │
                  ┌───────────────────┴───────────────────┐
                  ▼                                         ▼
         AsrBridge "glossary"                       AsrBridge "general"
@@ -37,9 +39,10 @@ Browser mic ──publishes audio──▶ LiveKit room
 ```
 
 Each bridge is a server-side LiveKit participant that joins the room as a bot
-(`asr-glossary` / `asr-general`), subscribes to your mic, streams PCM to its own
-Gemini Live WebSocket, and publishes transcripts back over the reliable data
-channel. The model is `gemini-3.5-live-translate-preview`, which emits both the
+(`asr-glossary` / `asr-general`), subscribes to whatever audio track you publish
+(mic or tab), streams PCM to its own Gemini Live WebSocket, and publishes
+transcripts back over the reliable data channel. The bridge is source-agnostic —
+tab audio is purely a client-side capture detail, so the server is unchanged. The model is `gemini-3.5-live-translate-preview`, which emits both the
 source (Chinese) ASR and the (English) translation — the translation is always
 produced; the checkbox only controls whether it's displayed.
 
@@ -95,8 +98,19 @@ GEMINI_API_KEY=your-gemini-api-key-here
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000), click **Start microphone**,
-allow mic access, and start speaking (Mandarin, ideally about stocks).
+Open [http://localhost:3000](http://localhost:3000), then pick an input:
+
+- **Start microphone** — allow mic access and start speaking (Mandarin, ideally
+  about stocks).
+- **Use a browser tab's audio** — in the share picker, choose the **Chrome Tab**
+  option, select the tab that's playing audio, and turn on **"Also share tab
+  audio"**. The tab's playback is transcribed instead of your mic. Chrome/Edge
+  on desktop only; Firefox/Safari don't expose tab audio.
+
+> Tab audio captures the *playback* of another tab — handy for transcribing a
+> YouTube clip, a recorded meeting, or any Mandarin audio without a mic. The
+> captured track is published to LiveKit exactly like the mic, so both Gemini
+> sessions see it the same way.
 
 ## Customizing the glossary
 
@@ -118,7 +132,7 @@ src/
 │   │   └── token/route.ts    # LiveKit token for the speaker
 │   ├── globals.css
 │   ├── layout.tsx
-│   └── page.tsx              # Whole UI: mic, checkbox, two transcript columns
+│   └── page.tsx              # Whole UI: mic/tab capture, checkbox, two columns
 └── lib/
     ├── glossary.ts           # TWSE terms + instruction builder
     ├── asr-config.ts         # Model + the two system instructions
@@ -128,8 +142,12 @@ src/
 
 ## Key design decisions
 
-- **One mic, two sessions** — the only variable between columns is the system
-  instruction, so differences are attributable to the glossary.
+- **One source, two sessions** — mic or tab audio, the only variable between
+  columns is the system instruction, so differences are attributable to the
+  glossary.
+- **Tab audio is client-only** — `getDisplayMedia({ audio: true })` captures the
+  tab's playback; the audio track is published to LiveKit as a Microphone-source
+  track, so the server bridge needs no changes.
 - **Translate model for plain ASR** — `gemini-3.5-live-translate-preview` gives
   `input_transcription` (the Chinese ASR we compare) for free, plus the English
   translation for the toggle.
