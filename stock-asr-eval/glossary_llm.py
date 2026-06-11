@@ -42,11 +42,14 @@ EXTRACT_PROMPT = """以下是一段台灣股市分析節目的完整字幕（You
 1. stocks：字幕中提到的台灣上市／上櫃公司。
    - name：該公司最常被口語稱呼的標準中文名稱（例如「台積電」「聯發科」）。
    - ticker：對應的台股代號（4–6 位數字字串，例如 "2330"）。若無法確定就留空字串。
-   - english：國際通用英文名稱（若知道，例如 "TSMC"），不確定就留空字串。
+   - english：該公司的英文名稱，**每一檔都必須填**（例如 "TSMC"、"MediaTek"）。
+     若沒有通用英文名，就給最接近的英文音譯／翻譯，絕對不要留空。
 
 2. terms：字幕中提到、且一般辨識模型容易聽錯的股市／財經／技術專有名詞
    （例如指標、籌碼術語、產業／技術名詞、外資機構名等）。
    - term：標準中文寫法。
+   - english：翻成英文時應使用的標準英文說法（例如 矽光子→"silicon photonics"、
+     外資→"foreign institutional investors"）；若本身就是英文縮寫（如 CoWoS、HBM），原樣重複。
    - explanation：一句話簡短說明（10–25 字）。
 
 規則：
@@ -69,6 +72,7 @@ class Stock(BaseModel):
 
 class Term(BaseModel):
     term: str
+    english: str = ""
     explanation: str = ""
 
 
@@ -194,8 +198,10 @@ def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[st
 
 
 def build_system_instruction(g: Glossary) -> str:
-    """Assemble the ASR system instruction. Mirrors glossary.py's phrasing, with a second
-    paragraph for technical terms so the recognizer pins jargon too."""
+    """Assemble the system instruction. Covers both directions for the translate model:
+    (1) Chinese ASR pinning — companies + jargon, mirroring glossary.py's phrasing; and
+    (2) English translation — the canonical English name for each company/term, so the
+    translated output uses the right proper nouns instead of guessing or transliterating."""
     parts: list[str] = ["這是一段台灣股市分析的廣播。"]
     if g.stocks:
         items = "、".join(f"{s.name}（{s.ticker}）" if s.ticker else s.name for s in g.stocks)
@@ -204,6 +210,12 @@ def build_system_instruction(g: Glossary) -> str:
     if g.terms:
         items = "、".join(t.term for t in g.terms)
         parts.append("內容也會提到下列股市／財經專有名詞，請正確辨識並轉寫：" + items + "。")
+
+    # English-translation guidance: name↔English mappings for the output side.
+    pairs = [f"{s.name}＝{s.english}" for s in g.stocks if s.english]
+    pairs += [f"{t.term}＝{t.english}" for t in g.terms if t.english]
+    if pairs:
+        parts.append("翻譯成英文時，請使用下列標準英文名稱與術語：" + "、".join(pairs) + "。")
     return "".join(parts)
 
 
@@ -231,6 +243,14 @@ def main():
 
     g = analyze(subtitle, api_key=load_api_key(), model=args.model)
     g.stocks, report = validate_stocks(g.stocks)
+
+    # Guarantee every stock carries an English name (the prompt requires one and the dict fills
+    # confirmed tickers). If anything still slipped through, fall back to the Chinese name so the
+    # field is never empty, and flag which ones for review.
+    no_eng = [s.name for s in g.stocks if not s.english.strip()]
+    for s in g.stocks:
+        if not s.english.strip():
+            s.english = s.name
     si = build_system_instruction(g)
 
     with open(out_path, "w", encoding="utf-8") as f:
@@ -247,6 +267,9 @@ def main():
         print("  corrected:", report["corrected"], flush=True)
     if report["unverified"]:
         print("  unverified:", report["unverified"], flush=True)
+    print(f"english: {len(g.stocks)}/{len(g.stocks)} stocks have a name", flush=True)
+    if no_eng:
+        print(f"  ⚠ model left {len(no_eng)} blank; filled from Chinese name: {no_eng}", flush=True)
     print("terms :", [t.term for t in g.terms], flush=True)
     print("\n----- system instruction -----")
     print(si)
