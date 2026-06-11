@@ -17,7 +17,7 @@ type InputMode = "mic" | "tab";
 // Display order, left → right. Server bridges are unaffected (see asr-config VARIANTS).
 const VARIANTS: Variant[] = ["general", "glossary"];
 const LABELS: Record<Variant, string> = {
-  glossary: "With glossary",
+  glossary: "Tuned with glossary",
   general: "General",
 };
 const SUBTITLES: Record<Variant, string> = {
