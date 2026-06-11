@@ -24,7 +24,7 @@ const LABELS: Record<Variant, string> = {
   general: "General",
 };
 const SUBTITLES: Record<Variant, string> = {
-  glossary: "Rephrased by gemini-3.1-flash-lite",
+  glossary: "+ smart rephrasing",
   general: "Raw ASR",
 };
 
