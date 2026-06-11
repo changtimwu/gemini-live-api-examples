@@ -229,9 +229,10 @@ def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[st
 
 
 # EXPERIMENT (hardcode): extra, near-verbatim example sentences for names the live model keeps
-# mis-hearing on dqDTSms4Imo (京元電子→「金源電」, 欣銓→「新全/新權」). Taken almost verbatim from
-# the subtitle to give the recognizer a stronger prior. Keyed by glossary name; injected only when
-# that name is present, so it's inert on videos that don't mention these. Remove after the trial.
+# mis-hearing on dqDTSms4Imo (京元電子→「金源電」, 欣銓→「新全/新權」, Claude→「Crown/Cloud/Crowd」).
+# Taken almost verbatim from the subtitle to give the recognizer a stronger prior. Keyed by glossary
+# name; injected only when that name is present, so it's inert on videos that don't mention these.
+# Remove after the trial.
 EXTRA_EXAMPLES: dict[str, list[str]] = {
     "京元電子": [
         "京元電子來講他算是突破了一個大型區間",
@@ -240,9 +241,33 @@ EXTRA_EXAMPLES: dict[str, list[str]] = {
     ],
     "欣銓": [
         "第三檔的是欣銓今天漲停昨天也漲停",
+        "這三檔都不是第一天漲停南茂雍智欣銓",
         "南茂雍智欣銓我們就來看他們的K線",
-        "欣銓受惠到最近ASIC的晶片需求",
+        "封測族群日月光投控京元電子精材跟欣銓",
+        "欣銓來講他是受惠到最近ASIC的晶片",
+        "欣銓的話股價在這兩天比較強一點點",
     ],
+    "Claude": [
+        "我不管你是Gemini還是ChatGPT還是Claude",
+        "不管是Gemini還是ChatGPT還是Claude他們誰贏",
+        "像Gemini、ChatGPT、Claude這些AI模型",
+    ],
+}
+
+# EXPERIMENT (hardcode): negative cues — name the exact wrong homophone the live model keeps
+# producing so it steers away from it. Injected when the name is present. Use for a true homophone
+# the recognizer can't disambiguate by sound (精材/精彩, 外溢/外意); can be combined with a phonetic
+# cue (欣銓 needs both — the phonetic cue alone let 新銓 creep back).
+NEGATIVE_CUES: dict[str, list[str]] = {
+    "精材": ["精彩"],
+    "外溢": ["外意"],
+    "欣銓": ["新全", "新權", "新詮", "新銓"],
+}
+
+# EXPERIMENT (hardcode): phonetic cues — instruct by reading so every same-sound variant maps to
+# the right characters at once. Maps glossary name -> pinyin. Injected when present.
+PHONETIC_CUES: dict[str, str] = {
+    "欣銓": "xīn quán",
 }
 
 
@@ -271,6 +296,26 @@ def build_system_instruction(g: Glossary) -> str:
     if examples:
         parts.append("這些名稱與專有名詞在節目中的用法範例如下，請依此正確辨識："
                      + "、".join(f"「{e}」" for e in examples) + "。")
+
+    # Phonetic cues: pin by reading, so every same-sound variant maps to the right characters.
+    stock_by_name = {s.name: s for s in g.stocks}
+    phon = []
+    for name, pinyin in PHONETIC_CUES.items():
+        if name not in present:
+            continue
+        s = stock_by_name.get(name)
+        tag = f"（{s.english}，{s.ticker}）" if s and s.ticker else ""
+        phon.append(f"「{name}」{tag}唸作 {pinyin}，凡聽到這個音請一律轉寫成「{name}」")
+    if phon:
+        parts.append("讀音提示：" + "；".join(phon) + "。")
+
+    # Negative cues: name the exact wrong homophones to steer away from, for names that keep
+    # slipping even with positive examples.
+    cues = [f"{name}（不要寫成{'、'.join(f'「{w}」' for w in wrong)}）"
+            for name, wrong in NEGATIVE_CUES.items() if name in present]
+    if cues:
+        parts.append("特別注意，下列名稱很容易被誤聽，請務必轉寫成正確寫法，切勿寫成括號內的錯誤詞："
+                     + "、".join(cues) + "。")
 
     # English-translation guidance: name↔English mappings for the output side.
     pairs = [f"{s.name}＝{s.english}" for s in g.stocks if s.english]
