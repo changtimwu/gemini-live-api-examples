@@ -16,6 +16,9 @@ type InputMode = "mic" | "tab";
 
 // Display order, left → right. Server bridges are unaffected (see asr-config VARIANTS).
 const VARIANTS: Variant[] = ["general", "glossary"];
+// The arm whose transcript is rephrased (see asr-config REPHRASE_VARIANTS). Only this column
+// is held back in "polished only" mode.
+const REPHRASED_VARIANT: Variant = "glossary";
 const LABELS: Record<Variant, string> = {
   glossary: "Tuned with glossary",
   general: "General",
@@ -87,6 +90,7 @@ export default function Home() {
   const [token, setToken] = useState("");
   const [serverUrl, setServerUrl] = useState("");
   const [showEnglish, setShowEnglish] = useState(false);
+  const [polishedOnly, setPolishedOnly] = useState(true);
   const [inputMode, setInputMode] = useState<InputMode>("mic");
   const [tabStream, setTabStream] = useState<MediaStream | null>(null);
 
@@ -264,6 +268,8 @@ export default function Home() {
       <LiveSession
         showEnglish={showEnglish}
         setShowEnglish={setShowEnglish}
+        polishedOnly={polishedOnly}
+        setPolishedOnly={setPolishedOnly}
         onStop={stop}
         inputMode={inputMode}
         tabStream={tabStream}
@@ -275,12 +281,16 @@ export default function Home() {
 function LiveSession({
   showEnglish,
   setShowEnglish,
+  polishedOnly,
+  setPolishedOnly,
   onStop,
   inputMode,
   tabStream,
 }: {
   showEnglish: boolean;
   setShowEnglish: (v: boolean) => void;
+  polishedOnly: boolean;
+  setPolishedOnly: (v: boolean) => void;
   onStop: () => void;
   inputMode: InputMode;
   tabStream: MediaStream | null;
@@ -437,6 +447,22 @@ function LiveSession({
             />
             <span className="body-sm">Show English</span>
           </label>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              cursor: "pointer",
+            }}
+            title="Hide the raw transcript on the rephrased side; show each line only after it's polished"
+          >
+            <input
+              type="checkbox"
+              checked={polishedOnly}
+              onChange={(e) => setPolishedOnly(e.target.checked)}
+            />
+            <span className="body-sm">Polished only</span>
+          </label>
 
           {inputMode === "tab" ? (
             <button
@@ -497,6 +523,7 @@ function LiveSession({
             variant={variant}
             segments={transcripts[variant]}
             showEnglish={showEnglish}
+            polishedOnly={polishedOnly}
           />
         ))}
       </div>
@@ -508,33 +535,42 @@ function TranscriptColumn({
   variant,
   segments,
   showEnglish,
+  polishedOnly,
 }: {
   variant: Variant;
   segments: Segment[];
   showEnglish: boolean;
+  polishedOnly: boolean;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // In "polished only" mode, the rephrased column shows a chunk only once its
+  // correction has arrived (segments with `corrected`); other columns are unchanged.
+  const visible =
+    polishedOnly && variant === REPHRASED_VARIANT
+      ? segments.filter((s) => s.corrected)
+      : segments;
 
   // Auto-scroll to the newest line.
   useEffect(() => {
     const el = scrollRef.current;
     if (el) el.scrollTop = el.scrollHeight;
-  }, [segments, showEnglish]);
+  }, [visible, showEnglish]);
 
   // Flatten turns into display items: one item = one Chinese sentence paired
   // (by index) with its English translation. The pairing is approximate — the
   // model splits sentences differently across languages — but we only want an
   // item-by-item readout, so exactness doesn't matter.
-  const items = segments.flatMap((s) => {
-    const zhLines = splitSentences(s.zh);
-    const enLines = showEnglish ? splitSentences(s.en) : [];
-    const count = Math.max(zhLines.length, enLines.length);
-    return Array.from({ length: count }, (_, i) => ({
-      key: `${s.id}-${i}`,
-      zh: zhLines[i] || "",
-      en: enLines[i] || "",
-    }));
-  });
+  // Merge all visible chunks into one stream, then split into sentences — so the rephrase
+  // chunk size doesn't dictate line length (lines break on punctuation, not per chunk).
+  const zhLines = splitSentences(visible.map((s) => s.zh).join(""));
+  const enLines = showEnglish ? splitSentences(visible.map((s) => s.en).join("")) : [];
+  const count = Math.max(zhLines.length, enLines.length);
+  const items = Array.from({ length: count }, (_, i) => ({
+    key: `line-${i}`,
+    zh: zhLines[i] || "",
+    en: enLines[i] || "",
+  }));
 
   return (
     <div

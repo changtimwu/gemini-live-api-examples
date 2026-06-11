@@ -43,9 +43,10 @@ export type BridgeStatus = "starting" | "active" | "error" | "closed";
 export type TranscriptKind = "source" | "translation" | "source-correction";
 
 // The translate model keeps one long turn over continuous speech (turnComplete rarely fires), so
-// the rephrase arm flushes a chunk for correction after a pause, or once it grows this long.
-const REPHRASE_IDLE_MS = 1500;
-const REPHRASE_MAX_CHARS = 80;
+// the rephrase arm flushes a chunk for correction after a short pause, or once it grows this long.
+// Kept small so corrections land quickly (and so "polished-only" mode doesn't lag far behind).
+const REPHRASE_IDLE_MS = 700;
+const REPHRASE_MAX_CHARS = 24;
 
 export class AsrBridge {
   private room: Room | null = null;
@@ -415,31 +416,39 @@ export class AsrBridge {
    * replaces that segment. On any failure we leave the live transcript untouched.
    */
   private async rephraseTurn(raw: string, segmentId: string): Promise<void> {
-    const url =
-      `https://generativelanguage.googleapis.com/v1beta/models/${REPHRASE_MODEL}` +
-      `:generateContent?key=${this.geminiApiKey}`;
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: REPHRASE_INSTRUCTION }] },
-        contents: [{ role: "user", parts: [{ text: raw }] }],
-        generationConfig: { temperature: 0 },
-      }),
-    });
-    if (!res.ok) {
-      this.log("rephrase HTTP", res.status, (await res.text()).slice(0, 120));
-      return;
+    const text = raw.trim();
+    let corrected = text; // fall back to the raw text on any failure
+    try {
+      const url =
+        `https://generativelanguage.googleapis.com/v1beta/models/${REPHRASE_MODEL}` +
+        `:generateContent?key=${this.geminiApiKey}`;
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: REPHRASE_INSTRUCTION }] },
+          contents: [{ role: "user", parts: [{ text }] }],
+          generationConfig: { temperature: 0 },
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const out: string = (
+          data?.candidates?.[0]?.content?.parts
+            ?.map((p: { text?: string }) => p.text ?? "")
+            .join("") ?? ""
+        ).trim();
+        if (out) corrected = out;
+      } else {
+        this.log("rephrase HTTP", res.status);
+      }
+    } catch (e) {
+      this.log("rephrase error:", e);
     }
-    const data = await res.json();
-    const corrected: string | undefined = data?.candidates?.[0]?.content?.parts
-      ?.map((p: { text?: string }) => p.text ?? "")
-      .join("")
-      .trim();
-    if (corrected && corrected !== raw.trim()) {
-      this.log(`rephrased: "${raw.trim()}" -> "${corrected}"`);
-      await this.publishCorrection(segmentId, corrected);
-    }
+    if (corrected !== text) this.log(`rephrased: "${text}" -> "${corrected}"`);
+    // Always finalize the chunk (even if unchanged) so the client's polished-only
+    // mode can show every segment once its rephrase pass completes.
+    await this.publishCorrection(segmentId, corrected);
   }
 
   /** Publish a corrected Chinese transcript for a finished segment (client replaces it). */
