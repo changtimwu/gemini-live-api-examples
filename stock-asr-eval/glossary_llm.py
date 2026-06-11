@@ -17,6 +17,7 @@ CLI:  python glossary_llm.py <youtube_url> [--model gemini-31-flash-lite] [--out
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -44,19 +45,26 @@ EXTRACT_PROMPT = """以下是一段台灣股市分析節目的完整字幕（You
    - ticker：對應的台股代號（4–6 位數字字串，例如 "2330"）。若無法確定就留空字串。
    - english：該公司的英文名稱，**每一檔都必須填**（例如 "TSMC"、"MediaTek"）。
      若沒有通用英文名，就給最接近的英文音譯／翻譯，絕對不要留空。
+   - example：一句示範該公司講法的短句（**最多 25 字、只能一句**，每一檔都要給）。
+     參考字幕中講到它的語氣自行改寫成通順短句，不要照抄一大段；句中必須含公司名稱。
+     例如「台積電今天帶量大漲衝上歷史新高」「久元連續兩天漲停板」。
 
-2. terms：字幕中提到、且一般辨識模型容易聽錯的股市／財經／技術專有名詞
-   （例如指標、籌碼術語、產業／技術名詞、外資機構名等）。
+2. terms：字幕中提到的股市／財經／技術專有名詞，包含兩種：
+   (a) 一般辨識模型容易聽錯的詞（指標、籌碼術語、外資機構名等）；
+   (b) 重要的半導體／產業／製程／材料名詞，即使不算難聽錯也要收（如「晶圓」「製程」「封裝」「良率」）。
    - term：標準中文寫法。
    - english：翻成英文時應使用的標準英文說法（例如 矽光子→"silicon photonics"、
-     外資→"foreign institutional investors"）；若本身就是英文縮寫（如 CoWoS、HBM），原樣重複。
+     晶圓→"wafer"、外資→"foreign institutional investors"）；若本身就是英文縮寫（如 CoWoS、HBM），原樣重複。
+   - example：一句示範該名詞講法的短句（**最多 25 字、只能一句**，每個詞都要給）。
+     字幕沒有標點，請參考其語氣自行改寫成通順短句，**切勿照抄一整段**；句中必須含該名詞。
    - explanation：一句話簡短說明（10–25 字）。
 
 規則：
 - 只收錄字幕中真的有提到的項目；寧缺勿濫。
 - 同一標的／名詞只列一次，使用最標準的寫法。
 - 一般常用詞（如「股票」「上漲」「公司」）不要收錄。
-
+- example 一定要精簡，最多 25 字，超過就是錯的。
+{must_include}
 字幕內容：
 ---
 {subtitle}
@@ -68,11 +76,13 @@ class Stock(BaseModel):
     name: str
     ticker: str = ""
     english: str = ""
+    example: str = ""  # an example sentence mirroring how the show uses the name
 
 
 class Term(BaseModel):
     term: str
     english: str = ""
+    example: str = ""  # an example sentence mirroring how the show uses the term
     explanation: str = ""
 
 
@@ -144,22 +154,43 @@ def load_api_key() -> str:
     sys.exit("no API key: set GEMINI_API_KEY or put it in .env.local")
 
 
-def analyze(subtitle: str, *, api_key: str, model: str = DEFAULT_MODEL) -> Glossary:
-    """Single pass over the whole subtitle -> structured glossary."""
+EXAMPLE_MAX = 30  # hard cap; captions are unpunctuated so the model sometimes over-extracts
+
+
+def analyze(subtitle: str, *, api_key: str, model: str = DEFAULT_MODEL,
+            must_include: list[str] = ()) -> Glossary:
+    """Single pass over the whole subtitle -> structured glossary. `must_include` terms are
+    forced into the prompt so they're always captured (even common ones the model would skip)."""
+    must = ""
+    if must_include:
+        must = ("- 下列名詞務必收錄到 terms（即使常見也要收），並比照格式給 english／example／explanation："
+                + "、".join(must_include) + "。\n")
     client = genai.Client(api_key=api_key)
     resp = client.models.generate_content(
         model=model,
-        contents=EXTRACT_PROMPT.format(subtitle=subtitle),
+        contents=EXTRACT_PROMPT.format(subtitle=subtitle, must_include=must),
         config=types.GenerateContentConfig(
             system_instruction=ANALYZER_SYSTEM,
             response_mime_type="application/json",
             response_schema=Glossary,
             temperature=0.0,
+            # Gemini 3 reasoning effort — "medium" for this scan-and-extract task.
+            thinking_config=types.ThinkingConfig(thinking_level=types.ThinkingLevel.MEDIUM),
         ),
     )
-    if resp.parsed is not None:
-        return resp.parsed
-    return Glossary(**json.loads(resp.text))  # fallback if SDK didn't auto-parse
+    g = resp.parsed if resp.parsed is not None else Glossary(**json.loads(resp.text))
+    for s in g.stocks:
+        s.example = _clamp_example(s.example)
+    for t in g.terms:
+        t.example = _clamp_example(t.example)
+    return g
+
+
+def _clamp_example(ex: str) -> str:
+    """Keep examples short. Captions have no punctuation, so the model occasionally returns a
+    huge span; trim to the first sentence-ish unit and hard-cap the length."""
+    ex = re.split(r"[。！？!?\n]", ex.strip(), 1)[0].strip()
+    return ex[:EXAMPLE_MAX] if len(ex) > EXAMPLE_MAX else ex
 
 
 def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[str]]]:
@@ -199,7 +230,8 @@ def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[st
 
 def build_system_instruction(g: Glossary) -> str:
     """Assemble the system instruction. Covers both directions for the translate model:
-    (1) Chinese ASR pinning — companies + jargon, mirroring glossary.py's phrasing; and
+    (1) Chinese ASR pinning — companies + jargon, mirroring glossary.py's phrasing, plus an
+        in-context example sentence per company so the recognizer anchors on real usage; and
     (2) English translation — the canonical English name for each company/term, so the
     translated output uses the right proper nouns instead of guessing or transliterating."""
     parts: list[str] = ["這是一段台灣股市分析的廣播。"]
@@ -210,6 +242,13 @@ def build_system_instruction(g: Glossary) -> str:
     if g.terms:
         items = "、".join(t.term for t in g.terms)
         parts.append("內容也會提到下列股市／財經專有名詞，請正確辨識並轉寫：" + items + "。")
+
+    # Example sentences: how each company/term tends to appear in the show, to anchor recognition.
+    examples = [s.example.strip() for s in g.stocks if s.example.strip()]
+    examples += [t.example.strip() for t in g.terms if t.example.strip()]
+    if examples:
+        parts.append("這些名稱與專有名詞在節目中的用法範例如下，請依此正確辨識："
+                     + "、".join(f"「{e}」" for e in examples) + "。")
 
     # English-translation guidance: name↔English mappings for the output side.
     pairs = [f"{s.name}＝{s.english}" for s in g.stocks if s.english]
@@ -225,7 +264,10 @@ def main():
     ap.add_argument("url", help="YouTube link of the stock show")
     ap.add_argument("--model", default=DEFAULT_MODEL, help=f"analyzer model (default {DEFAULT_MODEL})")
     ap.add_argument("--out", help="output .txt path (default results/<video_id>.si.txt)")
+    ap.add_argument("--include", help="comma-separated terms to force into the glossary "
+                                      "(e.g. 晶圓,製程), even if the model would skip them")
     args = ap.parse_args()
+    must_include = [t.strip() for t in (args.include or "").split(",") if t.strip()]
 
     vid = fetch._video_id(args.url)
     out_path = args.out or os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -241,8 +283,12 @@ def main():
         sys.exit("empty subtitle — no zh-Hant auto-captions found for this video")
     print(f"subtitle: {len(subtitle)} chars | analyzing with {args.model} ...", flush=True)
 
-    g = analyze(subtitle, api_key=load_api_key(), model=args.model)
+    g = analyze(subtitle, api_key=load_api_key(), model=args.model, must_include=must_include)
     g.stocks, report = validate_stocks(g.stocks)
+
+    missing = [t for t in must_include if not any(t == term.term for term in g.terms)]
+    if missing:
+        print(f"  ⚠ requested terms not captured by the model: {missing}", flush=True)
 
     # Guarantee every stock carries an English name (the prompt requires one and the dict fills
     # confirmed tickers). If anything still slipped through, fall back to the Chinese name so the
