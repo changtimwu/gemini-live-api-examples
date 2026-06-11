@@ -173,7 +173,7 @@ export default function Home() {
             style={{ maxWidth: 380, margin: "0 auto 40px" }}
           >
             Feed in your mic or a browser tab&apos;s audio. The same audio is
-            transcribed by two Gemini Live sessions side by side — one primed
+            transcribed by two live sessions side by side — one primed
             with a TWSE stock glossary, one general — so you can see the
             difference.
           </p>
