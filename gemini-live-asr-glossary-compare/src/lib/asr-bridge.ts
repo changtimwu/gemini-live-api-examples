@@ -28,14 +28,31 @@ import {
   AudioFrame,
 } from "@livekit/rtc-node";
 import WebSocket from "ws";
-import { Variant, MODEL, TARGET_LANGUAGE, SYSTEM_INSTRUCTIONS } from "./asr-config";
+import {
+  Variant,
+  MODEL,
+  TARGET_LANGUAGE,
+  SYSTEM_INSTRUCTIONS,
+  REPHRASE_MODEL,
+  REPHRASE_VARIANTS,
+  REPHRASE_INSTRUCTION,
+} from "./asr-config";
 
 export type BridgeStatus = "starting" | "active" | "error" | "closed";
-export type TranscriptKind = "source" | "translation";
+// "source-correction" replaces a segment's Chinese text with the rephrase agent's fix.
+export type TranscriptKind = "source" | "translation" | "source-correction";
+
+// The translate model keeps one long turn over continuous speech (turnComplete rarely fires), so
+// the rephrase arm flushes a chunk for correction after a pause, or once it grows this long.
+const REPHRASE_IDLE_MS = 1500;
+const REPHRASE_MAX_CHARS = 80;
 
 export class AsrBridge {
   private room: Room | null = null;
   private geminiWs: WebSocket | null = null;
+  private readonly rephrase: boolean;
+  private turnSource: string = ""; // accumulates the in-progress chunk's Chinese ASR
+  private idleTimer: ReturnType<typeof setTimeout> | null = null;
   private turnId: number = 0;
   private framesSentToGemini: number = 0;
   private geminiSetupComplete: boolean = false;
@@ -74,6 +91,7 @@ export class AsrBridge {
     this.livekitUrl = config.livekitUrl;
     this.livekitApiKey = config.livekitApiKey;
     this.livekitApiSecret = config.livekitApiSecret;
+    this.rephrase = REPHRASE_VARIANTS.includes(variant);
   }
 
   private log(...args: unknown[]): void {
@@ -98,6 +116,10 @@ export class AsrBridge {
   async stop(): Promise<void> {
     this.log("Stopping bridge");
     this.status = "closed";
+    if (this.idleTimer) {
+      clearTimeout(this.idleTimer);
+      this.idleTimer = null;
+    }
     if (this.geminiWs) {
       this.geminiWs.close();
       this.geminiWs = null;
@@ -228,6 +250,11 @@ export class AsrBridge {
       // Chinese ASR of what the speaker said.
       if (sc?.inputTranscription?.text) {
         this.publishTranscript("source", sc.inputTranscription.text);
+        if (this.rephrase) {
+          this.turnSource += sc.inputTranscription.text;
+          if (this.turnSource.length >= REPHRASE_MAX_CHARS) this.flushTurn();
+          else this.scheduleIdleFlush();
+        }
       }
       // English translation of the same turn.
       if (sc?.outputTranscription?.text) {
@@ -236,7 +263,8 @@ export class AsrBridge {
       // We ignore sc.modelTurn audio parts — no audio is published back.
 
       if (sc?.turnComplete) {
-        this.turnId++;
+        if (this.rephrase) this.flushTurn();
+        else this.turnId++;
       }
     } catch (error) {
       this.log("Error parsing Gemini message:", error);
@@ -353,6 +381,85 @@ export class AsrBridge {
       );
     } catch (error) {
       this.log("Error publishing transcript:", error);
+    }
+  }
+
+  /** (Re)arm the pause timer; firing flushes the accumulated chunk to the rephrase agent. */
+  private scheduleIdleFlush(): void {
+    if (this.idleTimer) clearTimeout(this.idleTimer);
+    this.idleTimer = setTimeout(() => {
+      this.idleTimer = null;
+      this.flushTurn();
+    }, REPHRASE_IDLE_MS);
+  }
+
+  /** Close the current chunk: rephrase it for its segment, then start a new segment. */
+  private flushTurn(): void {
+    if (this.idleTimer) {
+      clearTimeout(this.idleTimer);
+      this.idleTimer = null;
+    }
+    const raw = this.turnSource;
+    this.turnSource = "";
+    const segmentId = `${this.variant}-${this.turnId}`;
+    this.turnId++;
+    if (raw.trim()) {
+      this.rephraseTurn(raw, segmentId).catch((e) => this.log("rephrase failed:", e));
+    }
+  }
+
+  /**
+   * Post-transcribe correction: send the completed turn's raw Chinese ASR to the
+   * rephrase agent (gemini-3.1-flash-lite), which fixes domain-term mishearings
+   * using the glossary knowledge, then publish the corrected text so the client
+   * replaces that segment. On any failure we leave the live transcript untouched.
+   */
+  private async rephraseTurn(raw: string, segmentId: string): Promise<void> {
+    const url =
+      `https://generativelanguage.googleapis.com/v1beta/models/${REPHRASE_MODEL}` +
+      `:generateContent?key=${this.geminiApiKey}`;
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: REPHRASE_INSTRUCTION }] },
+        contents: [{ role: "user", parts: [{ text: raw }] }],
+        generationConfig: { temperature: 0 },
+      }),
+    });
+    if (!res.ok) {
+      this.log("rephrase HTTP", res.status, (await res.text()).slice(0, 120));
+      return;
+    }
+    const data = await res.json();
+    const corrected: string | undefined = data?.candidates?.[0]?.content?.parts
+      ?.map((p: { text?: string }) => p.text ?? "")
+      .join("")
+      .trim();
+    if (corrected && corrected !== raw.trim()) {
+      this.log(`rephrased: "${raw.trim()}" -> "${corrected}"`);
+      await this.publishCorrection(segmentId, corrected);
+    }
+  }
+
+  /** Publish a corrected Chinese transcript for a finished segment (client replaces it). */
+  private async publishCorrection(segmentId: string, text: string): Promise<void> {
+    if (!this.room?.localParticipant) return;
+    try {
+      const payload = JSON.stringify({
+        type: "transcript",
+        variant: this.variant,
+        kind: "source-correction" as TranscriptKind,
+        segmentId,
+        text,
+        timestamp: Date.now(),
+      });
+      await this.room.localParticipant.publishData(
+        new TextEncoder().encode(payload),
+        { reliable: true, topic: "transcript" }
+      );
+    } catch (error) {
+      this.log("Error publishing correction:", error);
     }
   }
 }

@@ -21,14 +21,15 @@ const LABELS: Record<Variant, string> = {
   general: "General",
 };
 const SUBTITLES: Record<Variant, string> = {
-  glossary: "TWSE company names + tickers pinned",
-  general: "No specific company list",
+  glossary: "Rephrased by gemini-3.1-flash-lite",
+  general: "Raw ASR",
 };
 
 interface Segment {
   id: string;
   zh: string;
   en: string;
+  corrected?: boolean; // zh was replaced by the rephrase agent's correction
 }
 type Transcripts = Record<Variant, Segment[]>;
 
@@ -343,7 +344,7 @@ function LiveSession({
       if (data.type !== "transcript") return;
       const { variant, kind, segmentId, text } = data as {
         variant: Variant;
-        kind: "source" | "translation";
+        kind: "source" | "translation" | "source-correction";
         segmentId: string;
         text: string;
       };
@@ -355,15 +356,23 @@ function LiveSession({
         if (i === -1) {
           segs.push({
             id: segmentId,
-            zh: kind === "source" ? text : "",
+            zh: kind === "translation" ? "" : text,
             en: kind === "translation" ? text : "",
+            corrected: kind === "source-correction",
           });
         } else {
           const s = segs[i];
           segs[i] = {
             ...s,
-            zh: kind === "source" ? s.zh + text : s.zh,
+            // "source" appends a live delta; "source-correction" replaces the whole turn.
+            zh:
+              kind === "source"
+                ? s.zh + text
+                : kind === "source-correction"
+                ? text
+                : s.zh,
             en: kind === "translation" ? s.en + text : s.en,
+            corrected: kind === "source-correction" ? true : s.corrected,
           };
         }
         return { ...prev, [variant]: segs };

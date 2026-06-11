@@ -45,9 +45,10 @@ if (!PCM_PATH) {
 }
 const SECONDS = Number(process.argv[3] || Infinity);
 
-const got = {
-  glossary: { source: [], translation: [] },
-  general: { source: [], translation: [] },
+// Per-segment so we can show the rephrase agent's correction (which replaces a segment's zh).
+const arms = {
+  glossary: { order: [], src: {}, cor: {} },
+  general: { order: [], src: {}, cor: {} },
 };
 
 const at = new AccessToken(KEY, SECRET, { identity: SPEAKER });
@@ -58,7 +59,13 @@ const room = new Room();
 room.on(RoomEvent.DataReceived, (payload) => {
   try {
     const m = JSON.parse(new TextDecoder().decode(payload));
-    if (m.type === "transcript" && got[m.variant]) got[m.variant][m.kind].push(m.text);
+    if (m.type !== "transcript") return;
+    const a = arms[m.variant];
+    if (!a) return;
+    if (!a.order.includes(m.segmentId)) a.order.push(m.segmentId);
+    if (m.kind === "source") a.src[m.segmentId] = (a.src[m.segmentId] || "") + m.text;
+    else if (m.kind === "source-correction") a.cor[m.segmentId] = m.text;
+    // translation ignored for this zh-focused comparison
   } catch { /* ignore non-transcript data */ }
 });
 await room.connect(WS, token, { autoSubscribe: false, dynacast: false });
@@ -100,10 +107,14 @@ await fetch(`${APP}/api/asr`, {
 });
 await room.disconnect();
 
-const join = (a) => a.join("").replace(/\s+/g, " ").trim();
-console.log("\n================ A/B RESULT ================");
-console.log("\n--- GLOSSARY arm — Chinese ASR ---\n" + join(got.glossary.source));
-console.log("\n--- GENERAL  arm — Chinese ASR ---\n" + join(got.general.source));
-console.log("\n--- GLOSSARY arm — English ---\n" + join(got.glossary.translation));
-console.log("\n--- GENERAL  arm — English ---\n" + join(got.general.translation));
+// Per-segment final text: rephrased correction if present, else the raw ASR.
+const final = (a) => a.order.map((id) => a.cor[id] ?? a.src[id] ?? "").join("").replace(/\s+/g, " ").trim();
+const raw = (a) => a.order.map((id) => a.src[id] ?? "").join("").replace(/\s+/g, " ").trim();
+console.log("\n================ A/B RESULT (Chinese ASR) ================");
+console.log("\n--- GENERAL  arm — raw ASR ---\n" + raw(arms.general));
+console.log("\n--- GLOSSARY arm — after rephrase ---\n" + final(arms.glossary));
+console.log("\n--- rephrase agent corrections (glossary arm) ---");
+const fixed = arms.glossary.order.filter((id) => arms.glossary.cor[id]);
+if (!fixed.length) console.log("  (none)");
+for (const id of fixed) console.log(`  "${arms.glossary.src[id]}"\n   -> "${arms.glossary.cor[id]}"`);
 process.exit(0);
