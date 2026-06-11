@@ -1,0 +1,129 @@
+"""Full-video A/B evaluation: chunk long audio for the Live API, build the glossary from the
+WHOLE caption, apply it to every chunk's B run, N trials per arm.
+
+  python eval_full.py --url https://youtu.be/... --trials 3 [--chunk 480]
+
+Aggregation: per trial, concatenate the per-chunk transcriptions into a full-video hypothesis,
+then CER + name/ticker recall vs the full caption. Report mean over trials + per-stock A→B
+hit-rate. Incremental JSON is written so a crash mid-run keeps partial data."""
+import argparse
+import asyncio
+import json
+import os
+import statistics
+import sys
+
+import fetch
+from glossary import build_system_instruction, extract_terms
+from score import cer, term_recall
+from transcribe import SAMPLE_RATE, transcribe_pcm
+
+CHUNK_SECS = 480  # 8 min — safely under the Live API audio-only session limit
+
+
+def _key():
+    k = os.environ.get("GEMINI_API_KEY")
+    if not k:
+        sys.exit("set GEMINI_API_KEY")
+    return k
+
+
+def _agg(xs):
+    xs = [x for x in xs if x == x]
+    return {"mean": round(statistics.mean(xs), 4), "min": round(min(xs), 4),
+            "max": round(max(xs), 4)} if xs else None
+
+
+def _chunks(pcm, secs):
+    n = SAMPLE_RATE * 2 * secs
+    return [pcm[i:i + n] for i in range(0, len(pcm), n)]
+
+
+async def _transcribe_retry(ch, key, sysi, exp_secs, retries=2):
+    """Retry if a pass comes back empty/near-empty (transient Live API failure)."""
+    floor = max(30, exp_secs * 0.5)
+    last = ""
+    for attempt in range(retries + 1):
+        try:
+            res = await transcribe_pcm(ch, api_key=key, system_instruction=sysi)
+            last = res["source_zh"]
+        except Exception as e:
+            print(f"      transcribe error: {e}", flush=True)
+            last = ""
+        if len(last) >= floor:
+            return last
+        print(f"      short/empty ({len(last)} chars < {floor:.0f}); retry {attempt+1}/{retries}", flush=True)
+    return last
+
+
+async def run(url, trials, chunk_secs, out_path):
+    key = _key()
+    pcm, full_gt = fetch.fetch(url)
+    segs = fetch.parse_vtt(fetch.download_subtitle(url))
+    terms = extract_terms(full_gt)
+    si = build_system_instruction(terms)
+    chs = _chunks(pcm, chunk_secs)
+    total = len(pcm) / (SAMPLE_RATE * 2)
+    print(f"full audio {total:.0f}s -> {len(chs)} chunks x {chunk_secs}s | "
+          f"glossary {len(terms)} stocks | trials={trials}", flush=True)
+    print("glossary:", [f"{n}({t})" for t, n in terms.items()], flush=True)
+
+    raw = {"A_no_si": {}, "B_with_si": {}}   # arm -> trial -> [chunk hyps]
+    for arm, sysi in (("A_no_si", None), ("B_with_si", si)):
+        for k in range(trials):
+            parts = []
+            for ci, ch in enumerate(chs):
+                exp = len(ch) / (SAMPLE_RATE * 2)
+                hyp = await _transcribe_retry(ch, key, sysi, exp)
+                parts.append(hyp)
+                print(f"  {arm} trial{k+1}/{trials} chunk{ci+1}/{len(chs)} -> {len(hyp)} chars", flush=True)
+            raw[arm][k] = parts
+            json.dump({"glossary": terms, "raw": raw}, open(out_path, "w", encoding="utf-8"),
+                      ensure_ascii=False)  # incremental
+
+    # aggregate: per trial, full hyp = concat chunks
+    summary = {"url": url, "trials": trials, "chunks": len(chs), "glossary": terms, "arms": {}}
+    hitrate = {a: {f"{n}({t})": 0 for t, n in terms.items()} for a in ("A_no_si", "B_with_si")}
+    for arm in ("A_no_si", "B_with_si"):
+        cers, nrec, trec = [], [], []
+        for k in range(trials):
+            full_hyp = " ".join(raw[arm][k])
+            cers.append(cer(full_gt, full_hyp))
+            tr = term_recall(terms, full_hyp)
+            nrec.append(tr["name_recall"]); trec.append(tr["ticker_recall"])
+            for term, v in tr["per_term"].items():
+                hitrate[arm][term] += int(v["name_hit"])
+        summary["arms"][arm] = {"cer": _agg(cers), "name_recall": _agg(nrec), "ticker_recall": _agg(trec)}
+
+    print("\n================ FULL-VIDEO SUMMARY ================", flush=True)
+    for arm in ("A_no_si", "B_with_si"):
+        a = summary["arms"][arm]
+        print(f"{arm:11} CER {a['cer']['mean']:.3f} [{a['cer']['min']}-{a['cer']['max']}]  "
+              f"name_recall {a['name_recall']['mean']:.3f}  ticker_recall {a['ticker_recall']['mean']:.3f}", flush=True)
+    A, B = summary["arms"]["A_no_si"], summary["arms"]["B_with_si"]
+    print(f"\nGlossary effect (B vs A): ΔCER {A['cer']['mean']-B['cer']['mean']:+.3f} (lower better)  "
+          f"Δname_recall {B['name_recall']['mean']-A['name_recall']['mean']:+.3f} (higher better)", flush=True)
+    print("\nper-stock name hit-rate across trials (A → B), where different:", flush=True)
+    for term in hitrate["A_no_si"]:
+        a, b = hitrate["A_no_si"][term], hitrate["B_with_si"][term]
+        if a != b:
+            print(f"   {term:18} {a}/{trials} → {b}/{trials}", flush=True)
+
+    summary["per_stock_hitrate"] = hitrate
+    json.dump(summary, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    print("\nwrote", out_path, flush=True)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--url", required=True)
+    ap.add_argument("--trials", type=int, default=3)
+    ap.add_argument("--chunk", type=int, default=CHUNK_SECS)
+    ap.add_argument("--out")
+    args = ap.parse_args()
+    out = args.out or f"results/{fetch._video_id(args.url)}_full.json"
+    asyncio.run(run(args.url, args.trials, args.chunk, out))
+
+
+if __name__ == "__main__":
+    main()
