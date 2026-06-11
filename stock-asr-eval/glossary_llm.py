@@ -228,6 +228,24 @@ def validate_stocks(stocks: list[Stock]) -> tuple[list[Stock], dict[str, list[st
     return out, report
 
 
+# EXPERIMENT (hardcode): extra, near-verbatim example sentences for names the live model keeps
+# mis-hearing on dqDTSms4Imo (京元電子→「金源電」, 欣銓→「新全/新權」). Taken almost verbatim from
+# the subtitle to give the recognizer a stronger prior. Keyed by glossary name; injected only when
+# that name is present, so it's inert on videos that don't mention these. Remove after the trial.
+EXTRA_EXAMPLES: dict[str, list[str]] = {
+    "京元電子": [
+        "京元電子來講他算是突破了一個大型區間",
+        "封測族群日月光投控京元電子精材跟欣銓",
+        "你可能就要特別擔心京元電子",
+    ],
+    "欣銓": [
+        "第三檔的是欣銓今天漲停昨天也漲停",
+        "南茂雍智欣銓我們就來看他們的K線",
+        "欣銓受惠到最近ASIC的晶片需求",
+    ],
+}
+
+
 def build_system_instruction(g: Glossary) -> str:
     """Assemble the system instruction. Covers both directions for the translate model:
     (1) Chinese ASR pinning — companies + jargon, mirroring glossary.py's phrasing, plus an
@@ -246,6 +264,10 @@ def build_system_instruction(g: Glossary) -> str:
     # Example sentences: how each company/term tends to appear in the show, to anchor recognition.
     examples = [s.example.strip() for s in g.stocks if s.example.strip()]
     examples += [t.example.strip() for t in g.terms if t.example.strip()]
+    present = {s.name for s in g.stocks} | {t.term for t in g.terms}
+    for name, extra in EXTRA_EXAMPLES.items():
+        if name in present:
+            examples += extra
     if examples:
         parts.append("這些名稱與專有名詞在節目中的用法範例如下，請依此正確辨識："
                      + "、".join(f"「{e}」" for e in examples) + "。")
