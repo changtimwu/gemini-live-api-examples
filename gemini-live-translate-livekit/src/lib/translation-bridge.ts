@@ -27,6 +27,24 @@ import WebSocket from "ws";
 
 export type BridgeStatus = "starting" | "active" | "error" | "closed";
 
+/**
+ * Optional domain glossary sent as a systemInstruction alongside translationConfig.
+ *
+ * The Live Translate model (gemini-3.5-live-translate-preview) is *documented* as
+ * "translation only — no support for instructions", but in practice it accepts and
+ * honors a systemInstruction. We use it to pin proper nouns (here: Taiwan-listed
+ * company names) so they survive translation even when the recognizer mishears the
+ * name — the spoken ticker number anchors the glossary mapping (e.g. mis-heard
+ * 宜鼎 still resolves to "Innodisk" via 5289). Edit/extend for your domain, or set
+ * to "" to disable (no systemInstruction is sent when empty).
+ */
+const TRANSLATION_SYSTEM_INSTRUCTION =
+  "You are translating a Taiwanese stock-investment broadcast. Render Taiwan-listed " +
+  "company names by their internationally recognized names, keeping the ticker number " +
+  "when spoken. Glossary: 華邦電=Winbond (2344); 南亞科=Nanya Technology (2408); " +
+  "威剛=ADATA (3260); 宜鼎=Innodisk (5289); 穩懋=WIN Semiconductors (3105); " +
+  "台積電=TSMC (2330); 聯發科=MediaTek (2454); 鴻海=Hon Hai/Foxconn (2317).";
+
 export class TranslationBridge {
   private room: Room | null = null;
   private geminiWs: WebSocket | null = null;
@@ -329,6 +347,14 @@ export class TranslationBridge {
     const setupMessage = {
       setup: {
         model: `models/${this.geminiModel}`,
+        // Undocumented but honored by the translate model — see TRANSLATION_SYSTEM_INSTRUCTION.
+        ...(TRANSLATION_SYSTEM_INSTRUCTION
+          ? {
+              systemInstruction: {
+                parts: [{ text: TRANSLATION_SYSTEM_INSTRUCTION }],
+              },
+            }
+          : {}),
         outputAudioTranscription: {},
         generationConfig: {
           responseModalities: ["AUDIO"],
