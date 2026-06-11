@@ -30,6 +30,18 @@ interface Segment {
 }
 type Transcripts = Record<Variant, Segment[]>;
 
+// Break a (still-streaming) transcript into sentence lines, keeping the
+// terminating punctuation attached. Handles both CJK (。！？；…) and Latin
+// (.!?) terminators plus explicit newlines. The trailing, not-yet-finished
+// sentence stays on its own line and keeps growing until punctuation arrives.
+function splitSentences(text: string): string[] {
+  if (!text) return [];
+  return text
+    .split(/(?<=[。！？；…!?\n])/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
 const SPEAKER_IDENTITY = "speaker";
 
 export default function Home() {
@@ -398,21 +410,45 @@ function TranscriptColumn({
         {segments.length === 0 ? (
           <p className="body-sm italic">Waiting for speech…</p>
         ) : (
-          segments.map((s) => (
-            <div key={s.id}>
-              <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--fg)" }}>
-                {s.zh || "…"}
-              </p>
-              {showEnglish && s.en && (
-                <p
-                  className="body-sm"
-                  style={{ marginTop: 4, color: "var(--fg-secondary)" }}
-                >
-                  {s.en}
-                </p>
-              )}
-            </div>
-          ))
+          segments.map((s) => {
+            const zhLines = splitSentences(s.zh);
+            const enLines = showEnglish ? splitSentences(s.en) : [];
+            return (
+              <div key={s.id}>
+                {zhLines.length > 0 ? (
+                  zhLines.map((line, i) => (
+                    <p
+                      key={`zh-${i}`}
+                      style={{
+                        fontSize: 16,
+                        lineHeight: 1.6,
+                        color: "var(--fg)",
+                        marginTop: i ? 4 : 0,
+                      }}
+                    >
+                      {line}
+                    </p>
+                  ))
+                ) : (
+                  <p style={{ fontSize: 16, lineHeight: 1.6, color: "var(--fg)" }}>
+                    …
+                  </p>
+                )}
+                {enLines.map((line, i) => (
+                  <p
+                    key={`en-${i}`}
+                    className="body-sm"
+                    style={{
+                      marginTop: i ? 2 : 6,
+                      color: "var(--fg-secondary)",
+                    }}
+                  >
+                    {line}
+                  </p>
+                ))}
+              </div>
+            );
+          })
         )}
       </div>
     </div>
