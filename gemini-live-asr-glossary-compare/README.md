@@ -90,6 +90,10 @@ LIVEKIT_API_SECRET=secret
 LIVEKIT_URL=ws://localhost:7880
 NEXT_PUBLIC_LIVEKIT_URL=ws://localhost:7880
 GEMINI_API_KEY=your-gemini-api-key-here
+
+# Optional: load the glossary arm's system instruction from a file instead of
+# the built-in TWSE list (see "Customizing the glossary").
+# GLOSSARY_SI_FILE=../stock-asr-eval/results/<videoId>.si.txt
 ```
 
 ### 4. Run the app
@@ -121,6 +125,29 @@ them and restart `npm run dev`:
   Chinese glossary instruction builder.
 - `src/lib/asr-config.ts` — the model, target language, and both system
   instructions (`glossary` vs `general`).
+
+### Load a generated, show-specific instruction
+
+Instead of the built-in list, point the glossary arm at a system-instruction
+file with `GLOSSARY_SI_FILE`. This pairs with the offline tool
+[`../stock-asr-eval/glossary_llm.py`](../stock-asr-eval/glossary_llm.py), which
+reads a stock show's YouTube subtitle and writes a tailored instruction (company
+names + tickers + jargon, plus English-translation mappings):
+
+```bash
+# 1. generate the instruction for the show you'll play into the tab
+python ../stock-asr-eval/glossary_llm.py "https://youtu.be/<videoId>"
+#    → ../stock-asr-eval/results/<videoId>.si.txt
+
+# 2. point the glossary arm at it, then restart
+echo 'GLOSSARY_SI_FILE=../stock-asr-eval/results/<videoId>.si.txt' >> .env.local
+npm run dev
+```
+
+The path resolves against the dev-server cwd (this app's directory). It's read
+once at startup, so restart to re-apply. If the file is missing or empty the app
+logs a warning and falls back to the built-in glossary. The **General** arm is
+unchanged, so the A/B now compares *that show's* glossary against no glossary.
 
 ## Project structure
 
