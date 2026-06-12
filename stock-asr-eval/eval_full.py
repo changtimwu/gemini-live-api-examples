@@ -70,21 +70,36 @@ async def run(url, trials, chunk_secs, out_path):
 
     raw = {"A_no_si": {}, "B_with_si": {}}     # arm -> trial -> [chunk hyps]
     valid = {"A_no_si": {}, "B_with_si": {}}   # arm -> trial -> bool (False if any chunk failed)
-    for arm, sysi in (("A_no_si", None), ("B_with_si", si)):
-        for k in range(trials):
-            parts, ok = [], True
-            for ci, ch in enumerate(chs):
-                exp = len(ch) / (SAMPLE_RATE * 2)
-                hyp = await _transcribe_retry(ch, key, sysi, exp)
-                if hyp is None:
-                    ok, hyp = False, ""
-                    print(f"  {arm} trial{k+1} chunk{ci+1}/{len(chs)} -> FAILED (trial invalid)", flush=True)
-                else:
-                    print(f"  {arm} trial{k+1}/{trials} chunk{ci+1}/{len(chs)} -> {len(hyp)} chars", flush=True)
-                parts.append(hyp)
-            raw[arm][k] = parts; valid[arm][k] = ok
-            json.dump({"glossary": terms, "raw": raw, "valid": valid},
-                      open(out_path, "w", encoding="utf-8"), ensure_ascii=False)  # incremental (keeps raw)
+
+    def _flush(status="running"):
+        os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+        json.dump({"status": status, "glossary": terms, "raw": raw, "valid": valid},
+                  open(out_path, "w", encoding="utf-8"), ensure_ascii=False)  # incremental (keeps raw)
+
+    try:
+        for arm, sysi in (("A_no_si", None), ("B_with_si", si)):
+            for k in range(trials):
+                parts, ok = [], True
+                raw[arm][k] = parts; valid[arm][k] = ok  # share the list ref so partial chunks persist
+                for ci, ch in enumerate(chs):
+                    exp = len(ch) / (SAMPLE_RATE * 2)
+                    hyp = await _transcribe_retry(ch, key, sysi, exp)
+                    if hyp is None:
+                        ok, hyp = False, ""
+                        valid[arm][k] = ok
+                        print(f"  {arm} trial{k+1} chunk{ci+1}/{len(chs)} -> FAILED (trial invalid)", flush=True)
+                    else:
+                        print(f"  {arm} trial{k+1}/{trials} chunk{ci+1}/{len(chs)} -> {len(hyp)} chars", flush=True)
+                    parts.append(hyp)
+                    _flush()  # incremental: keep completed chunks even if interrupted mid-trial
+    except KeyboardInterrupt:
+        _flush("interrupted")
+        print(f"\n⚠ interrupted — partial transcripts saved to {out_path}", flush=True)
+        raise
+    except Exception:
+        _flush("error")
+        print(f"\n⚠ error — partial transcripts saved to {out_path}", flush=True)
+        raise
 
     # aggregate VALID trials only; per trial full hyp = concat chunks
     summary = {"url": url, "trials": trials, "chunks": len(chs), "glossary": terms,
@@ -127,6 +142,8 @@ async def run(url, trials, chunk_secs, out_path):
         print("\n⚠ cannot compare arms — an arm had 0 valid trials (re-run on a stable network).", flush=True)
 
     summary["per_stock_hitrate"] = hitrate
+    summary["status"] = "complete"
+    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     json.dump(summary, open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print("\nwrote", out_path, flush=True)
 
@@ -139,7 +156,10 @@ def main():
     ap.add_argument("--out")
     args = ap.parse_args()
     out = args.out or f"results/{fetch._video_id(args.url)}_full.json"
-    asyncio.run(run(args.url, args.trials, args.chunk, out))
+    try:
+        asyncio.run(run(args.url, args.trials, args.chunk, out))
+    except KeyboardInterrupt:
+        sys.exit(130)
 
 
 if __name__ == "__main__":

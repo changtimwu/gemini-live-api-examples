@@ -8,9 +8,11 @@ is ignored for scoring (no English ground truth). Optionally pass a system_instr
 The translate model streams translated audio for a long time after the input ends, so we
 stop when the *input* transcription has been quiet for a while (not when output stops).
 
-Usage: python transcribe.py <pcm_file_16k_mono_s16le> [system_instruction_text]
+Usage: python transcribe.py <pcm_file_16k_mono_s16le> [system_instruction_text] [--out path]
+The transcript is saved to results/<pcm_stem>.transcript.json by default (--out '' to skip).
 """
 import asyncio
+import json
 import os
 import sys
 import time
@@ -96,11 +98,26 @@ def _read_key() -> str:
 
 
 if __name__ == "__main__":
-    pcm_path = sys.argv[1]
-    si = sys.argv[2] if len(sys.argv) > 2 else None
-    with open(pcm_path, "rb") as f:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("pcm", help="16k mono s16le PCM file")
+    ap.add_argument("si", nargs="?", default=None, help="optional system instruction (glossary) text")
+    ap.add_argument("--out", help="write transcript JSON here "
+                                  "(default results/<pcm_stem>.transcript.json; use '' to skip)")
+    args = ap.parse_args()
+    with open(args.pcm, "rb") as f:
         pcm = f.read()
-    print(f"audio: {pcm_path}  ({len(pcm)/(SAMPLE_RATE*2):.1f}s)  SI={'yes' if si else 'no'}", flush=True)
-    res = asyncio.run(transcribe_pcm(pcm, api_key=_read_key(), system_instruction=si))
+    print(f"audio: {args.pcm}  ({len(pcm)/(SAMPLE_RATE*2):.1f}s)  SI={'yes' if args.si else 'no'}", flush=True)
+    res = asyncio.run(transcribe_pcm(pcm, api_key=_read_key(), system_instruction=args.si))
     print("SOURCE (zh):", res["source_zh"])
     print("TRANSLATION (en):", res["translation_en"])
+
+    # persist by default — a one-off transcription is otherwise lost the moment it scrolls off
+    out_path = args.out if args.out is not None else os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), "results",
+        os.path.splitext(os.path.basename(args.pcm))[0] + ".transcript.json")
+    if out_path:
+        os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+        json.dump({"pcm": args.pcm, "system_instruction": args.si, **res},
+                  open(out_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+        print("wrote", out_path)
