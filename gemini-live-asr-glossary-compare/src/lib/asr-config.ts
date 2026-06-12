@@ -73,13 +73,21 @@ export const SYSTEM_INSTRUCTIONS: Record<Variant, string> = {
 // listed here run it; the rest publish the raw ASR.
 export const REPHRASE_MODEL = "gemini-3.1-flash-lite";
 export const REPHRASE_VARIANTS: Variant[] = ["glossary"];
-// The rephrase agent only needs correct names/tickers/terms + cues. Drop the example-sentence and
-// English-translation sections of the glossary text — the agent otherwise regurgitates the examples
-// and appends English glosses (e.g. "封測 (Packaging and Testing)").
+// The rephrase agent only needs correct names/tickers/terms + the precise negative cues. Drop:
+//  - the example-sentence section (it regurgitates the examples),
+//  - the English-translation map (it appends English glosses, e.g. "封測 (Packaging and Testing)"),
+//  - the 讀音提示 (phonetic) section — "always write 欣銓 for this sound" is far too broad for a
+//    context-aware agent and pulls in homophones (晶圓/安全/投信 → 欣銓). The exact-wrong-form
+//    negative cues (特別注意) stay; they're precise.
 function glossaryForRephrase(): string {
   return resolveGlossaryKnowledge()
     .split(/(?<=。)/)
-    .filter((s) => !s.includes("用法範例") && !s.includes("翻譯成英文"))
+    .filter(
+      (s) =>
+        !s.includes("用法範例") &&
+        !s.includes("翻譯成英文") &&
+        !s.includes("讀音提示")
+    )
     .join("");
 }
 
@@ -99,8 +107,12 @@ export const REPHRASE_INSTRUCTION =
   "範例（特別注意要清掉誤聽殘留字）：「台積電電它的」→「台積電 (2330) 它的」；" +
   "「那欣銓權來講」→「那欣銓 (3264) 來講」；「日月光投控光族群」→「日月光投控 (3711) 族群」。\n" +
   "嚴格要求：除上述兩點外，其他文字、語序、口語、標點一律原樣保留；不可翻譯、不可附加任何英文、" +
-  "不可解釋、不可自行造句、不可加入詞彙知識裡的例句或清單。若這段只是片段或標點，直接原樣輸出，" +
-  "不要回問或說明。輸出長度必須與輸入相近，只輸出處理後的這段逐字稿本身。\n\n" +
+  "不可解釋、不可自行造句、不可加入詞彙知識裡的例句或清單。" +
+  "詞彙知識只是查字典用的參考，絕對不可把輸入逐字稿中『沒有出現』的公司或名詞補進輸出——" +
+  "例如輸入是「盟立、大銀微系統」，就只能輸出「盟立 (2464)、大銀微系統 (4576)」，" +
+  "絕不可多出「穎崴 (6515)」等沒被提到的標的。" +
+  "若這段只是片段或標點，直接原樣輸出，不要回問或說明。" +
+  "輸出長度必須與輸入相近，只輸出處理後的這段逐字稿本身。\n\n" +
   "詞彙知識：\n" +
   glossaryForRephrase();
 
