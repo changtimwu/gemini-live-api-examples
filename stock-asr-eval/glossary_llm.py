@@ -262,6 +262,7 @@ NEGATIVE_CUES: dict[str, list[str]] = {
     "精材": ["精彩"],
     "外溢": ["外意"],
     "欣銓": ["新全", "新權", "新詮", "新銓"],
+    "晶圓": ["金融"],  # 晶圓巨頭/晶圓代工 在半導體語境常被誤聽成「金融」
 }
 
 # EXPERIMENT (hardcode): phonetic cues — instruct by reading so every same-sound variant maps to
