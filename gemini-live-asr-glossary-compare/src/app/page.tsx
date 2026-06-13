@@ -14,6 +14,14 @@ import { Track, LocalTrackPublication } from "livekit-client";
 type Variant = "glossary" | "general";
 type InputMode = "mic" | "tab";
 
+// Per-arm config surfaced from the server (asr-config ARMS) for the "Config" popup.
+interface ArmConfig {
+  model: string;
+  systemInstruction: string;
+  rephraseModel: string | null;
+  rephraseInstruction: string;
+}
+
 // Display order, left → right. Server bridges are unaffected (see asr-config VARIANTS).
 const VARIANTS: Variant[] = ["general", "glossary"];
 const LABELS: Record<Variant, string> = {
@@ -92,6 +100,7 @@ export default function Home() {
   const [inputMode, setInputMode] = useState<InputMode>("mic");
   const [tabStream, setTabStream] = useState<MediaStream | null>(null);
   const [rephrasedVariants, setRephrasedVariants] = useState<Variant[]>([]);
+  const [armConfigs, setArmConfigs] = useState<Partial<Record<Variant, ArmConfig>>>({});
 
   async function start(mode: InputMode) {
     setError(null);
@@ -114,10 +123,15 @@ export default function Home() {
       if (!startRes.ok) {
         throw new Error(startData.error || "Failed to start ASR bridges");
       }
-      // Learn which arms rephrase (per-arm config lives server-side in asr-config ARMS).
-      const rephrased: Variant[] = (startData.bridges ?? [])
-        .filter((b: { rephrase?: boolean }) => b.rephrase)
-        .map((b: { variant: Variant }) => b.variant);
+      // Per-arm config + which arms rephrase (both live server-side in asr-config ARMS).
+      const bridges = (startData.bridges ?? []) as Array<{
+        variant: Variant;
+        rephrase?: boolean;
+        config: ArmConfig;
+      }>;
+      const configs: Partial<Record<Variant, ArmConfig>> = {};
+      for (const b of bridges) configs[b.variant] = b.config;
+      const rephrased: Variant[] = bridges.filter((b) => b.rephrase).map((b) => b.variant);
 
       // 2. Get a LiveKit token for the speaker.
       const tokenRes = await fetch(
@@ -132,6 +146,7 @@ export default function Home() {
       setToken(tokenData.token);
       setServerUrl(tokenData.serverUrl);
       setRephrasedVariants(rephrased);
+      setArmConfigs(configs);
       setStarted(true);
     } catch (err) {
       stream?.getTracks().forEach((t) => t.stop());
@@ -278,6 +293,7 @@ export default function Home() {
         inputMode={inputMode}
         tabStream={tabStream}
         rephrasedVariants={rephrasedVariants}
+        armConfigs={armConfigs}
       />
     </LiveKitRoom>
   );
@@ -292,6 +308,7 @@ function LiveSession({
   inputMode,
   tabStream,
   rephrasedVariants,
+  armConfigs,
 }: {
   showEnglish: boolean;
   setShowEnglish: (v: boolean) => void;
@@ -301,6 +318,7 @@ function LiveSession({
   inputMode: InputMode;
   tabStream: MediaStream | null;
   rephrasedVariants: Variant[];
+  armConfigs: Partial<Record<Variant, ArmConfig>>;
 }) {
   const [transcripts, setTranscripts] = useState<Transcripts>({
     glossary: [],
@@ -532,6 +550,7 @@ function LiveSession({
             showEnglish={showEnglish}
             polishedOnly={polishedOnly}
             rephrasedVariants={rephrasedVariants}
+            config={armConfigs[variant]}
           />
         ))}
       </div>
@@ -545,15 +564,18 @@ function TranscriptColumn({
   showEnglish,
   polishedOnly,
   rephrasedVariants,
+  config,
 }: {
   variant: Variant;
   segments: Segment[];
   showEnglish: boolean;
   polishedOnly: boolean;
   rephrasedVariants: Variant[];
+  config?: ArmConfig;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isRephrased = rephrasedVariants.includes(variant);
+  const [showConfig, setShowConfig] = useState(false);
 
   // In "polished only" mode, a rephrased column shows a chunk only once its
   // correction has arrived (segments with `corrected`); other columns are unchanged.
@@ -594,13 +616,51 @@ function TranscriptColumn({
       }}
     >
       <div
-        style={{ padding: "14px 18px", borderBottom: "1px solid var(--border)" }}
+        style={{
+          padding: "14px 18px",
+          borderBottom: "1px solid var(--border)",
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          gap: 12,
+        }}
       >
-        <div className="label" style={{ color: "var(--fg)" }}>
-          {LABELS[variant]}
+        <div>
+          <div className="label" style={{ color: "var(--fg)" }}>
+            {LABELS[variant]}
+          </div>
+          <div className="body-sm">{subtitleFor(variant, rephrasedVariants)}</div>
         </div>
-        <div className="body-sm">{subtitleFor(variant, rephrasedVariants)}</div>
+        {config && (
+          <button
+            onClick={() => setShowConfig(true)}
+            title="Show this arm's configuration"
+            style={{
+              flexShrink: 0,
+              padding: "4px 10px",
+              fontFamily: "var(--font-body)",
+              fontSize: 11,
+              fontWeight: 500,
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
+              color: "var(--fg-secondary)",
+              background: "transparent",
+              border: "1px solid var(--border)",
+              borderRadius: 0,
+              cursor: "pointer",
+            }}
+          >
+            Config
+          </button>
+        )}
       </div>
+      {showConfig && config && (
+        <ConfigModal
+          label={LABELS[variant]}
+          config={config}
+          onClose={() => setShowConfig(false)}
+        />
+      )}
 
       <div
         ref={scrollRef}
@@ -641,6 +701,130 @@ function TranscriptColumn({
             </div>
           ))
         )}
+      </div>
+    </div>
+  );
+}
+
+// Popup showing one arm's current configuration (model + system instruction,
+// rephrase model + its instruction). Read-only — config is edited in
+// src/lib/asr-config.ts and applied on server restart.
+function ConfigModal({
+  label,
+  config,
+  onClose,
+}: {
+  label: string;
+  config: ArmConfig;
+  onClose: () => void;
+}) {
+  // Close on Escape.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  const field = (title: string, value: string, mono = false) => (
+    <div style={{ marginBottom: 18 }}>
+      <div className="label" style={{ marginBottom: 6 }}>
+        {title}
+      </div>
+      <div
+        style={{
+          fontFamily: mono ? "var(--font-mono)" : "var(--font-body)",
+          fontSize: mono ? 13 : 14,
+          lineHeight: 1.6,
+          color: "var(--fg)",
+          background: "var(--bg)",
+          border: "1px solid var(--border)",
+          padding: "10px 12px",
+          maxHeight: 240,
+          overflowY: "auto",
+          whiteSpace: "pre-wrap",
+          wordBreak: "break-word",
+        }}
+      >
+        {value}
+      </div>
+    </div>
+  );
+
+  return (
+    <div
+      onClick={onClose}
+      style={{
+        position: "fixed",
+        inset: 0,
+        background: "rgba(26, 25, 23, 0.45)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 24,
+        zIndex: 100,
+      }}
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        style={{
+          background: "var(--bg-elevated)",
+          border: "1px solid var(--border)",
+          width: "100%",
+          maxWidth: 620,
+          maxHeight: "82vh",
+          overflowY: "auto",
+          padding: 24,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            gap: 12,
+            marginBottom: 20,
+          }}
+        >
+          <div>
+            <div className="label" style={{ color: "var(--fg)" }}>
+              {label}
+            </div>
+            <div className="body-sm">Arm configuration</div>
+          </div>
+          <button
+            onClick={onClose}
+            aria-label="Close"
+            style={{
+              flexShrink: 0,
+              width: 28,
+              height: 28,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 16,
+              lineHeight: 1,
+              color: "var(--fg-secondary)",
+              background: "transparent",
+              border: "1px solid var(--border)",
+              borderRadius: 0,
+              cursor: "pointer",
+            }}
+          >
+            ✕
+          </button>
+        </div>
+
+        {field("Model", config.model, true)}
+        {field("System instruction", config.systemInstruction || "(none)")}
+        {field(
+          "Rephrase model",
+          config.rephraseModel ?? "None — raw ASR published as-is",
+          true
+        )}
+        {config.rephraseModel &&
+          field("Rephrase instruction", config.rephraseInstruction || "(none)")}
       </div>
     </div>
   );
