@@ -6,12 +6,14 @@
  * down. Idempotent: re-starting an already-running room is a no-op.
  */
 import { AsrBridge, BridgeStatus } from "./asr-bridge";
-import { Variant, VARIANTS } from "./asr-config";
+import { ArmConfig, ARMS, Variant, VARIANTS } from "./asr-config";
 
 export interface BridgeInfo {
   variant: Variant;
   identity: string;
   status: BridgeStatus;
+  rephrase: boolean; // whether this arm runs the post-transcribe rephrase pass
+  config: ArmConfig; // this arm's resolved config, for the client's "Config" popup
 }
 
 class AsrSessionManager {
@@ -68,7 +70,13 @@ class AsrSessionManager {
   }
 
   private toInfo(b: AsrBridge): BridgeInfo {
-    return { variant: b.variant, identity: b.identity, status: b.status };
+    return {
+      variant: b.variant,
+      identity: b.identity,
+      status: b.status,
+      rephrase: b.rephrase,
+      config: ARMS[b.variant],
+    };
   }
 }
 

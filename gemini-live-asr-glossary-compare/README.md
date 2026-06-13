@@ -116,15 +116,36 @@ Open [http://localhost:3000](http://localhost:3000), then pick an input:
 > captured track is published to LiveKit exactly like the mic, so both Gemini
 > sessions see it the same way.
 
-## Customizing the glossary
+## Configuring the two arms
 
-The glossary and the two system instructions are fixed in config files — edit
-them and restart `npm run dev`:
+Each arm (`general` and `glossary`) is configured independently in the `ARMS`
+table in `src/lib/asr-config.ts` — edit it and restart `npm run dev`. Per arm:
 
-- `src/lib/glossary.ts` — the curated TWSE term list (`name` ↔ `ticker`) and the
-  Chinese glossary instruction builder.
-- `src/lib/asr-config.ts` — the model, target language, and both system
-  instructions (`glossary` vs `general`).
+| Field                 | Meaning                                                                 |
+| --------------------- | ----------------------------------------------------------------------- |
+| `model`               | Recognizer (Gemini Live) model. Pick from `LIVE_MODELS` (see below).    |
+| `systemInstruction`   | System instruction sent to that recognizer.                             |
+| `rephraseModel`       | Post-transcribe correction model, or `null` for **no rephrasing**.      |
+| `rephraseInstruction` | System instruction for the rephrase agent (ignored when model is null). |
+
+`LIVE_MODELS` offers two recognizers:
+
+- `LIVE_MODELS.translate` (`gemini-3.5-live-translate-preview`, the default) — does
+  Chinese ASR **and** English translation natively, via `translationConfig`.
+- `LIVE_MODELS.flash` (`gemini-3.1-flash-live-preview`) — does Chinese ASR; it
+  *can* translate too, but only when its `systemInstruction` tells it to (it has no
+  `translationConfig`). So if you switch an arm to this model and still want the
+  English column populated, add a "translate to English" directive to that arm's
+  `systemInstruction`.
+
+The default `ARMS` keeps both arms on the translate model with the same light
+instruction (so they transcribe identically), and runs the rephrase agent only on
+the `glossary` arm — the same behavior as before this became per-arm config. The
+client learns which arms rephrase from the start response, so the "+ smart
+rephrasing" subtitle and "Polished only" mode follow whatever you configure.
+
+The curated TWSE term list (`name` ↔ `ticker`) and the Chinese glossary
+instruction builder live in `src/lib/glossary.ts`.
 
 ### Load a generated, show-specific instruction
 
@@ -182,7 +203,7 @@ src/
 │   └── page.tsx              # Whole UI: mic/tab capture, checkbox, two columns
 └── lib/
     ├── glossary.ts           # TWSE terms + instruction builder
-    ├── asr-config.ts         # Model + the two system instructions
+    ├── asr-config.ts         # Per-arm config: ARMS table (model, system instruction, rephrase)
     ├── asr-bridge.ts         # LiveKit ↔ Gemini bridge (one per variant)
     └── asr-session-manager.ts# Singleton: two bridges per room
 ```
