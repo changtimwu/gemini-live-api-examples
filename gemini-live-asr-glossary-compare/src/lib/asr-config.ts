@@ -1,21 +1,24 @@
 /**
- * Fixed A/B configuration for the ASR glossary comparison.
+ * A/B configuration for the ASR glossary comparison.
  *
- * Both variants stream the same mic audio into a separate Gemini Live session
- * (gemini-3.5-live-translate-preview) with the SAME light system instruction, so
- * both transcribe identically. The arms differ only afterwards:
+ * Each arm ("general" and "glossary") is configured independently in the ARMS
+ * table at the bottom of this file, on four axes:
  *
- *   - "general":  publish the raw Chinese ASR as-is.
- *   - "glossary": run each completed turn's Chinese ASR through a cheap rephrase
- *                 agent (gemini-3.1-flash-lite) that fixes domain-term mishearings
- *                 using the glossary knowledge — names, examples, and the phonetic/
- *                 negative cues that used to live in the translate model's SI.
+ *   1. model               — which Gemini Live recognizer model to stream into.
+ *   2. systemInstruction    — the system instruction sent to that recognizer.
+ *   3. rephraseModel         — the model for the post-transcribe correction pass,
+ *                              or null for no rephrasing (publish the raw ASR).
+ *   4. rephraseInstruction   — the system instruction for that rephrase agent.
  *
- * Moving the glossary rules from the recognizer's prompt to a post-transcribe
- * correction pass: a model that sees the whole phrase fixes true homophones
- * (外溢/外意, 精材/精彩) far better than priming the streaming recognizer does.
+ * By default both arms use the same translate model + light instruction, so they
+ * transcribe identically; the glossary arm then runs each completed turn through a
+ * cheap rephrase agent (gemini-3.1-flash-lite) that fixes domain-term mishearings
+ * using the glossary knowledge — names, examples, and the phonetic/negative cues.
+ * A model that sees the whole phrase fixes true homophones (外溢/外意, 精材/精彩)
+ * far better than priming the streaming recognizer does.
  *
- * Edit these instructions to taste, then restart `npm run dev` to apply.
+ * Edit the ARMS table (and the instructions it references), then restart
+ * `npm run dev` to apply.
  *
  * This module is server-only (imported solely by asr-bridge / asr-session-manager),
  * so reading a file at startup is safe — it never ships to the client bundle.
@@ -29,8 +32,21 @@ export type Variant = "glossary" | "general";
 
 export const VARIANTS: Variant[] = ["glossary", "general"];
 
-export const MODEL = "gemini-3.5-live-translate-preview";
-export const TARGET_LANGUAGE = "en"; // translate Chinese → English
+// Recognizer model options — the new flash model sits beside the original translate model.
+//   translate → does ASR *and* English translation natively (via translationConfig below).
+//   flash     → does ASR; it can also translate, but only when its systemInstruction tells
+//               it to (it has no translationConfig). See ARMS + asr-bridge's sendGeminiSetup.
+export const LIVE_MODELS = {
+  translate: "gemini-3.5-live-translate-preview",
+  flash: "gemini-3.1-flash-live-preview",
+} as const;
+
+// translationConfig is specific to the translate model; only emit it for that model.
+export function isTranslateModel(model: string): boolean {
+  return model.includes("translate");
+}
+
+export const TARGET_LANGUAGE = "en"; // translate Chinese → English (translate model only)
 
 /**
  * The glossary knowledge (company names + tickers + jargon + example sentences +
@@ -57,22 +73,16 @@ function resolveGlossaryKnowledge(): string {
   }
 }
 
-// Light recognizer prompt — same for both arms, so they transcribe identically.
+// Light recognizer prompt — the default for both arms, so they transcribe identically.
 const BASE_INSTRUCTION =
   "這是一段台灣股市分析的廣播，內容可能會提到台灣上市櫃公司的名稱與股票代號，" +
   "請盡量正確辨識並轉寫所有內容。";
 
-export const SYSTEM_INSTRUCTIONS: Record<Variant, string> = {
-  glossary: BASE_INSTRUCTION,
-  general: BASE_INSTRUCTION,
-};
-
 // --- Rephrase agent ---------------------------------------------------------
 // A cheap text model re-reads each completed turn's Chinese transcription and
-// corrects domain-term mishearings using the glossary knowledge. Only the arms
-// listed here run it; the rest publish the raw ASR.
-export const REPHRASE_MODEL = "gemini-3.1-flash-lite";
-export const REPHRASE_VARIANTS: Variant[] = ["glossary"];
+// corrects domain-term mishearings using the glossary knowledge. Which arms run
+// it (and with what model / instruction) is set per-arm in ARMS below; an arm
+// with rephraseModel: null publishes the raw ASR unchanged.
 // The rephrase agent only needs correct names/tickers/terms + the precise negative cues. Drop:
 //  - the example-sentence section (it regurgitates the examples),
 //  - the English-translation map (it appends English glosses, e.g. "封測 (Packaging and Testing)"),
@@ -115,6 +125,42 @@ export const REPHRASE_INSTRUCTION =
   "輸出長度必須與輸入相近，只輸出處理後的這段逐字稿本身。\n\n" +
   "詞彙知識：\n" +
   glossaryForRephrase();
+
+// --- Per-arm configuration --------------------------------------------------
+// The single source of truth for how each arm runs. Edit this table (and the
+// instructions it references) and restart `npm run dev` to apply.
+export interface ArmConfig {
+  /** Recognizer (Gemini Live) model. Pick from LIVE_MODELS, or any Live model id. */
+  model: string;
+  /**
+   * System instruction sent to the recognizer. For a non-translate model
+   * (e.g. LIVE_MODELS.flash), add a "translate to English" directive here if you
+   * want the English column populated — it won't translate on its own.
+   */
+  systemInstruction: string;
+  /** Post-transcribe correction model, or null for no rephrasing (raw ASR is published). */
+  rephraseModel: string | null;
+  /** System instruction for the rephrase agent (ignored when rephraseModel is null). */
+  rephraseInstruction: string;
+}
+
+export const ARMS: Record<Variant, ArmConfig> = {
+  // General arm: plain ASR, no glossary correction.
+  general: {
+    model: LIVE_MODELS.translate,
+    systemInstruction: BASE_INSTRUCTION,
+    rephraseModel: null,
+    rephraseInstruction: "",
+  },
+  // Glossary arm: same recognizer, but each turn is corrected by the rephrase
+  // agent using the glossary knowledge.
+  glossary: {
+    model: LIVE_MODELS.translate,
+    systemInstruction: BASE_INSTRUCTION,
+    rephraseModel: "gemini-3.1-flash-lite",
+    rephraseInstruction: REPHRASE_INSTRUCTION,
+  },
+};
 
 export const VARIANT_LABELS: Record<Variant, string> = {
   glossary: "Tuned with glossary",

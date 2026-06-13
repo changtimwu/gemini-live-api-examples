@@ -12,6 +12,7 @@ export interface BridgeInfo {
   variant: Variant;
   identity: string;
   status: BridgeStatus;
+  rephrase: boolean; // whether this arm runs the post-transcribe rephrase pass
 }
 
 class AsrSessionManager {
@@ -68,7 +69,7 @@ class AsrSessionManager {
   }
 
   private toInfo(b: AsrBridge): BridgeInfo {
-    return { variant: b.variant, identity: b.identity, status: b.status };
+    return { variant: b.variant, identity: b.identity, status: b.status, rephrase: b.rephrase };
   }
 }
 

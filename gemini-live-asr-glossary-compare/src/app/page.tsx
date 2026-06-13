@@ -16,17 +16,15 @@ type InputMode = "mic" | "tab";
 
 // Display order, left → right. Server bridges are unaffected (see asr-config VARIANTS).
 const VARIANTS: Variant[] = ["general", "glossary"];
-// The arm whose transcript is rephrased (see asr-config REPHRASE_VARIANTS). Only this column
-// is held back in "polished only" mode.
-const REPHRASED_VARIANT: Variant = "glossary";
 const LABELS: Record<Variant, string> = {
   glossary: "Tuned with glossary",
   general: "General",
 };
-const SUBTITLES: Record<Variant, string> = {
-  glossary: "+ smart rephrasing",
-  general: "Raw ASR",
-};
+// Which arms rephrase is per-arm config (asr-config ARMS), so the client learns it from
+// the /api/asr response rather than hardcoding it. Those columns get the "+ smart rephrasing"
+// subtitle and are the only ones held back in "polished only" mode.
+const subtitleFor = (variant: Variant, rephrasedVariants: Variant[]): string =>
+  rephrasedVariants.includes(variant) ? "+ smart rephrasing" : "Raw ASR";
 
 interface Segment {
   id: string;
@@ -93,6 +91,7 @@ export default function Home() {
   const [polishedOnly, setPolishedOnly] = useState(true);
   const [inputMode, setInputMode] = useState<InputMode>("mic");
   const [tabStream, setTabStream] = useState<MediaStream | null>(null);
+  const [rephrasedVariants, setRephrasedVariants] = useState<Variant[]>([]);
 
   async function start(mode: InputMode) {
     setError(null);
@@ -111,10 +110,14 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ room: roomName, speakerIdentity: SPEAKER_IDENTITY }),
       });
+      const startData = await startRes.json().catch(() => ({}));
       if (!startRes.ok) {
-        const data = await startRes.json().catch(() => ({}));
-        throw new Error(data.error || "Failed to start ASR bridges");
+        throw new Error(startData.error || "Failed to start ASR bridges");
       }
+      // Learn which arms rephrase (per-arm config lives server-side in asr-config ARMS).
+      const rephrased: Variant[] = (startData.bridges ?? [])
+        .filter((b: { rephrase?: boolean }) => b.rephrase)
+        .map((b: { variant: Variant }) => b.variant);
 
       // 2. Get a LiveKit token for the speaker.
       const tokenRes = await fetch(
@@ -128,6 +131,7 @@ export default function Home() {
       setRoom(roomName);
       setToken(tokenData.token);
       setServerUrl(tokenData.serverUrl);
+      setRephrasedVariants(rephrased);
       setStarted(true);
     } catch (err) {
       stream?.getTracks().forEach((t) => t.stop());
@@ -273,6 +277,7 @@ export default function Home() {
         onStop={stop}
         inputMode={inputMode}
         tabStream={tabStream}
+        rephrasedVariants={rephrasedVariants}
       />
     </LiveKitRoom>
   );
@@ -286,6 +291,7 @@ function LiveSession({
   onStop,
   inputMode,
   tabStream,
+  rephrasedVariants,
 }: {
   showEnglish: boolean;
   setShowEnglish: (v: boolean) => void;
@@ -294,6 +300,7 @@ function LiveSession({
   onStop: () => void;
   inputMode: InputMode;
   tabStream: MediaStream | null;
+  rephrasedVariants: Variant[];
 }) {
   const [transcripts, setTranscripts] = useState<Transcripts>({
     glossary: [],
@@ -524,6 +531,7 @@ function LiveSession({
             segments={transcripts[variant]}
             showEnglish={showEnglish}
             polishedOnly={polishedOnly}
+            rephrasedVariants={rephrasedVariants}
           />
         ))}
       </div>
@@ -536,18 +544,21 @@ function TranscriptColumn({
   segments,
   showEnglish,
   polishedOnly,
+  rephrasedVariants,
 }: {
   variant: Variant;
   segments: Segment[];
   showEnglish: boolean;
   polishedOnly: boolean;
+  rephrasedVariants: Variant[];
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isRephrased = rephrasedVariants.includes(variant);
 
-  // In "polished only" mode, the rephrased column shows a chunk only once its
+  // In "polished only" mode, a rephrased column shows a chunk only once its
   // correction has arrived (segments with `corrected`); other columns are unchanged.
   const visible =
-    polishedOnly && variant === REPHRASED_VARIANT
+    polishedOnly && isRephrased
       ? segments.filter((s) => s.corrected)
       : segments;
 
@@ -588,7 +599,7 @@ function TranscriptColumn({
         <div className="label" style={{ color: "var(--fg)" }}>
           {LABELS[variant]}
         </div>
-        <div className="body-sm">{SUBTITLES[variant]}</div>
+        <div className="body-sm">{subtitleFor(variant, rephrasedVariants)}</div>
       </div>
 
       <div

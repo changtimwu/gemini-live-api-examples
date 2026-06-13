@@ -28,15 +28,7 @@ import {
   AudioFrame,
 } from "@livekit/rtc-node";
 import WebSocket from "ws";
-import {
-  Variant,
-  MODEL,
-  TARGET_LANGUAGE,
-  SYSTEM_INSTRUCTIONS,
-  REPHRASE_MODEL,
-  REPHRASE_VARIANTS,
-  REPHRASE_INSTRUCTION,
-} from "./asr-config";
+import { Variant, ARMS, TARGET_LANGUAGE, isTranslateModel } from "./asr-config";
 
 export type BridgeStatus = "starting" | "active" | "error" | "closed";
 // "source-correction" replaces a segment's Chinese text with the rephrase agent's fix.
@@ -51,7 +43,9 @@ const REPHRASE_MAX_CHARS = 40;
 export class AsrBridge {
   private room: Room | null = null;
   private geminiWs: WebSocket | null = null;
-  private readonly rephrase: boolean;
+  // Whether this arm runs the post-transcribe rephrase pass (rephraseModel != null).
+  // Public so the session manager can surface it to the client.
+  public readonly rephrase: boolean;
   private turnSource: string = ""; // accumulates the in-progress chunk's Chinese ASR
   private idleTimer: ReturnType<typeof setTimeout> | null = null;
   private turnId: number = 0;
@@ -92,7 +86,7 @@ export class AsrBridge {
     this.livekitUrl = config.livekitUrl;
     this.livekitApiKey = config.livekitApiKey;
     this.livekitApiSecret = config.livekitApiSecret;
-    this.rephrase = REPHRASE_VARIANTS.includes(variant);
+    this.rephrase = ARMS[variant].rephraseModel != null;
   }
 
   private log(...args: unknown[]): void {
@@ -212,21 +206,28 @@ export class AsrBridge {
   }
 
   private sendGeminiSetup(): void {
-    const systemInstruction = SYSTEM_INSTRUCTIONS[this.variant];
+    const cfg = ARMS[this.variant];
     const setupMessage = {
       setup: {
-        model: `models/${MODEL}`,
-        ...(systemInstruction
-          ? { systemInstruction: { parts: [{ text: systemInstruction }] } }
+        model: `models/${cfg.model}`,
+        ...(cfg.systemInstruction
+          ? { systemInstruction: { parts: [{ text: cfg.systemInstruction }] } }
           : {}),
         inputAudioTranscription: {},
         outputAudioTranscription: {},
         generationConfig: {
           responseModalities: ["AUDIO"],
-          translationConfig: {
-            targetLanguageCode: TARGET_LANGUAGE,
-            echoTargetLanguage: true,
-          },
+          // translationConfig is specific to the translate model. A plain live model
+          // (e.g. gemini-3.1-flash-live-preview) translates only when its systemInstruction
+          // says to; its spoken output is then transcribed via outputAudioTranscription.
+          ...(isTranslateModel(cfg.model)
+            ? {
+                translationConfig: {
+                  targetLanguageCode: TARGET_LANGUAGE,
+                  echoTargetLanguage: true,
+                },
+              }
+            : {}),
         },
         realtimeInputConfig: {
           automaticActivityDetection: { disabled: false },
@@ -416,17 +417,18 @@ export class AsrBridge {
    * replaces that segment. On any failure we leave the live transcript untouched.
    */
   private async rephraseTurn(raw: string, segmentId: string): Promise<void> {
+    const cfg = ARMS[this.variant];
     const text = raw.trim();
     let corrected = text; // fall back to the raw text on any failure
     try {
       const url =
-        `https://generativelanguage.googleapis.com/v1beta/models/${REPHRASE_MODEL}` +
+        `https://generativelanguage.googleapis.com/v1beta/models/${cfg.rephraseModel}` +
         `:generateContent?key=${this.geminiApiKey}`;
       const res = await fetch(url, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          systemInstruction: { parts: [{ text: REPHRASE_INSTRUCTION }] },
+          systemInstruction: { parts: [{ text: cfg.rephraseInstruction }] },
           contents: [{ role: "user", parts: [{ text }] }],
           generationConfig: { temperature: 0 },
         }),
