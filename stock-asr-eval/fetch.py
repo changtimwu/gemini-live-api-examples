@@ -1,7 +1,9 @@
 """Fetch a YouTube video's audio (16k mono PCM) + ground-truth subtitle text.
 
-Ground truth = YouTube auto-caption (zh-Hant). Supports a time range so long videos can be
-evaluated in segments. Caches downloads under data/.
+Ground truth = the best available Chinese auto-caption (tries zh-Hant, zh-TW, ... best-first;
+not every channel exposes zh-Hant). Supports a time range so long videos can be evaluated in
+segments. Caches downloads under data/, and reuses any full audio/caption already fetched by
+the playlist downloader (data/playlists/*/) so segments are clipped locally, not re-downloaded.
 
 CLI:  python fetch.py <url> [start_sec] [end_sec]
 """
@@ -10,7 +12,11 @@ import re
 import subprocess
 import sys
 
+import playlist
+
 SAMPLE_RATE = 16000
+AUDIO_FORMAT = "140"                                  # m4a / AAC — matches playlist.py's cache
+ZH_SUB_LANGS = playlist.DEFAULT_SUB_LANGS             # shared zh caption priority (best first)
 DATA = os.path.join(os.path.dirname(__file__), "data")
 TS = re.compile(r"(\d\d):(\d\d):(\d\d)\.(\d\d\d)\s+-->\s+(\d\d):(\d\d):(\d\d)\.(\d\d\d)")
 TAG = re.compile(r"<[^>]+>")
@@ -57,28 +63,67 @@ def subtitle_text(segs, t0: float | None = None, t1: float | None = None) -> str
     return " ".join(parts)
 
 
+def _flat_cached_sub(vid: str) -> str | None:
+    for lang in ZH_SUB_LANGS:
+        p = os.path.join(DATA, f"{vid}.{lang}.vtt")
+        if os.path.exists(p):
+            return p
+    return None
+
+
 def download_subtitle(url: str) -> str:
+    """Download the best available Chinese auto-caption to data/, returning its path.
+
+    Tries several zh codes best-first and reuses any already-cached track — including one
+    fetched by the playlist downloader (data/playlists/*/).
+    """
     vid = _video_id(url)
-    path = os.path.join(DATA, f"{vid}.zh-Hant.vtt")
-    if not os.path.exists(path):
-        subprocess.run(["yt-dlp", "-q", "--no-warnings", "--skip-download",
-                        "--write-auto-subs", "--sub-langs", "zh-Hant", "--sub-format", "vtt",
-                        "-o", os.path.join(DATA, "%(id)s.%(ext)s"), url], check=True)
-    return path
+    hit = playlist.cached_subtitle(vid, ZH_SUB_LANGS, DATA) or _flat_cached_sub(vid)
+    if hit:
+        return hit
+    os.makedirs(DATA, exist_ok=True)
+    # One language at a time, best first: requesting all langs at once makes yt-dlp pull every
+    # matching (incl. machine-translated) track and trip YouTube's 429 rate limit.
+    for lang in ZH_SUB_LANGS:
+        subprocess.run(["yt-dlp", "-q", "--no-warnings", "--skip-download", "--write-auto-subs",
+                        "--sub-langs", lang, "--sub-format", "vtt",
+                        "-o", os.path.join(DATA, "%(id)s.%(ext)s"), url],
+                       capture_output=True)  # tolerate per-lang failure (missing track / 429)
+        p = os.path.join(DATA, f"{vid}.{lang}.vtt")
+        if os.path.exists(p):
+            return p
+    raise RuntimeError(f"no Chinese auto-captions found for {url} "
+                       f"(tried {', '.join(ZH_SUB_LANGS)}); check `yt-dlp --list-subs {url}`")
+
+
+def _to_pcm(src: str, pcm: str, t0: float | None = None, t1: float | None = None) -> None:
+    """Decode src -> 16k mono s16le PCM, optionally clipping to [t0, t1] seconds."""
+    cmd = ["ffmpeg", "-y"]
+    if t0:
+        cmd += ["-ss", _hms(t0)]
+    if t1 is not None:
+        cmd += ["-t", _hms(t1 - (t0 or 0))]
+    cmd += ["-i", src, "-ar", str(SAMPLE_RATE), "-ac", "1", "-f", "s16le", pcm]
+    subprocess.run(cmd, check=True, capture_output=True)
 
 
 def download_audio_pcm(url: str, t0: float | None = None, t1: float | None = None) -> bytes:
     vid = _video_id(url)
     tag = f"{int(t0 or 0)}_{int(t1) if t1 else 'end'}"
-    src = os.path.join(DATA, f"{vid}.{tag}.m4a")
     pcm = os.path.join(DATA, f"{vid}.{tag}.pcm")
     if not os.path.exists(pcm):
-        cmd = ["yt-dlp", "-q", "--no-warnings", "-f", "bestaudio", "-o", src]
-        if t0 is not None or t1 is not None:
-            cmd += ["--download-sections", f"*{_hms(t0 or 0)}-{_hms(t1) if t1 else '99:59:59'}"]
-        subprocess.run(cmd + [url], check=True)
-        subprocess.run(["ffmpeg", "-y", "-i", src, "-ar", str(SAMPLE_RATE), "-ac", "1",
-                        "-f", "s16le", pcm], check=True, capture_output=True)
+        os.makedirs(DATA, exist_ok=True)
+        full = playlist.cached_audio(vid, AUDIO_FORMAT, DATA)
+        if full:
+            # clip the requested window from the already-downloaded full track (no network)
+            _to_pcm(full, pcm, t0, t1)
+        else:
+            src = os.path.join(DATA, f"{vid}.{tag}.m4a")
+            cmd = ["yt-dlp", "-q", "--no-warnings", "-f", AUDIO_FORMAT, "-o", src]
+            if t0 is not None or t1 is not None:
+                cmd += ["--download-sections", f"*{_hms(t0 or 0)}-{_hms(t1) if t1 else '99:59:59'}"]
+            subprocess.run(cmd + [url], check=True)
+            _to_pcm(src, pcm)  # src already clipped by --download-sections
     with open(pcm, "rb") as f:
         return f.read()
 

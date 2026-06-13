@@ -18,7 +18,6 @@ import argparse
 import json
 import os
 import re
-import subprocess
 import sys
 
 from pydantic import BaseModel
@@ -89,45 +88,6 @@ class Term(BaseModel):
 class Glossary(BaseModel):
     stocks: list[Stock]
     terms: list[Term]
-
-
-# Preferred zh auto-caption codes, best first. fetch.download_subtitle hardcodes zh-Hant, but
-# many Taiwan channels publish the source track as zh-TW (already Traditional); the
-# "<lang>-zh-TW" entries are machine re-translations, so they rank below the real source.
-ZH_SUB_LANGS = ["zh-Hant", "zh-TW", "zh-Hant-zh-TW", "zh-Hans", "zh"]
-
-
-def download_subtitle(url: str) -> str:
-    """Download the best available Chinese auto-caption to data/, returning its path.
-
-    Like fetch.download_subtitle but tries several zh codes and picks the highest-priority track
-    that actually exists for this video (not every channel exposes zh-Hant)."""
-    vid = fetch._video_id(url)
-
-    def first_present():
-        for lang in ZH_SUB_LANGS:
-            p = os.path.join(fetch.DATA, f"{vid}.{lang}.vtt")
-            if os.path.exists(p):
-                return p
-        return None
-
-    hit = first_present()
-    if hit:
-        return hit
-    os.makedirs(fetch.DATA, exist_ok=True)
-    # One language at a time, best first: stop at the first track that downloads. Requesting all
-    # langs at once makes yt-dlp fetch every matching (incl. machine-translated) track and trip
-    # YouTube's 429 rate limit.
-    for lang in ZH_SUB_LANGS:
-        subprocess.run(["yt-dlp", "-q", "--no-warnings", "--skip-download", "--write-auto-subs",
-                        "--sub-langs", lang, "--sub-format", "vtt",
-                        "-o", os.path.join(fetch.DATA, "%(id)s.%(ext)s"), url],
-                       capture_output=True)  # tolerate per-lang failure (missing track / 429)
-        p = os.path.join(fetch.DATA, f"{vid}.{lang}.vtt")
-        if os.path.exists(p):
-            return p
-    sys.exit(f"no Chinese auto-captions found (tried {', '.join(ZH_SUB_LANGS)}). "
-             f"Check `yt-dlp --list-subs {url}`.")
 
 
 def load_api_key() -> str:
@@ -343,12 +303,12 @@ def main():
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
 
     print(f"fetching subtitle for {vid} ...", flush=True)
-    sub_path = download_subtitle(args.url)
+    sub_path = fetch.download_subtitle(args.url)
     print(f"using {os.path.basename(sub_path)}", flush=True)
     segs = fetch.parse_vtt(sub_path)
     subtitle = fetch.subtitle_text(segs)
     if not subtitle.strip():
-        sys.exit("empty subtitle — no zh-Hant auto-captions found for this video")
+        sys.exit("empty subtitle — no Chinese auto-captions found for this video")
     print(f"subtitle: {len(subtitle)} chars | analyzing with {args.model} ...", flush=True)
 
     g = analyze(subtitle, api_key=load_api_key(), model=args.model, must_include=must_include)

@@ -31,7 +31,10 @@ import time
 
 DATA = os.path.join(os.path.dirname(__file__), "data")
 DEFAULT_AUDIO_FORMAT = "140"                          # m4a / AAC mp4a.40.2 ~129k 44.1kHz
-DEFAULT_SUB_LANGS = ["zh-TW", "zh-Hant", "zh-Hans", "zh"]
+# Preferred zh auto-caption codes, best first (shared source of truth; fetch.py aliases this).
+# Many Taiwan channels publish the source as zh-TW (already Traditional); "<lang>-zh-TW" entries
+# are machine re-translations, so rank below the real source.
+DEFAULT_SUB_LANGS = ["zh-Hant", "zh-TW", "zh-Hant-zh-TW", "zh-Hans", "zh"]
 WHAT_ALL = ("info", "audio", "subs")
 
 
@@ -75,6 +78,26 @@ def enumerate_playlist(url: str, recent: int | None = None) -> dict:
 def iter_playlist(url: str, recent: int | None = None) -> list[dict]:
     """Public API: the (id, title, duration) entries of a playlist, newest-first."""
     return enumerate_playlist(url, recent)["entries"]
+
+
+def cached_audio(vid: str, fmt: str = DEFAULT_AUDIO_FORMAT, data_dir: str = DATA) -> str | None:
+    """Path to a full audio track already cached for ``vid`` (any playlist), or None.
+
+    Lets other tools (e.g. fetch.py) clip a segment from the full track instead of
+    re-downloading; matches the requested format id so the codec is known.
+    """
+    hits = glob.glob(os.path.join(data_dir, "playlists", "*", f"{vid}.f{fmt}.*"))
+    return hits[0] if hits else None
+
+
+def cached_subtitle(vid: str, langs: list[str] | None = None,
+                    data_dir: str = DATA) -> str | None:
+    """Path to a cached source caption for ``vid`` (any playlist), highest-priority lang first."""
+    for lang in (langs or DEFAULT_SUB_LANGS):
+        hits = glob.glob(os.path.join(data_dir, "playlists", "*", f"{vid}.{lang}.vtt"))
+        if hits:
+            return hits[0]
+    return None
 
 
 # --------------------------------------------------------------- per-artifact
