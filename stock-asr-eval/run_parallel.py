@@ -165,8 +165,8 @@ def main():
     ap.add_argument("--start", type=float, help="clip start (sec), applied to every video")
     ap.add_argument("--end", type=float, help="clip end (sec), applied to every video")
     ap.add_argument("--chunk", type=int, default=480)
-    ap.add_argument("--asr-model", default="gemini-3.5-live-translate-preview",
-                    help="Live recognizer model (flash-live is non-functional here; see transcribe.py)")
+    ap.add_argument("--asr-model", default="gemini-3.1-flash-lite",
+                    help="ASR model (default cheap batch; gemini-3.5-live-translate-preview = higher-accuracy Live)")
     ap.add_argument("--analyzer-model", default="gemini-3.1-flash-lite")
     ap.add_argument("--rephrase-model", default="gemini-3.1-flash-lite")
     ap.add_argument("--add-tickers", action="store_true")

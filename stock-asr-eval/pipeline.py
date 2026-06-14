@@ -33,8 +33,10 @@ import fetch
 import glossary_llm
 from rephrase import (build_rephrase_instruction, rephrase_transcript,
                       strip_ticker_annotations)
+import transcribe_batch
 from score import cer, term_recall
-from transcribe import SAMPLE_RATE, transcribe_pcm, MODEL as ASR_MODEL_DEFAULT
+from transcribe import SAMPLE_RATE, transcribe_pcm
+ASR_MODEL_DEFAULT = transcribe_batch.DEFAULT_BATCH_MODEL   # batch gemini-3.1 ASR (cheap; see transcribe_batch)
 
 # Plain recognizer prompt — identical to the live app's BASE_INSTRUCTION, used for BOTH arms so the
 # transcription is glossary-free and the rephrase pass is the only variable.
@@ -77,8 +79,17 @@ async def _transcribe_retry(ch: bytes, *, api_key: str, exp_secs: float, model: 
 
 
 async def _transcribe_full(pcm: bytes, *, api_key: str, chunk_secs: int, model: str) -> tuple[str | None, bool]:
-    """Transcribe the whole (possibly long) track chunk-by-chunk with the plain prompt.
-    Returns (full_transcript, ok); ok is False if any chunk failed after retries."""
+    """Transcribe the whole (possibly long) track with the plain prompt.
+    Returns (full_transcript, ok); ok is False if transcription failed/came back too short."""
+    total_secs = len(pcm) / (SAMPLE_RATE * 2)
+    if transcribe_batch.is_batch_model(model):
+        # Batch (non-Live) ASR: one call set, splits internally; no per-chunk Live streaming.
+        res = await transcribe_batch.batch_transcribe_pcm(
+            pcm, api_key=api_key, model=model, system_instruction=BASE_INSTRUCTION)
+        zh = res["source_zh"]
+        ok = len(zh) >= max(100, total_secs * 0.3)   # batch normalizes/compresses; lenient floor
+        print(f"    batch {model} -> {len(zh)} chars" + ("" if ok else "  (too short -> trial invalid)"), flush=True)
+        return (zh if ok else None), ok
     chs = _chunks(pcm, chunk_secs)
     parts, ok = [], True
     for ci, ch in enumerate(chs):
@@ -211,6 +222,22 @@ async def run(url: str, *, api_key: str, t0: float | None, t1: float | None, tri
     rescued = [t for t in hits["raw"] if hits["rephrased"][t] > hits["raw"][t]]
     if rescued:
         print(f"  terms rescued by rephrase: {rescued}", flush=True)
+    # Stocks STILL missed after rephrasing (name never found in any valid rephrased trial) — the
+    # list to inspect when improving the glossary/rephrase. Also keep the raw-arm misses for diff.
+    out["missed_stocks_rephrased"] = sorted(t for t in hits["rephrased"] if hits["rephrased"][t] == 0)
+    out["missed_stocks_raw"] = sorted(t for t in hits["raw"] if hits["raw"][t] == 0)
+    if out["missed_stocks_rephrased"]:
+        print(f"  still missed after rephrase ({len(out['missed_stocks_rephrased'])}): "
+              f"{out['missed_stocks_rephrased']}", flush=True)
+    # Dump the transcripts as plain .txt next to the JSON so they're easy to eyeball / grep.
+    v = next((t for t in out["trial_data"] if t.get("valid")), None)
+    if v:
+        base = os.path.splitext(out_path)[0]
+        with open(base + ".raw.txt", "w", encoding="utf-8") as f:
+            f.write(v["raw"])
+        with open(base + ".rephrased.txt", "w", encoding="utf-8") as f:
+            f.write(v["rephrased"])
+        out["transcript_files"] = [base + ".raw.txt", base + ".rephrased.txt"]
     flush("complete")
     print(f"\n[{vid}] wrote {out_path}  ({out['elapsed_secs']}s)", flush=True)
     return out
@@ -224,7 +251,8 @@ def main():
     ap.add_argument("--trials", type=int, default=1, help="transcribe+rephrase N times (default 1)")
     ap.add_argument("--chunk", type=int, default=CHUNK_SECS, help="audio chunk seconds for the Live API")
     ap.add_argument("--asr-model", default=ASR_MODEL_DEFAULT,
-                    help=f"Live recognizer model (default {ASR_MODEL_DEFAULT}; cheap text-out ASR)")
+                    help=f"ASR model (default {ASR_MODEL_DEFAULT}, cheap batch; "
+                         f"gemini-3.5-live-translate-preview is the higher-accuracy Live model)")
     ap.add_argument("--analyzer-model", default=glossary_llm.DEFAULT_MODEL, help="LLM for glossary extraction")
     ap.add_argument("--rephrase-model", default="gemini-3.1-flash-lite", help="model for the rephrase pass")
     ap.add_argument("--add-tickers", action="store_true",
