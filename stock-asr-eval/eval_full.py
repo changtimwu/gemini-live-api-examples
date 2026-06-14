@@ -22,10 +22,8 @@ CHUNK_SECS = 480  # 8 min — safely under the Live API audio-only session limit
 
 
 def _key():
-    k = os.environ.get("GEMINI_API_KEY")
-    if not k:
-        sys.exit("set GEMINI_API_KEY")
-    return k
+    from apikey import load_api_key
+    return load_api_key()
 
 
 def _agg(xs):

@@ -91,27 +91,9 @@ class Glossary(BaseModel):
 
 
 def load_api_key() -> str:
-    """GEMINI_API_KEY / GOOGLE_API_KEY from the environment, else from the nearest .env.local."""
-    for var in ("GEMINI_API_KEY", "GOOGLE_API_KEY"):
-        if os.environ.get(var):
-            return os.environ[var]
-    here = os.path.dirname(os.path.abspath(__file__))
-    candidates = [os.path.join(here, ".env.local"),
-                  os.path.join(here, "..", ".env.local"),
-                  os.path.join(os.getcwd(), ".env.local")]
-    for path in candidates:
-        if not os.path.exists(path):
-            continue
-        for line in open(path, encoding="utf-8"):
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            k, _, v = line.partition("=")
-            k = k.replace("export ", "").strip()
-            v = v.strip().strip('"').strip("'")
-            if k in ("GEMINI_API_KEY", "GOOGLE_API_KEY") and v:
-                return v
-    sys.exit("no API key: set GEMINI_API_KEY or put it in .env.local")
+    """GEMINI_API_KEY / GOOGLE_API_KEY from env or the nearest .env.local (shared loader)."""
+    from apikey import load_api_key as _impl
+    return _impl()
 
 
 EXAMPLE_MAX = 30  # hard cap; captions are unpunctuated so the model sometimes over-extracts

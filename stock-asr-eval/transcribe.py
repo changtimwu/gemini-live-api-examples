@@ -111,10 +111,8 @@ async def transcribe_pcm(pcm: bytes, *, api_key: str, model: str = MODEL,
 
 
 def _read_key() -> str:
-    key = os.environ.get("GEMINI_API_KEY")
-    if not key:
-        sys.exit("set GEMINI_API_KEY")
-    return key
+    from apikey import load_api_key
+    return load_api_key()
 
 
 if __name__ == "__main__":
