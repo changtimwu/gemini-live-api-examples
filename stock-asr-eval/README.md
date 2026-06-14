@@ -41,20 +41,24 @@ even after rephrasing (the list to inspect when tuning the glossary).
 
 ## Result (validated)
 
-Across **7 full 中集 episodes** of 錢線百分百 (339 min of audio, one trial each, translate-model ASR),
-post-transcribe rephrasing lifts Taiwan stock-name recall from **~53% to ~96%** — every episode
-improved (gains of 32–59 pp), zero regressions:
+Across **7 full 中集 episodes** of 錢線百分百 (≈339 min, one trial each, batch `gemini-3.1-flash-lite`
+ASR), post-transcribe rephrasing lifts Taiwan stock-name recall from **~78% to ~99%** — every
+episode improved (5 of 7 reach 100%), zero regressions:
 
 | metric | raw ASR | rephrased | Δ |
 | --- | --- | --- | --- |
-| **name_recall** | **53.3%** | **95.9%** | **+42.6 pp** |
-| CER | 0.242 | 0.236 | +0.005 |
-| ticker_recall | 9.1% | 15.3% | +6.1 pp |
+| **name_recall** | **77.6%** | **99.1%** | **+21.6 pp** |
+| CER | 0.120 | 0.119 | +0.001 |
+| ticker_recall | 11.7% | 17.5% | +5.8 pp |
 
-CER moves little because these episodes carry a high baseline error rate from *general* mishearings
-the glossary rephrase deliberately doesn't touch; the gain is concentrated exactly where it should
-be — the stock names. Real corrections seen: `文業→文曄`, `大成剛→大成鋼`, `富邦美→富邦媒`,
-`那雅科→南亞科`, `一頂→宜鼎`, `台子期→台指期`, `除席→除息`.
+CER moves little because what's left is *general* mishearings the glossary rephrase deliberately
+doesn't touch; the gain is concentrated where it should be — the stock names. Real corrections seen:
+`文業→文曄`, `大成剛→大成鋼`, `富邦美→富邦媒`, `那雅科→南亞科`, `一頂→宜鼎`, `台子期→台指期`. Only
+3 names slip through across all 7 episodes (a `-KY` name, an ETF code, a thinly-mentioned small-cap).
+
+**Recognizer matters.** The same corpus on the Live translate model scored far worse — raw recall
+53%, CER 0.242 (rephrased 96% / 0.236) — because the Live model drops content over long audio, while
+batch transcribes the whole file coherently (lower CER, higher recall, *and* cheaper). See issue #20.
 
 ## Selecting a corpus
 
