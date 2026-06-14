@@ -134,11 +134,23 @@ def analyze(subtitle: str, *, api_key: str, model: str = DEFAULT_MODEL,
             response_mime_type="application/json",
             response_schema=Glossary,
             temperature=0.0,
-            # Gemini 3 reasoning effort — "medium" for this scan-and-extract task.
-            thinking_config=types.ThinkingConfig(thinking_level=types.ThinkingLevel.MEDIUM),
+            # A full-episode caption (~17k chars) yields a large glossary (~50+ stocks): the JSON +
+            # thinking tokens overflow the default output budget and truncate to invalid JSON. Give
+            # it generous headroom. "low" thinking is enough for scan-and-extract and leaves more
+            # of that budget for the (sizeable) structured output.
+            max_output_tokens=32768,
+            thinking_config=types.ThinkingConfig(thinking_level=types.ThinkingLevel.LOW),
         ),
     )
-    g = resp.parsed if resp.parsed is not None else Glossary(**json.loads(resp.text))
+    if resp.parsed is not None:
+        g = resp.parsed
+    else:
+        fr = resp.candidates[0].finish_reason if resp.candidates else None
+        try:
+            g = Glossary(**json.loads(resp.text or ""))
+        except Exception as e:          # truncated/again-unparseable: clear, actionable error
+            raise RuntimeError(f"glossary model returned unparseable JSON (finish_reason={fr}); "
+                               f"likely truncated — raise max_output_tokens. {type(e).__name__}: {e}") from e
     for s in g.stocks:
         s.example = _clamp_example(s.example)
     for t in g.terms:
