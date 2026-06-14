@@ -1,14 +1,19 @@
-"""Capture the SOURCE-language (Chinese) transcription from gemini-3.5-live-translate-preview.
+"""Capture the SOURCE-language (Chinese) ASR from a Gemini Live model.
 
-We stream raw 16kHz mono PCM into a Live API session (translation mode) and collect
-`input_transcription` — the model's ASR of what it heard. The translated (output) text/audio
-is ignored for scoring (no English ground truth). Optionally pass a system_instruction
-(glossary) for the A/B test.
+We stream raw 16kHz mono PCM into a Live session and collect `input_transcription` — the model's
+ASR of what it heard. Two model paths (`input_transcription` is read identically for both):
 
-The translate model streams translated audio for a long time after the input ends, so we
-stop when the *input* transcription has been quiet for a while (not when output stops).
+  - gemini-3.5-live-translate-preview (translate, DEFAULT) — AUDIO response + translationConfig, as
+    the live app uses. Emits an English translation (output_transcription), kept for reference only.
+    This is the only path that reliably transcribes in our harness today.
+  - gemini-3.1-flash-live-preview (flash) — intended as a cheaper recognizer, but it does NOT work
+    here: it rejects a TEXT response (native-audio model), and with an AUDIO response the Live
+    session closes ~3s in with zero transcription (tried v1beta/v1alpha, ±realtimeInputConfig,
+    several send rates). Left selectable via --model in case it's fixed/enabled later. See issue #19.
 
-Usage: python transcribe.py <pcm_file_16k_mono_s16le> [system_instruction_text] [--out path]
+Both paths use an AUDIO response; only the translate model adds translationConfig.
+
+Usage: python transcribe.py <pcm_file_16k_mono_s16le> [system_instruction_text] [--model M] [--out path]
 The transcript is saved to results/<pcm_stem>.transcript.json by default (--out '' to skip).
 """
 import asyncio
@@ -20,7 +25,8 @@ import time
 from google import genai
 from google.genai import types
 
-MODEL = "gemini-3.5-live-translate-preview"
+MODEL = "gemini-3.5-live-translate-preview"           # default: the only model that works here
+FLASH_MODEL = "gemini-3.1-flash-live-preview"          # cheaper in theory, but non-functional (see docstring)
 SAMPLE_RATE = 16000
 CHUNK_BYTES = 3200       # 100 ms @ 16k mono s16le
 SEND_SLEEP = 0.04        # ~2.5x real time
@@ -28,18 +34,32 @@ INPUT_IDLE = 8.0         # stop once input transcription is quiet this long (pos
 POLL = 2.0               # receive poll granularity
 
 
+def is_translate_model(model: str) -> bool:
+    return "translate" in model
+
+
 async def transcribe_pcm(pcm: bytes, *, api_key: str, model: str = MODEL,
                          system_instruction: str | None = None,
                          send_sleep: float = SEND_SLEEP, input_idle: float = INPUT_IDLE,
                          target_language: str = "en") -> dict:
     client = genai.Client(api_key=api_key, http_options=types.HttpOptions(api_version="v1beta"))
-    cfg_kwargs = dict(
-        response_modalities=[types.Modality.AUDIO],
-        translation_config=types.TranslationConfig(
-            target_language_code=target_language, echo_target_language=True),
-        input_audio_transcription=types.AudioTranscriptionConfig(),
-        output_audio_transcription=types.AudioTranscriptionConfig(),
-    )
+    if is_translate_model(model):
+        cfg_kwargs = dict(
+            response_modalities=[types.Modality.AUDIO],
+            translation_config=types.TranslationConfig(
+                target_language_code=target_language, echo_target_language=True),
+            input_audio_transcription=types.AudioTranscriptionConfig(),
+            output_audio_transcription=types.AudioTranscriptionConfig(),
+        )
+    else:
+        # Plain live model (e.g. flash-live): native-audio, so AUDIO is the only supported response
+        # modality (TEXT is rejected). We read the Chinese ASR from input_audio_transcription and
+        # ignore the model's spoken turn. No translationConfig, so it won't translate.
+        cfg_kwargs = dict(
+            response_modalities=[types.Modality.AUDIO],
+            input_audio_transcription=types.AudioTranscriptionConfig(),
+            output_audio_transcription=types.AudioTranscriptionConfig(),
+        )
     if system_instruction:
         cfg_kwargs["system_instruction"] = types.Content(parts=[types.Part(text=system_instruction)])
     config = types.LiveConnectConfig(**cfg_kwargs)
@@ -102,13 +122,15 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("pcm", help="16k mono s16le PCM file")
     ap.add_argument("si", nargs="?", default=None, help="optional system instruction (glossary) text")
+    ap.add_argument("--model", default=MODEL, help=f"Live model (default {MODEL}; {FLASH_MODEL} is non-functional)")
     ap.add_argument("--out", help="write transcript JSON here "
                                   "(default results/<pcm_stem>.transcript.json; use '' to skip)")
     args = ap.parse_args()
     with open(args.pcm, "rb") as f:
         pcm = f.read()
-    print(f"audio: {args.pcm}  ({len(pcm)/(SAMPLE_RATE*2):.1f}s)  SI={'yes' if args.si else 'no'}", flush=True)
-    res = asyncio.run(transcribe_pcm(pcm, api_key=_read_key(), system_instruction=args.si))
+    print(f"audio: {args.pcm}  ({len(pcm)/(SAMPLE_RATE*2):.1f}s)  model={args.model}  "
+          f"SI={'yes' if args.si else 'no'}", flush=True)
+    res = asyncio.run(transcribe_pcm(pcm, api_key=_read_key(), model=args.model, system_instruction=args.si))
     print("SOURCE (zh):", res["source_zh"])
     print("TRANSLATION (en):", res["translation_en"])
 
