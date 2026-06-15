@@ -84,17 +84,20 @@ const BASE_INSTRUCTION =
 // it (and with what model / instruction) is set per-arm in ARMS below; an arm
 // with rephraseModel: null publishes the raw ASR unchanged.
 // The rephrase agent only needs correct names/tickers/terms + the precise negative cues. Drop:
-//  - the example-sentence section (it regurgitates the examples),
+//  - the example-sentence section (it regurgitates the examples) — UNLESS GLOSSARY_KEEP_EXAMPLES=1,
+//    which keeps 用法範例 because its in-context sentences disambiguate look-alike names the negative
+//    cues alone miss (e.g. 創意→欣銓 in "…京元電子精材跟欣銓", where 創意 is itself a real company),
 //  - the English-translation map (it appends English glosses, e.g. "封測 (Packaging and Testing)"),
 //  - the 讀音提示 (phonetic) section — "always write 欣銓 for this sound" is far too broad for a
 //    context-aware agent and pulls in homophones (晶圓/安全/投信 → 欣銓). The exact-wrong-form
 //    negative cues (特別注意) stay; they're precise.
 function glossaryForRephrase(): string {
+  const keepExamples = process.env.GLOSSARY_KEEP_EXAMPLES === "1";
   return resolveGlossaryKnowledge()
     .split(/(?<=。)/)
     .filter(
       (s) =>
-        !s.includes("用法範例") &&
+        (keepExamples || !s.includes("用法範例")) &&
         !s.includes("翻譯成英文") &&
         !s.includes("讀音提示")
     )
