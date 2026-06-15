@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import {
   LiveKitRoom,
   useDataChannel,
@@ -10,6 +17,7 @@ import {
 } from "@livekit/components-react";
 import "@livekit/components-styles";
 import { Track, LocalTrackPublication } from "livekit-client";
+import { GLOSSARY } from "@/lib/glossary";
 
 type Variant = "glossary" | "general";
 type InputMode = "mic" | "tab";
@@ -52,6 +60,68 @@ function splitSentences(text: string): string[] {
     .split(/(?<=[。！？；…!?\n])/)
     .map((s) => s.trim())
     .filter(Boolean);
+}
+
+// Highlighting glossary stock terms in the live transcript is the whole point of the
+// A/B, made visible: the glossary / rephrased column lights up on a name the General
+// column (mis-hearing the same audio) leaves plain. The term set must track the
+// *loaded* glossary — the built-in demo list OR a show-specific GLOSSARY_SI_FILE — not
+// just the hard-coded GLOSSARY, or names like 精材/欣銓 from a show glossary never light up.
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+type Highlighter = (text: string) => ReactNode;
+
+// Build a highlighter for one set of terms. Names: raw CJK substrings, longest-first so
+// 聯發科 wins over 聯電's 聯. Tickers: digit codes guarded by non-digit boundaries so a
+// ticker isn't matched inside a longer number.
+function buildHighlighter(names: string[], tickers: string[]): Highlighter {
+  const ns = [...new Set(names)]
+    .filter(Boolean)
+    .sort((a, b) => b.length - a.length)
+    .map(escapeRe);
+  const ts = [...new Set(tickers)].filter(Boolean).map(escapeRe);
+  const alts: string[] = [];
+  if (ns.length) alts.push(ns.join("|"));
+  if (ts.length) alts.push(`(?<![0-9])(?:${ts.join("|")})(?![0-9])`);
+  if (!alts.length) return (text) => text;
+  const re = new RegExp(alts.join("|"), "g");
+  return (text) => {
+    if (!text) return text;
+    const nodes: ReactNode[] = [];
+    let last = 0;
+    let i = 0;
+    for (const m of text.matchAll(re)) {
+      const start = m.index ?? 0;
+      if (start > last) nodes.push(text.slice(last, start));
+      nodes.push(
+        <mark key={i++} className="stock-hl">
+          {m[0]}
+        </mark>,
+      );
+      last = start + m[0].length;
+    }
+    if (last < text.length) nodes.push(text.slice(last));
+    return nodes;
+  };
+}
+
+// Pull the glossary company list ("台積電（2330）、…、精材（3374）。") out of the active
+// rephrase instruction, so the highlighter tracks whatever glossary the server loaded.
+// Full-width parens around a digit-only ticker uniquely mark list entries — the prose
+// examples use half-width "(2330)" and the 特別注意 cues use 「」 brackets, so neither matches.
+// Falls back to the built-in demo glossary when no list is present (e.g. before start).
+const GLOSSARY_TERM_RE = /([一-鿿A-Za-z0-9-]+)（(\d{4,6})）/g;
+function parseGlossaryTerms(instruction?: string): { names: string[]; tickers: string[] } {
+  const names: string[] = [];
+  const tickers: string[] = [];
+  for (const m of (instruction ?? "").matchAll(GLOSSARY_TERM_RE)) {
+    names.push(m[1]);
+    tickers.push(m[2]);
+  }
+  if (!names.length) {
+    return { names: GLOSSARY.map((t) => t.name), tickers: GLOSSARY.map((t) => t.ticker) };
+  }
+  return { names, tickers };
 }
 
 const SPEAKER_IDENTITY = "speaker";
@@ -324,6 +394,13 @@ function LiveSession({
     glossary: [],
     general: [],
   });
+  // Highlight whatever glossary the server actually loaded (built-in or GLOSSARY_SI_FILE).
+  // The term list rides along in the glossary arm's rephrase instruction; both columns use
+  // the same matcher, so the General column only lights up names it happened to get right.
+  const highlight = useMemo<Highlighter>(() => {
+    const { names, tickers } = parseGlossaryTerms(armConfigs.glossary?.rephraseInstruction);
+    return buildHighlighter(names, tickers);
+  }, [armConfigs]);
   const { localParticipant } = useLocalParticipant();
   const micTracks = useTracks([Track.Source.Microphone]);
   const isMicOn = micTracks.some(
@@ -551,6 +628,7 @@ function LiveSession({
             polishedOnly={polishedOnly}
             rephrasedVariants={rephrasedVariants}
             config={armConfigs[variant]}
+            highlight={highlight}
           />
         ))}
       </div>
@@ -565,6 +643,7 @@ function TranscriptColumn({
   polishedOnly,
   rephrasedVariants,
   config,
+  highlight,
 }: {
   variant: Variant;
   segments: Segment[];
@@ -572,6 +651,7 @@ function TranscriptColumn({
   polishedOnly: boolean;
   rephrasedVariants: Variant[];
   config?: ArmConfig;
+  highlight: Highlighter;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const isRephrased = rephrasedVariants.includes(variant);
@@ -686,14 +766,14 @@ function TranscriptColumn({
               }}
             >
               {item.zh && (
-                <p style={{ fontSize: 16, lineHeight: 1.5, color: "var(--fg)" }}>
-                  {item.zh}
+                <p style={{ fontSize: 32, lineHeight: 1.5, color: "var(--fg)" }}>
+                  {highlight(item.zh)}
                 </p>
               )}
               {showEnglish && item.en && (
                 <p
                   className="body-sm"
-                  style={{ marginTop: 4, color: "var(--fg-secondary)" }}
+                  style={{ fontSize: 26, lineHeight: 1.5, marginTop: 8, color: "var(--fg-secondary)" }}
                 >
                   {item.en}
                 </p>
