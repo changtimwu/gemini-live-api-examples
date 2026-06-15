@@ -22,10 +22,8 @@ from transcribe import SAMPLE_RATE, transcribe_pcm
 
 
 def _key() -> str:
-    k = os.environ.get("GEMINI_API_KEY")
-    if not k:
-        sys.exit("set GEMINI_API_KEY")
-    return k
+    from apikey import load_api_key
+    return load_api_key()
 
 
 def _agg(xs):

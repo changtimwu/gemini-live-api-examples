@@ -1,0 +1,5 @@
+# Python deps for stock-asr-eval.  (Also needs yt-dlp + ffmpeg on PATH, e.g. `brew install yt-dlp ffmpeg`.)
+google-genai
+pydantic
+jiwer
+opencc-python-reimplemented

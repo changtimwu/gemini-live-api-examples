@@ -87,7 +87,8 @@ if __name__ == "__main__":
     ap.add_argument("pcm", help="16k mono s16le PCM file")
     ap.add_argument("--model", default=DEFAULT_BATCH_MODEL)
     args = ap.parse_args()
-    key = os.environ.get("GEMINI_API_KEY") or sys.exit("set GEMINI_API_KEY")
+    from apikey import load_api_key
+    key = load_api_key()
     pcm = open(args.pcm, "rb").read()
     print(f"audio {len(pcm)/(SAMPLE_RATE*2):.0f}s  model={args.model}", flush=True)
     res = asyncio.run(batch_transcribe_pcm(pcm, api_key=key, model=args.model,
